@@ -45,12 +45,22 @@ The small `|Δν|` is grammar-level, not a conversion bug: `wardley-beta`'s pipe
 
 ## Converter
 
-Conversions were produced by ArcKit's OWM → Mermaid `wardley-beta` converter:
+The OWM → Mermaid `wardley-beta` converter ships in this repo under [`tools/`](./tools/):
 
-- Source: [`tractorjuice/arc-kit/tests/mermaid-wardley/convert.mjs`](https://github.com/tractorjuice/arc-kit/blob/main/tests/mermaid-wardley/convert.mjs)
-- Fidelity test: [`test-fidelity.mjs`](https://github.com/tractorjuice/arc-kit/blob/main/tests/mermaid-wardley/test-fidelity.mjs)
+```bash
+# Rebuild every .mmd file from its OWM sibling
+node tools/regenerate.mjs
 
-To regenerate this repo from a fresh clone of the upstream source, see the converter README.
+# Preview without writing
+node tools/regenerate.mjs --dry-run
+
+# Convert a different tree (e.g., a fresh clone of the upstream source)
+node tools/regenerate.mjs --root /path/to/WARDLEY-MAP-REPOSITORY
+```
+
+Pure stdlib, no npm dependencies. Node.js 18+.
+
+The converter is maintained upstream at [`tractorjuice/arc-kit/tests/mermaid-wardley/`](https://github.com/tractorjuice/arc-kit/tree/main/tests/mermaid-wardley), which also hosts the parser-validation (`test-real-maps.mjs`) and conversion-fidelity (`test-fidelity.mjs`) suites.
 
 ## Attribution
 
