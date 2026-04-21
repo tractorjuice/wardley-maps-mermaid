@@ -4,77 +4,77 @@ title TELECOMS - Space - FEB 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component corporation [0.99, 0.53]
-component government [0.99, 0.60]
+component corporation [0.99, 0.53] label [-55, -10]
+component government [0.99, 0.60] label [-14, -15]
 
-component backhaul [0.50, 0.73]
-component USER TERMINAL [0.61, 0.72]
-component SATELLITE [0.73, 0.66]
+component backhaul [0.50, 0.73] label [10, 5]
+component USER TERMINAL [0.61, 0.72] label [13, 7]
+component SATELLITE [0.73, 0.66] label [-72, -11]
 pipeline SATELLITE {
-  component GEO Sat [0.34]
-  component LEO microsat [0.7]
-  component launchers [0.72]
+  component GEO Sat [0.34] label [-69, 4]
+  component LEO microsat [0.7] label [-2, -18]
+  component launchers [0.72] label [6, -7]
 }
 
-component geography [0.66, 0.39]
+component geography [0.66, 0.39] label [-74, 12]
 
-component NETWORK ACCESS [0.90, 0.68]
+component NETWORK ACCESS [0.90, 0.68] label [8, -7]
 pipeline NETWORK ACCESS {
-  component mesh network [0.47]
-  component physical network [0.59]
-  component consumer [0.67]
-  component broadcast [0.76]
+  component mesh network [0.47] label [-107, 0]
+  component physical network [0.59] label [-57, -42]
+  component consumer [0.67] label [5, -10]
+  component broadcast [0.76] label [18, 5]
 }
 
-component TOPOLOGY [0.81, 0.66]
+component TOPOLOGY [0.81, 0.66] label [11, -5]
 pipeline TOPOLOGY {
-  component fibre [0.35]
-  component mobile [0.42]
-  component NTN (non terrestrial Network) [0.73]
+  component fibre [0.35] label [-56, 3]
+  component mobile [0.42] label [-22, 23]
+  component NTN (non terrestrial Network) [0.73] label [28, -41]
 }
-component groundstation [0.53, 0.67]
+component groundstation [0.53, 0.67] label [9, -1]
 
-component SPECTRUM [0.33, 0.68]
+component SPECTRUM [0.33, 0.68] label [9, -6]
 pipeline SPECTRUM {
-  component V (40GHz) [0.67]
-  component Ka (27GHz) [0.68]
-  component Ku (12GHz) [0.7]
+  component V (40GHz) [0.67] label [-81, 3]
+  component Ka (27GHz) [0.68] label [-11, 22]
+  component Ku (12GHz) [0.7] label [16, 1]
 }
 
-component Optical Sat2Sat Coms [0.56, 0.40]
-component PROPULSION [0.59, 0.66]
+component Optical Sat2Sat Coms [0.56, 0.40] label [-44, 12]
+component PROPULSION [0.59, 0.66] label [-80, -3]
 pipeline PROPULSION {
-  component Xenon [0.59]
-  component Krypton [0.67]
+  component Xenon [0.59] label [-52, 4]
+  component Krypton [0.67] label [18, 3]
 }
 
-component power [0.65, 0.72]
-component COOLING [0.67, 0.60]
+component power [0.65, 0.72] label [11, 3]
+component COOLING [0.67, 0.60] label [-61, -5]
 pipeline COOLING {
-  component Thermal Electric [0.51]
-  component Cryogens [0.61]
-  component Radiative [0.63]
+  component Thermal Electric [0.51] label [-78, -17]
+  component Cryogens [0.61] label [-48, 18]
+  component Radiative [0.63] label [17, 4]
 }
 
-component CONTROL SYSTEMS [0.22, 0.55]
+component CONTROL SYSTEMS [0.22, 0.55] label [13, -27]
 pipeline CONTROL SYSTEMS {
-  component fleet management [0.38]
-  component debris tracking [0.46]
-  component orbit tracking [0.69]
+  component fleet management [0.38] label [-84, -12]
+  component debris tracking [0.46] label [-34, -43]
+  component orbit tracking [0.69] label [19, 1]
 }
 
-component AUTOMATION [0.11, 0.61]
+component AUTOMATION [0.11, 0.61] label [14, 2]
 
-component supply chains [0.02, 0.65]
+component supply chains [0.02, 0.65] label [11, 1]
 
-component beamforming [0.39, 0.67]
-component ANTENNA [0.47, 0.68]
+component beamforming [0.39, 0.67] label [-77, 18]
+component ANTENNA [0.47, 0.68] label [4, -7]
 pipeline ANTENNA {
-  component beam_steering [0.65]
-  component phased array antennas [0.67]
+  component beam_steering [0.65] label [-100, 15]
+  component phased array antennas [0.67] label [-75, -36]
 }
 
-component supply chain awareness [0.05, 0.34]
+component supply chain awareness [0.05, 0.34] label [-66, -14]
 fibre -> wire
 "5G" -> masts
 masts -> geography
@@ -139,7 +139,7 @@ LEO microsat -> AUTOMATION
 AUTOMATION -> supply chain awareness
 supply chains -> supply chain awareness
 AUTOMATION -> supply chains
-component SPACE REGULATION [0.10, 0.39]
+component SPACE REGULATION [0.10, 0.39] label [-80, -34]
 SPECTRUM -> SPACE REGULATION
 orbit tracking -> SPACE REGULATION
 SPACE REGULATION -> SPACE REGULATION

@@ -8,26 +8,26 @@ note "(+thinking)" [0.72, 0.11]
 note "(+AI automation)" [0.54, 0.13]
 note "(+robotic automation)" [0.52, 0.78]
 
-component government [1.00, 0.47]
+component government [1.00, 0.47] label [5, -10]
 government -> regulation
 government -> social cohesion
 government -> societal demand for labour
 government -> economy
 
-component societal demand for labour [0.96, 0.55]
-component regulation [0.93, 0.36]
+component societal demand for labour [0.96, 0.55] label [-6, -37]
+component regulation [0.93, 0.36] label [-71, -4]
 societal demand for labour -> Business
 regulation -> Business
 societal demand for labour -> merit based management
 societal demand for labour -> economy
 
-component social cohesion [0.94, 0.71]
+component social cohesion [0.94, 0.71] label [-11, -39]
 social cohesion -> social norms
 
-component economy [0.87, 0.49]
+component economy [0.87, 0.49] label [-45, -12]
 pipeline economy {
-  component new tech [0.21]
-  component commoditisation of the economy [0.81]
+  component new tech [0.21] label [-76, -2]
+  component commoditisation of the economy [0.81] label [40, -2]
 }
 economy -> choice
 economy -> Business
@@ -35,77 +35,77 @@ new tech -> Business
 new tech -> new roles
 new tech -> entrepreneur
 
-component Business [0.77, 0.48]
+component Business [0.77, 0.48] label [9, -5]
 pipeline Business {
-  component entrepreneur [0.24]
-  component new roles [0.3]
-  component white collar [0.37]
-  component blue collar [0.65]
-  component "labour/mundane" [0.78]
+  component entrepreneur [0.24] label [-100, 2]
+  component new roles [0.3] label [-51, 23]
+  component white collar [0.37] label [-43, 23]
+  component blue collar [0.65] label [-53, 23]
+  component "labour/mundane" [0.78] label [20, 9]
 }
 Business -> Work actions
 
-component DEI [0.66, 0.42]
-component skills gap [0.65, 0.34]
+component DEI [0.66, 0.42] label [-35, 0]
+component skills gap [0.65, 0.34] label [-55, 25]
 DEI -> Business
 
-component Work actions [0.59, 0.45]
+component Work actions [0.59, 0.45] label [5, -10]
 pipeline Work actions {
-  component identify new market [0.11]
-  component problem solving [0.19]
-  component task completion [0.79]
+  component identify new market [0.11] label [-38, -64]
+  component problem solving [0.19] label [-28, -48]
+  component task completion [0.79] label [3, -3]
 }
 component mentoring [0.45, 0.62]
 note "(+external coaching)" [0.48, 0.63]
 
-component alumni [0.50, 0.42]
+component alumni [0.50, 0.42] label [-55, -12]
 alumni -> skills training
 alumni -> agency
 alumni -> DEI
 
-component Experienced individual [0.40, 0.24]
+component Experienced individual [0.40, 0.24] label [-29, 8]
 
-component new agency [0.47, 0.47]
+component new agency [0.47, 0.47] label [2, -17]
 
-component Post compulsary [0.36, 0.59]
+component Post compulsary [0.36, 0.59] label [-21, -38]
 pipeline Post compulsary {
-  component "masters, phd+" [0.52]
-  component uni [0.55]
-  component short courses [0.64]
-  component work specific [0.72]
-  component none [0.78]
+  component "masters, phd+" [0.52] label [-97, 26]
+  component uni [0.55] label [-14, 23]
+  component short courses [0.64] label [4, -18]
+  component work specific [0.72] label [-29, 20]
+  component none [0.78] label [23, 1]
 }
 uni -> alumni
 "masters, phd+" -> alumni
 Post compulsary -> Business
 Post compulsary -> Work actions
 
-component choice [0.35, 0.36]
+component choice [0.35, 0.36] label [-52, 5]
 choice -> agency
 choice -> School
 
-component initial agency [0.27, 0.51]
+component initial agency [0.27, 0.51] label [14, -3]
 initial agency -> Post compulsary
 
-component awareness [0.24, 0.38]
+component awareness [0.24, 0.38] label [-51, 18]
 awareness -> Social affordances
 awareness -> choice
 
-component social norms [0.26, 0.77]
+component social norms [0.26, 0.77] label [11, 4]
 
-component skills training [0.43, 0.36]
+component skills training [0.43, 0.36] label [-70, -21]
 skills training -> problem solving
 skills training -> individuals
 
-component social capital [0.06, 0.27]
-component real life experience [0.06, 0.61]
+component social capital [0.06, 0.27] label [-89, 7]
+component real life experience [0.06, 0.61] label [-9, -7]
 
-component Social affordances [0.19, 0.45]
-component patronage [0.05, 0.55]
-component investment funds [0.11, 0.69]
-component natural ability [0.08, 0.43]
-component family [0.09, 0.63]
-component hope [0.09, 0.39]
+component Social affordances [0.19, 0.45] label [-35, -36]
+component patronage [0.05, 0.55] label [-30, 20]
+component investment funds [0.11, 0.69] label [2, -19]
+component natural ability [0.08, 0.43] label [-41, 13]
+component family [0.09, 0.63] label [13, 7]
+component hope [0.09, 0.39] label [-37, 18]
 Social affordances -> individuals
 Social affordances -> hope
 Social affordances -> initial agency
@@ -115,12 +115,12 @@ natural ability -> Social affordances
 investment funds -> Social affordances
 patronage -> Social affordances
 
-component individuals choice [0.10, 0.20]
+component individuals choice [0.10, 0.20] label [-72, -16]
 individuals choice -> Social affordances
-component high school [0.25, 0.69]
+component high school [0.25, 0.69] label [-27, -17]
 component primary school [0.16, 0.75]
 
-component shocks [0.06, 0.49]
+component shocks [0.06, 0.49] label [-25, 19]
 shocks -> Social affordances
 
 rules and rulers -> blue collar

@@ -4,74 +4,74 @@ title twitter
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component user [0.98, 0.70]
-component twitter [0.98, 0.52]
-component advertisers [0.98, 0.66]
-component regulators [0.98, 0.58]
-component device [0.95, 0.72]
+component user [0.98, 0.70] label [1, -15]
+component twitter [0.98, 0.52] label [-40, -17]
+component advertisers [0.98, 0.66] label [-49, -15]
+component regulators [0.98, 0.58] label [-46, -16]
+component device [0.95, 0.72] label [18, 5]
 
-component adverts [0.96, 0.68]
+component adverts [0.96, 0.68] label [-61, 4]
 
-component front_end [0.91, 0.65]
-component brand [0.88, 0.55]
+component front_end [0.91, 0.65] label [-89, 0]
+component brand [0.88, 0.55] label [-48, 7]
 
-component network_access [0.87, 0.71]
+component network_access [0.87, 0.71] label [10, -10]
 pipeline network_access {
-  component mobile [0.7]
-  component web [0.72]
+  component mobile [0.7] label [-60, 7]
+  component web [0.72] label [18, 2]
 }
 
-component protocol [0.79, 0.72]
+component protocol [0.79, 0.72] label [-62, -15]
 pipeline protocol {
-  component graphQL [0.7]
-  component "TLS-API" [0.73]
+  component graphQL [0.7] label [-66, 1]
+  component "TLS-API" [0.73] label [20, 4]
 }
 
-component timeline_mixer_(Control) [0.70, 0.68]
+component timeline_mixer_(Control) [0.70, 0.68] label [-115, -21]
 pipeline timeline_mixer_(Control) {
-  component conversation module [0.64]
-  component recommendation [0.67]
-  component dedup [0.71]
-  component pagination [0.73]
-  component ad_injector [0.75]
-  component data_logging [0.77]
+  component conversation module [0.64] label [-96, -12]
+  component recommendation [0.67] label [-64, 25]
+  component dedup [0.71] label [-1, 22]
+  component pagination [0.73] label [-45, -20]
+  component ad_injector [0.75] label [8, -10]
+  component data_logging [0.77] label [17, 7]
 }
 
-component home_mixer_(Control) [0.57, 0.59]
+component home_mixer_(Control) [0.57, 0.59] label [-109, -24]
 
-component backend components [0.50, 0.63]
+component backend components [0.50, 0.63] label [-34, -41]
 pipeline backend components {
-  component home ranker [0.5]
-  component timeline service [0.57]
-  component timeline scorer [0.61]
-  component people discovery [0.66]
-  component onboarding [0.68]
-  component admixer [0.7]
+  component home ranker [0.5] label [-94, 0]
+  component timeline service [0.57] label [-42, 20]
+  component timeline scorer [0.61] label [-21, 20]
+  component people discovery [0.66] label [12, 15]
+  component onboarding [0.68] label [-37, -20]
+  component admixer [0.7] label [24, 2]
 }
-component home_score [0.37, 0.57]
-component candidate_fetch [0.36, 0.63]
+component home_score [0.37, 0.57] label [-87, 7]
+component candidate_fetch [0.36, 0.63] label [9, -23]
 
-component business_process [0.28, 0.57]
+component business_process [0.28, 0.57] label [-58, -28]
 pipeline business_process {
-  component prediction_service [0.52]
-  component feature hydration [0.64]
-  component crMixer [0.66]
-  component earlyBird [0.68]
-  component Uteg [0.7]
-  component commissioning [0.72]
-  component space [0.74]
+  component prediction_service [0.52] label [-112, -9]
+  component feature hydration [0.64] label [-53, 8]
+  component crMixer [0.66] label [-19, -19]
+  component earlyBird [0.68] label [-23, 25]
+  component Uteg [0.7] label [-15, -19]
+  component commissioning [0.72] label [-6, -18]
+  component space [0.74] label [-20, 26]
 }
 
-component foundational components [0.15, 0.59]
+component foundational components [0.15, 0.59] label [-71, -37]
 pipeline foundational components {
-  component gizmoduck [0.58]
-  component manhattan [0.64]
-  component tweety pie [0.67]
-  component social graph [0.7]
-  component memcache [0.72]
+  component gizmoduck [0.58] label [-90, 0]
+  component manhattan [0.64] label [-36, -14]
+  component tweety pie [0.67] label [-5, -22]
+  component social graph [0.7] label [-30, 24]
+  component memcache [0.72] label [19, 2]
 }
 
-component infrastructure [0.04, 0.70]
+component infrastructure [0.04, 0.70] label [8, 2]
 
 user -> device
 device -> front_end

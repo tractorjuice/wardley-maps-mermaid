@@ -13,58 +13,58 @@ note "+marketing" [0.02, 0.03]
 note "+NGO" [0.06, 0.03]
 note "+standards" [0.04, 0.03]
 
-component lobbying [0.66, 0.36]
-component corporate [0.96, 0.67]
-component government [0.90, 0.71]
-component citizen [0.80, 0.75]
-component society [0.94, 0.62]
+component lobbying [0.66, 0.36] label [-29, -16]
+component corporate [0.96, 0.67] label [13, 0]
+component government [0.90, 0.71] label [-17, -17]
+component citizen [0.80, 0.75] label [16, 6]
+component society [0.94, 0.62] label [-50, -13]
 
-component bad actor [0.94, 0.44]
+component bad actor [0.94, 0.44] label [-69, -6]
 
-component bad action [0.88, 0.38]
+component bad action [0.88, 0.38] label [-83, -8]
 pipeline bad action {
-  component exploitation [0.3]
-  component corruption [0.43]
-  component theft [0.49]
+  component exploitation [0.3] label [-66, 23]
+  component corruption [0.43] label [-32, 19]
+  component theft [0.49] label [-15, 23]
 }
 
-component sustainability [0.90, 0.53]
+component sustainability [0.90, 0.53] label [-61, -12]
 
-component trust [0.08, 0.68]
+component trust [0.08, 0.68] label [-52, -1]
 pipeline trust {
-  component competence [0.56]
-  component speed [0.57]
-  component integrity [0.66]
-  component benevolence [0.72]
+  component competence [0.56] label [-45, 25]
+  component speed [0.57] label [7, 2]
+  component integrity [0.66] label [-34, 23]
+  component benevolence [0.72] label [-7, 21]
 }
 
-component value [0.47, 0.36]
-component authority [0.75, 0.64]
-component power [0.69, 0.64]
+component value [0.47, 0.36] label [-32, -12]
+component authority [0.75, 0.64] label [-68, -10]
+component power [0.69, 0.64] label [-45, -12]
 pipeline power {
-  component power over [0.56]
-  component power with [0.68]
+  component power over [0.56] label [-49, 22]
+  component power with [0.68] label [-36, 29]
 }
 
-component control [0.46, 0.62]
+component control [0.46, 0.62] label [-64, -4]
 pipeline control {
-  component principle [0.45]
-  component rules [0.75]
+  component principle [0.45] label [-9, 22]
+  component rules [0.75] label [-9, 24]
 }
 
-component accountability [0.28, 0.62]
+component accountability [0.28, 0.62] label [-108, -5]
 pipeline accountability {
-  component legal norms [0.57]
-  component economic norms [0.64]
-  component social norm [0.72]
+  component legal norms [0.57] label [-71, 23]
+  component economic norms [0.64] label [-37, 21]
+  component social norm [0.72] label [-6, 22]
 }
-component transparency [0.12, 0.52]
-component beneficial ownership [0.05, 0.41]
-component legislation [0.53, 0.28]
+component transparency [0.12, 0.52] label [-93, 1]
+component beneficial ownership [0.05, 0.41] label [-90, -17]
+component legislation [0.53, 0.28] label [-92, 4]
 
-component structure [0.31, 0.36]
+component structure [0.31, 0.36] label [-91, 11]
 
-component capital [0.59, 0.55]
+component capital [0.59, 0.55] label [-61, -7]
 
 accountability -> speed
 accountability -> transparency

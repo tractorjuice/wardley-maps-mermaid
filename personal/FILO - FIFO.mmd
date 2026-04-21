@@ -4,16 +4,16 @@ size [1100, 800]
 component app [0.88, 0.62]
 component FIFO [0.73, 0.73]
 pipeline FIFO {
-  component "swardley's SNS" [0.24]
-  component AWS SNS [0.71]
+  component "swardley's SNS" [0.24] label [-64, 29]
+  component AWS SNS [0.71] label [-28, 31]
 }
 
 evolve "swardley's SNS" 0.42
 app -> AWS SNS
 
-component FILO [0.46, 0.73]
+component FILO [0.46, 0.73] label [0, -18]
 pipeline FILO {
-  component AWS SNS (FILO) [0.71]
+  component AWS SNS (FILO) [0.71] label [-32, 36]
 }
 
 AWS SNS (FILO) -> app

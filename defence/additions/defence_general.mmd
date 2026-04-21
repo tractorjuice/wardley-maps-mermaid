@@ -3,52 +3,52 @@ title defence - general
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component government [0.96, 0.65]
-component society [0.94, 0.67]
-component citizen [0.90, 0.71]
+component government [0.96, 0.65] label [-29, -9]
+component society [0.94, 0.67] label [11, 2]
+component citizen [0.90, 0.71] label [8, 3]
 
-component legitimacy [0.92, 0.58]
-component trust [0.74, 0.55]
+component legitimacy [0.92, 0.58] label [-84, -2]
+component trust [0.74, 0.55] label [-42, -3]
 pipeline trust {
-  component benevolence [0.42]
-  component competence [0.5]
-  component integrity [0.57]
+  component benevolence [0.42] label [-97, 4]
+  component competence [0.5] label [-42, 20]
+  component integrity [0.57] label [14, 4]
 }
-component belonging [0.83, 0.64]
-component norms [0.90, 0.63]
-component success [0.65, 0.73]
-component appearance of success [0.74, 0.73]
-component sovereignty [0.58, 0.69]
+component belonging [0.83, 0.64] label [18, 4]
+component norms [0.90, 0.63] label [12, 9]
+component success [0.65, 0.73] label [7, 3]
+component appearance of success [0.74, 0.73] label [8, -22]
+component sovereignty [0.58, 0.69] label [0, -12]
 pipeline sovereignty {
-  component digital [0.46]
-  component economic [0.53]
-  component political [0.62]
-  component cultural [0.67]
-  component physical [0.75]
+  component digital [0.46] label [-71, 3]
+  component economic [0.53] label [-21, 22]
+  component political [0.62] label [-45, 24]
+  component cultural [0.67] label [-24, 22]
+  component physical [0.75] label [17, 7]
 }
 
-component theatre [0.41, 0.63]
+component theatre [0.41, 0.63] label [-43, -10]
 pipeline theatre {
-  component economy [0.34]
-  component space [0.48]
-  component cyber [0.53]
-  component art [0.57]
-  component critical national infrastructure [0.66]
-  component air [0.69]
-  component sea [0.71]
-  component land [0.73]
+  component economy [0.34] label [-43, 21]
+  component space [0.48] label [-7, 21]
+  component cyber [0.53] label [-20, 21]
+  component art [0.57] label [-11, 20]
+  component critical national infrastructure [0.66] label [-45, 12]
+  component air [0.69] label [-15, -20]
+  component sea [0.71] label [-10, 19]
+  component land [0.73] label [15, 5]
 }
-component landscape [0.09, 0.56]
+component landscape [0.09, 0.56] label [-73, -9]
 pipeline landscape {
-  component supply chain [0.38]
-  component territory [0.7]
+  component supply chain [0.38] label [-110, 6]
+  component territory [0.7] label [18, 2]
 }
 
-component CNI [0.24, 0.65]
+component CNI [0.24, 0.65] label [-29, -6]
 pipeline CNI {
-  component telecoms [0.6]
-  component energy [0.66]
-  component food [0.72]
+  component telecoms [0.6] label [-78, 4]
+  component energy [0.66] label [-18, 21]
+  component food [0.72] label [20, 7]
 }
 
 government -> society

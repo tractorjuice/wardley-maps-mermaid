@@ -7,62 +7,62 @@ anchor individuals [0.93, 0.26]
 anchor government [0.93, 0.66]
 anchor business [0.93, 0.44]
 
-component Safety [0.81, 0.29]
-component Competitive advantage [0.83, 0.52]
-component Reputation [0.82, 0.38]
+component Safety [0.81, 0.29] label [-55, -3]
+component Competitive advantage [0.83, 0.52] label [25, -6]
+component Reputation [0.82, 0.38] label [12, 10]
 
-component Power [0.84, 0.76]
-component Enforcement [0.43, 0.04]
-component Regulations [0.43, 0.14]
+component Power [0.84, 0.76] label [13, 6]
+component Enforcement [0.43, 0.04] label [-36, 18]
+component Regulations [0.43, 0.14] label [-40, 18]
 
-component OUTPUT [0.43, 0.70]
+component OUTPUT [0.43, 0.70] label [-6, -12]
 pipeline OUTPUT {
-  component Believed [0.59]
-  component Objectively evaluatable [0.79]
+  component Believed [0.59] label [-38, -23]
+  component Objectively evaluatable [0.79] label [32, -10]
 }
 
-component "Algorithm / Model" [0.58, 0.61]
-component Policy [0.53, 0.09]
+component "Algorithm / Model" [0.58, 0.61] label [21, -9]
+component Policy [0.53, 0.09] label [-53, 2]
 
 component DATA [0.20, 0.70]
 pipeline DATA {
-  component Input  DATA [0.61]
-  component Training [0.79]
+  component Input  DATA [0.61] label [-34, 27]
+  component Training [0.79] label [-24, 27]
 }
-component ACCESS [0.68, 0.30]
+component ACCESS [0.68, 0.30] label [-24, -12]
 pipeline ACCESS {
-  component Transparency [0.21]
-  component Asymmetrical [0.22]
-  component Defend (IP) [0.39]
+  component Transparency [0.21] label [-78, 23]
+  component Asymmetrical [0.22] label [-94, 4]
+  component Defend (IP) [0.39] label [5, 24]
 }
 
-component Bias [0.06, 0.65]
+component Bias [0.06, 0.65] label [-14, 20]
 
-component Quality [0.10, 0.46]
+component Quality [0.10, 0.46] label [-25, -11]
 
-component CONTROLS [0.29, 0.15]
+component CONTROLS [0.29, 0.15] label [-41, -12]
 pipeline CONTROLS {
-  component Leading [0.11]
-  component Lagging [0.19]
+  component Leading [0.11] label [-70, -1]
+  component Lagging [0.19] label [-1, 24]
 }
 
-component Computation [0.05, 0.75]
+component Computation [0.05, 0.75] label [-39, 20]
 
-component Feedback Loop [0.11, 0.05]
+component Feedback Loop [0.11, 0.05] label [-38, 18]
 
-component constitution [0.22, 0.03]
+component constitution [0.22, 0.03] label [-20, 17]
 
-component "Ranking (Reputation Engine / Trust Broker)" [0.30, 0.35]
+component "Ranking (Reputation Engine / Trust Broker)" [0.30, 0.35] label [17, -7]
 
-component Checks and balances (Guardrails) [0.16, 0.31]
+component Checks and balances (Guardrails) [0.16, 0.31] label [-27, 9]
 
-component Forensics [0.15, 0.13]
+component Forensics [0.15, 0.13] label [-33, 19]
 
-component Audits [0.10, 0.17]
-component Benchmarks [0.04, 0.37]
+component Audits [0.10, 0.17] label [0, 20]
+component Benchmarks [0.04, 0.37] label [-37, 18]
 
-component Technologists [0.04, 0.18]
-component Source [0.07, 0.55]
+component Technologists [0.04, 0.18] label [-41, 19]
+component Source [0.07, 0.55] label [-22, 19]
 
 Reputation -> CONTROLS
 Transparency -> Whitehat Developer
@@ -115,7 +115,7 @@ Power -> Shared Responsibilities
 
 note "+Speed:human->computation" [0.17, 0.01]
 
-component Computation language [0.24, 0.28]
+component Computation language [0.24, 0.28] label [-5, 10]
 
 evolve Forensics 0.2
 evolve Regulations 0.3

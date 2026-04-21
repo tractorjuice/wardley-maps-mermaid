@@ -6,42 +6,42 @@ note "We map to how things are in the market not how we would like them to be" [
 
 anchor Society [1.00, 0.51]
 
-component security [0.06, 0.49]
-component land [0.12, 0.44]
-component habitable living [0.19, 0.50]
+component security [0.06, 0.49] label [-58, 3]
+component land [0.12, 0.44] label [12, 5]
+component habitable living [0.19, 0.50] label [8, -30]
 pipeline habitable living {
-  component "thriving living?" [0.21]
-  component care [0.25]
-  component basic needs met [0.6]
-  component survival living [0.66]
-  component clean water [0.74]
-  component not survivable living [0.79]
+  component "thriving living?" [0.21] label [-73, -19]
+  component care [0.25] label [-38, -1]
+  component basic needs met [0.6] label [-35, -58]
+  component survival living [0.66] label [-14, -44]
+  component clean water [0.74] label [12, 9]
+  component not survivable living [0.79] label [16, -23]
 }
-component communities [0.90, 0.55]
-component stabilised climate [0.12, 0.37]
-component ecosystem [0.07, 0.72]
+component communities [0.90, 0.55] label [10, -5]
+component stabilised climate [0.12, 0.37] label [-3, 10]
+component ecosystem [0.07, 0.72] label [23, 4]
 
-component social stability [0.79, 0.38]
+component social stability [0.79, 0.38] label [-62, -20]
 social stability -> security services
 social stability -> social capital
 social stability -> financial capital
 communities -> social stability
 
-component reserves [0.09, 0.24]
-component surplus [0.13, 0.31]
+component reserves [0.09, 0.24] label [-62, 5]
+component surplus [0.13, 0.31] label [12, 6]
 
-component governance [0.98, 0.40]
+component governance [0.98, 0.40] label [-37, -11]
 pipeline governance {
-  component constitution [0.31]
+  component constitution [0.31] label [-52, -19]
 }
 
-component institutions [0.37, 0.49]
+component institutions [0.37, 0.49] label [-42, -14]
 pipeline institutions {
-  component security services [0.34]
-  component access control [0.39]
-  component capital rules [0.45]
-  component rights [0.55]
-  component bureaucracy [0.64]
+  component security services [0.34] label [-52, -41]
+  component access control [0.39] label [-83, 26]
+  component capital rules [0.45] label [8, 23]
+  component rights [0.55] label [-16, -19]
+  component bureaucracy [0.64] label [-36, 29]
 }
 
 governance -> rights
@@ -50,36 +50,36 @@ rights -> healthcare
 governance -> bureaucracy
 governance -> institutions
 
-component forms of capital [0.61, 0.64]
+component forms of capital [0.61, 0.64] label [-3, -48]
 pipeline forms of capital {
-  component social capital [0.53]
-  component knowledge capital [0.59]
-  component time capital [0.67]
-  component financial capital [0.74]
-  component material resources [0.79]
+  component social capital [0.53] label [-33, -21]
+  component knowledge capital [0.59] label [-29, 20]
+  component time capital [0.67] label [-25, 25]
+  component financial capital [0.74] label [-25, 14]
+  component material resources [0.79] label [-42, -41]
   component natural capital [0.84]
 }
 
 individuals -> forms of capital
 communities -> forms of capital
 
-component "capital exchange/market" [0.48, 0.44]
+component "capital exchange/market" [0.48, 0.44] label [-93, -18]
 forms of capital -> "capital exchange/market"
 "capital exchange/market" -> capital rules
 
-component belonging [0.78, 0.57]
-component shared interests [0.82, 0.66]
-component social norms [0.64, 0.24]
+component belonging [0.78, 0.57] label [-35, 25]
+component shared interests [0.82, 0.66] label [-19, 11]
+component social norms [0.64, 0.24] label [-93, 11]
 
-component "contentment?" [0.72, 0.09]
-component "happiness?" [0.76, 0.09]
+component "contentment?" [0.72, 0.09] label [-89, 5]
+component "happiness?" [0.76, 0.09] label [-83, 5]
 
-component food [0.11, 0.61]
-component clean air [0.13, 0.67]
+component food [0.11, 0.61] label [-39, 9]
+component clean air [0.13, 0.67] label [-47, 16]
 
-component wellbeing [0.28, 0.39]
+component wellbeing [0.28, 0.39] label [-66, 3]
 
-component individuals [0.88, 0.30]
+component individuals [0.88, 0.30] label [-71, 0]
 wellbeing -> habitable living
 communities -> individuals
 individuals -> wellbeing

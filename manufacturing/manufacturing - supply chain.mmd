@@ -4,81 +4,81 @@ size [1100, 800]
 
 evolution genesis / concept -> custom / emerging -> PRODUCT/ converging -> commodity / accepted
 
-component PRODUCT [0.87, 0.64]
+component PRODUCT [0.87, 0.64] label [-60, 3]
 
-component sales forecasting [0.82, 0.62]
+component sales forecasting [0.82, 0.62] label [-58, -6]
 
-component R&D [0.51, 0.22]
+component R&D [0.51, 0.22] label [-35, 5]
 agility -> prototype
 
-component EQUIPMENT [0.67, 0.61]
+component EQUIPMENT [0.67, 0.61] label [-60, -10]
 
-component government [0.93, 0.56]
-component manufacturer [0.95, 0.65]
-component REGULATION [0.65, 0.47]
+component government [0.93, 0.56] label [-29, -15]
+component manufacturer [0.95, 0.65] label [9, -6]
+component REGULATION [0.65, 0.47] label [-78, -10]
 pipeline REGULATION {
-  component lobbying [0.38]
-  component compliance [0.53]
+  component lobbying [0.38] label [-54, -20]
+  component compliance [0.53] label [-36, -20]
 }
-component safety [0.87, 0.55]
-component distributor [0.92, 0.48]
-component IP [0.74, 0.49]
+component safety [0.87, 0.55] label [-51, 4]
+component distributor [0.92, 0.48] label [-54, -12]
+component IP [0.74, 0.49] label [-21, -5]
 pipeline IP {
-  component prototype [0.19]
-  component trial [0.34]
-  component design [0.42]
-  component relationships [0.53]
+  component prototype [0.19] label [-83, 8]
+  component trial [0.34] label [-15, -21]
+  component design [0.42] label [-33, -19]
+  component relationships [0.53] label [18, 1]
 }
-component MATERIALS [0.58, 0.63]
+component MATERIALS [0.58, 0.63] label [-73, -8]
 pipeline MATERIALS {
-  component novel [0.41]
-  component branded [0.5]
-  component refined [0.69]
-  component raw [0.75]
+  component novel [0.41] label [-32, 29]
+  component branded [0.5] label [-32, -20]
+  component refined [0.69] label [-11, -19]
+  component raw [0.75] label [18, 9]
 }
 
-component SUPPLY CHAIN [0.44, 0.62]
+component SUPPLY CHAIN [0.44, 0.62] label [9, -4]
 
-component agility [0.81, 0.33]
-component METRICS [0.10, 0.43]
+component agility [0.81, 0.33] label [-64, 1]
+component METRICS [0.10, 0.43] label [-64, 7]
 
-component visibility [0.31, 0.30]
+component visibility [0.31, 0.30] label [-89, 5]
 
-component AWARENESS [0.67, 0.28]
+component AWARENESS [0.67, 0.28] label [-72, 3]
 visibility -> AWARENESS
 AWARENESS -> SUPPLY CHAIN
 R&D -> SUPPLY CHAIN
-component certification [0.51, 0.70]
+component certification [0.51, 0.70] label [10, 4]
 
-component reliability [0.78, 0.70]
-component INVENTORY MANAGEMENT [0.33, 0.64]
+component reliability [0.78, 0.70] label [-33, 21]
+component INVENTORY MANAGEMENT [0.33, 0.64] label [12, -31]
 pipeline INVENTORY MANAGEMENT {
-  component just in case [0.52]
-  component just in time [0.69]
+  component just in case [0.52] label [-102, 8]
+  component just in time [0.69] label [12, 4]
 }
 
-component warehousing [0.26, 0.66]
-component cost [0.76, 0.78]
-component forecasting [0.36, 0.44]
-component LOGISTICS [0.21, 0.60]
+component warehousing [0.26, 0.66] label [12, 1]
+component cost [0.76, 0.78] label [8, 3]
+component forecasting [0.36, 0.44] label [-91, 6]
+component LOGISTICS [0.21, 0.60] label [-72, -7]
 pipeline LOGISTICS {
-  component automation [0.27]
-  component rate of change [0.41]
-  component clipboard [0.67]
+  component automation [0.27] label [-93, 0]
+  component rate of change [0.41] label [-16, -17]
+  component clipboard [0.67] label [15, 3]
 }
 
 visibility -> rate of change
 rate of change -> METRICS
-component data [0.02, 0.66]
-component ROCE [0.91, 0.72]
+component data [0.02, 0.66] label [11, 1]
+component ROCE [0.91, 0.72] label [8, -3]
 
-component ENERGY [0.39, 0.70]
+component ENERGY [0.39, 0.70] label [13, 8]
 
-component CNI [0.76, 0.57]
+component CNI [0.76, 0.57] label [8, 2]
 
-component capital [0.85, 0.78]
+component capital [0.85, 0.78] label [10, 4]
 
-component authority [0.49, 0.51]
+component authority [0.49, 0.51] label [-71, 2]
 
 manufacturer -> agility
 manufacturer -> reliability

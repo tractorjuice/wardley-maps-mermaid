@@ -3,72 +3,72 @@ title sustainability from a complexity perspective
 size [1100, 800]
 
 component organization [0.96, 0.35]
-component institutional environments [0.96, 0.61]
-component "macro-social phenomena" [0.72, 0.56]
+component institutional environments [0.96, 0.61] label [19, -6]
+component "macro-social phenomena" [0.72, 0.56] label [-30, 10]
 "macro-social phenomena" -> assessment
 "macro-social phenomena" -> organizational cultural patterns
-component finanace [0.87, 0.53]
+component finanace [0.87, 0.53] label [-11, 21]
 
-component primary work system [0.83, 0.37]
+component primary work system [0.83, 0.37] label [0, -18]
 organization -> primary work system
-component sustainability [0.87, 0.32]
+component sustainability [0.87, 0.32] label [-38, 18]
 organization -> sustainability
-component interventions [0.80, 0.31]
+component interventions [0.80, 0.31] label [-38, -7]
 sustainability -> interventions
 sustainability -> primary work system
 sustainability -> finanace
-component production system [0.74, 0.36]
+component production system [0.74, 0.36] label [6, -14]
 interventions -> production system
 leadership -> interventions
 primary work system -> production system
-component innovating [0.69, 0.07]
+component innovating [0.69, 0.07] label [-36, 22]
 interventions -> innovating
-component representation [0.55, 0.37]
+component representation [0.55, 0.37] label [-27, -17]
 pipeline representation {
-  component energy return on energy invested [0.33]
-  component visualization [0.37]
+  component energy return on energy invested [0.33] label [-39, 10]
+  component visualization [0.37] label [-28, 25]
 }
-component understanding [0.69, 0.30]
+component understanding [0.69, 0.30] label [3, -10]
 interventions -> understanding
 interventions -> organizational cultural patterns
 interventions -> compliance
-component organizational cultural patterns [0.54, 0.17]
+component organizational cultural patterns [0.54, 0.17] label [-75, -46]
 pipeline organizational cultural patterns {
-  component Adaptive Ways of Working [0.1]
-  component Agility [0.13]
-  component Traditional Project Management [0.25]
+  component Adaptive Ways of Working [0.1] label [-61, -24]
+  component Agility [0.13] label [-12, 23]
+  component Traditional Project Management [0.25] label [-32, 5]
 }
 innovating -> organizational cultural patterns
-component measurement [0.27, 0.25]
+component measurement [0.27, 0.25] label [-69, -15]
 pipeline measurement {
-  component flow of value [0.16]
-  component identifying process waste [0.22]
-  component efficiency calculation [0.29]
-  component bench mark [0.35]
-  component environmental impact measurement [0.39]
+  component flow of value [0.16] label [-43, 26]
+  component identifying process waste [0.22] label [-14, 12]
+  component efficiency calculation [0.29] label [-7, 9]
+  component bench mark [0.35] label [-22, -13]
+  component environmental impact measurement [0.39] label [-6, 12]
 }
 
-component modelling [0.46, 0.42]
+component modelling [0.46, 0.42] label [5, -10]
 pipeline modelling {
-  component cynefin [0.36]
-  component digital twin [0.4]
+  component cynefin [0.36] label [-17, 24]
+  component digital twin [0.4] label [-30, 30]
 }
 representation -> modelling
 understanding -> modelling
 production system -> modelling
-component training and education [0.64, 0.24]
+component training and education [0.64, 0.24] label [-43, 5]
 understanding -> training and education
-component "market requirements" [0.41, 0.24]
+component "market requirements" [0.41, 0.24] label [-31, 10]
 
 understanding -> "market requirements"
-component assessment [0.58, 0.46]
-component cycle time [0.13, 0.11]
+component assessment [0.58, 0.46] label [1, 18]
+component cycle time [0.13, 0.11] label [16, 0]
 component lead time [0.10, 0.13]
 component throughput [0.09, 0.05]
-component variability of throughput [0.08, 0.16]
-component exogenous data [0.03, 0.03]
+component variability of throughput [0.08, 0.16] label [12, -18]
+component exogenous data [0.03, 0.03] label [-12, -11]
 
-component standards [0.66, 0.76]
+component standards [0.66, 0.76] label [19, -10]
 institutional environments -> standards
 standards -> measurement
 component data [0.06, 0.54]
@@ -78,24 +78,24 @@ understanding -> representation
 modelling -> measurement
 understanding -> assessment
 assessment -> modelling
-component leadership [0.82, 0.22]
+component leadership [0.82, 0.22] label [-69, -8]
 organization -> leadership
 leadership -> understanding
-component awareness [0.75, 0.14]
+component awareness [0.75, 0.14] label [-33, 23]
 leadership -> awareness
-component compliance [0.41, 0.58]
+component compliance [0.41, 0.58] label [14, -4]
 pipeline compliance {
-  component product compliance [0.51]
-  component company industry specific data [0.55]
-  component trade compliance [0.6]
-  component ESG compliance (GSCDDA) [0.64]
+  component product compliance [0.51] label [-50, 14]
+  component company industry specific data [0.55] label [-28, 15]
+  component trade compliance [0.6] label [-25, 15]
+  component ESG compliance (GSCDDA) [0.64] label [3, 4]
 }
 standards -> compliance
 organization -> compliance
-component reporting [0.30, 0.58]
+component reporting [0.30, 0.58] label [6, -4]
 pipeline reporting {
-  component "self-reporting" [0.46]
-  component certification [0.63]
+  component "self-reporting" [0.46] label [-20, 26]
+  component certification [0.63] label [-22, 26]
 }
 compliance -> reporting
 reporting -> measurement

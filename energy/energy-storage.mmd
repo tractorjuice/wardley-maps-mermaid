@@ -4,59 +4,59 @@ title ENERGY - electrical energy storage, APRIL 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component CONSUMER [0.99, 0.68]
+component CONSUMER [0.99, 0.68] label [-69, 3]
 
-component ACTIVITY [0.93, 0.68]
+component ACTIVITY [0.93, 0.68] label [-70, 5]
 
-component CONTROL [0.89, 0.73]
+component CONTROL [0.89, 0.73] label [10, 3]
 
-component GRID [0.80, 0.69]
+component GRID [0.80, 0.69] label [-41, -4]
 pipeline GRID {
-  component Distributed grid [0.35]
-  component ELECTRICITY [0.72]
-  component Traditional grid (single machine view) [0.8]
+  component Distributed grid [0.35] label [-70, -32]
+  component ELECTRICITY [0.72] label [12, 4]
+  component Traditional grid (single machine view) [0.8] label [22, -37]
 }
 
-component BATTERY (POWER) STORAGE [0.22, 0.60]
+component BATTERY (POWER) STORAGE [0.22, 0.60] label [-65, -41]
 pipeline BATTERY (POWER) STORAGE {
-  component hydrogen [0.41]
-  component hydro [0.51]
-  component electrical [0.71]
+  component hydrogen [0.41] label [-79, 2]
+  component hydro [0.51] label [-15, 25]
+  component electrical [0.71] label [18, 5]
 }
-component SCADA [0.63, 0.72]
+component SCADA [0.63, 0.72] label [-47, 3]
 
-component ENERGY PLATFORM [0.55, 0.65]
+component ENERGY PLATFORM [0.55, 0.65] label [-76, -28]
 pipeline ENERGY PLATFORM {
-  component "fast response (<1s)" [0.26]
-  component fast control system [0.31]
-  component spinning reserve [0.69]
+  component "fast response (<1s)" [0.26] label [-80, -29]
+  component fast control system [0.31] label [10, -24]
+  component spinning reserve [0.69] label [17, -6]
 }
 
-component MODEL OF CONTROL [0.70, 0.67]
+component MODEL OF CONTROL [0.70, 0.67] label [-65, -46]
 pipeline MODEL OF CONTROL {
-  component "Fault Tolerant (TCP/IP like)" [0.31]
-  component Auto Generation Control [0.79]
+  component "Fault Tolerant (TCP/IP like)" [0.31] label [-78, -49]
+  component Auto Generation Control [0.79] label [29, -7]
 }
 
-component GENERATION [0.13, 0.69]
+component GENERATION [0.13, 0.69] label [18, 4]
 
-component STOCKPILE [0.09, 0.64]
+component STOCKPILE [0.09, 0.64] label [-77, 4]
 
-component SOURCES [0.07, 0.69]
+component SOURCES [0.07, 0.69] label [17, 7]
 
-component MATERIAL_SUPPLY_CHAIN [0.02, 0.68]
+component MATERIAL_SUPPLY_CHAIN [0.02, 0.68] label [57, -5]
 
-component energy supply chain [0.28, 0.69]
-component awareness of chain [0.36, 0.32]
-component INTEGRATION [0.46, 0.52]
+component energy supply chain [0.28, 0.69] label [0, -24]
+component awareness of chain [0.36, 0.32] label [-68, -20]
+component INTEGRATION [0.46, 0.52] label [-35, -9]
 pipeline INTEGRATION {
-  component adaptive [0.34]
-  component "pre-approval (discovery)" [0.61]
+  component adaptive [0.34] label [-77, 3]
+  component "pre-approval (discovery)" [0.61] label [33, -7]
 }
 
-component plug and play [0.62, 0.25]
+component plug and play [0.62, 0.25] label [-105, 2]
 
-component "TCP/IP" [0.58, 0.76]
+component "TCP/IP" [0.58, 0.76] label [8, 4]
 evolve "Fault Tolerant (TCP/IP like)" 0.5
 
 government -> local community

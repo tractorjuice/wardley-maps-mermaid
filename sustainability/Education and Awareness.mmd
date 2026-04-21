@@ -5,46 +5,46 @@ size [1100, 800]
 anchor Producer [0.98, 0.46]
 anchor Consumer [0.98, 0.62]
 
-component Information [0.62, 0.54]
+component Information [0.62, 0.54] label [-71, -7]
 Society -> Information
 
 component Media [0.50, 0.65]
 component Community [0.23, 0.29]
 component Resources [0.41, 0.35]
-component Communications [0.47, 0.65]
-component Accountability [0.22, 0.42] (inertia)
-component Autonomy [0.24, 0.20]
-component Feedback [0.07, 0.35] (inertia)
-component Behavior [0.50, 0.38]
+component Communications [0.47, 0.65] label [-29, 20]
+component Accountability [0.22, 0.42] label [-30, 14] (inertia)
+component Autonomy [0.24, 0.20] label [-24, 15]
+component Feedback [0.07, 0.35] label [-50, 17] (inertia)
+component Behavior [0.50, 0.38] label [9, 10]
 component Values [0.72, 0.36] (inertia)
 component Roadmap [0.48, 0.81]
-component Critical Thinking [0.18, 0.33]
-component Trust [0.69, 0.34]
+component Critical Thinking [0.18, 0.33] label [-59, -6]
+component Trust [0.69, 0.34] label [-46, 5]
 component Sharing Lessons Learned [0.41, 0.60]
 component Leadership [0.42, 0.80]
 component Diversity [0.13, 0.40]
-component Coordination [0.33, 0.54]
+component Coordination [0.33, 0.54] label [-79, -9]
 pipeline Coordination {
-  component "Self-Organizing" [0.1]
-  component Funding [0.3]
-  component "Tools & Equipment" [0.42]
-  component Governance [0.77]
+  component "Self-Organizing" [0.1] label [-30, -29]
+  component Funding [0.3] label [-46, -13]
+  component "Tools & Equipment" [0.42] label [-6, -22]
+  component Governance [0.77] label [15, 1]
 }
-component "Product-Service" [0.90, 0.48]
+component "Product-Service" [0.90, 0.48] label [5, -20]
 pipeline "Product-Service" {
-  component Waste [0.21]
-  component Process [0.42]
-  component Renewable Resources [0.69]
+  component Waste [0.21] label [-54, -6]
+  component Process [0.42] label [6, -8]
+  component Renewable Resources [0.69] label [21, -12]
 }
-component Belief [0.74, 0.34]
+component Belief [0.74, 0.34] label [-47, -1]
 
-component Education [0.56, 0.48]
+component Education [0.56, 0.48] label [10, -1]
 pipeline Education {
-  component Elementary [0.3]
-  component Evidence [0.34]
-  component Higher [0.62]
-  component Data [0.64]
-  component Continuous [0.77]
+  component Elementary [0.3] label [-83, -2]
+  component Evidence [0.34] label [-70, 3]
+  component Higher [0.62] label [-49, 3]
+  component Data [0.64] label [16, 5]
+  component Continuous [0.77] label [24, 8]
 }
 
 Producer -> Education
@@ -97,8 +97,8 @@ evolve Critical Thinking 0.68
 
 component OWNER [0.81, 0.49]
 pipeline OWNER {
-  component Private [0.43]
-  component Public [0.73]
+  component Private [0.43] label [-39, 19]
+  component Public [0.73] label [10, 4]
 }
 Public -> Coordination
 "Self-Organizing" -> Community

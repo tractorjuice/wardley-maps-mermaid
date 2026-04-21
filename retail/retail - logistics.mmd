@@ -4,68 +4,68 @@ size [1100, 800]
 
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component consumer [0.98, 0.65]
-component producer [0.52, 0.46]
-component GOOD [0.91, 0.65]
+component consumer [0.98, 0.65] label [-10, -13]
+component producer [0.52, 0.46] label [-8, -14]
+component GOOD [0.91, 0.65] label [-41, 2]
 
-component VEHICLE [0.24, 0.68]
+component VEHICLE [0.24, 0.68] label [-55, -9]
 pipeline VEHICLE {
-  component autotrucks [0.51]
-  component drone [0.56]
-  component ship [0.7]
-  component trucks [0.72]
+  component autotrucks [0.51] label [-1, -18]
+  component drone [0.56] label [-15, 21]
+  component ship [0.7] label [-19, 24]
+  component trucks [0.72] label [6, -15]
 }
 
-component labour [0.10, 0.79]
+component labour [0.10, 0.79] label [-4, 20]
 
-component sustainability [0.79, 0.44]
-component "2" [0.79, 0.21]
+component sustainability [0.79, 0.44] label [-25, -16]
+component "2" [0.79, 0.21] label [-3235, 627]
 evolve "2" 0.44
 
-component infrastructure [0.03, 0.67]
-component "4" [0.03, 0.42]
+component infrastructure [0.03, 0.67] label [10, 5]
+component "4" [0.03, 0.42] label [-3525, 57]
 evolve "4" 0.67
 note "+need to modernise (tech debt)" [0.04, 0.46]
 note "+market" [0.90, 0.35]
 note "+market" [0.77, 0.32]
 
-component INVENTORY MGMT [0.39, 0.62]
+component INVENTORY MGMT [0.39, 0.62] label [10, -9]
 pipeline INVENTORY MGMT {
-  component distributed [0.51]
-  component hub and spoke [0.7]
+  component distributed [0.51] label [-97, 4]
+  component hub and spoke [0.7] label [16, 3]
 }
-component LAST MILE OPTIONS [0.72, 0.70]
+component LAST MILE OPTIONS [0.72, 0.70] label [-5, -51]
 pipeline LAST MILE OPTIONS {
-  component autonomous [0.6]
-  component human [0.73]
+  component autonomous [0.6] label [-41, 28]
+  component human [0.73] label [19, 5]
 }
-component fuel [0.56, 0.78]
-component safety [0.64, 0.49]
-component tracking [0.61, 0.57]
-component LANDSCAPE [0.81, 0.62]
+component fuel [0.56, 0.78] label [9, 3]
+component safety [0.64, 0.49] label [-58, 1]
+component tracking [0.61, 0.57] label [7, 3]
+component LANDSCAPE [0.81, 0.62] label [-33, -13]
 pipeline LANDSCAPE {
-  component rural [0.55]
-  component urban [0.66]
-  component last mile [0.67]
+  component rural [0.55] label [-53, 2]
+  component urban [0.66] label [-17, 27]
+  component last mile [0.67] label [11, -2]
 }
 
-component STORAGE [0.53, 0.63]
+component STORAGE [0.53, 0.63] label [-32, -13]
 pipeline STORAGE {
-  component Kirb [0.57]
-  component Shop [0.68]
-  component warehouse [0.71]
+  component Kirb [0.57] label [-46, 0]
+  component Shop [0.68] label [-17, 19]
+  component warehouse [0.71] label [19, 5]
 }
-component convenience [0.89, 0.58]
+component convenience [0.89, 0.58] label [-22, 19]
 
-component supply chain [0.08, 0.63]
-component supply chain awareness [0.15, 0.44]
-component "3" [0.15, 0.19]
+component supply chain [0.08, 0.63] label [-48, -12]
+component supply chain awareness [0.15, 0.44] label [-85, -47]
+component "3" [0.15, 0.19] label [-3249, 146]
 evolve "3" 0.44
 note "+market" [0.16, 0.29]
 
 evolve drone 0.65
 
-component "1" [0.89, 0.33]
+component "1" [0.89, 0.33] label [-3403, 703]
 evolve "1" 0.58
 
 evolve autonomous 0.65

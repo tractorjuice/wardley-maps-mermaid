@@ -3,80 +3,80 @@ title TELECOMS - Sovereignty - OCT 2022
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component corporation [1.00, 0.57]
+component corporation [1.00, 0.57] label [-88, 6]
 
-component people [0.94, 0.69]
-component GOVERNMENT [1.00, 0.63]
-component COLLECTIVE [0.98, 0.67]
-component perception of success [0.92, 0.63]
-component LEGITIMACY [0.95, 0.60]
+component people [0.94, 0.69] label [12, 1]
+component GOVERNMENT [1.00, 0.63] label [-24, -13]
+component COLLECTIVE [0.98, 0.67] label [10, -4]
+component perception of success [0.92, 0.63] label [-1, -22]
+component LEGITIMACY [0.95, 0.60] label [-57, 20]
 
-component SOVEREIGNTY [0.86, 0.53]
+component SOVEREIGNTY [0.86, 0.53] label [-85, -5]
 pipeline SOVEREIGNTY {
-  component digital [0.33]
-  component economic [0.44]
-  component CNI [0.52]
-  component political [0.62]
-  component cultural [0.67]
-  component territorial [0.72]
+  component digital [0.33] label [-71, 3]
+  component economic [0.44] label [-33, 20]
+  component CNI [0.52] label [-8, 23]
+  component political [0.62] label [-49, 22]
+  component cultural [0.67] label [-26, 23]
+  component territorial [0.72] label [17, 1]
 }
 
-component ACCESS DEVICE [0.74, 0.70]
+component ACCESS DEVICE [0.74, 0.70] label [11, -4]
 pipeline ACCESS DEVICE {
-  component IoT [0.56]
-  component sat phone [0.6]
-  component COMMUNICATION [0.66]
-  component smartphone [0.66]
-  component computer [0.73]
-  component "radio/TV" [0.76]
+  component IoT [0.56] label [-38, 2]
+  component sat phone [0.6] label [-17, -17]
+  component COMMUNICATION [0.66] label [13, 2]
+  component smartphone [0.66] label [-57, 23]
+  component computer [0.73] label [-11, 20]
+  component "radio/TV" [0.76] label [15, 2]
 }
 evolve doves 0.72
 
-component ACCESS NETWORK [0.64, 0.73]
+component ACCESS NETWORK [0.64, 0.73] label [8, -8]
 pipeline ACCESS NETWORK {
-  component Mobile [0.68]
-  component Fixed [0.74]
+  component Mobile [0.68] label [-62, -1]
+  component Fixed [0.74] label [17, 3]
 }
-component launch vehicles [0.31, 0.65]
-component NETWORK EQPT [0.30, 0.51]
+component launch vehicles [0.31, 0.65] label [-41, 6]
+component NETWORK EQPT [0.30, 0.51] label [16, 6]
 
-component NETWORK TOPOLOGY [0.39, 0.64]
+component NETWORK TOPOLOGY [0.39, 0.64] label [-71, -30]
 pipeline NETWORK TOPOLOGY {
-  component cable [0.37]
-  component Towers [0.45]
-  component satellite [0.72]
+  component cable [0.37] label [-24, -21]
+  component Towers [0.45] label [-12, 23]
+  component satellite [0.72] label [17, 4]
 }
 evolve launch vehicles 0.72
 
 evolve "BACKHAUL/INTERNET CORE" 0.8
-component THEATRE [0.21, 0.50]
+component THEATRE [0.21, 0.50] label [-25, -13]
 pipeline THEATRE {
-  component "awareness of supply-chains" [0.35]
-  component doves [0.67]
-  component "awareness of land-sea-air-space" [0.7]
+  component "awareness of supply-chains" [0.35] label [-80, -19]
+  component doves [0.67] label [-43, 4]
+  component "awareness of land-sea-air-space" [0.7] label [24, -13]
 }
 
-component REALITY [0.09, 0.49]
+component REALITY [0.09, 0.49] label [-58, -4]
 pipeline REALITY {
-  component geography [0.31]
-  component information supply chain [0.59]
-  component physical supply chain [0.64]
-  component space [0.72]
+  component geography [0.31] label [-85, 2]
+  component information supply chain [0.59] label [-32, 9]
+  component physical supply chain [0.64] label [-19, -58]
+  component space [0.72] label [17, 4]
 }
-component Compute [0.19, 0.83]
-component Power [0.05, 0.84]
+component Compute [0.19, 0.83] label [12, 0]
+component Power [0.05, 0.84] label [16, 2]
 
 evolve "awareness of supply-chains" 0.50
 evolve freespace laser 0.8
 
-component CONTROL LAYER [0.55, 0.67]
+component CONTROL LAYER [0.55, 0.67] label [-93, -11]
 pipeline CONTROL LAYER {
-  component quantum network [0.19]
-  component NationStateFirewalls [0.44]
-  component DNSoverHTTPS [0.51]
-  component geofencing [0.56]
-  component peering [0.63]
-  component SIMS [0.73]
+  component quantum network [0.19] label [-74, -14]
+  component NationStateFirewalls [0.44] label [-33, 13]
+  component DNSoverHTTPS [0.51] label [-34, -20]
+  component geofencing [0.56] label [-39, 19]
+  component peering [0.63] label [-26, 18]
+  component SIMS [0.73] label [-9, 23]
 }
 evolve DNSoverHTTPS 0.70
 
@@ -105,9 +105,9 @@ COMMUNICATION -> ACCESS NETWORK
 ACCESS NETWORK -> Compute
 Compute -> Power
 CNI -> COMMUNICATION
-component Real estate [0.29, 0.31]
+component Real estate [0.29, 0.31] label [-95, 4]
 mobile -> Real estate
-component EXPERTISE [0.27, 0.46]
+component EXPERTISE [0.27, 0.46] label [-73, 1]
 Software -> EXPERTISE
 CNI -> "BACKHAUL/INTERNET CORE"
 "BACKHAUL/INTERNET CORE" -> Real estate

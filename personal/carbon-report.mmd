@@ -5,46 +5,46 @@ size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
 component user [0.97, 0.71]
-component application [0.82, 0.61]
+component application [0.82, 0.61] label [-48, -19]
 pipeline application {
-  component drone swarming control [0.31]
-  component payroll system [0.67]
-  component word processing [0.79]
+  component drone swarming control [0.31] label [-81, -12]
+  component payroll system [0.67] label [-47, 25]
+  component word processing [0.79] label [-20, 15]
 }
 
 evolve drone swarming control 0.4
 
-component ESG [0.95, 0.53]
+component ESG [0.95, 0.53] label [-37, -3]
 
-component runtime [0.60, 0.68]
+component runtime [0.60, 0.68] label [-48, 19]
 
 evolve runtime 0.75
 note "+serverless" [0.58, 0.77]
 note "+LAMP / .NET" [0.53, 0.61]
-component machine container [0.42, 0.71]
-component compute [0.20, 0.67]
-component operating system [0.47, 0.71]
+component machine container [0.42, 0.71] label [12, -12]
+component compute [0.20, 0.67] label [-65, -3]
+component operating system [0.47, 0.71] label [-73, -9]
 component data centre [0.05, 0.69]
 evolve compute 0.80
 note "+cloud IaaS" [0.17, 0.81]
 note "+servers" [0.18, 0.60]
 evolve devops 0.6
-component architectural practice [0.33, 0.66]
+component architectural practice [0.33, 0.66] label [-78, -41]
 pipeline architectural practice {
-  component devops [0.21]
-  component ITIL [0.76]
+  component devops [0.21] label [-52, 4]
+  component ITIL [0.76] label [19, -14]
 }
-component "1" [0.20, 0.81]
-component application architecture [0.70, 0.63]
+component "1" [0.20, 0.81] label [199, 174]
+component application architecture [0.70, 0.63] label [-90, -31]
 pipeline application architecture {
-  component finops [0.31]
-  component best coding practice [0.71]
+  component finops [0.31] label [-54, 14]
+  component best coding practice [0.71] label [21, -26]
 }
 evolve finops 0.4
-component "2" [0.60, 0.75]
+component "2" [0.60, 0.75] label [292, 423]
 
-component carbon [0.63, 0.47]
-component reporting [0.91, 0.39]
+component carbon [0.63, 0.47] label [-20, 16]
+component reporting [0.91, 0.39] label [-80, -2]
 
 note "+$" [0.11, 0.66]
 note "+$" [0.36, 0.69]

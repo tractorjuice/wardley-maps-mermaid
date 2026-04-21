@@ -9,58 +9,58 @@ note "+ complexity of diseases" [0.02, 0.84]
 note "+ access to technology??" [0.24, 0.59]
 
 component p [0.28, 0.60]
-component d [0.28, 0.7]
-component clinicians [0.92, 0.62]
-component AI model [0.73, 0.21]
+component d [0.28, 0.7] label [14, -5]
+component clinicians [0.92, 0.62] label [-31, -10]
+component AI model [0.73, 0.21] label [-70, 3]
 
-component transparency [0.08, 0.13]
+component transparency [0.08, 0.13] label [-63, 19]
 
 p -> AI diagnosis
 d -> AI diagnosis
 
 note "+ issues of bias?" [0.83, 0.15]
 
-component cofactors [0.58, 0.50]
+component cofactors [0.58, 0.50] label [-71, -8]
 pipeline cofactors {
-  component social determinants [0.38]
-  component comorbidity [0.56]
+  component social determinants [0.38] label [-68, -2]
+  component comorbidity [0.56] label [-45, 23]
 }
-component patients [0.95, 0.70]
-component minimise illness [0.82, 0.62]
+component patients [0.95, 0.70] label [3, -11]
+component minimise illness [0.82, 0.62] label [-69, -26]
 pipeline minimise illness {
-  component AI diagnosis [0.22]
-  component authority [0.41]
-  component preventative [0.51]
-  component diagnosis [0.66]
+  component AI diagnosis [0.22] label [-103, 3]
+  component authority [0.41] label [-77, -5]
+  component preventative [0.51] label [-59, -16]
+  component diagnosis [0.66] label [15, 7]
 }
-component Health [0.89, 0.68]
-component treatment package [0.70, 0.54]
+component Health [0.89, 0.68] label [10, 7]
+component treatment package [0.70, 0.54] label [-68, -28]
 pipeline treatment package {
-  component mental health [0.42]
-  component primary care [0.62]
+  component mental health [0.42] label [-111, 3]
+  component primary care [0.62] label [15, 3]
 }
-component data model [0.15, 0.38]
-component coding standards [0.12, 0.47]
-component codes of practice [0.06, 0.52]
-component intervention [0.49, 0.63]
+component data model [0.15, 0.38] label [-77, -6]
+component coding standards [0.12, 0.47] label [-25, -36]
+component codes of practice [0.06, 0.52] label [-4, -20]
+component intervention [0.49, 0.63] label [10, -6]
 pipeline intervention {
-  component surgery [0.42]
-  component medical software [0.51]
-  component medical devices [0.55]
-  component advice [0.61]
-  component medication [0.67]
+  component surgery [0.42] label [-61, 6]
+  component medical software [0.51] label [-48, 14]
+  component medical devices [0.55] label [-24, 14]
+  component advice [0.61] label [-19, 24]
+  component medication [0.67] label [17, 6]
 }
-component Healthcare Records [0.30, 0.39]
+component Healthcare Records [0.30, 0.39] label [-52, -36]
 pipeline Healthcare Records {
-  component verbal [0.3]
-  component paper [0.36]
-  component digital footprint [0.39]
-  component personal [0.41]
-  component EHR [0.43]
+  component verbal [0.3] label [-56, 3]
+  component paper [0.36] label [-40, 23]
+  component digital footprint [0.39] label [-37, 19]
+  component personal [0.41] label [1, 23]
+  component EHR [0.43] label [-7, -16]
 }
-component geography [0.03, 0.35]
-component payer [0.96, 0.55]
-component claim [0.91, 0.54]
+component geography [0.03, 0.35] label [-73, 2]
+component payer [0.96, 0.55] label [-45, 0]
+component claim [0.91, 0.54] label [-49, 1]
 
 evolve personal 0.60
 evolve digital footprint 0.7

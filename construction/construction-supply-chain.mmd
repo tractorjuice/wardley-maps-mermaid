@@ -3,78 +3,78 @@ title CONSTRUCTION - supply chain - MARCH, 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component government [1.00, 0.65]
-component HOMES [0.93, 0.73]
+component government [1.00, 0.65] label [-79, -3]
+component HOMES [0.93, 0.73] label [7, -3]
 pipeline HOMES {
-  component citizens [0.71]
-  component social [0.71]
-  component private [0.75]
+  component citizens [0.71] label [14, -6]
+  component social [0.71] label [-58, 4]
+  component private [0.75] label [16, 3]
 }
-component mortgage company [0.99, 0.53]
+component mortgage company [0.99, 0.53] label [-71, -15]
 
-component "BUILDING INSPECTORS" [0.84, 0.47]
+component "BUILDING INSPECTORS" [0.84, 0.47] label [-75, -18]
 
-component EQUIPMENT [0.73, 0.66]
-component "BUILDING MATERIALS" [0.63, 0.57]
+component EQUIPMENT [0.73, 0.66] label [0, -11]
+component "BUILDING MATERIALS" [0.63, 0.57] label [-66, -31]
 pipeline "BUILDING MATERIALS" {
-  component prefab [0.5]
-  component circular materials [0.54]
+  component prefab [0.5] label [-62, 4]
+  component circular materials [0.54] label [-22, 9]
 }
 
-component LABOUR [0.58, 0.66]
+component LABOUR [0.58, 0.66] label [5, -8]
 pipeline LABOUR {
-  component skilled [0.63]
-  component unskilled [0.72]
+  component skilled [0.63] label [-40, 21]
+  component unskilled [0.72] label [18, 2]
 }
 
-component certification [0.40, 0.57]
+component certification [0.40, 0.57] label [8, 5]
 
-component SKILLS [0.49, 0.62]
+component SKILLS [0.49, 0.62] label [7, -6]
 pipeline SKILLS {
-  component project management [0.46]
-  component machinery [0.56]
-  component trade [0.68]
+  component project management [0.46] label [-55, 15]
+  component machinery [0.56] label [-48, 20]
+  component trade [0.68] label [17, 6]
 }
 
 construction -> project management
 project management -> LOGISTICS
 
-component test driven development [0.06, 0.40]
-component stock [0.87, 0.71]
-component "market" [0.78, 0.77]
-component material supply chain [0.03, 0.70]
-component FINANCE [0.81, 0.69]
+component test driven development [0.06, 0.40] label [-60, -15]
+component stock [0.87, 0.71] label [8, 3]
+component "market" [0.78, 0.77] label [8, 4]
+component material supply chain [0.03, 0.70] label [-73, -19]
+component FINANCE [0.81, 0.69] label [7, 4]
 
-component construction [0.83, 0.64]
-component MANUFACTURE [0.19, 0.66]
+component construction [0.83, 0.64] label [-96, -1]
+component MANUFACTURE [0.19, 0.66] label [-88, -6]
 pipeline MANUFACTURE {
-  component benchmarks [0.43]
-  component factory mode (Inflight) [0.45]
-  component standards [0.58]
-  component EoL Inspection [0.71]
+  component benchmarks [0.43] label [-81, 4]
+  component factory mode (Inflight) [0.45] label [-76, -12]
+  component standards [0.58] label [8, 2]
+  component EoL Inspection [0.71] label [20, 4]
 }
 
-component MATERIALS [0.12, 0.58]
+component MATERIALS [0.12, 0.58] label [-76, -3]
 pipeline MATERIALS {
-  component recycled [0.45]
-  component raw [0.69]
+  component recycled [0.45] label [-25, 19]
+  component raw [0.69] label [21, 3]
 }
 
-component blueprint [0.79, 0.52]
-component planning permission [0.75, 0.41]
-component quality assurance [0.92, 0.46]
+component blueprint [0.79, 0.52] label [-7, 17]
+component planning permission [0.75, 0.41] label [-75, -27]
+component quality assurance [0.92, 0.46] label [-68, -32]
 
-component TESTING [0.34, 0.51]
+component TESTING [0.34, 0.51] label [-40, -13]
 pipeline TESTING {
-  component modular [0.46]
-  component "building codes" [0.59]
+  component modular [0.46] label [-69, 2]
+  component "building codes" [0.59] label [-6, -18]
 }
-component REGULATION [0.71, 0.52]
+component REGULATION [0.71, 0.52] label [-81, 15]
 
-component laws [0.66, 0.68]
-component land [0.73, 0.58]
+component laws [0.66, 0.68] label [5, 10]
+component land [0.73, 0.58] label [-41, 1]
 
-component waste materials [0.06, 0.70]
+component waste materials [0.06, 0.70] label [14, -15]
 
 recycled -> waste materials
 waste materials -> material supply chain
@@ -162,16 +162,16 @@ benchmarks -> standards
 prefab -> modular
 raw materialols -> material supply chain
 factory mode (Inflight) -> test driven development
-component LOGISTICS [0.54, 0.52]
+component LOGISTICS [0.54, 0.52] label [-22, 22]
 
-component DISTRIBUTORS [0.29, 0.64]
+component DISTRIBUTORS [0.29, 0.64] label [9, -4]
 pipeline DISTRIBUTORS {
-  component platform [0.42]
-  component integrated [0.49]
-  component traditional [0.71]
+  component platform [0.42] label [-79, 1]
+  component integrated [0.49] label [-25, 20]
+  component traditional [0.71] label [18, 3]
 }
 DISTRIBUTORS -> MANUFACTURE
-component Supply Chain Awareness [0.44, 0.25]
+component Supply Chain Awareness [0.44, 0.25] label [-63, -16]
 LOGISTICS -> "BUILDING MATERIALS"
 prefab -> LOGISTICS
 skilled -> LOGISTICS
@@ -180,14 +180,14 @@ project management -> Supply Chain Awareness
 LOGISTICS -> Supply Chain Awareness
 
 material supply chain -> Supply Chain Awareness
-component substitutability [0.55, 0.29]
+component substitutability [0.55, 0.29] label [-97, -11]
 Supply Chain Awareness -> substitutability
 blueprint -> Supply Chain Awareness
 blueprint -> substitutability
-component CNI [0.80, 0.26]
+component CNI [0.80, 0.26] label [-14, -10]
 government -> CNI
 CNI -> Supply Chain Awareness
 CNI -> skilled
-component locality [0.71, 0.29]
+component locality [0.71, 0.29] label [-13, 20]
 CNI -> locality
 

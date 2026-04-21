@@ -4,47 +4,47 @@ title Disruption in the energy industry
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component Secure Power System [0.77, 0.73]
-component Contingency Analysis [0.61, 0.73]
-component Short Circuit Analysis [0.56, 0.80]
-component System Models [0.31, 0.72]
+component Secure Power System [0.77, 0.73] label [5, -14]
+component Contingency Analysis [0.61, 0.73] label [-7, 16]
+component Short Circuit Analysis [0.56, 0.80] label [-3, -4]
+component System Models [0.31, 0.72] label [-37, 24]
 
 evolve "1" 0.72
 evolve "2" 0.48
 evolve "3" 0.48
 
-component state [0.45, 0.59]
+component state [0.45, 0.59] label [-28, -11]
 pipeline state {
-  component "2" [0.23]
-  component State Solution [0.23]
-  component storage [0.69]
-  component State Estimation [0.74]
+  component "2" [0.23] label [-305, 471]
+  component State Solution [0.23] label [-62, 25]
+  component storage [0.69] label [-51, 5]
+  component State Estimation [0.74] label [23, -18]
 }
 
-component renewable [0.81, 0.74]
-component intermitancy [0.61, 0.61]
-component microgrids [0.57, 0.65]
+component renewable [0.81, 0.74] label [5, -1]
+component intermitancy [0.61, 0.61] label [-78, -2]
+component microgrids [0.57, 0.65] label [-67, 22]
 component user [0.97, 0.69]
 
-component networks [0.09, 0.73]
+component networks [0.09, 0.73] label [15, 4]
 
-component measurer [0.22, 0.63]
+component measurer [0.22, 0.63] label [-58, -10]
 pipeline measurer {
-  component "1" [0.38]
-  component synchrophasor [0.73]
-  component SCADA [0.81]
+  component "1" [0.38] label [-578, 203]
+  component synchrophasor [0.73] label [-487, 28]
+  component SCADA [0.81] label [15, 2]
 }
 
-component secure power [0.90, 0.66]
+component secure power [0.90, 0.66] label [-53, -48]
 pipeline secure power {
-  component secure renewable [0.62]
+  component secure renewable [0.62] label [-79, -7]
 }
 
-component Architectural model [0.69, 0.67]
+component Architectural model [0.69, 0.67] label [-50, -34]
 pipeline Architectural model {
-  component "3" [0.41]
-  component chaos engines [0.41]
-  component "N+1" [0.7]
+  component "3" [0.41] label [-564, 606]
+  component chaos engines [0.41] label [-106, 1]
+  component "N+1" [0.7] label [-26, 26]
 }
 
 note "SCADA = 8 Bytes every 1-4 seconds per point (error bar +/- 1-3%)" [0.97, 0.04]

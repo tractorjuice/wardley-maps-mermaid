@@ -3,75 +3,75 @@ title DEFENCE - intelligence - MAR 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component OPERATIONAL DECISION [0.83, 0.65]
+component OPERATIONAL DECISION [0.83, 0.65] label [14, -26]
 pipeline OPERATIONAL DECISION {
-  component HOTL [0.55]
-  component HITL [0.7]
+  component HOTL [0.55] label [-49, 3]
+  component HITL [0.7] label [17, 6]
 }
 evolve HOTL 0.6
 
-component target discovery [0.77, 0.46]
+component target discovery [0.77, 0.46] label [-75, -9]
 
-component INTELLIGENCE GATHERING [0.73, 0.60]
+component INTELLIGENCE GATHERING [0.73, 0.60] label [19, -30]
 pipeline INTELLIGENCE GATHERING {
-  component OSINT [0.56]
-  component agency [0.69]
+  component OSINT [0.56] label [-23, 25]
+  component agency [0.69] label [19, 5]
 }
 
-component COLLECTORS [0.38, 0.65]
+component COLLECTORS [0.38, 0.65] label [-51, -20]
 pipeline COLLECTORS {
-  component social media [0.6]
-  component machine [0.63]
-  component public_data [0.67]
-  component people [0.71]
+  component social media [0.6] label [-110, 4]
+  component machine [0.63] label [-34, 24]
+  component public_data [0.67] label [-4, -18]
+  component people [0.71] label [17, 4]
 }
 
 component ANALYSIS [0.63, 0.61]
 pipeline ANALYSIS {
-  component crowdsourcing [0.46]
-  component AI [0.52]
-  component desk ANALYSIS [0.68]
+  component crowdsourcing [0.46] label [-114, 0]
+  component AI [0.52] label [0, -20]
+  component desk ANALYSIS [0.68] label [20, 2]
 }
-component data science [0.27, 0.58]
-component SOURCES [0.50, 0.65]
+component data science [0.27, 0.58] label [-99, 4]
+component SOURCES [0.50, 0.65] label [-34, -13]
 pipeline SOURCES {
-  component diversity [0.51]
-  component verified [0.69]
+  component diversity [0.51] label [-90, 2]
+  component verified [0.69] label [26, 5]
 }
-component ML Engine [0.20, 0.65]
+component ML Engine [0.20, 0.65] label [-43, 18]
 
-component ACTORS [0.99, 0.60]
+component ACTORS [0.99, 0.60] label [-11, -14]
 pipeline ACTORS {
-  component opponent [0.55]
-  component military [0.63]
-  component government [0.67]
+  component opponent [0.55] label [-74, 1]
+  component military [0.63] label [-28, 24]
+  component government [0.67] label [24, 2]
 }
 
 component citizen [0.90, 0.70]
-component privacy [0.83, 0.33]
-component regulation [0.43, 0.30]
-component data [0.14, 0.71]
-component ownership [0.12, 0.64]
+component privacy [0.83, 0.33] label [-71, -7]
+component regulation [0.43, 0.30] label [-85, 6]
+component data [0.14, 0.71] label [18, 2]
+component ownership [0.12, 0.64] label [6, 14]
 
-component TRUST [0.09, 0.45]
+component TRUST [0.09, 0.45] label [-15, -15]
 pipeline TRUST {
-  component competence [0.36]
-  component integrity [0.43]
-  component benevolence [0.5]
+  component competence [0.36] label [-96, 1]
+  component integrity [0.43] label [-32, 27]
+  component benevolence [0.5] label [18, 6]
 }
 
-component CAPABILITY [0.92, 0.51]
+component CAPABILITY [0.92, 0.51] label [-79, -8]
 pipeline CAPABILITY {
-  component Prompt Engineering [0.31]
-  component attack vector [0.43]
-  component misinformation [0.54]
+  component Prompt Engineering [0.31] label [-44, -45]
+  component attack vector [0.43] label [-57, 26]
+  component misinformation [0.54] label [17, 3]
 }
 
-component SENSORS [0.29, 0.69]
+component SENSORS [0.29, 0.69] label [11, -5]
 pipeline SENSORS {
-  component network signals [0.67]
-  component GPS [0.7]
-  component cameras [0.72]
+  component network signals [0.67] label [-73, -20]
+  component GPS [0.7] label [-1, 20]
+  component cameras [0.72] label [19, 3]
 }
 
 evolve AI 0.59

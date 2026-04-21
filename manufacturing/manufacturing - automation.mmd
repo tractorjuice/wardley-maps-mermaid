@@ -9,46 +9,46 @@ note "*recursive to start of map" [0.15, 0.65]
 note "+observability" [0.53, 0.24]
 note "+market" [0.57, 0.07]
 evolve AI model 0.6
-component AI engine [0.06, 0.71]
-component good [0.90, 0.65]
+component AI engine [0.06, 0.71] label [11, 1]
+component good [0.90, 0.65] label [-7, -14]
 pipeline good {
-  component future line [0.3]
+  component future line [0.3] label [-99, 5]
 }
-component Subject Expert [0.68, 0.41]
-component standards [0.30, 0.28]
-component "2" [0.3, 0.28]
+component Subject Expert [0.68, 0.41] label [-43, 19]
+component standards [0.30, 0.28] label [-1, 22]
+component "2" [0.3, 0.28] label [-405, -3225]
 evolve "2" 0.44
 
 quality -> COGS
 COGS -> actors
-component labour [0.35, 0.65]
+component labour [0.35, 0.65] label [-53, 1]
 evolve labour 0.8
-component robotics [0.35, 0.71]
+component robotics [0.35, 0.71] label [-1, -10]
 evolve good 0.8
 evolve facilities 0.71
 
-component l [0.35, 0.65]
+component l [0.35, 0.65] label [-748, -3264]
 l -> SC process
 
-component AI model [0.11, 0.37]
-component KMS [0.68, 0.48]
+component AI model [0.11, 0.37] label [-69, 3]
+component KMS [0.68, 0.48] label [-3, -10]
 
 evolve SC process 0.75
-component automation [0.44, 0.70]
+component automation [0.44, 0.70] label [-21, -14]
 
-component manufacturer [0.98, 0.57]
+component manufacturer [0.98, 0.57] label [-41, -10]
 pipeline manufacturer {
-  component digital [0.41]
-  component traditional [0.65]
+  component digital [0.41] label [-69, -1]
+  component traditional [0.65] label [15, 5]
 }
 manufacturer -> need
 manufacturer -> continued existence
 manufacturer -> quality threshold
 continued existence -> good
 
-component SC process [0.44, 0.65]
+component SC process [0.44, 0.65] label [-83, 2]
 
-component service [0.74, 0.70]
+component service [0.74, 0.70] label [11, 5]
 
 quality service -> continued existence
 good -> service
@@ -62,9 +62,9 @@ quality -> need
 
 need -> "customer [0.91, 0.10]"
 
-component COGS [0.59, 0.66]
+component COGS [0.59, 0.66] label [-38, 4]
 
-component cashflow [0.68, 0.66]
+component cashflow [0.68, 0.66] label [-30, -13]
 
 continued existence -> cashflow
 
@@ -76,7 +76,7 @@ cashflow -> subsidies
 cashflow -> investors
 cashflow -> debt
 
-component opex [0.58, 0.55]
+component opex [0.58, 0.55] label [-48, 1]
 
 COGS -> time
 
@@ -102,18 +102,18 @@ SC process -> time
 
 process -> efficiency
 
-component external supply chain [0.18, 0.69]
-component awareness of [0.55, 0.35]
-component "1" [0.55, 0.18]
+component external supply chain [0.18, 0.69] label [4, -34]
+component awareness of [0.55, 0.35] label [-91, -11]
+component "1" [0.55, 0.18] label [-112, -395]
 evolve "1" 0.35
 
-component materials [0.29, 0.68]
+component materials [0.29, 0.68] label [12, 1]
 
 SC process -> materials
 process -> materials
 sustainability -> materials
 
-component facilities [0.03, 0.43]
+component facilities [0.03, 0.43] label [-84, 4]
 sustainability -> facilities
 process -> facilities
 facilities -> actors
@@ -124,14 +124,14 @@ opex -> facilities
 
 sustainability -> process
 
-component customer [0.79, 0.72]
+component customer [0.79, 0.72] label [8, -2]
 
-component quality [0.80, 0.57]
+component quality [0.80, 0.57] label [-33, -16]
 pipeline quality {
-  component quality threshold [0.51]
+  component quality threshold [0.51] label [-83, -13]
 }
 
-component sustainability [0.44, 0.39]
+component sustainability [0.44, 0.39] label [-99, -14]
 manufacturer -> good
 manufacturer -> quality service
 manufacturer -> cashflow
