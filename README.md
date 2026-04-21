@@ -9,6 +9,7 @@ Every source file is kept verbatim; each one has a sibling `.mmd` in the same di
 - **147 Wardley maps** converted from the source repo
 - Directory structure mirrors the upstream — `agriculture/`, `ai/`, `defence/`, `healthcare/`, etc.
 - Every conversion is lossless for components, anchors, links, and evolution coordinates (see [fidelity notes](#conversion-fidelity))
+- **All 147 `.mmd` files parse cleanly** under Mermaid 11.14.0+
 
 ## Rendering a map
 
@@ -42,6 +43,10 @@ Across all 147 maps (4,905 components, 5,172 links):
 | Visibility drift `\|Δν\|` (mean) | 0.008 |
 
 The small `|Δν|` is grammar-level, not a conversion bug: `wardley-beta`'s pipeline-block syntax uses 1-D `[evo]` for children, forcing them to inherit parent visibility. A handful of source maps place children at slightly different visibility to their parent; that offset cannot be expressed in `wardley-beta` pipelines.
+
+## Deviations from upstream
+
+This fork is a faithful mirror with one exception: **`manufacturing/manufacturing - automation`** has a single-character fix — `component 1 [0.55. 0.18]` → `[0.55, 0.18]` (a period was a comma in the upstream source). The typo would otherwise block rendering. No other source edits.
 
 ## Converter
 

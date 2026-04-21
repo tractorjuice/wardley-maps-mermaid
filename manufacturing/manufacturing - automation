@@ -156,7 +156,7 @@ process -> efficiency
 
 component external supply chain [0.18, 0.69] label [4, -34]
 component awareness of [0.55, 0.35] label [-91, -11]
-component 1 [0.55. 0.18] label [-112, -395]
+component 1 [0.55, 0.18] label [-112, -395]
 evolve 1 0.35 label [-409, -398]
 
 
