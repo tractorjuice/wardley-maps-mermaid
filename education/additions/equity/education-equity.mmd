@@ -3,80 +3,80 @@ wardley-beta
 title education - equity
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
-anchor "Governments" [0.94, 0.63]
-anchor "Customer" [0.94, 0.78]
-anchor "Consumer" [0.94, 0.48]
-anchor "Financial Institutions" [0.97, 0.31]
-anchor "Educational Institutions" [0.97, 0.14]
-component "Agenda" [0.82, 0.49]
-pipeline "Agenda" {
-  component "Expand" [0.35]
-  component "Power" [0.44]
-  component "Literacy" [0.58]
-  component "Business" [0.74]
+anchor Governments [0.94, 0.63]
+anchor Customer [0.94, 0.78]
+anchor Consumer [0.94, 0.48]
+anchor Financial Institutions [0.97, 0.31]
+anchor Educational Institutions [0.97, 0.14]
+component Agenda [0.82, 0.49]
+pipeline Agenda {
+  component Expand [0.35]
+  component Power [0.44]
+  component Literacy [0.58]
+  component Business [0.74]
 }
-component "Resources" [0.33, 0.57]
-pipeline "Resources" {
-  component "Infrastructure" [0.36]
-  component "school management tools" [0.47]
-  component "Data" [0.53]
-  component "Mooc" [0.71]
-  component "Money" [0.74]
+component Resources [0.33, 0.57]
+pipeline Resources {
+  component Infrastructure [0.36]
+  component school management tools [0.47]
+  component Data [0.53]
+  component Mooc [0.71]
+  component Money [0.74]
 }
-component "Access to Resources" [0.51, 0.54]
-pipeline "Access to Resources" {
-  component "inclusion" [0.46]
-  component "exclusion" [0.64]
+component Access to Resources [0.51, 0.54]
+pipeline Access to Resources {
+  component inclusion [0.46]
+  component exclusion [0.64]
 }
-component "Medium" [0.10, 0.61]
-pipeline "Medium" {
-  component "Physical" [0.46]
-  component "hybrid" [0.56]
-  component "Virtual" [0.74]
+component Medium [0.10, 0.61]
+pipeline Medium {
+  component Physical [0.46]
+  component hybrid [0.56]
+  component Virtual [0.74]
 }
 
-component "Financial Instruments" [0.17, 0.68]
-component "Outcome" [0.61, 0.29]
-pipeline "Outcome" {
-  component "Knowledge" [0.21]
-  component "Skill" [0.31]
-  component "Job" [0.37]
-  component "Profit" [0.44]
+component Financial Instruments [0.17, 0.68]
+component Outcome [0.61, 0.29]
+pipeline Outcome {
+  component Knowledge [0.21]
+  component Skill [0.31]
+  component Job [0.37]
+  component Profit [0.44]
 }
-component "Social Class" [0.60, 0.73]
+component Social Class [0.60, 0.73]
 
-component "academic standards" [0.40, 0.67]
-component "scolarship" [0.40, 0.60]
-component "intelligence traits theory" [0.22, 0.67]
-anchor "NGOs" [0.94, 0.42]
-anchor "social actors" [0.94, 0.55]
+component academic standards [0.40, 0.67]
+component scolarship [0.40, 0.60]
+component intelligence traits theory [0.22, 0.67]
+anchor NGOs [0.94, 0.42]
+anchor social actors [0.94, 0.55]
 
-"Governments" -> "Agenda"
-"Educational Institutions" -> "Agenda"
-"Financial Institutions" -> "Agenda"
-"Customer" -> "Agenda"
-"Consumer" -> "Agenda"
-"Agenda" -> "Outcome"
-"Agenda" -> "Access to Resources"
-"Power" -> "Social Class"
-"Business" -> "Social Class"
-"Access to Resources" -> "Resources"
-"Resources" -> "Medium"
-"Money" -> "Financial Instruments"
+Governments -> Agenda
+Educational Institutions -> Agenda
+Financial Institutions -> Agenda
+Customer -> Agenda
+Consumer -> Agenda
+Agenda -> Outcome
+Agenda -> Access to Resources
+Power -> Social Class
+Business -> Social Class
+Access to Resources -> Resources
+Resources -> Medium
+Money -> Financial Instruments
 annotation 1,[0.27, 0.84] "Higher equity with Virtual Medium"
 annotation 2,[0.53, 0.79] "Social equality with Access to Resources"
 annotations [0.11, 0.02]
 
-"open education" -> "Virtual"
-"inclusion" -> "open education"
-"Mooc" -> "open education"
-"exclusion" -> "academic standards"
-"Infrastructure" -> "Physical"
-"Infrastructure" -> "Virtual"
-"inclusion" -> "scolarship"
+open education -> Virtual
+inclusion -> open education
+Mooc -> open education
+exclusion -> academic standards
+Infrastructure -> Physical
+Infrastructure -> Virtual
+inclusion -> scolarship
 
-"scolarship" -> "Money"
-"academic standards" -> "intelligence traits theory"
-"NGOs" -> "Agenda"
-"social actors" -> "Agenda"
+scolarship -> Money
+academic standards -> intelligence traits theory
+NGOs -> Agenda
+social actors -> Agenda
 

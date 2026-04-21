@@ -3,89 +3,89 @@ title Cybersecurity, Technological Advancements, June 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component "BAD ACTOR" [0.90, 0.56]
-pipeline "BAD ACTOR" {
-  component "local criminal gang" [0.37]
-  component "lone wolf" [0.43]
-  component "organised crime" [0.53]
-  component "nation state" [0.61]
-  component "script kiddy" [0.63]
+component BAD ACTOR [0.90, 0.56]
+pipeline BAD ACTOR {
+  component local criminal gang [0.37]
+  component lone wolf [0.43]
+  component organised crime [0.53]
+  component nation state [0.61]
+  component script kiddy [0.63]
 }
 
-component "REWARDS" [0.77, 0.66]
-pipeline "REWARDS" {
-  component "disinformation" [0.4]
-  component "obfuscated Identity" [0.68]
-  component "POWER" [0.7]
-  component "money" [0.75]
+component REWARDS [0.77, 0.66]
+pipeline REWARDS {
+  component disinformation [0.4]
+  component obfuscated Identity [0.68]
+  component POWER [0.7]
+  component money [0.75]
 }
 
-component "TARGET" [0.67, 0.64]
-pipeline "TARGET" {
-  component "automated targetting and exploitation" [0.31]
-  component "Brand" [0.51]
-  component "ENTITY" [0.57]
-  component "Ad Platform" [0.66]
+component TARGET [0.67, 0.64]
+pipeline TARGET {
+  component automated targetting and exploitation [0.31]
+  component Brand [0.51]
+  component ENTITY [0.57]
+  component Ad Platform [0.66]
 }
 
-component "ATTACK VECTOR" [0.55, 0.62]
-pipeline "ATTACK VECTOR" {
-  component "quantum cracking" [0.31]
-  component "DEEP FAKES" [0.37]
-  component "HACKING TOOLS" [0.5]
-  component "KNOWLEDGE" [0.53]
+component ATTACK VECTOR [0.55, 0.62]
+pipeline ATTACK VECTOR {
+  component quantum cracking [0.31]
+  component DEEP FAKES [0.37]
+  component HACKING TOOLS [0.5]
+  component KNOWLEDGE [0.53]
   component "social-engineering" [0.57]
-  component "ENABLERS" [0.72]
+  component ENABLERS [0.72]
 }
 
-component "SOURCES" [0.42, 0.60]
-pipeline "SOURCES" {
-  component "dark web marketplace" [0.56]
-  component "INTERNET DEVICES" [0.7]
-  component "PII" [0.74]
+component SOURCES [0.42, 0.60]
+pipeline SOURCES {
+  component dark web marketplace [0.56]
+  component INTERNET DEVICES [0.7]
+  component PII [0.74]
 }
 
-component "IDENTITY" [0.27, 0.67]
-pipeline "IDENTITY" {
-  component "Digital identity" [0.62]
-  component "Bank ID" [0.65]
-  component "passport" [0.71]
+component IDENTITY [0.27, 0.67]
+pipeline IDENTITY {
+  component Digital identity [0.62]
+  component Bank ID [0.65]
+  component passport [0.71]
 }
 
-component "cryptography" [0.34, 0.71]
-component "LLM" [0.11, 0.57]
+component cryptography [0.34, 0.71]
+component LLM [0.11, 0.57]
 
-component "TRUSTED AUHTORITY" [0.16, 0.64]
+component TRUSTED AUHTORITY [0.16, 0.64]
 
-component "IDENTIFIER" [0.06, 0.69]
-pipeline "IDENTIFIER" {
-  component "image" [0.69]
+component IDENTIFIER [0.06, 0.69]
+pipeline IDENTIFIER {
+  component image [0.69]
 }
 
-component "automated targetting" [0.22, 0.39]
+component automated targetting [0.22, 0.39]
 
-component "quantum computing" [0.36, 0.19]
-evolve "LLM" 0.71
+component quantum computing [0.36, 0.19]
+evolve LLM 0.71
 
-"quantum cracking" -> "quantum computing"
-"quantum cracking" -> "cryptography"
-"INTERNET DEVICES" -> "cryptography"
-"INTERNET DEVICES" -> "IDENTITY"
-"IDENTITY" -> "TRUSTED AUHTORITY"
-"cryptography" -> "TRUSTED AUHTORITY"
-"disinformation" -> "TRUSTED AUHTORITY"
-"IDENTITY" -> "IDENTIFIER"
-"LLM" -> "image"
-"DEEP FAKES" -> "LLM"
-"automated targetting and exploitation" -> "automated targetting"
-"automated targetting" -> "LLM"
-"automated targetting and exploitation" -> "ATTACK VECTOR"
+quantum cracking -> quantum computing
+quantum cracking -> cryptography
+INTERNET DEVICES -> cryptography
+INTERNET DEVICES -> IDENTITY
+IDENTITY -> TRUSTED AUHTORITY
+cryptography -> TRUSTED AUHTORITY
+disinformation -> TRUSTED AUHTORITY
+IDENTITY -> IDENTIFIER
+LLM -> image
+DEEP FAKES -> LLM
+automated targetting and exploitation -> automated targetting
+automated targetting -> LLM
+automated targetting and exploitation -> ATTACK VECTOR
 
-"BAD ACTOR" -> "REWARDS"
-"REWARDS" -> "TARGET"
-"BAD ACTOR" -> "obfuscated Identity"
-"obfuscated Identity" -> "IDENTITY"
-"ATTACK VECTOR" -> "SOURCES"
-"TARGET" -> "ATTACK VECTOR"
-"TRUSTED AUHTORITY" -> "DEEP FAKES"
+BAD ACTOR -> REWARDS
+REWARDS -> TARGET
+BAD ACTOR -> obfuscated Identity
+obfuscated Identity -> IDENTITY
+ATTACK VECTOR -> SOURCES
+TARGET -> ATTACK VECTOR
+TRUSTED AUHTORITY -> DEEP FAKES
 

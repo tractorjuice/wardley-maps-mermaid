@@ -3,111 +3,111 @@ evolution genesis / concept -> custom / emerging -> product/ converging -> commo
 title Purpose of Education V6.4, May 2023
 size [1100, 800]
 
-component "Survival" [0.69, 0.77]
+component Survival [0.69, 0.77]
 
-component "KNOWLEDGE DISSEMINATION" [0.68, 0.65]
+component KNOWLEDGE DISSEMINATION [0.68, 0.65]
 
-component "Wealth" [0.65, 0.87]
+component Wealth [0.65, 0.87]
 
-component "social cohesion" [0.90, 0.62]
-component "R&D" [0.87, 0.38]
-component "ENVIRONMENT" [0.12, 0.73]
-pipeline "ENVIRONMENT" {
-  component "Formal (School)" [0.64]
-  component "Informal (Twitter Spaces)" [0.82]
+component social cohesion [0.90, 0.62]
+component R&D [0.87, 0.38]
+component ENVIRONMENT [0.12, 0.73]
+pipeline ENVIRONMENT {
+  component Formal (School) [0.64]
+  component Informal (Twitter Spaces) [0.82]
 }
 
-component "REASONING" [0.27, 0.64]
-pipeline "REASONING" {
-  component "Deductive (Act)" [0.55]
-  component "Inductive (Observe)" [0.68]
+component REASONING [0.27, 0.64]
+pipeline REASONING {
+  component Deductive (Act) [0.55]
+  component Inductive (Observe) [0.68]
 }
 
-component "MENTORS" [0.18, 0.36]
-pipeline "MENTORS" {
-  component "HOOTL" [0.22]
-  component "HITL" [0.54]
+component MENTORS [0.18, 0.36]
+pipeline MENTORS {
+  component HOOTL [0.22]
+  component HITL [0.54]
 }
 
-component "Society" [0.81, 0.76]
-component "Government" [1.00, 0.78]
-component "Individual" [0.80, 0.69]
+component Society [0.81, 0.76]
+component Government [1.00, 0.78]
+component Individual [0.80, 0.69]
 
-component "agency" [0.75, 0.45]
+component agency [0.75, 0.45]
 
-component "SKILLS" [0.41, 0.42]
-pipeline "SKILLS" {
-  component "Creativity" [0.26]
-  component "Critical thinking" [0.52]
-  component "Declarative" [0.64]
-  component "Literacy" [0.77]
-  component "Procedural" [0.81]
+component SKILLS [0.41, 0.42]
+pipeline SKILLS {
+  component Creativity [0.26]
+  component Critical thinking [0.52]
+  component Declarative [0.64]
+  component Literacy [0.77]
+  component Procedural [0.81]
 }
 
-component "CULTURE" [0.57, 0.39]
-pipeline "CULTURE" {
-  component "Individual beliefs" [0.21]
-  component "Behavior" [0.35]
-  component "values" [0.45]
-  component "Shared beliefs" [0.54]
-  component "principles" [0.6]
-  component "KNOWLEDGE" [0.69]
+component CULTURE [0.57, 0.39]
+pipeline CULTURE {
+  component Individual beliefs [0.21]
+  component Behavior [0.35]
+  component values [0.45]
+  component Shared beliefs [0.54]
+  component principles [0.6]
+  component KNOWLEDGE [0.69]
 }
 
-component "Educational industry" [0.80, 0.62]
+component Educational industry [0.80, 0.62]
 
-component "knowledge exclusion" [0.60, 0.83]
+component knowledge exclusion [0.60, 0.83]
 
-component "useful economic units" [0.91, 0.71]
+component useful economic units [0.91, 0.71]
 
-component "MODELS OF LEARNING" [0.04, 0.53]
+component MODELS OF LEARNING [0.04, 0.53]
 
-"Survival" -> "Wealth"
-"REASONING" -> "MENTORS"
-"REASONING" -> "ENVIRONMENT"
-"MENTORS" -> "ENVIRONMENT"
+Survival -> Wealth
+REASONING -> MENTORS
+REASONING -> ENVIRONMENT
+MENTORS -> ENVIRONMENT
 
-"Wealth" -> "Government"
-"Government" -> "Society"
+Wealth -> Government
+Government -> Society
 
-"agency" -> "Pleasure"
-"KNOWLEDGE" -> "REASONING"
-"SKILLS" -> "KNOWLEDGE"
-"Fairness" -> "KNOWLEDGE"
-"SKILLS" -> "REASONING"
-"SKILLS" -> "MENTORS"
-"Creativity" -> "agency"
-"agency" -> "Fairness"
-"Wealth" -> "knowledge exclusion"
-"Government" -> "useful economic units"
-"useful economic units" -> "Educational industry"
-"Society" -> "useful members"
-"Society" -> "Survival"
-"Individual" -> "useful economic units"
-"Individual" -> "useful members"
-"agency" -> "Individual"
+agency -> Pleasure
+KNOWLEDGE -> REASONING
+SKILLS -> KNOWLEDGE
+Fairness -> KNOWLEDGE
+SKILLS -> REASONING
+SKILLS -> MENTORS
+Creativity -> agency
+agency -> Fairness
+Wealth -> knowledge exclusion
+Government -> useful economic units
+useful economic units -> Educational industry
+Society -> useful members
+Society -> Survival
+Individual -> useful economic units
+Individual -> useful members
+agency -> Individual
 
-"Government" -> "social cohesion"
-"Educational industry" -> "KNOWLEDGE DISSEMINATION"
-"Educational industry" -> "R&D"
-"Society" -> "KNOWLEDGE DISSEMINATION"
-"Society" -> "social cohesion"
-"Government" -> "R&D"
-"KNOWLEDGE DISSEMINATION" -> "shared language"
-"agency" -> "CULTURE"
-"Society" -> "CULTURE"
+Government -> social cohesion
+Educational industry -> KNOWLEDGE DISSEMINATION
+Educational industry -> R&D
+Society -> KNOWLEDGE DISSEMINATION
+Society -> social cohesion
+Government -> R&D
+KNOWLEDGE DISSEMINATION -> shared language
+agency -> CULTURE
+Society -> CULTURE
 
-"Society" -> "Individual"
+Society -> Individual
 
-"knowledge exclusion" -> "KNOWLEDGE"
-"KNOWLEDGE DISSEMINATION" -> "knowledge exclusion"
-"KNOWLEDGE" -> "Creativity"
-"R&D" -> "Creativity"
-"agency" -> "Survival"
-"KNOWLEDGE DISSEMINATION" -> "CULTURE"
+knowledge exclusion -> KNOWLEDGE
+KNOWLEDGE DISSEMINATION -> knowledge exclusion
+KNOWLEDGE -> Creativity
+R&D -> Creativity
+agency -> Survival
+KNOWLEDGE DISSEMINATION -> CULTURE
 
-"agency" -> "KNOWLEDGE"
-"MENTORS" -> "MODELS OF LEARNING"
-"REASONING" -> "MODELS OF LEARNING"
-"ENVIRONMENT" -> "MODELS OF LEARNING"
+agency -> KNOWLEDGE
+MENTORS -> MODELS OF LEARNING
+REASONING -> MODELS OF LEARNING
+ENVIRONMENT -> MODELS OF LEARNING
 

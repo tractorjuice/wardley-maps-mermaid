@@ -4,137 +4,137 @@ size [1100, 800]
 
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component "patient" [0.97, 0.64]
+component patient [0.97, 0.64]
 
-component "AI CAPABILITY" [0.52, 0.60]
-pipeline "AI CAPABILITY" {
-  component "complex demand simulation (digital twins)" [0.21]
-  component "explainability" [0.25]
-  component "precision medicine" [0.26]
-  component "clinical notes" [0.36]
-  component "clinical decision making" [0.42]
-  component "clinical support" [0.46]
-  component "pathway management" [0.51]
-  component "micro expression analysis" [0.56]
-  component "doc scan" [0.62]
-  component "voice" [0.65]
-  component "object recognition" [0.68]
-  component "predictive analytics" [0.7]
-  component "categorisation" [0.74]
-}
-
-component "DATA" [0.20, 0.68]
-pipeline "DATA" {
-  component "unstructured" [0.57]
-  component "structured" [0.73]
-}
-component "STANDARDS" [0.12, 0.47]
-pipeline "STANDARDS" {
-  component "EHR" [0.39]
-  component "general practice EHR" [0.59]
-  component "financial codes" [0.62]
-  component "snomed" [0.65]
-  component "digital pathology" [0.69]
-  component "PACS" [0.72]
+component AI CAPABILITY [0.52, 0.60]
+pipeline AI CAPABILITY {
+  component complex demand simulation (digital twins) [0.21]
+  component explainability [0.25]
+  component precision medicine [0.26]
+  component clinical notes [0.36]
+  component clinical decision making [0.42]
+  component clinical support [0.46]
+  component pathway management [0.51]
+  component micro expression analysis [0.56]
+  component doc scan [0.62]
+  component voice [0.65]
+  component object recognition [0.68]
+  component predictive analytics [0.7]
+  component categorisation [0.74]
 }
 
-component "AI" [0.39, 0.63]
-pipeline "AI" {
-  component "General purpose" [0.16]
-  component "regulators" [0.3]
-  component "regulation" [0.32]
-  component "deep learning" [0.52]
-  component "machine learning" [0.71]
+component DATA [0.20, 0.68]
+pipeline DATA {
+  component unstructured [0.57]
+  component structured [0.73]
 }
-component "HCI" [0.72, 0.54]
-pipeline "HCI" {
-  component "replace people" [0.37]
-  component "augment tasks" [0.56]
-  component "replace tasks" [0.58]
+component STANDARDS [0.12, 0.47]
+pipeline STANDARDS {
+  component EHR [0.39]
+  component general practice EHR [0.59]
+  component financial codes [0.62]
+  component snomed [0.65]
+  component digital pathology [0.69]
+  component PACS [0.72]
 }
 
-component "ETHICS" [0.63, 0.43]
-pipeline "ETHICS" {
-  component "consent" [0.35]
-  component "bias" [0.39]
-  component "audit" [0.45]
+component AI [0.39, 0.63]
+pipeline AI {
+  component General purpose [0.16]
+  component regulators [0.3]
+  component regulation [0.32]
+  component deep learning [0.52]
+  component machine learning [0.71]
 }
-component "TRAINING DATA" [0.24, 0.36]
-pipeline "TRAINING DATA" {
-  component "intersectionality" [0.23]
-  component "anonymised training sets" [0.39]
+component HCI [0.72, 0.54]
+pipeline HCI {
+  component replace people [0.37]
+  component augment tasks [0.56]
+  component replace tasks [0.58]
 }
-component "history" [0.17, 0.38]
-component "HEALTHCARE" [0.90, 0.61]
-pipeline "HEALTHCARE" {
-  component "triage" [0.56]
-  component "health" [0.64]
-  component "diagnosis" [0.68]
-}
-component "PROVIDER" [0.82, 0.60]
-pipeline "PROVIDER" {
-  component "virtual assistant" [0.41]
-  component "chatbot" [0.53]
-  component "clinician" [0.69]
-}
-component "data store" [0.05, 0.72]
-component "trust" [0.93, 0.47]
 
-component "MODEL" [0.31, 0.42]
-pipeline "MODEL" {
+component ETHICS [0.63, 0.43]
+pipeline ETHICS {
+  component consent [0.35]
+  component bias [0.39]
+  component audit [0.45]
+}
+component TRAINING DATA [0.24, 0.36]
+pipeline TRAINING DATA {
+  component intersectionality [0.23]
+  component anonymised training sets [0.39]
+}
+component history [0.17, 0.38]
+component HEALTHCARE [0.90, 0.61]
+pipeline HEALTHCARE {
+  component triage [0.56]
+  component health [0.64]
+  component diagnosis [0.68]
+}
+component PROVIDER [0.82, 0.60]
+pipeline PROVIDER {
+  component virtual assistant [0.41]
+  component chatbot [0.53]
+  component clinician [0.69]
+}
+component data store [0.05, 0.72]
+component trust [0.93, 0.47]
+
+component MODEL [0.31, 0.42]
+pipeline MODEL {
   component "pre-trained models" [0.45]
 }
-evolve "deep learning" 0.67
+evolve deep learning 0.67
 evolve "pre-trained models" 0.65
-evolve "EHR" 0.45
-evolve "chatbot" 0.6
+evolve EHR 0.45
+evolve chatbot 0.6
 
-"patient" -> "trust"
-"patient" -> "health"
-"health" -> "HEALTHCARE"
-"diagnosis" -> "clinician"
-"diagnosis" -> "virtual assistant"
-"triage" -> "chatbot"
-"clinician" -> "replace tasks"
-"virtual assistant" -> "replace people"
-"clinician" -> "HCI"
-"clinician" -> "augment tasks"
-"HCI" -> "ETHICS"
-"replace people" -> "bias"
-"HCI" -> "AI CAPABILITY"
-"augment tasks" -> "object recognition"
-"replace tasks" -> "categorisation"
-"replace tasks" -> "doc scan"
-"augment tasks" -> "clinical notes"
-"augment tasks" -> "pathway management"
-"augment tasks" -> "clinical decision making"
-"object recognition" -> "machine learning"
-"AI CAPABILITY" -> "AI"
-"categorisation" -> "machine learning"
-"doc scan" -> "machine learning"
-"virtual assistant" -> "General purpose"
-"clinical decision making" -> "deep learning"
-"bias" -> "explainability"
-"audit" -> "explainability"
+patient -> trust
+patient -> health
+health -> HEALTHCARE
+diagnosis -> clinician
+diagnosis -> virtual assistant
+triage -> chatbot
+clinician -> replace tasks
+virtual assistant -> replace people
+clinician -> HCI
+clinician -> augment tasks
+HCI -> ETHICS
+replace people -> bias
+HCI -> AI CAPABILITY
+augment tasks -> object recognition
+replace tasks -> categorisation
+replace tasks -> doc scan
+augment tasks -> clinical notes
+augment tasks -> pathway management
+augment tasks -> clinical decision making
+object recognition -> machine learning
+AI CAPABILITY -> AI
+categorisation -> machine learning
+doc scan -> machine learning
+virtual assistant -> General purpose
+clinical decision making -> deep learning
+bias -> explainability
+audit -> explainability
 
-"AI" -> "MODEL"
-"TRAINING DATA" -> "DATA"
-"DATA" -> "data store"
-"structured" -> "financial codes"
-"DATA" -> "STANDARDS"
-"unstructured" -> "EHR"
-"TRAINING DATA" -> "history"
-"bias" -> "history"
-"audit" -> "regulation"
-"chatbot" -> "pathway management"
-"consent" -> "DATA"
-"trust" -> "ETHICS"
-"audit" -> "AI CAPABILITY"
-"HEALTHCARE" -> "PROVIDER"
-"regulation" -> "STANDARDS"
-"regulation" -> "regulators"
+AI -> MODEL
+TRAINING DATA -> DATA
+DATA -> data store
+structured -> financial codes
+DATA -> STANDARDS
+unstructured -> EHR
+TRAINING DATA -> history
+bias -> history
+audit -> regulation
+chatbot -> pathway management
+consent -> DATA
+trust -> ETHICS
+audit -> AI CAPABILITY
+HEALTHCARE -> PROVIDER
+regulation -> STANDARDS
+regulation -> regulators
 
-"object recognition" -> "deep learning"
-"AI CAPABILITY" -> "regulation"
-"MODEL" -> "TRAINING DATA"
+object recognition -> deep learning
+AI CAPABILITY -> regulation
+MODEL -> TRAINING DATA
 

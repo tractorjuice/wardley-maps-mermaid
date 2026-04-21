@@ -4,140 +4,140 @@ size [1100, 800]
 
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "consumer" [0.98, 0.65]
-component "producer" [0.52, 0.46]
-component "GOOD" [0.91, 0.65]
+component consumer [0.98, 0.65]
+component producer [0.52, 0.46]
+component GOOD [0.91, 0.65]
 
-component "VEHICLE" [0.24, 0.68]
-pipeline "VEHICLE" {
-  component "autotrucks" [0.51]
-  component "drone" [0.56]
-  component "ship" [0.7]
-  component "trucks" [0.72]
+component VEHICLE [0.24, 0.68]
+pipeline VEHICLE {
+  component autotrucks [0.51]
+  component drone [0.56]
+  component ship [0.7]
+  component trucks [0.72]
 }
 
-component "labour" [0.10, 0.79]
+component labour [0.10, 0.79]
 
-component "sustainability" [0.79, 0.44]
+component sustainability [0.79, 0.44]
 component "2" [0.79, 0.21]
 evolve "2" 0.44
 
-component "infrastructure" [0.03, 0.67]
+component infrastructure [0.03, 0.67]
 component "4" [0.03, 0.42]
 evolve "4" 0.67
 note "+need to modernise (tech debt)" [0.04, 0.46]
 note "+market" [0.90, 0.35]
 note "+market" [0.77, 0.32]
 
-component "INVENTORY MGMT" [0.39, 0.62]
-pipeline "INVENTORY MGMT" {
-  component "distributed" [0.51]
-  component "hub and spoke" [0.7]
+component INVENTORY MGMT [0.39, 0.62]
+pipeline INVENTORY MGMT {
+  component distributed [0.51]
+  component hub and spoke [0.7]
 }
-component "LAST MILE OPTIONS" [0.72, 0.70]
-pipeline "LAST MILE OPTIONS" {
-  component "autonomous" [0.6]
-  component "human" [0.73]
+component LAST MILE OPTIONS [0.72, 0.70]
+pipeline LAST MILE OPTIONS {
+  component autonomous [0.6]
+  component human [0.73]
 }
-component "fuel" [0.56, 0.78]
-component "safety" [0.64, 0.49]
-component "tracking" [0.61, 0.57]
-component "LANDSCAPE" [0.81, 0.62]
-pipeline "LANDSCAPE" {
-  component "rural" [0.55]
-  component "urban" [0.66]
-  component "last mile" [0.67]
+component fuel [0.56, 0.78]
+component safety [0.64, 0.49]
+component tracking [0.61, 0.57]
+component LANDSCAPE [0.81, 0.62]
+pipeline LANDSCAPE {
+  component rural [0.55]
+  component urban [0.66]
+  component last mile [0.67]
 }
 
-component "STORAGE" [0.53, 0.63]
-pipeline "STORAGE" {
-  component "Kirb" [0.57]
-  component "Shop" [0.68]
-  component "warehouse" [0.71]
+component STORAGE [0.53, 0.63]
+pipeline STORAGE {
+  component Kirb [0.57]
+  component Shop [0.68]
+  component warehouse [0.71]
 }
-component "convenience" [0.89, 0.58]
+component convenience [0.89, 0.58]
 
-component "supply chain" [0.08, 0.63]
-component "supply chain awareness" [0.15, 0.44]
+component supply chain [0.08, 0.63]
+component supply chain awareness [0.15, 0.44]
 component "3" [0.15, 0.19]
 evolve "3" 0.44
 note "+market" [0.16, 0.29]
 
-evolve "drone" 0.65
+evolve drone 0.65
 
 component "1" [0.89, 0.33]
 evolve "1" 0.58
 
-evolve "autonomous" 0.65
-evolve "distributed" 0.6
+evolve autonomous 0.65
+evolve distributed 0.6
 
-"consumer" -> "A to B"
-"A to B" -> "producer"
-"consumer" -> "behavior"
-"A to B" -> "GOOD"
-"STORAGE" -> "INVENTORY MGMT"
-"STORAGE" -> "delivery VEHICLE"
-"STORAGE" -> "security"
-"security" -> "tracking"
-"non human" -> "safety"
-"LAST MILE OPTIONS" -> "last mile"
-"LANDSCAPE" -> "last mile"
-"delivery VEHICLE" -> "cost"
-"fuel" -> "LAST MILE OPTIONS"
-"LANDSCAPE" -> "population density"
-"cross sell" -> "producer"
-"data" -> "cross sell"
-"data" -> "tracking"
-"convenience" -> "behavior"
-"STORAGE" -> "cost"
-"tracking" -> "safety"
-"value" -> "behavior"
-"value" -> "cost"
-"GOOD" -> "value"
-"behavior" -> "sustainability"
-"sustainability" -> "LAST MILE OPTIONS"
-"society" -> "sustainability"
-"INVENTORY MGMT" -> "LAST MILE OPTIONS"
-"LAST MILE OPTIONS" -> "distribution topology"
-"distribution topology" -> "LANDSCAPE"
-"STORAGE" -> "customer experience"
-"consumer" -> "customer experience"
-"convenience" -> "time sensitivity"
-"GOOD" -> "socioeconomic class"
-"time sensitivity" -> "socioeconomic class"
-"value" -> "socioeconomic class"
-"sustainability" -> "socioeconomic class"
-"socioeconomic class" -> "exclusion"
-"GOOD" -> "exclusion"
-"producer" -> "GOOD"
-"consumer" -> "GOOD"
-"convenience" -> "tracking"
-"consumer" -> "convenience"
-"consumer" -> "sustainability"
-"GOOD" -> "last mile"
-"safety" -> "autonomous"
-"tracking" -> "INVENTORY MGMT"
-"producer" -> "INVENTORY MGMT"
-"INVENTORY MGMT" -> "first last delivery VEHICLE"
-"LAST MILE OPTIONS" -> "STORAGE"
-"supply chain" -> "awareness"
-"sustainability" -> "awareness"
-"supply chain awareness" -> "supply chain"
+consumer -> A to B
+A to B -> producer
+consumer -> behavior
+A to B -> GOOD
+STORAGE -> INVENTORY MGMT
+STORAGE -> delivery VEHICLE
+STORAGE -> security
+security -> tracking
+non human -> safety
+LAST MILE OPTIONS -> last mile
+LANDSCAPE -> last mile
+delivery VEHICLE -> cost
+fuel -> LAST MILE OPTIONS
+LANDSCAPE -> population density
+cross sell -> producer
+data -> cross sell
+data -> tracking
+convenience -> behavior
+STORAGE -> cost
+tracking -> safety
+value -> behavior
+value -> cost
+GOOD -> value
+behavior -> sustainability
+sustainability -> LAST MILE OPTIONS
+society -> sustainability
+INVENTORY MGMT -> LAST MILE OPTIONS
+LAST MILE OPTIONS -> distribution topology
+distribution topology -> LANDSCAPE
+STORAGE -> customer experience
+consumer -> customer experience
+convenience -> time sensitivity
+GOOD -> socioeconomic class
+time sensitivity -> socioeconomic class
+value -> socioeconomic class
+sustainability -> socioeconomic class
+socioeconomic class -> exclusion
+GOOD -> exclusion
+producer -> GOOD
+consumer -> GOOD
+convenience -> tracking
+consumer -> convenience
+consumer -> sustainability
+GOOD -> last mile
+safety -> autonomous
+tracking -> INVENTORY MGMT
+producer -> INVENTORY MGMT
+INVENTORY MGMT -> first last delivery VEHICLE
+LAST MILE OPTIONS -> STORAGE
+supply chain -> awareness
+sustainability -> awareness
+supply chain awareness -> supply chain
 
-"sustainability" -> "supply chain awareness"
-"supply chain" -> "3"
+sustainability -> supply chain awareness
+supply chain -> "3"
 "2" -> "3"
 "1" -> "2"
-"distributed" -> "supply chain awareness"
-"3" -> "hub and spoke"
-"INVENTORY MGMT" -> "VEHICLE"
-"VEHICLE" -> "infrastructure"
-"infrastructure" -> "supply chain"
+distributed -> supply chain awareness
+"3" -> hub and spoke
+INVENTORY MGMT -> VEHICLE
+VEHICLE -> infrastructure
+infrastructure -> supply chain
 "3" -> "4"
-"ship" -> "labour"
-"labour" -> "trucks"
-"labour" -> "human"
-"INVENTORY MGMT" -> "supply chain"
-"fuel" -> "VEHICLE"
-"sustainability" -> "fuel"
+ship -> labour
+labour -> trucks
+labour -> human
+INVENTORY MGMT -> supply chain
+fuel -> VEHICLE
+sustainability -> fuel
 

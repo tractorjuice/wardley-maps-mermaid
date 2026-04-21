@@ -3,56 +3,56 @@ wardley-beta
 title Energy
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
-component "regulation" [0.80, 0.05]
-component "energy policy" [0.88, 0.05]
-component "consumers" [0.88, 0.63]
-component "industrial" [0.86, 0.52]
-component "Government" [0.97, 0.51]
-component "transmission" [0.78, 0.55]
-component "storage" [0.68, 0.47]
-component "output fuel" [0.64, 0.70]
-pipeline "output fuel" {
-  component "hydrocarbon" [0.64]
-  component "electricity" [0.71]
-  component "heat" [0.74]
+component regulation [0.80, 0.05]
+component energy policy [0.88, 0.05]
+component consumers [0.88, 0.63]
+component industrial [0.86, 0.52]
+component Government [0.97, 0.51]
+component transmission [0.78, 0.55]
+component storage [0.68, 0.47]
+component output fuel [0.64, 0.70]
+pipeline output fuel {
+  component hydrocarbon [0.64]
+  component electricity [0.71]
+  component heat [0.74]
 }
-component "input fuel" [0.23, 0.65]
-pipeline "input fuel" {
-  component "nuclear" [0.56]
-  component "renewable" [0.6]
-  component "fossil" [0.69]
+component input fuel [0.23, 0.65]
+pipeline input fuel {
+  component nuclear [0.56]
+  component renewable [0.6]
+  component fossil [0.69]
 }
-component "generator" [0.32, 0.58]
-pipeline "generator" {
-  component "gas turbine" [0.41]
-  component "wind turbine" [0.69]
+component generator [0.32, 0.58]
+pipeline generator {
+  component gas turbine [0.41]
+  component wind turbine [0.69]
 }
-component "generation" [0.46, 0.62]
-pipeline "generation" {
-  component "decentralised" [0.57]
-  component "centralised" [0.67]
+component generation [0.46, 0.62]
+pipeline generation {
+  component decentralised [0.57]
+  component centralised [0.67]
 }
-component "security" [0.13, 0.28]
-component "bad actors" [0.08, 0.21]
-component "geopolitical risk" [0.04, 0.37]
-component "CNI" [0.30, 0.24]
-component "climate changes" [0.06, 0.40]
-"industrial" -> "transmission"
-"consumers" -> "transmission"
-"transmission" -> "output fuel"
-"output fuel" -> "generation"
-"generation" -> "generator"
-"generator" -> "input fuel"
-"transmission" -> "storage"
-"transmission" -> "security"
-"output fuel" -> "security"
-"generation" -> "security"
-"generator" -> "security"
-"input fuel" -> "security"
-"security" -> "bad actors"
-"security" -> "geopolitical risk"
-"Government" -> "CNI"
-"security" -> "CNI"
-"climate changes" -> "security"
-"Government" -> "consumers"
+component security [0.13, 0.28]
+component bad actors [0.08, 0.21]
+component geopolitical risk [0.04, 0.37]
+component CNI [0.30, 0.24]
+component climate changes [0.06, 0.40]
+industrial -> transmission
+consumers -> transmission
+transmission -> output fuel
+output fuel -> generation
+generation -> generator
+generator -> input fuel
+transmission -> storage
+transmission -> security
+output fuel -> security
+generation -> security
+generator -> security
+input fuel -> security
+security -> bad actors
+security -> geopolitical risk
+Government -> CNI
+security -> CNI
+climate changes -> security
+Government -> consumers
 

@@ -4,161 +4,161 @@ size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
 component "labelling" [0.51, 0.41]
-component "HARVEST" [0.35, 0.70]
-pipeline "HARVEST" {
-  component "scarcity" [0.64]
-  component "abundance" [0.73]
+component HARVEST [0.35, 0.70]
+pipeline HARVEST {
+  component scarcity [0.64]
+  component abundance [0.73]
 }
-component "nurition" [0.67, 0.73]
-component "SUSTAINABILITY" [0.89, 0.63]
-pipeline "SUSTAINABILITY" {
-  component "food security" [0.6]
-  component "recycling" [0.64]
-}
-
-component "CORPORATIONS" [0.98, 0.57]
-pipeline "CORPORATIONS" {
-  component "Agricultural Industry" [0.5]
-  component "supermarket" [0.63]
+component nurition [0.67, 0.73]
+component SUSTAINABILITY [0.89, 0.63]
+pipeline SUSTAINABILITY {
+  component food security [0.6]
+  component recycling [0.64]
 }
 
-component "consumer waste" [0.82, 0.71]
-component "choice" [0.71, 0.79]
-component "CONSUMER" [0.79, 0.76]
-pipeline "CONSUMER" {
-  component "rural" [0.74]
-  component "urban" [0.78]
+component CORPORATIONS [0.98, 0.57]
+pipeline CORPORATIONS {
+  component Agricultural Industry [0.5]
+  component supermarket [0.63]
 }
 
-component "REFUSE COLLECTION" [0.16, 0.61]
-pipeline "REFUSE COLLECTION" {
-  component "AdHoc" [0.41]
-  component "Centralised" [0.69]
+component consumer waste [0.82, 0.71]
+component choice [0.71, 0.79]
+component CONSUMER [0.79, 0.76]
+pipeline CONSUMER {
+  component rural [0.74]
+  component urban [0.78]
 }
 
-component "standard" [0.47, 0.51]
-component "WASTE" [0.23, 0.66]
-pipeline "WASTE" {
-  component "sustainable" [0.36]
-  component "quality check" [0.56]
-  component "unsustainable" [0.72]
+component REFUSE COLLECTION [0.16, 0.61]
+pipeline REFUSE COLLECTION {
+  component AdHoc [0.41]
+  component Centralised [0.69]
 }
-component "LOGISTIC" [0.43, 0.63]
-pipeline "LOGISTIC" {
-  component "tranportation" [0.55]
-  component "warehousing" [0.64]
-  component "production" [0.68]
+
+component standard [0.47, 0.51]
+component WASTE [0.23, 0.66]
+pipeline WASTE {
+  component sustainable [0.36]
+  component quality check [0.56]
+  component unsustainable [0.72]
 }
-component "GOVERNMENT" [0.97, 0.70]
-component "POLICY" [0.77, 0.54]
-component "education" [0.68, 0.57]
-component "transparency" [0.17, 0.32]
-component "supply chain awareness" [0.10, 0.35]
-component "BIOLOGICAL PRODUCTS" [0.62, 0.66]
-pipeline "BIOLOGICAL PRODUCTS" {
-  component "fuel" [0.54]
-  component "chemical" [0.58]
-  component "fertilizers" [0.65]
-  component "feedstock" [0.68]
-  component "food" [0.73]
+component LOGISTIC [0.43, 0.63]
+pipeline LOGISTIC {
+  component tranportation [0.55]
+  component warehousing [0.64]
+  component production [0.68]
 }
-component "nutrional value" [0.65, 0.47]
-component "INPUTS" [0.08, 0.65]
-pipeline "INPUTS" {
-  component "water" [0.64]
-  component "energy" [0.67]
-  component "land" [0.69]
-  component "labour" [0.71]
+component GOVERNMENT [0.97, 0.70]
+component POLICY [0.77, 0.54]
+component education [0.68, 0.57]
+component transparency [0.17, 0.32]
+component supply chain awareness [0.10, 0.35]
+component BIOLOGICAL PRODUCTS [0.62, 0.66]
+pipeline BIOLOGICAL PRODUCTS {
+  component fuel [0.54]
+  component chemical [0.58]
+  component fertilizers [0.65]
+  component feedstock [0.68]
+  component food [0.73]
+}
+component nutrional value [0.65, 0.47]
+component INPUTS [0.08, 0.65]
+pipeline INPUTS {
+  component water [0.64]
+  component energy [0.67]
+  component land [0.69]
+  component labour [0.71]
 }
 component "marketing" [0.89, 0.45]
-component "regulatory capture" [0.82, 0.33]
-component "territory" [0.04, 0.43]
+component regulatory capture [0.82, 0.33]
+component territory [0.04, 0.43]
 
-"supermarket" -> "food"
-"supermarket" -> "CONSUMER"
-"food" -> "standard"
-"quality check" -> "standard"
-"quality check" -> "WASTE"
-"tranportation" -> "energy"
-"CONSUMER" -> "choice"
-"GOVERNMENT" -> "CONSUMER"
-"GOVERNMENT" -> "SUSTAINABILITY"
-"food security" -> "staples"
-"luxury" -> "exclusion"
-"exclusion" -> "trade"
-"energy" -> "carbon footprint"
-"unsustainable" -> "carbon footprint"
-"POLICY" -> "education"
-"GOVERNMENT" -> "society"
-"society" -> "CONSUMER"
-"society" -> "social norms"
-"social norms" -> "education"
-"education" -> "BIOLOGICAL PRODUCTS"
-"social norms" -> "visibility"
-"social norms" -> "welfare"
-"POLICY" -> "welfare"
-"welfare" -> "sustainable"
-"sustainable" -> "transparency"
-"transparency" -> "supply chain awareness"
-"human food" -> "food"
-"trade" -> "BIOLOGICAL PRODUCTS"
-"corporate" -> "BIOLOGICAL PRODUCTS"
-"CONSUMER" -> "trade"
-"choice" -> "cost"
+supermarket -> food
+supermarket -> CONSUMER
+food -> standard
+quality check -> standard
+quality check -> WASTE
+tranportation -> energy
+CONSUMER -> choice
+GOVERNMENT -> CONSUMER
+GOVERNMENT -> SUSTAINABILITY
+food security -> staples
+luxury -> exclusion
+exclusion -> trade
+energy -> carbon footprint
+unsustainable -> carbon footprint
+POLICY -> education
+GOVERNMENT -> society
+society -> CONSUMER
+society -> social norms
+social norms -> education
+education -> BIOLOGICAL PRODUCTS
+social norms -> visibility
+social norms -> welfare
+POLICY -> welfare
+welfare -> sustainable
+sustainable -> transparency
+transparency -> supply chain awareness
+human food -> food
+trade -> BIOLOGICAL PRODUCTS
+corporate -> BIOLOGICAL PRODUCTS
+CONSUMER -> trade
+choice -> cost
 
-"supply chain awareness" -> "INPUTS"
-"LOGISTIC" -> "supply chain awareness"
-"recycled WASTE" -> "WASTE"
-"supply chain awareness" -> "supply chain standards"
-"transparency" -> "supply chain standards"
-"diet" -> "education"
-"diet" -> "cost"
-"cost" -> "LOGISTIC"
-"education" -> "nutrional value"
-"CORPORATIONS" -> "marketing"
-"marketing" -> "nutrional value"
-"marketing" -> "nutrional value"
-"corporate" -> "PR"
-"PR" -> "nutrional value"
-"marketing" -> "nutrional value"
-"nutrional value" -> "marketing"
-"marketing" -> "regulatory capture"
-"marketing" -> "regulatory capture"
-"regulatory capture" -> "marketing"
-"regulatory capture" -> "standard"
+supply chain awareness -> INPUTS
+LOGISTIC -> supply chain awareness
+recycled WASTE -> WASTE
+supply chain awareness -> supply chain standards
+transparency -> supply chain standards
+diet -> education
+diet -> cost
+cost -> LOGISTIC
+education -> nutrional value
+CORPORATIONS -> "marketing"
+"marketing" -> nutrional value
+"marketing" -> nutrional value
+corporate -> PR
+PR -> nutrional value
+"marketing" -> nutrional value
+nutrional value -> "marketing"
+"marketing" -> regulatory capture
+"marketing" -> regulatory capture
+regulatory capture -> "marketing"
+regulatory capture -> standard
 
-"LOGISTIC" -> "quality check"
-"food security" -> "food surplus"
-"food surplus" -> "LOGISTIC"
-"BIOLOGICAL PRODUCTS" -> "WASTE"
-"food security" -> "food"
-"education" -> "labelling"
-"labelling" -> "standard"
-"transparency" -> "labelling"
-"nutrional value" -> "labelling"
-"unsustainable" -> "chemical products"
-"welfare" -> "standard"
-"HARVEST" -> "production"
-"WASTE" -> "abundance"
-"choice" -> "abundance"
-"education" -> "choice"
-"POLICY" -> "supply chain awareness"
-"HARVEST" -> "INPUTS"
-"CONSUMER" -> "nurition"
+LOGISTIC -> quality check
+food security -> food surplus
+food surplus -> LOGISTIC
+BIOLOGICAL PRODUCTS -> WASTE
+food security -> food
+education -> "labelling"
+"labelling" -> standard
+transparency -> "labelling"
+nutrional value -> "labelling"
+unsustainable -> chemical products
+welfare -> standard
+HARVEST -> production
+WASTE -> abundance
+choice -> abundance
+education -> choice
+POLICY -> supply chain awareness
+HARVEST -> INPUTS
+CONSUMER -> nurition
 
-"nurition" -> "food"
-"consumer waste" -> "CONSUMER"
-"recycling" -> "consumer waste"
-"recycling" -> "BIOLOGICAL PRODUCTS"
-"SUSTAINABILITY" -> "POLICY"
-"recyclers" -> "BIOLOGICAL PRODUCTS"
-"Agricultural Industry" -> "BIOLOGICAL PRODUCTS"
-"BIOLOGICAL PRODUCTS" -> "LOGISTIC"
-"WASTE" -> "REFUSE COLLECTION"
-"recycling" -> "REFUSE COLLECTION"
-"urban" -> "Centralised"
-"POLICY" -> "BIOLOGICAL PRODUCTS"
-"POLICY" -> "regulatory capture"
-"POLICY" -> "territory"
-"territory" -> "GOVERNMENT"
+nurition -> food
+consumer waste -> CONSUMER
+recycling -> consumer waste
+recycling -> BIOLOGICAL PRODUCTS
+SUSTAINABILITY -> POLICY
+recyclers -> BIOLOGICAL PRODUCTS
+Agricultural Industry -> BIOLOGICAL PRODUCTS
+BIOLOGICAL PRODUCTS -> LOGISTIC
+WASTE -> REFUSE COLLECTION
+recycling -> REFUSE COLLECTION
+urban -> Centralised
+POLICY -> BIOLOGICAL PRODUCTS
+POLICY -> regulatory capture
+POLICY -> territory
+territory -> GOVERNMENT
 

@@ -3,130 +3,130 @@ title AI, Societal Change, JUNE 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-anchor "We" [0.97, 0.47]
-anchor "Me" [0.97, 0.73]
+anchor We [0.97, 0.47]
+anchor Me [0.97, 0.73]
 
-component "Identity" [0.91, 0.54]
+component Identity [0.91, 0.54]
 
-component "BELONGING" [0.86, 0.43]
-pipeline "BELONGING" {
-  component "Companionship" [0.24]
-  component "Role models" [0.57]
-  component "Individualism" [0.7]
+component BELONGING [0.86, 0.43]
+pipeline BELONGING {
+  component Companionship [0.24]
+  component Role models [0.57]
+  component Individualism [0.7]
 }
 
-component "Safety" [0.79, 0.39]
+component Safety [0.79, 0.39]
 
-component "Power" [0.79, 0.50]
+component Power [0.79, 0.50]
 
-component "ADVANTAGE" [0.74, 0.39]
-evolve "ADVANTAGE" 0.53
-component "Equality" [0.74, 0.53]
+component ADVANTAGE [0.74, 0.39]
+evolve ADVANTAGE 0.53
+component Equality [0.74, 0.53]
 
-component "PSYCHOLOGY" [0.15, 0.60]
-pipeline "PSYCHOLOGY" {
-  component "Mimicary" [0.5]
-  component "Mental Health" [0.52]
-  component "fairness" [0.68]
+component PSYCHOLOGY [0.15, 0.60]
+pipeline PSYCHOLOGY {
+  component Mimicary [0.5]
+  component Mental Health [0.52]
+  component fairness [0.68]
 }
 
-component "MACHINE LEARNING" [0.55, 0.34]
-pipeline "MACHINE LEARNING" {
-  component "AGI" [0.11]
-  component "Accuracy" [0.28]
-  component "Skill Augmentation" [0.38]
-  component "LLM Model" [0.55]
-  component "FOUNDATIONAL COMPONENTS" [0.67]
+component MACHINE LEARNING [0.55, 0.34]
+pipeline MACHINE LEARNING {
+  component AGI [0.11]
+  component Accuracy [0.28]
+  component Skill Augmentation [0.38]
+  component LLM Model [0.55]
+  component FOUNDATIONAL COMPONENTS [0.67]
 }
 
-component "NATURAL LEARNING" [0.46, 0.56]
-pipeline "NATURAL LEARNING" {
-  component "Differentiated Learning" [0.25]
-  component "Learning Tools" [0.41]
-  component "Syllabus Learning" [0.67]
-  component "Storytelling" [0.81]
-  component "Ritual" [0.87]
-  component "Symbols" [0.89]
+component NATURAL LEARNING [0.46, 0.56]
+pipeline NATURAL LEARNING {
+  component Differentiated Learning [0.25]
+  component Learning Tools [0.41]
+  component Syllabus Learning [0.67]
+  component Storytelling [0.81]
+  component Ritual [0.87]
+  component Symbols [0.89]
 }
 
-component "COMMUNITY" [0.27, 0.42]
-pipeline "COMMUNITY" {
-  component "Machine Mediated Community" [0.18]
-  component "Social Media" [0.56]
-  component "Open Source" [0.67]
-  component "State Mediated community" [0.73]
+component COMMUNITY [0.27, 0.42]
+pipeline COMMUNITY {
+  component Machine Mediated Community [0.18]
+  component Social Media [0.56]
+  component Open Source [0.67]
+  component State Mediated community [0.73]
   component "Non-mediated community" [0.78]
 }
 
-component "MINDS" [0.07, 0.43]
-pipeline "MINDS" {
-  component "Artificial Minds" [0.18]
-  component "Natural Minds" [0.79]
+component MINDS [0.07, 0.43]
+pipeline MINDS {
+  component Artificial Minds [0.18]
+  component Natural Minds [0.79]
 }
 
-component "LEGAL FRAMEWORKS" [0.66, 0.50]
-pipeline "LEGAL FRAMEWORKS" {
-  component "EU AI Act" [0.29]
-  component "GDPR" [0.4]
-  component "Common Law" [0.72]
+component LEGAL FRAMEWORKS [0.66, 0.50]
+pipeline LEGAL FRAMEWORKS {
+  component EU AI Act [0.29]
+  component GDPR [0.4]
+  component Common Law [0.72]
 }
 
-component "AFFORDANCES" [0.36, 0.50]
-pipeline "AFFORDANCES" {
-  component "Societal Disadvantage" [0.44]
-  component "Societal Biases" [0.56]
-  component "public services" [0.61]
-  component "Disparities" [0.66]
+component AFFORDANCES [0.36, 0.50]
+pipeline AFFORDANCES {
+  component Societal Disadvantage [0.44]
+  component Societal Biases [0.56]
+  component public services [0.61]
+  component Disparities [0.66]
 }
 
-"We" -> "Identity"
-"Me" -> "Identity"
-"Me" -> "Individualism"
-"We" -> "Companionship"
+We -> Identity
+Me -> Identity
+Me -> Individualism
+We -> Companionship
 
-"Self worth" -> "Me"
-"Identity" -> "Belonging"
+Self worth -> Me
+Identity -> Belonging
 
-"Individual Biases" -> "Societal Biases"
+Individual Biases -> Societal Biases
 
-"Power" -> "ADVANTAGE"
-"Power" -> "Equality"
-"Safety" -> "ADVANTAGE"
-"Safety" -> "Equality"
-"Learning Tools" -> "PSYCHOLOGY"
-"Differentiated Learning" -> "PSYCHOLOGY"
+Power -> ADVANTAGE
+Power -> Equality
+Safety -> ADVANTAGE
+Safety -> Equality
+Learning Tools -> PSYCHOLOGY
+Differentiated Learning -> PSYCHOLOGY
 
-"PSYCHOLOGY" -> "Mirroring"
-"PSYCHOLOGY" -> "Mimicary"
-"PSYCHOLOGY" -> "Syllabus Learning"
-"Natural Minds" -> "Non-mediated Community"
-"LLM Model" -> "Mimicary"
+PSYCHOLOGY -> Mirroring
+PSYCHOLOGY -> Mimicary
+PSYCHOLOGY -> Syllabus Learning
+Natural Minds -> "Non-mediated Community"
+LLM Model -> Mimicary
 
-"Syllabus Learning" -> "Equality"
-"Differentiated Learning" -> "ADVANTAGE"
+Syllabus Learning -> Equality
+Differentiated Learning -> ADVANTAGE
 
-"Machine Mediated Community" -> "Differentiated Learning"
+Machine Mediated Community -> Differentiated Learning
 
-"Common Law" -> "Non-mediated community"
-"Non-mediated community" -> "Storytelling"
-"Non-mediated Community" -> "Oral Tradition"
+Common Law -> "Non-mediated community"
+"Non-mediated community" -> Storytelling
+"Non-mediated Community" -> Oral Tradition
 
-"Society Disadvantage" -> "ADVANTAGE"
-"Individual Disadvantage" -> "Society Disadvantage"
+Society Disadvantage -> ADVANTAGE
+Individual Disadvantage -> Society Disadvantage
 
-"Identity" -> "BELONGING"
-"BELONGING" -> "Safety"
-"Power" -> "BELONGING"
-"Power" -> "LEGAL FRAMEWORKS"
-"ADVANTAGE" -> "LEGAL FRAMEWORKS"
-"EU AI Act" -> "MACHINE LEARNING"
+Identity -> BELONGING
+BELONGING -> Safety
+Power -> BELONGING
+Power -> LEGAL FRAMEWORKS
+ADVANTAGE -> LEGAL FRAMEWORKS
+EU AI Act -> MACHINE LEARNING
 
-"Role models" -> "Storytelling"
-"Societal Disadvantage" -> "Differentiated Learning"
-"ADVANTAGE" -> "AFFORDANCES"
-"Equality" -> "LEGAL FRAMEWORKS"
-"Artificial Minds" -> "AGI"
-"Mimicary" -> "Artificial Minds"
-"BELONGING" -> "COMMUNITY"
-"PSYCHOLOGY" -> "Natural Minds"
+Role models -> Storytelling
+Societal Disadvantage -> Differentiated Learning
+ADVANTAGE -> AFFORDANCES
+Equality -> LEGAL FRAMEWORKS
+Artificial Minds -> AGI
+Mimicary -> Artificial Minds
+BELONGING -> COMMUNITY
+PSYCHOLOGY -> Natural Minds
 

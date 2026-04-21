@@ -4,69 +4,69 @@ title Energy - Cloud
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component "user" [0.97, 0.71]
-component "application" [0.82, 0.61]
-pipeline "application" {
-  component "drone swarming control" [0.31]
-  component "payroll system" [0.67]
-  component "word processing" [0.79]
+component user [0.97, 0.71]
+component application [0.82, 0.61]
+pipeline application {
+  component drone swarming control [0.31]
+  component payroll system [0.67]
+  component word processing [0.79]
 }
 
-evolve "drone swarming control" 0.4
+evolve drone swarming control 0.4
 
-component "ESG" [0.95, 0.53]
+component ESG [0.95, 0.53]
 
-component "runtime" [0.60, 0.68]
+component runtime [0.60, 0.68]
 
-evolve "runtime" 0.75
+evolve runtime 0.75
 note "+serverless" [0.58, 0.77]
 note "+LAMP / .NET" [0.53, 0.61]
-component "machine container" [0.42, 0.71]
-component "compute" [0.20, 0.67]
-component "operating system" [0.47, 0.71]
-component "data centre" [0.05, 0.69]
-evolve "compute" 0.80
+component machine container [0.42, 0.71]
+component compute [0.20, 0.67]
+component operating system [0.47, 0.71]
+component data centre [0.05, 0.69]
+evolve compute 0.80
 note "+cloud IaaS" [0.17, 0.81]
 note "+servers" [0.18, 0.60]
-evolve "devops" 0.6
-component "architectural practice" [0.33, 0.66]
-pipeline "architectural practice" {
-  component "devops" [0.21]
-  component "ITIL" [0.76]
+evolve devops 0.6
+component architectural practice [0.33, 0.66]
+pipeline architectural practice {
+  component devops [0.21]
+  component ITIL [0.76]
 }
 component "1" [0.20, 0.81]
-component "application architecture" [0.70, 0.63]
-pipeline "application architecture" {
-  component "finops" [0.31]
-  component "best coding practice" [0.71]
+component application architecture [0.70, 0.63]
+pipeline application architecture {
+  component finops [0.31]
+  component best coding practice [0.71]
 }
-evolve "finops" 0.4
+evolve finops 0.4
 component "2" [0.60, 0.75]
 
-component "carbon" [0.63, 0.47]
-component "reporting" [0.91, 0.39]
+component carbon [0.63, 0.47]
+component reporting [0.91, 0.39]
 
 note "+$" [0.11, 0.66]
 note "+$" [0.36, 0.69]
 note "+$" [0.52, 0.70]
 note "+$" [0.61, 0.45]
 
-"2" -> "finops"
-"1" -> "devops"
-"user" -> "application"
+"2" -> finops
+"1" -> devops
+user -> application
 
-"runtime" -> "operating system"
-"operating system" -> "machine container"
-"compute" -> "data centre"
-"machine container" -> "architectural practice"
-"architectural practice" -> "compute"
-"ITIL" -> "compute"
-"application architecture" -> "application"
-"application architecture" -> "runtime"
-"best coding practice" -> "runtime"
-"drone swarming control" -> "finops"
-"user" -> "ESG"
-"ESG" -> "reporting"
-"carbon" -> "reporting"
-"reporting" -> "application"
+runtime -> operating system
+operating system -> machine container
+compute -> data centre
+machine container -> architectural practice
+architectural practice -> compute
+ITIL -> compute
+application architecture -> application
+application architecture -> runtime
+best coding practice -> runtime
+drone swarming control -> finops
+user -> ESG
+ESG -> reporting
+carbon -> reporting
+reporting -> application
 

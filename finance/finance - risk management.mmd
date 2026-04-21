@@ -7,125 +7,125 @@ evolution genesis / concept -> custom / emerging -> product / converging -> comm
 note "*1" [0.07, 0.46]
 note "*1 See Embedded finance map [0.95, 0.01]" [0.95, 0.01]
 
-component "inclusion" [0.82, 0.84]
-component "exclusion" [0.38, 0.80]
-component "profit" [0.59, 0.78]
-component "perceived risk" [0.68, 0.36]
-component "gov" [0.97, 0.57]
-component "sovereignty" [0.88, 0.46]
-pipeline "sovereignty" {
-  component "economic" [0.37]
-  component "political" [0.45]
-  component "CNI" [0.5]
-  component "territorial" [0.57]
+component inclusion [0.82, 0.84]
+component exclusion [0.38, 0.80]
+component profit [0.59, 0.78]
+component perceived risk [0.68, 0.36]
+component gov [0.97, 0.57]
+component sovereignty [0.88, 0.46]
+pipeline sovereignty {
+  component economic [0.37]
+  component political [0.45]
+  component CNI [0.5]
+  component territorial [0.57]
 }
-component "expectations" [0.73, 0.43]
-component "cost" [0.47, 0.79]
+component expectations [0.73, 0.43]
+component cost [0.47, 0.79]
 
-component "rating agencies" [0.11, 0.44]
-component "providers" [0.64, 0.66]
-component "public" [0.86, 0.72]
-component "society" [0.92, 0.71]
-component "financial services" [0.74, 0.65]
-pipeline "financial services" {
-  component "insurance" [0.52]
-  component "lending" [0.67]
-  component "retail banking" [0.7]
+component rating agencies [0.11, 0.44]
+component providers [0.64, 0.66]
+component public [0.86, 0.72]
+component society [0.92, 0.71]
+component financial services [0.74, 0.65]
+pipeline financial services {
+  component insurance [0.52]
+  component lending [0.67]
+  component retail banking [0.7]
 }
-component "corporation" [0.97, 0.63]
+component corporation [0.97, 0.63]
 
-component "regulation" [0.35, 0.52]
-component "risk" [0.26, 0.66]
-pipeline "risk" {
-  component "cascade failure" [0.29]
-  component "system risk" [0.4]
-  component "cybersecurity" [0.5]
-  component "third party" [0.55]
-  component "credit risk" [0.6]
-  component "theft" [0.73]
-}
-
-component "trust" [0.61, 0.56]
-
-component "assets" [0.55, 0.62]
-pipeline "assets" {
-  component "governance" [0.39]
-  component "process" [0.56]
-  component "infrastructure" [0.68]
-  component "people" [0.7]
-  component "capital" [0.75]
+component regulation [0.35, 0.52]
+component risk [0.26, 0.66]
+pipeline risk {
+  component cascade failure [0.29]
+  component system risk [0.4]
+  component cybersecurity [0.5]
+  component third party [0.55]
+  component credit risk [0.6]
+  component theft [0.73]
 }
 
-component "information assymetry" [0.58, 0.27]
-component "liability" [0.32, 0.59]
+component trust [0.61, 0.56]
 
-component "accountability" [0.05, 0.67]
-component "awareness" [0.07, 0.22]
-component "supply chain" [0.03, 0.27]
-component "value" [0.44, 0.77]
+component assets [0.55, 0.62]
+pipeline assets {
+  component governance [0.39]
+  component process [0.56]
+  component infrastructure [0.68]
+  component people [0.7]
+  component capital [0.75]
+}
 
-"supranation" -> "gov"
-"nation" -> "public"
-"public" -> "financial services"
-"public" -> "capital"
-"financial services" -> "assets"
-"nation" -> "regulation"
-"regulation" -> "liability"
-"risk" -> "liability"
-"regulation" -> "territory"
-"system risk" -> "centralised"
-"financial services" -> "control"
-"system risk" -> "monopoly"
-"cascade failure" -> "awareness"
-"awareness" -> "few players"
-"credit risk" -> "many players"
-"territory" -> "accountability"
-"supranation" -> "regulation"
+component information assymetry [0.58, 0.27]
+component liability [0.32, 0.59]
 
-"system risk" -> "few players"
-"risk" -> "accountability"
-"awareness" -> "supply chain"
-"financial services" -> "supply chain"
-"nation" -> "financial services"
-"supranation" -> "financial services"
-"corporation" -> "financial services"
-"few players" -> "2B2F"
-"regulation" -> "regulators"
-"financial services" -> "providers"
-"providers" -> "assets"
-"regulators" -> "risk"
-"risk" -> "rating agencies"
-"assets" -> "value"
-"gov" -> "nation"
-"territorial" -> "territory"
-"gov" -> "sovereignty"
-"public" -> "expectations"
-"political" -> "expectations"
-"expectations" -> "expectations"
-"expectations" -> "risk"
-"expectations" -> "perceived risk"
-"assets" -> "cost"
-"providers" -> "profit"
-"profit" -> "value"
-"profit" -> "cost"
-"providers" -> "competency"
-"expectations" -> "trust"
-"value" -> "exclusion"
-"assets" -> "exclusion"
-"public" -> "inclusion"
-"value" -> "network effects"
-"network effects" -> "many players"
-"value" -> "risk"
-"perceived risk" -> "information assymetry"
-"information assymetry" -> "awareness"
-"rating agencies" -> "accountability"
-"gov" -> "society"
-"society" -> "public"
-"CNI" -> "expectations"
-"gov" -> "regulation"
-"rating agencies" -> "awareness"
-"regulation" -> "accountability"
-"providers" -> "trust"
-"exclusion" -> "regulation"
-"cost" -> "regulation"
+component accountability [0.05, 0.67]
+component awareness [0.07, 0.22]
+component supply chain [0.03, 0.27]
+component value [0.44, 0.77]
+
+supranation -> gov
+nation -> public
+public -> financial services
+public -> capital
+financial services -> assets
+nation -> regulation
+regulation -> liability
+risk -> liability
+regulation -> territory
+system risk -> centralised
+financial services -> control
+system risk -> monopoly
+cascade failure -> awareness
+awareness -> few players
+credit risk -> many players
+territory -> accountability
+supranation -> regulation
+
+system risk -> few players
+risk -> accountability
+awareness -> supply chain
+financial services -> supply chain
+nation -> financial services
+supranation -> financial services
+corporation -> financial services
+few players -> "2B2F"
+regulation -> regulators
+financial services -> providers
+providers -> assets
+regulators -> risk
+risk -> rating agencies
+assets -> value
+gov -> nation
+territorial -> territory
+gov -> sovereignty
+public -> expectations
+political -> expectations
+expectations -> expectations
+expectations -> risk
+expectations -> perceived risk
+assets -> cost
+providers -> profit
+profit -> value
+profit -> cost
+providers -> competency
+expectations -> trust
+value -> exclusion
+assets -> exclusion
+public -> inclusion
+value -> network effects
+network effects -> many players
+value -> risk
+perceived risk -> information assymetry
+information assymetry -> awareness
+rating agencies -> accountability
+gov -> society
+society -> public
+CNI -> expectations
+gov -> regulation
+rating agencies -> awareness
+regulation -> accountability
+providers -> trust
+exclusion -> regulation
+cost -> regulation
 

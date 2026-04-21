@@ -3,52 +3,52 @@ title Intuitive Finance, Investor, Dec 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component "investors" [1.00, 0.68]
+component investors [1.00, 0.68]
 
-component "risk profile" [0.86, 0.40]
-pipeline "risk profile" {
-  component "risk appetite" [0.39]
+component risk profile [0.86, 0.40]
+pipeline risk profile {
+  component risk appetite [0.39]
   component "market risk" [0.42]
-  component "strategy" [0.46]
-  component "domain expertise" [0.57]
-  component "brand" [0.69]
-  component "capital" [0.71]
+  component strategy [0.46]
+  component domain expertise [0.57]
+  component brand [0.69]
+  component capital [0.71]
 }
 
-component "industry" [0.20, 0.66]
+component industry [0.20, 0.66]
 
-component "prediction score" [0.95, 0.58]
+component prediction score [0.95, 0.58]
 
-component "investment type" [0.63, 0.68]
-pipeline "investment type" {
-  component "derivatives" [0.58]
-  component "treasury bonds" [0.62]
-  component "stock" [0.64]
-  component "real estates" [0.68]
-  component "cash" [0.71]
+component investment type [0.63, 0.68]
+pipeline investment type {
+  component derivatives [0.58]
+  component treasury bonds [0.62]
+  component stock [0.64]
+  component real estates [0.68]
+  component cash [0.71]
 }
 
-component "investment criteria checklist" [0.40, 0.40]
-pipeline "investment criteria checklist" {
-  component "business strategy" [0.22]
-  component "executive brand" [0.24]
-  component "bias" [0.38]
+component investment criteria checklist [0.40, 0.40]
+pipeline investment criteria checklist {
+  component business strategy [0.22]
+  component executive brand [0.24]
+  component bias [0.38]
   component "need / product analysis" [0.51]
-  component "emotional attachment" [0.53]
-  component "circle of competence" [0.57]
+  component emotional attachment [0.53]
+  component circle of competence [0.57]
   component "market analysis" [0.65]
-  component "finances" [0.69]
+  component finances [0.69]
 }
 
-component "luck" [0.94, 0.69]
-component "assets" [0.94, 0.67]
+component luck [0.94, 0.69]
+component assets [0.94, 0.67]
 
-"investors" -> "prediction score"
-"prediction score" -> "risk profile"
-"prediction score" -> "investment type"
-"investment type" -> "investment criteria checklist"
-"industry" -> "domain expertise"
-"circle of competence" -> "industry"
-"luck" -> "investors"
-"assets" -> "investors"
+investors -> prediction score
+prediction score -> risk profile
+prediction score -> investment type
+investment type -> investment criteria checklist
+industry -> domain expertise
+circle of competence -> industry
+luck -> investors
+assets -> investors
 

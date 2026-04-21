@@ -6,78 +6,78 @@ evolution genesis / concept -> custom / emerging -> product/ converging -> commo
 
 note "For inspiring witches and magicians and those into self actualisation" [1.01, 0.32]
 
-component "Self" [0.90, 0.58]
+component Self [0.90, 0.58]
 
-component "GROWTH" [0.80, 0.64]
-pipeline "GROWTH" {
-  component "AUTHORITY" [0.58]
-  component "CRAFT" [0.68]
-  component "money" [0.72]
+component GROWTH [0.80, 0.64]
+pipeline GROWTH {
+  component AUTHORITY [0.58]
+  component CRAFT [0.68]
+  component money [0.72]
 }
 
-component "DISPOSITIONAL ATTITUDES" [0.56, 0.62]
-pipeline "DISPOSITIONAL ATTITUDES" {
-  component "moral imperative" [0.68]
+component DISPOSITIONAL ATTITUDES [0.56, 0.62]
+pipeline DISPOSITIONAL ATTITUDES {
+  component moral imperative [0.68]
 }
 note "How to a better human" [0.57, 0.63]
 
-component "CONTEXT" [0.31, 0.40]
-pipeline "CONTEXT" {
-  component "change" [0.2]
-  component "status quo" [0.45]
+component CONTEXT [0.31, 0.40]
+pipeline CONTEXT {
+  component change [0.2]
+  component status quo [0.45]
 }
 
-component "awareness" [0.38, 0.42]
+component awareness [0.38, 0.42]
 
-component "VALUE JUDGEMENT" [0.31, 0.56]
-pipeline "VALUE JUDGEMENT" {
-  component "good for WE" [0.51]
-  component "good for ME" [0.58]
+component VALUE JUDGEMENT [0.31, 0.56]
+pipeline VALUE JUDGEMENT {
+  component good for WE [0.51]
+  component good for ME [0.58]
 }
 
-component "BELIEFS" [0.19, 0.55]
+component BELIEFS [0.19, 0.55]
 
-component "collective" [0.94, 0.48]
+component collective [0.94, 0.48]
 
-component "CAPABILITY FOR GROWTH" [0.68, 0.66]
-pipeline "CAPABILITY FOR GROWTH" {
-  component "social factors" [0.66]
-  component "education" [0.7]
+component CAPABILITY FOR GROWTH [0.68, 0.66]
+pipeline CAPABILITY FOR GROWTH {
+  component social factors [0.66]
+  component education [0.7]
 }
 
-component "TRADITION" [0.09, 0.62]
-pipeline "TRADITION" {
-  component "rituals" [0.56]
-  component "stories" [0.61]
-  component "symbols" [0.64]
+component TRADITION [0.09, 0.62]
+pipeline TRADITION {
+  component rituals [0.56]
+  component stories [0.61]
+  component symbols [0.64]
 }
 
-component "FUNDAMENTALS" [0.48, 0.61]
-pipeline "FUNDAMENTALS" {
-  component "spiritual Wisdom" [0.64]
-  component "purpose" [0.67]
-  component "passion" [0.69]
+component FUNDAMENTALS [0.48, 0.61]
+pipeline FUNDAMENTALS {
+  component spiritual Wisdom [0.64]
+  component purpose [0.67]
+  component passion [0.69]
 }
 
-component "individual experiences" [0.12, 0.50]
+component individual experiences [0.12, 0.50]
 
-"self" -> "growth"
-"BELIEFS" -> "VALUE JUDGEMENT"
-"GROWTH" -> "VALUE JUDGEMENT"
-"GROWTH" -> "DISPOSITIONAL ATTITUDES"
-"GROWTH" -> "awareness"
-"awareness" -> "context"
-"Self" -> "GROWTH"
-"collective" -> "BELIEFS"
-"Self" -> "collective"
-"BELIEFS" -> "ION"
-"CAPABILITY FOR GROWTH" -> "GROWTH"
-"CONTEXT" -> "awareness"
-"moral imperative" -> "purpose"
-"passion" -> "moral imperative"
-"FUNDAMENTALS" -> "BELIEFS"
-"FUNDAMENTALS" -> "awareness"
-"DISPOSITIONAL ATTITUDES" -> "FUNDAMENTALS"
-"BELIEFS" -> "TRADITION"
-"BELIEFS" -> "individual experiences"
+self -> growth
+BELIEFS -> VALUE JUDGEMENT
+GROWTH -> VALUE JUDGEMENT
+GROWTH -> DISPOSITIONAL ATTITUDES
+GROWTH -> awareness
+awareness -> context
+Self -> GROWTH
+collective -> BELIEFS
+Self -> collective
+BELIEFS -> ION
+CAPABILITY FOR GROWTH -> GROWTH
+CONTEXT -> awareness
+moral imperative -> purpose
+passion -> moral imperative
+FUNDAMENTALS -> BELIEFS
+FUNDAMENTALS -> awareness
+DISPOSITIONAL ATTITUDES -> FUNDAMENTALS
+BELIEFS -> TRADITION
+BELIEFS -> individual experiences
 

@@ -3,64 +3,64 @@ title ESG - Sustainability
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "company" [0.95, 0.67]
-component "survive" [0.88, 0.64]
-pipeline "survive" {
-  component "tomorrow" [0.31]
-  component "today" [0.7]
+component company [0.95, 0.67]
+component survive [0.88, 0.64]
+pipeline survive {
+  component tomorrow [0.31]
+  component today [0.7]
 }
-component "sustainability" [0.64, 0.30]
-component "profit" [0.77, 0.76]
-component "good" [0.74, 0.70]
-component "supply chain" [0.19, 0.73]
-component "awareness of supply chain" [0.56, 0.20]
-component "standards" [0.11, 0.25] (inertia)
-component "cost" [0.03, 0.65]
-component "competition" [0.56, 0.55]
-pipeline "competition" {
-  component "collaboration" [0.32]
-  component "conflict" [0.63]
+component sustainability [0.64, 0.30]
+component profit [0.77, 0.76]
+component good [0.74, 0.70]
+component supply chain [0.19, 0.73]
+component awareness of supply chain [0.56, 0.20]
+component standards [0.11, 0.25] (inertia)
+component cost [0.03, 0.65]
+component competition [0.56, 0.55]
+pipeline competition {
+  component collaboration [0.32]
+  component conflict [0.63]
 }
-component "open data" [0.19, 0.38] (inertia)
-component "advantage" [0.42, 0.60]
-component "society" [0.97, 0.59]
+component open data [0.19, 0.38] (inertia)
+component advantage [0.42, 0.60]
+component society [0.97, 0.59]
 
-component "status" [0.70, 0.63]
+component status [0.70, 0.63]
 
-evolve "tomorrow" 0.70
-evolve "open data" 0.6
-evolve "standards" 0.61
-evolve "sustainability" 0.6
+evolve tomorrow 0.70
+evolve open data 0.6
+evolve standards 0.61
+evolve sustainability 0.6
 
 note "+counters" [0.28, 0.65]
 note "+counters" [0.26, 0.37]
 note "+counters" [0.27, 0.48]
 note "+counters" [0.46, 0.42]
 
-evolve "collaboration" 0.5
+evolve collaboration 0.5
 
-"company" -> "survive"
-"tomorrow" -> "sustainability"
-"today" -> "profit"
-"profit" -> "good"
-"good" -> "supply chain"
-"sustainability" -> "awareness of supply chain"
-"awareness of supply chain" -> "supply chain"
-"standards" -> "awareness of supply chain"
-"competition" -> "survive"
-"good" -> "conflict"
-"sustainability" -> "collaboration"
-"open data" -> "awareness of supply chain"
-"standards" -> "cost"
-"awareness of supply chain" -> "cost"
-"conflict" -> "advantage"
+company -> survive
+tomorrow -> sustainability
+today -> profit
+profit -> good
+good -> supply chain
+sustainability -> awareness of supply chain
+awareness of supply chain -> supply chain
+standards -> awareness of supply chain
+competition -> survive
+good -> conflict
+sustainability -> collaboration
+open data -> awareness of supply chain
+standards -> cost
+awareness of supply chain -> cost
+conflict -> advantage
 
-"today" -> "conflict"
-"good" -> "marketing"
-"marketing" -> "sustainability"
-"marketing" -> "sustainability"
-"good" -> "status"
-"status" -> "sustainability"
-"society" -> "sustainability"
-"awareness of supply chain" -> "collaboration"
+today -> conflict
+good -> "marketing"
+"marketing" -> sustainability
+"marketing" -> sustainability
+good -> status
+status -> sustainability
+society -> sustainability
+awareness of supply chain -> collaboration
 

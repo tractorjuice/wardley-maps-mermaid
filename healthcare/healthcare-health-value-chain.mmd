@@ -4,120 +4,120 @@ title HEALTHCARE - healthcare value chain - OCT 2022
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component "government" [0.97, 0.64]
-component "public" [0.91, 0.69]
-component "insurance" [0.97, 0.57]
-component "HEALTH" [0.81, 0.62]
-pipeline "HEALTH" {
-  component "patient education" [0.36]
-  component "avoidance of disease" [0.48]
-  component "treatment" [0.69]
-  component "profit" [0.7]
+component government [0.97, 0.64]
+component public [0.91, 0.69]
+component insurance [0.97, 0.57]
+component HEALTH [0.81, 0.62]
+pipeline HEALTH {
+  component patient education [0.36]
+  component avoidance of disease [0.48]
+  component treatment [0.69]
+  component profit [0.7]
 }
 
-component "preventative healthcare" [0.74, 0.44]
-component "medical industry" [0.97, 0.52]
+component preventative healthcare [0.74, 0.44]
+component medical industry [0.97, 0.52]
 
-component "social policy" [0.89, 0.51]
+component social policy [0.89, 0.51]
 
-component "personalised tracking" [0.44, 0.42]
+component personalised tracking [0.44, 0.42]
 
-component "SENSORS" [0.36, 0.62]
-pipeline "SENSORS" {
-  component "gene sequence" [0.53]
-  component "blood test" [0.65]
-  component "physical activity" [0.7]
+component SENSORS [0.36, 0.62]
+pipeline SENSORS {
+  component gene sequence [0.53]
+  component blood test [0.65]
+  component physical activity [0.7]
 }
 
-component "baseline" [0.29, 0.40]
+component baseline [0.29, 0.40]
 note "(human body)" [0.28, 0.34]
-component "epigenetic factors" [0.18, 0.26]
+component epigenetic factors [0.18, 0.26]
 
-component "POPULATION DATA" [0.12, 0.53]
-pipeline "POPULATION DATA" {
-  component "epigentic data" [0.3]
-  component "cultural" [0.39]
+component POPULATION DATA [0.12, 0.53]
+pipeline POPULATION DATA {
+  component epigentic data [0.3]
+  component cultural [0.39]
   component "socio-economic" [0.61]
-  component "phenotypic characteristics" [0.69]
+  component phenotypic characteristics [0.69]
 }
 
-component "personalised insurance" [0.17, 0.46]
+component personalised insurance [0.17, 0.46]
 
-component "sequencing machines" [0.23, 0.61]
-component "privacy" [0.37, 0.38]
-component "identity" [0.39, 0.43]
-component "medical practitioner" [0.75, 0.61]
+component sequencing machines [0.23, 0.61]
+component privacy [0.37, 0.38]
+component identity [0.39, 0.43]
+component medical practitioner [0.75, 0.61]
 
-component "THERAPEUTICS" [0.63, 0.61]
-pipeline "THERAPEUTICS" {
-  component "homeopathy" [0.2]
-  component "psychotherapy" [0.36]
-  component "unlicensed drug" [0.41]
-  component "physiotherapy" [0.53]
-  component "CBT" [0.61]
-  component "SURGERY" [0.67]
-  component "licensed drug" [0.7]
-  component "COST" [0.71]
+component THERAPEUTICS [0.63, 0.61]
+pipeline THERAPEUTICS {
+  component homeopathy [0.2]
+  component psychotherapy [0.36]
+  component unlicensed drug [0.41]
+  component physiotherapy [0.53]
+  component CBT [0.61]
+  component SURGERY [0.67]
+  component licensed drug [0.7]
+  component COST [0.71]
 }
 
-component "access" [0.69, 0.66]
-component "LAST MILE" [0.50, 0.60]
-pipeline "LAST MILE" {
-  component "BEHAVIOURAL CHANGE" [0.47]
-  component "medical centres" [0.48]
-  component "hospitals" [0.67]
-  component "telemedicine" [0.71]
+component access [0.69, 0.66]
+component LAST MILE [0.50, 0.60]
+pipeline LAST MILE {
+  component BEHAVIOURAL CHANGE [0.47]
+  component medical centres [0.48]
+  component hospitals [0.67]
+  component telemedicine [0.71]
 }
-component "exercise" [0.42, 0.63]
-component "nutrition" [0.70, 0.48]
-evolve "sequencing machines" 0.67
+component exercise [0.42, 0.63]
+component nutrition [0.70, 0.48]
+evolve sequencing machines 0.67
 
-"public" -> "HEALTH"
-"insurance" -> "profit"
-"insurance" -> "personalised insurance"
-"avoidance of disease" -> "preventative healthcare"
-"preventative healthcare" -> "personalised tracking"
-"personalised tracking" -> "privacy"
-"personalised tracking" -> "baseline"
-"baseline" -> "epigenetic factors"
-"epigenetic factors" -> "epigentic data"
-"personalised tracking" -> "SENSORS"
-"gene sequence" -> "sequencing machines"
-"physical activity" -> "phenotypic characteristics"
-"SENSORS" -> "POPULATION DATA"
-"baseline" -> "POPULATION DATA"
-"personalised insurance" -> "POPULATION DATA"
-"identity" -> "privacy"
-"treatment" -> "medical practitioner"
-"treatment" -> "access"
-"access" -> "LAST MILE"
-"preventative healthcare" -> "exercise"
-"nutrition" -> "preventative healthcare"
-"personalised tracking" -> "identity"
-"public" -> "government"
-"access" -> "COST"
-"COST" -> "government"
-"COST" -> "pharma"
-"personalised tracking" -> "insurance"
-"baseline" -> "values"
-"values" -> "public"
-"treatment" -> "personalised tracking"
-"access" -> "preventative healthcare"
-"preventative healthcare" -> "BEHAVIOURAL CHANGE"
-"access" -> "socio-economic"
-"BEHAVIOURAL CHANGE" -> "cultural"
-"exercise" -> "physical activity"
-"social policy" -> "government"
-"social policy" -> "socio-economic"
-"insurance" -> "treatment"
-"treatment" -> "THERAPEUTICS"
-"psychotherapy" -> "BEHAVIOURAL CHANGE"
-"CBT" -> "BEHAVIOURAL CHANGE"
-"insurance" -> "avoidance of disease"
-"medical industry" -> "THERAPEUTICS"
-"medical industry" -> "patient education"
-"social policy" -> "patient education"
-"medical practitioner" -> "patient education"
-"insurance" -> "patient education"
-"preventative healthcare" -> "patient education"
+public -> HEALTH
+insurance -> profit
+insurance -> personalised insurance
+avoidance of disease -> preventative healthcare
+preventative healthcare -> personalised tracking
+personalised tracking -> privacy
+personalised tracking -> baseline
+baseline -> epigenetic factors
+epigenetic factors -> epigentic data
+personalised tracking -> SENSORS
+gene sequence -> sequencing machines
+physical activity -> phenotypic characteristics
+SENSORS -> POPULATION DATA
+baseline -> POPULATION DATA
+personalised insurance -> POPULATION DATA
+identity -> privacy
+treatment -> medical practitioner
+treatment -> access
+access -> LAST MILE
+preventative healthcare -> exercise
+nutrition -> preventative healthcare
+personalised tracking -> identity
+public -> government
+access -> COST
+COST -> government
+COST -> pharma
+personalised tracking -> insurance
+baseline -> values
+values -> public
+treatment -> personalised tracking
+access -> preventative healthcare
+preventative healthcare -> BEHAVIOURAL CHANGE
+access -> "socio-economic"
+BEHAVIOURAL CHANGE -> cultural
+exercise -> physical activity
+social policy -> government
+social policy -> "socio-economic"
+insurance -> treatment
+treatment -> THERAPEUTICS
+psychotherapy -> BEHAVIOURAL CHANGE
+CBT -> BEHAVIOURAL CHANGE
+insurance -> avoidance of disease
+medical industry -> THERAPEUTICS
+medical industry -> patient education
+social policy -> patient education
+medical practitioner -> patient education
+insurance -> patient education
+preventative healthcare -> patient education
 

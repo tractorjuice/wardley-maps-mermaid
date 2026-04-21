@@ -4,105 +4,105 @@ title ENERGY - electrical energy storage, APRIL 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component "CONSUMER" [0.99, 0.68]
+component CONSUMER [0.99, 0.68]
 
-component "ACTIVITY" [0.93, 0.68]
+component ACTIVITY [0.93, 0.68]
 
-component "CONTROL" [0.89, 0.73]
+component CONTROL [0.89, 0.73]
 
-component "GRID" [0.80, 0.69]
-pipeline "GRID" {
-  component "Distributed grid" [0.35]
-  component "ELECTRICITY" [0.72]
-  component "Traditional grid (single machine view)" [0.8]
+component GRID [0.80, 0.69]
+pipeline GRID {
+  component Distributed grid [0.35]
+  component ELECTRICITY [0.72]
+  component Traditional grid (single machine view) [0.8]
 }
 
-component "BATTERY (POWER) STORAGE" [0.22, 0.60]
-pipeline "BATTERY (POWER) STORAGE" {
-  component "hydrogen" [0.41]
-  component "hydro" [0.51]
-  component "electrical" [0.71]
+component BATTERY (POWER) STORAGE [0.22, 0.60]
+pipeline BATTERY (POWER) STORAGE {
+  component hydrogen [0.41]
+  component hydro [0.51]
+  component electrical [0.71]
 }
-component "SCADA" [0.63, 0.72]
+component SCADA [0.63, 0.72]
 
-component "ENERGY PLATFORM" [0.55, 0.65]
-pipeline "ENERGY PLATFORM" {
+component ENERGY PLATFORM [0.55, 0.65]
+pipeline ENERGY PLATFORM {
   component "fast response (<1s)" [0.26]
-  component "fast control system" [0.31]
-  component "spinning reserve" [0.69]
+  component fast control system [0.31]
+  component spinning reserve [0.69]
 }
 
-component "MODEL OF CONTROL" [0.70, 0.67]
-pipeline "MODEL OF CONTROL" {
+component MODEL OF CONTROL [0.70, 0.67]
+pipeline MODEL OF CONTROL {
   component "Fault Tolerant (TCP/IP like)" [0.31]
-  component "Auto Generation Control" [0.79]
+  component Auto Generation Control [0.79]
 }
 
-component "GENERATION" [0.13, 0.69]
+component GENERATION [0.13, 0.69]
 
-component "STOCKPILE" [0.09, 0.64]
+component STOCKPILE [0.09, 0.64]
 
-component "SOURCES" [0.07, 0.69]
+component SOURCES [0.07, 0.69]
 
-component "MATERIAL_SUPPLY_CHAIN" [0.02, 0.68]
+component MATERIAL_SUPPLY_CHAIN [0.02, 0.68]
 
-component "energy supply chain" [0.28, 0.69]
-component "awareness of chain" [0.36, 0.32]
-component "INTEGRATION" [0.46, 0.52]
-pipeline "INTEGRATION" {
-  component "adaptive" [0.34]
+component energy supply chain [0.28, 0.69]
+component awareness of chain [0.36, 0.32]
+component INTEGRATION [0.46, 0.52]
+pipeline INTEGRATION {
+  component adaptive [0.34]
   component "pre-approval (discovery)" [0.61]
 }
 
-component "plug and play" [0.62, 0.25]
+component plug and play [0.62, 0.25]
 
 component "TCP/IP" [0.58, 0.76]
 evolve "Fault Tolerant (TCP/IP like)" 0.5
 
-"government" -> "local community"
-"government" -> "consumer"
-"consumer" -> "ELECTRICITY"
-"local community" -> "ELECTRICITY"
-"ELECTRICITY" -> "inverter"
-"inverter" -> "communication"
-"consumer" -> "activity"
-"activity" -> "control"
-"households" -> "cooking"
-"cooking" -> "thermal"
-"steel making" -> "thermal"
-"industrial" -> "steel making"
-"CONSUMER" -> "ACTIVITY"
-"ACTIVITY" -> "CONTROL"
-"CONTROL" -> "ELECTRICITY"
-"thermal" -> "chemical"
-"thermal" -> "nuclear"
-"thermal" -> "electrical"
-"ELECTRICITY" -> "GRID"
+government -> local community
+government -> consumer
+consumer -> ELECTRICITY
+local community -> ELECTRICITY
+ELECTRICITY -> inverter
+inverter -> communication
+consumer -> activity
+activity -> control
+households -> cooking
+cooking -> thermal
+steel making -> thermal
+industrial -> steel making
+CONSUMER -> ACTIVITY
+ACTIVITY -> CONTROL
+CONTROL -> ELECTRICITY
+thermal -> chemical
+thermal -> nuclear
+thermal -> electrical
+ELECTRICITY -> GRID
 
-"SOURCES" -> "MATERIAL_SUPPLY_CHAIN"
-"GENERATION" -> "SOURCES"
-"SOURCES" -> "STOCKPILE"
-"STOCKPILE" -> "GENERATION"
+SOURCES -> MATERIAL_SUPPLY_CHAIN
+GENERATION -> SOURCES
+SOURCES -> STOCKPILE
+STOCKPILE -> GENERATION
 
-"Traditional grid (single machine view)" -> "Auto Generation Control"
-"Distributed grid" -> "Fault Tolerant (TCP/IP like)"
-"Auto Generation Control" -> "spinning reserve"
+Traditional grid (single machine view) -> Auto Generation Control
+Distributed grid -> "Fault Tolerant (TCP/IP like)"
+Auto Generation Control -> spinning reserve
 "Fault Tolerant (TCP/IP like)" -> "fast response (<1s) electrical"
 
-"energy supply chain" -> "BATTERY (POWER) STORAGE"
-"energy supply chain" -> "GENERATION"
-"spinning reserve" -> "pre-approval (discovery)"
+energy supply chain -> BATTERY (POWER) STORAGE
+energy supply chain -> GENERATION
+spinning reserve -> "pre-approval (discovery)"
 
-"pre-approval (discovery)" -> "awareness of chain"
-"awareness of chain" -> "energy supply chain"
-"fast response (<1s)" -> "electrical"
-"Fault Tolerant (TCP/IP like)" -> "fast control system"
+"pre-approval (discovery)" -> awareness of chain
+awareness of chain -> energy supply chain
+"fast response (<1s)" -> electrical
+"Fault Tolerant (TCP/IP like)" -> fast control system
 "TCP/IP" -> "Fault Tolerant (TCP/IP like)"
-"SCADA" -> "Auto Generation Control"
-"Fault Tolerant (TCP/IP like)" -> "plug and play"
-"plug and play" -> "adaptive"
-"fast response (<1s)" -> "plug and play"
-"fast control system" -> "fast response (<1s)"
-"BATTERY (POWER) STORAGE" -> "MATERIAL_SUPPLY_CHAIN"
-"adaptive" -> "awareness of chain"
+SCADA -> Auto Generation Control
+"Fault Tolerant (TCP/IP like)" -> plug and play
+plug and play -> adaptive
+"fast response (<1s)" -> plug and play
+fast control system -> "fast response (<1s)"
+BATTERY (POWER) STORAGE -> MATERIAL_SUPPLY_CHAIN
+adaptive -> awareness of chain
 

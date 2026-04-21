@@ -3,127 +3,127 @@ title AGRICULTURE - traceability / security - FEB 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "society" [0.93, 0.76]
-component "SEED" [0.34, 0.55]
-pipeline "SEED" {
-  component "diversity" [0.44]
-  component "monoculture" [0.66]
+component society [0.93, 0.76]
+component SEED [0.34, 0.55]
+pipeline SEED {
+  component diversity [0.44]
+  component monoculture [0.66]
 }
 
-component "SOVEREIGNTY" [0.89, 0.59]
-pipeline "SOVEREIGNTY" {
-  component "economic" [0.41]
-  component "political" [0.48]
-  component "CNI" [0.55]
-  component "territorial" [0.67]
+component SOVEREIGNTY [0.89, 0.59]
+pipeline SOVEREIGNTY {
+  component economic [0.41]
+  component political [0.48]
+  component CNI [0.55]
+  component territorial [0.67]
 }
-component "sustainability" [0.80, 0.38]
-component "DISTRIBUTION" [0.51, 0.59]
-pipeline "DISTRIBUTION" {
-  component "JIC" [0.42]
-  component "regulation" [0.48]
-  component "JIT" [0.63]
+component sustainability [0.80, 0.38]
+component DISTRIBUTION [0.51, 0.59]
+pipeline DISTRIBUTION {
+  component JIC [0.42]
+  component regulation [0.48]
+  component JIT [0.63]
 }
-component "goverment" [0.97, 0.67]
+component goverment [0.97, 0.67]
 component "market" [0.63, 0.69]
-component "FOOD PRODUCT" [0.57, 0.71]
-pipeline "FOOD PRODUCT" {
-  component "cash" [0.66]
-  component "food" [0.73]
+component FOOD PRODUCT [0.57, 0.71]
+pipeline FOOD PRODUCT {
+  component cash [0.66]
+  component food [0.73]
 }
-component "transparency" [0.21, 0.31]
-component "industrial agriculture" [0.97, 0.61]
-component "AWARENESS" [0.18, 0.52]
-pipeline "AWARENESS" {
-  component "supply chain" [0.35]
-  component "land" [0.7]
+component transparency [0.21, 0.31]
+component industrial agriculture [0.97, 0.61]
+component AWARENESS [0.18, 0.52]
+pipeline AWARENESS {
+  component supply chain [0.35]
+  component land [0.7]
 }
-component "traceability" [0.28, 0.34]
-component "FOOD SECURITY" [0.79, 0.64]
-pipeline "FOOD SECURITY" {
-  component "variety" [0.55]
-  component "convenience" [0.71]
-  component "health" [0.72]
+component traceability [0.28, 0.34]
+component FOOD SECURITY [0.79, 0.64]
+pipeline FOOD SECURITY {
+  component variety [0.55]
+  component convenience [0.71]
+  component health [0.72]
 }
-component "education" [0.68, 0.54]
+component education [0.68, 0.54]
 
-component "externality" [0.70, 0.34]
+component externality [0.70, 0.34]
 
-component "food standards" [0.67, 0.45]
-component "behaviour" [0.74, 0.31]
-component "ENERGY" [0.12, 0.70]
-pipeline "ENERGY" {
-  component "synthetic" [0.64]
-  component "labour" [0.68]
-  component "solar" [0.75]
+component food standards [0.67, 0.45]
+component behaviour [0.74, 0.31]
+component ENERGY [0.12, 0.70]
+pipeline ENERGY {
+  component synthetic [0.64]
+  component labour [0.68]
+  component solar [0.75]
 }
-component "farm" [0.41, 0.67]
-evolve "supply chain" 0.55
-component "enviromental labelling" [0.39, 0.26]
+component farm [0.41, 0.67]
+evolve supply chain 0.55
+component enviromental labelling [0.39, 0.26]
 
-component "AUTOMATION" [0.05, 0.57]
-pipeline "AUTOMATION" {
-  component "AI" [0.53]
-  component "AVs" [0.62]
+component AUTOMATION [0.05, 0.57]
+pipeline AUTOMATION {
+  component AI [0.53]
+  component AVs [0.62]
 }
 
-component "bioengineering" [0.25, 0.54]
+component bioengineering [0.25, 0.54]
 
-evolve "transparency" 0.50
-evolve "traceability" 0.5
-evolve "enviromental labelling" 0.53
+evolve transparency 0.50
+evolve traceability 0.5
+evolve enviromental labelling 0.53
 
-"variety" -> "traceability"
-"health" -> "FOOD PRODUCT"
-"consumers" -> "health"
-"FOOD PRODUCT" -> "supply chain"
-"goverment" -> "consumers"
-"transparency" -> "traceability"
-"traceability" -> "food standards"
-"education" -> "behaviour"
-"seasonality" -> "FOOD PRODUCT"
-"farm" -> "FOOD PRODUCT"
-"farm" -> "territory"
-"education" -> "substition"
-"variety" -> "educational content"
-"regulation" -> "market"
-"consumers" -> "convenience"
-"society" -> "consumers"
-"sustainability" -> "behaviour"
-"sustainability" -> "traceability"
-"preserved" -> "preservation"
-"traceability" -> "enviromental labelling"
-"education" -> "social media"
-"DISTRIBUTION" -> "ENERGY"
-"variety" -> "education"
-"behaviour" -> "enviromental labelling"
-"traceability" -> "supply chain"
-"FOOD PRODUCT" -> "market"
-"convenience" -> "market"
-"industrial agriculture" -> "monoculture"
-"monoculture" -> "JIT"
-"DISTRIBUTION" -> "market"
-"variety" -> "JIC"
-"variety" -> "FOOD PRODUCT"
-"farm" -> "SEED"
-"FOOD SECURITY" -> "regulation"
-"health" -> "food standards"
-"food standards" -> "market"
-"variety" -> "diversity"
-"farm" -> "land"
-"land" -> "ENERGY"
-"goverment" -> "society"
-"society" -> "convenience"
-"health" -> "society"
-"regulation" -> "food standards"
-"AWARENESS" -> "regulation"
-"goverment" -> "SOVEREIGNTY"
-"CNI" -> "FOOD SECURITY"
-"economic" -> "supply chain"
-"political" -> "market"
-"society" -> "sustainability"
-"labour" -> "AVs"
-"AVs" -> "JIT"
-"monoculture" -> "AUTOMATION"
-"monoculture" -> "bioengineering"
+variety -> traceability
+health -> FOOD PRODUCT
+consumers -> health
+FOOD PRODUCT -> supply chain
+goverment -> consumers
+transparency -> traceability
+traceability -> food standards
+education -> behaviour
+seasonality -> FOOD PRODUCT
+farm -> FOOD PRODUCT
+farm -> territory
+education -> substition
+variety -> educational content
+regulation -> "market"
+consumers -> convenience
+society -> consumers
+sustainability -> behaviour
+sustainability -> traceability
+preserved -> preservation
+traceability -> enviromental labelling
+education -> social media
+DISTRIBUTION -> ENERGY
+variety -> education
+behaviour -> enviromental labelling
+traceability -> supply chain
+FOOD PRODUCT -> "market"
+convenience -> "market"
+industrial agriculture -> monoculture
+monoculture -> JIT
+DISTRIBUTION -> "market"
+variety -> JIC
+variety -> FOOD PRODUCT
+farm -> SEED
+FOOD SECURITY -> regulation
+health -> food standards
+food standards -> "market"
+variety -> diversity
+farm -> land
+land -> ENERGY
+goverment -> society
+society -> convenience
+health -> society
+regulation -> food standards
+AWARENESS -> regulation
+goverment -> SOVEREIGNTY
+CNI -> FOOD SECURITY
+economic -> supply chain
+political -> "market"
+society -> sustainability
+labour -> AVs
+AVs -> JIT
+monoculture -> AUTOMATION
+monoculture -> bioengineering
 

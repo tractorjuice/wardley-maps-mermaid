@@ -3,34 +3,34 @@ wardley-beta
 title Some Random Map
 size [1100, 800]
 
-component "user" [0.99, 0.69]
-component "Thing the user needs" [0.83, 0.62]
+component user [0.99, 0.69]
+component Thing the user needs [0.83, 0.62]
 
-component "Capability to meet the Thing the user needs" [0.62, 0.67]
+component Capability to meet the Thing the user needs [0.62, 0.67]
 
-pipeline "Capability to meet the Thing the user needs" {
+pipeline Capability to meet the Thing the user needs {
   component "competitor 1" [0.52]
   component "competitor 2" [0.62]
   component "competitor 3" [0.67]
 }
 
-"Thing the user needs" -> "user"; expresses
-"Capability to meet the Thing the user needs" -> "Thing the user needs"; fufilled by
+Thing the user needs -> user; expresses
+Capability to meet the Thing the user needs -> Thing the user needs; fufilled by
 
-component "thing required" [0.32, 0.35]
-component "another thing required" [0.35, 0.49]
-component "and another thing" [0.08, 0.42]
-component "and other thing" [0.15, 0.62]
+component thing required [0.32, 0.35]
+component another thing required [0.35, 0.49]
+component and another thing [0.08, 0.42]
+component and other thing [0.15, 0.62]
 
-component "other thing" [0.30, 0.27]
-component "expensive consultants" [0.48, 0.26]
+component other thing [0.30, 0.27]
+component expensive consultants [0.48, 0.26]
 
-"thing required" -> "competitor 3"; needs
-"and another thing" -> "thing required"; needs
-"another thing required" -> "competitor 3"; needs
-"expensive consultants" -> "competitor 1"; uses
-"other thing" -> "competitor 1"; needs
-"and other thing" -> "thing required"; needs
-"and another thing" -> "another thing required"; needs
-"thing required" -> "other thing"; needs
+thing required -> "competitor 3"; needs
+and another thing -> thing required; needs
+another thing required -> "competitor 3"; needs
+expensive consultants -> "competitor 1"; uses
+other thing -> "competitor 1"; needs
+and other thing -> thing required; needs
+and another thing -> another thing required; needs
+thing required -> other thing; needs
 

@@ -3,104 +3,104 @@ title Gaming Industry - Purposful Gaming. NOV 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "Learner" [0.97, 0.66]
-component "Sponsor" [0.97, 0.62]
+component Learner [0.97, 0.66]
+component Sponsor [0.97, 0.62]
 
-component "ADVANTAGE" [0.94, 0.51]
+component ADVANTAGE [0.94, 0.51]
 
-component "Skills" [0.53, 0.65]
-pipeline "Skills" {
-  component "Heuristics" [0.59]
-  component "Talent" [0.65]
+component Skills [0.53, 0.65]
+pipeline Skills {
+  component Heuristics [0.59]
+  component Talent [0.65]
   component "Cross-Disciplinary" [0.69]
-  component "Artefacts" [0.72]
-  component "Mastery" [0.79]
+  component Artefacts [0.72]
+  component Mastery [0.79]
 }
-component "Motivation" [0.85, 0.52]
-component "Urgency" [0.83, 0.43]
-component "Goal" [0.83, 0.32]
-component "Agility" [0.82, 0.20]
-component "Data and Insights" [0.82, 0.50]
-component "Entertainment" [0.83, 0.56]
-component "Status" [0.83, 0.69]
-component "self actualisation" [0.83, 0.38]
-component "Benevolence" [0.83, 0.26]
+component Motivation [0.85, 0.52]
+component Urgency [0.83, 0.43]
+component Goal [0.83, 0.32]
+component Agility [0.82, 0.20]
+component Data and Insights [0.82, 0.50]
+component Entertainment [0.83, 0.56]
+component Status [0.83, 0.69]
+component self actualisation [0.83, 0.38]
+component Benevolence [0.83, 0.26]
 
-component "DELIVERY MECHANISM" [0.18, 0.43]
-pipeline "DELIVERY MECHANISM" {
-  component "PURPOSEFUL GAME" [0.5]
-  component "online course" [0.73]
-}
-
-component "FEEDBACK" [0.55, 0.35]
-pipeline "FEEDBACK" {
-  component "Admonition" [0.32]
-  component "Incentive" [0.44]
-}
-component "Validation" [0.79, 0.81]
-pipeline "Validation" {
-  component "certification" [0.8]
+component DELIVERY MECHANISM [0.18, 0.43]
+pipeline DELIVERY MECHANISM {
+  component PURPOSEFUL GAME [0.5]
+  component online course [0.73]
 }
 
-component "DELIVERY MODE" [0.09, 0.61]
-pipeline "DELIVERY MODE" {
-  component "Virtual" [0.55]
-  component "Physical" [0.65]
+component FEEDBACK [0.55, 0.35]
+pipeline FEEDBACK {
+  component Admonition [0.32]
+  component Incentive [0.44]
+}
+component Validation [0.79, 0.81]
+pipeline Validation {
+  component certification [0.8]
 }
 
-component "LEARNING OBJECTIVE" [0.35, 0.43]
-pipeline "LEARNING OBJECTIVE" {
-  component "Critical Thinking" [0.21]
-  component "Innovation" [0.27]
-  component "Problem Solving" [0.34]
-  component "Knowledge" [0.44]
-  component "Demonstration" [0.58]
-  component "Progress Tracking" [0.76]
+component DELIVERY MODE [0.09, 0.61]
+pipeline DELIVERY MODE {
+  component Virtual [0.55]
+  component Physical [0.65]
 }
 
-component "Evaluation" [0.66, 0.81]
-pipeline "Evaluation" {
-  component "Assessment" [0.81]
+component LEARNING OBJECTIVE [0.35, 0.43]
+pipeline LEARNING OBJECTIVE {
+  component Critical Thinking [0.21]
+  component Innovation [0.27]
+  component Problem Solving [0.34]
+  component Knowledge [0.44]
+  component Demonstration [0.58]
+  component Progress Tracking [0.76]
 }
 
-component "PRACTICE SIMULATION" [0.68, 0.24]
-pipeline "PRACTICE SIMULATION" {
-  component "Experience (ARAP)" [0.19]
-  component "Feedback  Loops" [0.24]
-  component "Perspectives (ADAP)" [0.31]
-  component "Environment Safe or Not" [0.4]
-  component "Application of Skills (AMAP)" [0.48]
+component Evaluation [0.66, 0.81]
+pipeline Evaluation {
+  component Assessment [0.81]
 }
 
-component "SIMULATION PROFILES" [0.49, 0.24]
-pipeline "SIMULATION PROFILES" {
-  component "Adaptive" [0.19]
-  component "Tailored" [0.26]
-  component "Learning   Path" [0.31]
-  component "Levels(BIE)" [0.36]
-  component "Culture" [0.44]
+component PRACTICE SIMULATION [0.68, 0.24]
+pipeline PRACTICE SIMULATION {
+  component Experience (ARAP) [0.19]
+  component Feedback  Loops [0.24]
+  component Perspectives (ADAP) [0.31]
+  component Environment Safe or Not [0.4]
+  component Application of Skills (AMAP) [0.48]
 }
 
-"Learner" -> "Knowledge and ability to apply it in RL"
-"Learner" -> "Motivation"
+component SIMULATION PROFILES [0.49, 0.24]
+pipeline SIMULATION PROFILES {
+  component Adaptive [0.19]
+  component Tailored [0.26]
+  component Learning   Path [0.31]
+  component Levels(BIE) [0.36]
+  component Culture [0.44]
+}
 
-"Learner" -> "Skills"
-"ADVANTAGE" -> "Sponsor"
-"ADVANTAGE" -> "Skills"
-"online course" -> "certification"
-"Entertainment" -> "Purposeful game"
-"PURPOSEFUL GAME" -> "Entertainment"
-"PURPOSEFUL GAME" -> "Skills"
-"PURPOSEFUL GAME" -> "DELIVERY MODE"
-"Status" -> "Validation"
-"Skills" -> "Validation"
-"Validation" -> "Evaluation"
-"ADVANTAGE" -> "Motivation"
-"Motivation" -> "PRACTICE SIMULATION"
-"PRACTICE SIMULATION" -> "Feedback  Loops"
-"PRACTICE SIMULATION" -> "SIMULATION PROFILES"
-"SIMULATION PROFILES" -> "LEARNING OBJECTIVE"
-"LEARNING OBJECTIVE" -> "PURPOSEFUL GAME"
-"PRACTICE SIMULATION" -> "DELIVERY MECHANISM"
-"PRACTICE SIMULATION" -> "FEEDBACK"
+Learner -> Knowledge and ability to apply it in RL
+Learner -> Motivation
+
+Learner -> Skills
+ADVANTAGE -> Sponsor
+ADVANTAGE -> Skills
+online course -> certification
+Entertainment -> Purposeful game
+PURPOSEFUL GAME -> Entertainment
+PURPOSEFUL GAME -> Skills
+PURPOSEFUL GAME -> DELIVERY MODE
+Status -> Validation
+Skills -> Validation
+Validation -> Evaluation
+ADVANTAGE -> Motivation
+Motivation -> PRACTICE SIMULATION
+PRACTICE SIMULATION -> Feedback  Loops
+PRACTICE SIMULATION -> SIMULATION PROFILES
+SIMULATION PROFILES -> LEARNING OBJECTIVE
+LEARNING OBJECTIVE -> PURPOSEFUL GAME
+PRACTICE SIMULATION -> DELIVERY MECHANISM
+PRACTICE SIMULATION -> FEEDBACK
 

@@ -2,68 +2,68 @@ wardley-beta
 title Sustainability - Technological Innovation - Sept 2023
 size [1100, 800]
 
-anchor "Companies" [0.99, 0.73]
-anchor "Users" [0.99, 0.44]
+anchor Companies [0.99, 0.73]
+anchor Users [0.99, 0.44]
 
-component "Consumer Choice" [0.90, 0.21]
-component "Env Values" [0.79, 0.21]
-component "Data" [0.56, 0.38]
+component Consumer Choice [0.90, 0.21]
+component Env Values [0.79, 0.21]
+component Data [0.56, 0.38]
 
-component "Products" [0.86, 0.63]
-pipeline "Products" {
+component Products [0.86, 0.63]
+pipeline Products {
   component "low-impact" [0.36]
   component "high-impact" [0.74]
 }
 
-component "Profit" [0.94, 0.81]
-component "Reputation" [0.91, 0.59]
-component "Governance" [0.91, 0.37]
+component Profit [0.94, 0.81]
+component Reputation [0.91, 0.59]
+component Governance [0.91, 0.37]
 
-component "Emissions" [0.68, 0.32]
-pipeline "Emissions" {
+component Emissions [0.68, 0.32]
+pipeline Emissions {
   component "Reports/Analysis" [0.26]
   component "scope 1" [0.49]
 }
 
-component "Energy" [0.31, 0.75]
-component "Storage" [0.14, 0.28]
-pipeline "Storage" {
-  component "decentralized" [0.22]
-  component "centralized" [0.74]
+component Energy [0.31, 0.75]
+component Storage [0.14, 0.28]
+pipeline Storage {
+  component decentralized [0.22]
+  component centralized [0.74]
 }
 
-component "Transmission" [0.23, 0.64]
+component Transmission [0.23, 0.64]
 
-component "Generation" [0.05, 0.81]
+component Generation [0.05, 0.81]
 
-component "sensors" [0.46, 0.23]
-component "IoT" [0.44, 0.22]
-component "barometer" [0.44, 0.76]
+component sensors [0.46, 0.23]
+component IoT [0.44, 0.22]
+component barometer [0.44, 0.76]
 
-component "Materials" [0.34, 0.41]
-component "Supply Chain" [0.64, 0.64]
+component Materials [0.34, 0.41]
+component Supply Chain [0.64, 0.64]
 
-"Users" -> "Consumer Choice"
-"Consumer Choice" -> "Products"
-"Consumer Choice" -> "Env Values"
-"Env Values" -> "Reports/Analysis"
-"Reports/Analysis" -> "Data"
-"Reports/Analysis" -> "Emissions"
-"Emissions" -> "Data"
-"Products" -> "Emissions"
-"Data" -> "sensors"
-"sensors" -> "Energy"
-"Energy" -> "Storage"
-"Energy" -> "Generation"
-"Energy" -> "Transmission"
-"Products" -> "Supply Chain"
-"Supply Chain" -> "Materials"
-"Materials" -> "Planetary Resources"
-"Supply Chain" -> "Energy"
-"Companies" -> "Reputation"
-"Companies" -> "Profit"
-"Companies" -> "Governance"
-"Governance" -> "Emissions"
-"Governance" -> "Products"
-"Governance" -> "Reports"
+Users -> Consumer Choice
+Consumer Choice -> Products
+Consumer Choice -> Env Values
+Env Values -> "Reports/Analysis"
+"Reports/Analysis" -> Data
+"Reports/Analysis" -> Emissions
+Emissions -> Data
+Products -> Emissions
+Data -> sensors
+sensors -> Energy
+Energy -> Storage
+Energy -> Generation
+Energy -> Transmission
+Products -> Supply Chain
+Supply Chain -> Materials
+Materials -> Planetary Resources
+Supply Chain -> Energy
+Companies -> Reputation
+Companies -> Profit
+Companies -> Governance
+Governance -> Emissions
+Governance -> Products
+Governance -> Reports
 

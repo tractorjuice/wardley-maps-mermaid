@@ -8,17 +8,17 @@ note "Specific climatic patterns we can have in the Gaming Industry" [0.08, 0.03
 note "-Distributor channel rules change" [0.06, 0.05]
 note "-Social media trends" [0.04, 0.05]
 
-anchor "Producers" [0.96, 0.86]
+anchor Producers [0.96, 0.86]
 
-anchor "Consumer" [0.97, 0.58]
+anchor Consumer [0.97, 0.58]
 
-anchor "Moders" [0.97, 0.23]
-anchor "Designer" [0.98, 0.37]
+anchor Moders [0.97, 0.23]
+anchor Designer [0.98, 0.37]
 
 component "maximize-profits" [0.88, 0.83]
 component "target-audience" [0.64, 0.89]
 
-component "Vision" [0.62, 0.62]
+component Vision [0.62, 0.62]
 component "Focus-on-elements" [0.69, 0.34]
 component "Build-story" [0.62, 0.44]
 component "Commercialization-model" [0.54, 0.78]
@@ -31,43 +31,43 @@ component "Ideal-gamer-persona" [0.92, 0.36]
 component "Build-user-base" [0.71, 0.72]
 
 component "Design-a-Game" [0.91, 0.48]
-component "Prototyping" [0.32, 0.73]
+component Prototyping [0.32, 0.73]
 
 component "Mental-space" [0.36, 0.44]
 
-component "Experience" [0.91, 0.64]
+component Experience [0.91, 0.64]
 component "First-Impression" [0.84, 0.64]
-component "Status" [0.86, 0.74]
+component Status [0.86, 0.74]
 
-component "Laws" [0.24, 0.75]
-component "Incentives" [0.17, 0.78]
+component Laws [0.24, 0.75]
+component Incentives [0.17, 0.78]
 
-"Producers" -> "maximize-profits"
+Producers -> "maximize-profits"
 
 "maximize-profits" -> "Commercialization-model"
 "maximize-profits" -> "Monetization-model"
 "maximize-profits" -> "target-audience"
 "target-audience" -> "Build-user-base"
-"target-audience" -> "Status"
-"Monetization-model" -> "Laws"
-"Laws" -> "Incentives"
-"Moders" -> "Vision"
+"target-audience" -> Status
+"Monetization-model" -> Laws
+Laws -> Incentives
+Moders -> Vision
 
-"Consumer" -> "Experience"
-"Experience" -> "Vision"
-"Experience" -> "First-Impression"
-"Experience" -> "Status"
+Consumer -> Experience
+Experience -> Vision
+Experience -> "First-Impression"
+Experience -> Status
 
-"Vision" -> "Focus-on-elements"
-"Vision" -> "Build-story"
-"Vision" -> "Visualize-end-product"
-"Vision" -> "Commercialization-model"
-"Vision" -> "Monetization-model"
+Vision -> "Focus-on-elements"
+Vision -> "Build-story"
+Vision -> "Visualize-end-product"
+Vision -> "Commercialization-model"
+Vision -> "Monetization-model"
 
 "Build-story" -> "Drama-Tension-Curiosity"
 "Drama-Tension-Curiosity" -> "Building-&-release-of-tension"
 
-"Designer" -> "Ideal-gamer-persona"
-"Designer" -> "Design-a-Game"
+Designer -> "Ideal-gamer-persona"
+Designer -> "Design-a-Game"
 "Ideal-gamer-persona" -> "Build-user-base"
 

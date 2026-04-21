@@ -5,94 +5,94 @@ size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
 note "unused" [0.20, 0.03]
-component "society" [0.16, 0.05]
-component "infrastructure" [0.11, 0.05]
+component society [0.16, 0.05]
+component infrastructure [0.11, 0.05]
 component "market" [0.07, 0.05]
 
-component "government" [0.99, 0.61]
-component "transport users" [0.94, 0.66]
-component "transport operator" [0.91, 0.56]
+component government [0.99, 0.61]
+component transport users [0.94, 0.66]
+component transport operator [0.91, 0.56]
 
-component "A to B" [0.85, 0.67]
-component "behaviour" [0.88, 0.60]
-component "regulation" [0.87, 0.40]
-component "public infrastructure" [0.18, 0.67]
-component "sustainability" [0.92, 0.45]
-component "private infrastructure" [0.19, 0.54]
-component "critical national infrastructure" [0.06, 0.31]
-component "space" [0.72, 0.63]
-pipeline "space" {
-  component "virtual" [0.47]
-  component "awareness" [0.57]
-  component "cost" [0.66]
-  component "physical" [0.67]
+component A to B [0.85, 0.67]
+component behaviour [0.88, 0.60]
+component regulation [0.87, 0.40]
+component public infrastructure [0.18, 0.67]
+component sustainability [0.92, 0.45]
+component private infrastructure [0.19, 0.54]
+component critical national infrastructure [0.06, 0.31]
+component space [0.72, 0.63]
+pipeline space {
+  component virtual [0.47]
+  component awareness [0.57]
+  component cost [0.66]
+  component physical [0.67]
 }
-component "ease of use" [0.82, 0.69]
-component "safety" [0.77, 0.70]
-component "public sources" [0.52, 0.61]
-component "transport information" [0.59, 0.50]
-component "connection details" [0.47, 0.49]
-component "access to service" [0.82, 0.37]
-component "open data" [0.28, 0.26]
-component "situational services" [0.41, 0.21]
-component "transport integration" [0.37, 0.37]
-component "mobility hubs" [0.51, 0.33]
-component "climate" [0.78, 0.49]
-component "transportation mode" [0.31, 0.61]
-pipeline "transportation mode" {
-  component "shared" [0.45]
-  component "distributed public" [0.64]
-  component "private" [0.7]
+component ease of use [0.82, 0.69]
+component safety [0.77, 0.70]
+component public sources [0.52, 0.61]
+component transport information [0.59, 0.50]
+component connection details [0.47, 0.49]
+component access to service [0.82, 0.37]
+component open data [0.28, 0.26]
+component situational services [0.41, 0.21]
+component transport integration [0.37, 0.37]
+component mobility hubs [0.51, 0.33]
+component climate [0.78, 0.49]
+component transportation mode [0.31, 0.61]
+pipeline transportation mode {
+  component shared [0.45]
+  component distributed public [0.64]
+  component private [0.7]
 }
-component "city planning" [0.17, 0.38]
-component "health" [0.46, 0.69]
-component "sensors" [0.60, 0.57]
-component "vehicle" [0.11, 0.63]
-pipeline "vehicle" {
-  component "train" [0.64]
-  component "car" [0.66]
+component city planning [0.17, 0.38]
+component health [0.46, 0.69]
+component sensors [0.60, 0.57]
+component vehicle [0.11, 0.63]
+pipeline vehicle {
+  component train [0.64]
+  component car [0.66]
 }
 
-"transport users" -> "behaviour"
-"behaviour" -> "ease of use"
-"behaviour" -> "awareness"
-"behaviour" -> "access to service"
-"awareness" -> "transport information"
-"transport information" -> "public sources"
-"access to service" -> "mobility hubs"
-"public sources" -> "connection details"
-"transport information" -> "connection details"
-"connection details" -> "transport integration"
-"connection details" -> "transportation mode"
-"behaviour" -> "safety"
-"safety" -> "sensors"
-"safety" -> "health"
-"health" -> "shared"
-"transport integration" -> "open data"
-"situational services" -> "mobility hubs"
-"mobility hubs" -> "open data"
-"transportation mode" -> "city planning"
-"transportation mode" -> "vehicle"
-"transport operator" -> "transport information"
-"behaviour" -> "cost"
-"behaviour" -> "climate"
-"climate" -> "transportation mode"
-"transportation mode" -> "cost"
-"situational services" -> "open data"
-"transport integration" -> "city planning"
-"government" -> "transport users"
-"sustainability" -> "government"
-"climate" -> "sustainability"
-"behaviour" -> "A to B"
-"A to B" -> "space"
-"sustainability" -> "regulation"
-"government" -> "distributed public"
-"distributed public" -> "public infrastructure"
-"private" -> "public infrastructure"
-"private" -> "private infrastructure"
-"regulation" -> "critical national infrastructure"
-"private infrastructure" -> "critical national infrastructure"
-"public infrastructure" -> "critical national infrastructure"
-"ease of use" -> "transport information"
-"ease of use" -> "transportation mode"
+transport users -> behaviour
+behaviour -> ease of use
+behaviour -> awareness
+behaviour -> access to service
+awareness -> transport information
+transport information -> public sources
+access to service -> mobility hubs
+public sources -> connection details
+transport information -> connection details
+connection details -> transport integration
+connection details -> transportation mode
+behaviour -> safety
+safety -> sensors
+safety -> health
+health -> shared
+transport integration -> open data
+situational services -> mobility hubs
+mobility hubs -> open data
+transportation mode -> city planning
+transportation mode -> vehicle
+transport operator -> transport information
+behaviour -> cost
+behaviour -> climate
+climate -> transportation mode
+transportation mode -> cost
+situational services -> open data
+transport integration -> city planning
+government -> transport users
+sustainability -> government
+climate -> sustainability
+behaviour -> A to B
+A to B -> space
+sustainability -> regulation
+government -> distributed public
+distributed public -> public infrastructure
+private -> public infrastructure
+private -> private infrastructure
+regulation -> critical national infrastructure
+private infrastructure -> critical national infrastructure
+public infrastructure -> critical national infrastructure
+ease of use -> transport information
+ease of use -> transportation mode
 

@@ -3,91 +3,91 @@ title Finance - AI - version 1.0
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component "client" [0.97, 0.76]
-component "manage budget" [0.89, 0.75]
+component client [0.97, 0.76]
+component manage budget [0.89, 0.75]
 
-component "bad actors" [0.97, 0.65]
-component "state" [0.96, 0.71]
-component "CNI" [0.93, 0.45]
+component bad actors [0.97, 0.65]
+component state [0.96, 0.71]
+component CNI [0.93, 0.45]
 
-component "CAPABILITIES" [0.86, 0.47]
-pipeline "CAPABILITIES" {
-  component "offence" [0.44]
-  component "defence" [0.51]
+component CAPABILITIES [0.86, 0.47]
+pipeline CAPABILITIES {
+  component offence [0.44]
+  component defence [0.51]
 }
 
-component "NARROW AI" [0.20, 0.69]
-pipeline "NARROW AI" {
-  component "LLM" [0.56]
-  component "NLP" [0.59]
-  component "localization" [0.62]
-  component "anomaly detection" [0.65]
+component NARROW AI [0.20, 0.69]
+pipeline NARROW AI {
+  component LLM [0.56]
+  component NLP [0.59]
+  component localization [0.62]
+  component anomaly detection [0.65]
 }
 
-evolve "open banking API" 0.71
+evolve open banking API 0.71
 
-component "BANKING SERVICES" [0.78, 0.73]
-pipeline "BANKING SERVICES" {
-  component "payment" [0.7]
-  component "loans" [0.75]
-  component "savings" [0.78]
+component BANKING SERVICES [0.78, 0.73]
+pipeline BANKING SERVICES {
+  component payment [0.7]
+  component loans [0.75]
+  component savings [0.78]
 }
 
-component "ACCESS" [0.65, 0.72]
-pipeline "ACCESS" {
+component ACCESS [0.65, 0.72]
+pipeline ACCESS {
   component "3rd party tools" [0.46]
-  component "chatbots" [0.62]
-  component "internet banking" [0.69]
-  component "telebanking" [0.72]
-  component "ATM" [0.74]
-  component "bank teller" [0.77]
+  component chatbots [0.62]
+  component internet banking [0.69]
+  component telebanking [0.72]
+  component ATM [0.74]
+  component bank teller [0.77]
 }
 
-component "IDENTITY" [0.55, 0.42]
-pipeline "IDENTITY" {
-  component "fraud detection" [0.52]
-  component "authentification" [0.57]
+component IDENTITY [0.55, 0.42]
+pipeline IDENTITY {
+  component fraud detection [0.52]
+  component authentification [0.57]
 }
 
-component "CERTIFYING AUTHORITY" [0.42, 0.66]
-pipeline "CERTIFYING AUTHORITY" {
-  component "bank" [0.62]
-  component "web giants" [0.67]
-  component "gov bodies" [0.7]
+component CERTIFYING AUTHORITY [0.42, 0.66]
+pipeline CERTIFYING AUTHORITY {
+  component bank [0.62]
+  component web giants [0.67]
+  component gov bodies [0.7]
 }
 
-component "BANK PRESENTATION" [0.28, 0.47]
-pipeline "BANK PRESENTATION" {
-  component "robobanking" [0.36]
-  component "bank API" [0.4]
-  component "open banking API" [0.5]
+component BANK PRESENTATION [0.28, 0.47]
+pipeline BANK PRESENTATION {
+  component robobanking [0.36]
+  component bank API [0.4]
+  component open banking API [0.5]
 }
 
-component "CORE BANKING SYSTEMS" [0.06, 0.45]
-pipeline "CORE BANKING SYSTEMS" {
-  component "Semantic APIs" [0.37]
-  component "training dataset" [0.62]
+component CORE BANKING SYSTEMS [0.06, 0.45]
+pipeline CORE BANKING SYSTEMS {
+  component Semantic APIs [0.37]
+  component training dataset [0.62]
 }
 
-evolve "NARROW AI" 0.76
+evolve NARROW AI 0.76
 
-"client" -> "manage budget"
-"manage budget" -> "BANKING SERVICES"
-"ACCESS" -> "BANKING SERVICES"
-"CORE BANKING SYSTEMS" -> "BANK PRESENTATION"
-"BANK PRESENTATION" -> "ACCESS"
-"ACCESS" -> "IDENTITY"
-"authentification" -> "CERTIFYING AUTHORITY"
-"bad actors" -> "authentification"
-"bad actors" -> "CERTIFYING AUTHORITY"
-"bad actors" -> "NARROW AI"
-"state" -> "CNI"
-"CNI" -> "BANKING SERVICES"
-"CNI" -> "CAPABILITIES"
-"defence" -> "NARROW AI"
-"fraud detection" -> "NARROW AI"
-"NARROW AI" -> "chatbots"
-"robobanking" -> "NARROW AI"
-"NARROW AI" -> "training dataset"
-"open banking API" -> "3rd party tools"
+client -> manage budget
+manage budget -> BANKING SERVICES
+ACCESS -> BANKING SERVICES
+CORE BANKING SYSTEMS -> BANK PRESENTATION
+BANK PRESENTATION -> ACCESS
+ACCESS -> IDENTITY
+authentification -> CERTIFYING AUTHORITY
+bad actors -> authentification
+bad actors -> CERTIFYING AUTHORITY
+bad actors -> NARROW AI
+state -> CNI
+CNI -> BANKING SERVICES
+CNI -> CAPABILITIES
+defence -> NARROW AI
+fraud detection -> NARROW AI
+NARROW AI -> chatbots
+robobanking -> NARROW AI
+NARROW AI -> training dataset
+open banking API -> "3rd party tools"
 

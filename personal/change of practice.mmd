@@ -2,44 +2,44 @@ wardley-beta
 title home entertainment
 size [1100, 800]
 
-component "user" [0.97, 0.71]
-component "film" [0.93, 0.66]
-component "logistics database" [0.45, 0.43]
+component user [0.97, 0.71]
+component film [0.93, 0.66]
+component logistics database [0.45, 0.43]
 
-evolve "compute" 0.80
+evolve compute 0.80
 
-component "shop" [0.22, 0.61]
-component "video" [0.37, 0.72]
+component shop [0.22, 0.61]
+component video [0.37, 0.72]
 
-"user" -> "film"
-"online ordering" -> "film"
-"film" -> "video"
-"video" -> "shop"
-"online ordering" -> "website"
-"recommendation engine" -> "video picker system"
-"video picker system" -> "online ordering"
-"video picker system" -> "logistics database"
-"logistics database" -> "shop"
-"video" -> "logistics database"
-"internet" -> "website"
-"internet" -> "logistics database"
-"compute" -> "data centre"
-"film" -> "recommendation engine"
-"website" -> "recommendation engine"
-"compute" -> "best architectural practice"
-"best architectural practice" -> "logistics database"
-"video picker system" -> "best architectural practice"
-"best architectural practice" -> "website"
-"best architectural practice" -> "recommendation engine"
-"best architectural practice" -> "online ordering"
-"1" -> "devops"
+user -> film
+online ordering -> film
+film -> video
+video -> shop
+online ordering -> website
+recommendation engine -> video picker system
+video picker system -> online ordering
+video picker system -> logistics database
+logistics database -> shop
+video -> logistics database
+internet -> website
+internet -> logistics database
+compute -> data centre
+film -> recommendation engine
+website -> recommendation engine
+compute -> best architectural practice
+best architectural practice -> logistics database
+video picker system -> best architectural practice
+best architectural practice -> website
+best architectural practice -> recommendation engine
+best architectural practice -> online ordering
+"1" -> devops
 
-"devops" -> "logistics database"
-"video picker system" -> "devops"
-"devops" -> "website"
-"devopse" -> "online ordering"
-"streaming" -> "devops"
-"streaming" -> "1"
-"streaming" -> "internet"
-"streaming" -> "recommendation engine"
+devops -> logistics database
+video picker system -> devops
+devops -> website
+devopse -> online ordering
+streaming -> devops
+streaming -> "1"
+streaming -> internet
+streaming -> recommendation engine
 

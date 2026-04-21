@@ -4,99 +4,99 @@ title twitter
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "user" [0.98, 0.70]
-component "twitter" [0.98, 0.52]
-component "advertisers" [0.98, 0.66]
-component "regulators" [0.98, 0.58]
-component "device" [0.95, 0.72]
+component user [0.98, 0.70]
+component twitter [0.98, 0.52]
+component advertisers [0.98, 0.66]
+component regulators [0.98, 0.58]
+component device [0.95, 0.72]
 
-component "adverts" [0.96, 0.68]
+component adverts [0.96, 0.68]
 
-component "front_end" [0.91, 0.65]
-component "brand" [0.88, 0.55]
+component front_end [0.91, 0.65]
+component brand [0.88, 0.55]
 
-component "network_access" [0.87, 0.71]
-pipeline "network_access" {
-  component "mobile" [0.7]
-  component "web" [0.72]
+component network_access [0.87, 0.71]
+pipeline network_access {
+  component mobile [0.7]
+  component web [0.72]
 }
 
-component "protocol" [0.79, 0.72]
-pipeline "protocol" {
-  component "graphQL" [0.7]
+component protocol [0.79, 0.72]
+pipeline protocol {
+  component graphQL [0.7]
   component "TLS-API" [0.73]
 }
 
-component "timeline_mixer_(Control)" [0.70, 0.68]
-pipeline "timeline_mixer_(Control)" {
-  component "conversation module" [0.64]
-  component "recommendation" [0.67]
-  component "dedup" [0.71]
-  component "pagination" [0.73]
-  component "ad_injector" [0.75]
-  component "data_logging" [0.77]
+component timeline_mixer_(Control) [0.70, 0.68]
+pipeline timeline_mixer_(Control) {
+  component conversation module [0.64]
+  component recommendation [0.67]
+  component dedup [0.71]
+  component pagination [0.73]
+  component ad_injector [0.75]
+  component data_logging [0.77]
 }
 
-component "home_mixer_(Control)" [0.57, 0.59]
+component home_mixer_(Control) [0.57, 0.59]
 
-component "backend components" [0.50, 0.63]
-pipeline "backend components" {
-  component "home ranker" [0.5]
-  component "timeline service" [0.57]
-  component "timeline scorer" [0.61]
-  component "people discovery" [0.66]
-  component "onboarding" [0.68]
-  component "admixer" [0.7]
+component backend components [0.50, 0.63]
+pipeline backend components {
+  component home ranker [0.5]
+  component timeline service [0.57]
+  component timeline scorer [0.61]
+  component people discovery [0.66]
+  component onboarding [0.68]
+  component admixer [0.7]
 }
-component "home_score" [0.37, 0.57]
-component "candidate_fetch" [0.36, 0.63]
+component home_score [0.37, 0.57]
+component candidate_fetch [0.36, 0.63]
 
-component "business_process" [0.28, 0.57]
-pipeline "business_process" {
-  component "prediction_service" [0.52]
-  component "feature hydration" [0.64]
-  component "crMixer" [0.66]
-  component "earlyBird" [0.68]
-  component "Uteg" [0.7]
-  component "commissioning" [0.72]
-  component "space" [0.74]
-}
-
-component "foundational components" [0.15, 0.59]
-pipeline "foundational components" {
-  component "gizmoduck" [0.58]
-  component "manhattan" [0.64]
-  component "tweety pie" [0.67]
-  component "social graph" [0.7]
-  component "memcache" [0.72]
+component business_process [0.28, 0.57]
+pipeline business_process {
+  component prediction_service [0.52]
+  component feature hydration [0.64]
+  component crMixer [0.66]
+  component earlyBird [0.68]
+  component Uteg [0.7]
+  component commissioning [0.72]
+  component space [0.74]
 }
 
-component "infrastructure" [0.04, 0.70]
+component foundational components [0.15, 0.59]
+pipeline foundational components {
+  component gizmoduck [0.58]
+  component manhattan [0.64]
+  component tweety pie [0.67]
+  component social graph [0.7]
+  component memcache [0.72]
+}
 
-"user" -> "device"
-"device" -> "front_end"
-"front_end" -> "brand"
-"front_end" -> "twitter"
-"advertisers" -> "adverts"
-"network_access" -> "front_end"
-"graphQL" -> "mobile"
-"TLS-API" -> "web"
-"business_process" -> "foundational components"
-"foundational components" -> "infrastructure"
-"graphQL" -> "timeline_mixer_(Control)"
-"graphQL" -> "home_mixer_(Control)"
-"timeline_mixer_(Control)" -> "TLS-API"
-"home_mixer_(Control)" -> "backend components"
-"timeline_mixer_(Control)" -> "backend components"
-"home_mixer_(Control)" -> "foundational components"
-"candidate_fetch" -> "home ranker"
-"home_score" -> "home ranker"
-"adverts" -> "commissioning"
-"prediction_service" -> "home_score"
-"crMixer" -> "candidate_fetch"
-"earlyBird" -> "candidate_fetch"
-"Uteg" -> "candidate_fetch"
-"commissioning" -> "candidate_fetch"
-"space" -> "candidate_fetch"
-"feature hydration" -> "home_score"
+component infrastructure [0.04, 0.70]
+
+user -> device
+device -> front_end
+front_end -> brand
+front_end -> twitter
+advertisers -> adverts
+network_access -> front_end
+graphQL -> mobile
+"TLS-API" -> web
+business_process -> foundational components
+foundational components -> infrastructure
+graphQL -> timeline_mixer_(Control)
+graphQL -> home_mixer_(Control)
+timeline_mixer_(Control) -> "TLS-API"
+home_mixer_(Control) -> backend components
+timeline_mixer_(Control) -> backend components
+home_mixer_(Control) -> foundational components
+candidate_fetch -> home ranker
+home_score -> home ranker
+adverts -> commissioning
+prediction_service -> home_score
+crMixer -> candidate_fetch
+earlyBird -> candidate_fetch
+Uteg -> candidate_fetch
+commissioning -> candidate_fetch
+space -> candidate_fetch
+feature hydration -> home_score
 

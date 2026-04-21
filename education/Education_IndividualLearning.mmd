@@ -2,71 +2,71 @@ wardley-beta
 title Individual Learning V2
 size [1100, 800]
 
-component "Motivation" [0.97, 0.60]
-component "Job" [0.96, 0.85]
-component "Joy of Learning" [0.96, 0.34]
-component "Min Time" [0.96, 0.39]
-evolve "Min Time" 0.74
+component Motivation [0.97, 0.60]
+component Job [0.96, 0.85]
+component Joy of Learning [0.96, 0.34]
+component Min Time [0.96, 0.39]
+evolve Min Time 0.74
 
-component "Bloom" [0.75, 0.66]
-component "Mastery" [0.73, 0.83]
-component "Overview" [0.74, 0.47]
+component Bloom [0.75, 0.66]
+component Mastery [0.73, 0.83]
+component Overview [0.74, 0.47]
 
-component "Social Capabilties" [0.47, 0.47]
-pipeline "Social Capabilties" {
-  component "Online Simulations" [0.38]
-  component "Coaching" [0.83]
+component Social Capabilties [0.47, 0.47]
+pipeline Social Capabilties {
+  component Online Simulations [0.38]
+  component Coaching [0.83]
 }
-evolve "Online Simulations" 0.61
+evolve Online Simulations 0.61
 
-component "Find the Right Curse" [0.59, 0.61]
-component "Peers" [0.58, 0.82]
-component "Google for Education" [0.58, 0.33]
-evolve "Google for Education" 0.77
+component Find the Right Curse [0.59, 0.61]
+component Peers [0.58, 0.82]
+component Google for Education [0.58, 0.33]
+evolve Google for Education 0.77
 
-component "Learn everythere" [0.87, 0.50]
-component "Apple Glasses" [0.85, 0.33]
-component "mobile" [0.85, 0.56]
-component "VR" [0.85, 0.41]
-evolve "VR" 0.6
-evolve "Apple Glasses" 0.66
+component Learn everythere [0.87, 0.50]
+component Apple Glasses [0.85, 0.33]
+component mobile [0.85, 0.56]
+component VR [0.85, 0.41]
+evolve VR 0.6
+evolve Apple Glasses 0.66
 
-component "Curriculum" [0.35, 0.62]
-component "interactive personalized" [0.33, 0.34]
-evolve "interactive personalized" 0.77
+component Curriculum [0.35, 0.62]
+component interactive personalized [0.33, 0.34]
+evolve interactive personalized 0.77
 
-component "fix Curriculum" [0.33, 0.82]
+component fix Curriculum [0.33, 0.82]
 
-component "Status" [0.24, 0.59]
-pipeline "Status" {
-  component "Self Learning" [0.32]
-  component "Independet RockStars MOOCs" [0.38]
-  component "Elite Badge Certification" [0.8]
+component Status [0.24, 0.59]
+pipeline Status {
+  component Self Learning [0.32]
+  component Independet RockStars MOOCs [0.38]
+  component Elite Badge Certification [0.8]
 }
-evolve "Independet RockStars MOOCs" 0.69
+evolve Independet RockStars MOOCs 0.69
 
-component "Tech Stack" [0.11, 0.64]
+component Tech Stack [0.11, 0.64]
 component "LMS, LXP" [0.10, 0.82]
-component "Adaptive Learning Engine" [0.10, 0.34]
-evolve "Adaptive Learning Engine" 0.77
-component "PKM" [0.10, 0.43]
-evolve "PKM" 0.61
+component Adaptive Learning Engine [0.10, 0.34]
+evolve Adaptive Learning Engine 0.77
+component PKM [0.10, 0.43]
+evolve PKM 0.61
 
-"Find the Right Curse" -> "Curriculum"
-"Bloom" -> "Curriculum"
-"Curriculum" -> "Status"
-"Status" -> "Tech Stack"
-"Curriculum" -> "Tech Stack"
-"Learn everythere" -> "Curriculum"
-"Mastery" -> "Curriculum"
-"Mastery" -> "Status"
-"Overview" -> "fix Curriculum"
-"Min Time" -> "interactive personalized"
-"Find the Right Curse" -> "Social Capabilties"
-"Min Time" -> "Learn everythere"
-"Motivation" -> "Bloom"
-"Job" -> "Status"
+Find the Right Curse -> Curriculum
+Bloom -> Curriculum
+Curriculum -> Status
+Status -> Tech Stack
+Curriculum -> Tech Stack
+Learn everythere -> Curriculum
+Mastery -> Curriculum
+Mastery -> Status
+Overview -> fix Curriculum
+Min Time -> interactive personalized
+Find the Right Curse -> Social Capabilties
+Min Time -> Learn everythere
+Motivation -> Bloom
+Job -> Status
 
-"Min Time" -> "PKM"
-"interactive personalized" -> "Adaptive Learning Engine"
+Min Time -> PKM
+interactive personalized -> Adaptive Learning Engine
 

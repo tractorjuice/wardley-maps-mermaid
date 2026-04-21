@@ -3,116 +3,116 @@ title agriculture - food traceability
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "society" [0.96, 0.72]
-component "seed" [0.31, 0.55]
-pipeline "seed" {
-  component "diversity" [0.44]
-  component "monoculture" [0.66]
+component society [0.96, 0.72]
+component seed [0.31, 0.55]
+pipeline seed {
+  component diversity [0.44]
+  component monoculture [0.66]
 }
-component "social norms" [0.85, 0.46]
-pipeline "social norms" {
-  component "sustainability" [0.43]
+component social norms [0.85, 0.46]
+pipeline social norms {
+  component sustainability [0.43]
 }
-component "distribution" [0.51, 0.59]
-pipeline "distribution" {
-  component "JIC" [0.42]
-  component "JIT" [0.63]
+component distribution [0.51, 0.59]
+pipeline distribution {
+  component JIC [0.42]
+  component JIT [0.63]
 }
-component "goverment" [0.96, 0.67]
+component goverment [0.96, 0.67]
 component "market" [0.64, 0.68]
-component "consumers" [0.86, 0.77]
-component "food product" [0.54, 0.72]
-component "transparency" [0.21, 0.31]
-component "industrial agriculture" [0.96, 0.61]
-component "awareness" [0.15, 0.52]
-pipeline "awareness" {
-  component "supply chain" [0.35]
-  component "land" [0.7]
+component consumers [0.86, 0.77]
+component food product [0.54, 0.72]
+component transparency [0.21, 0.31]
+component industrial agriculture [0.96, 0.61]
+component awareness [0.15, 0.52]
+pipeline awareness {
+  component supply chain [0.35]
+  component land [0.7]
 }
-component "traceability" [0.31, 0.34]
-component "food security" [0.79, 0.64]
-pipeline "food security" {
-  component "substitution" [0.53]
-  component "convenience" [0.72]
-  component "health" [0.72]
+component traceability [0.31, 0.34]
+component food security [0.79, 0.64]
+pipeline food security {
+  component substitution [0.53]
+  component convenience [0.72]
+  component health [0.72]
 }
-component "education" [0.40, 0.53]
-component "sovereignty" [0.58, 0.47]
-component "food standards" [0.68, 0.45]
-component "behaviour" [0.48, 0.29]
-component "energy" [0.06, 0.70]
-pipeline "energy" {
-  component "synthetic" [0.62]
-  component "labour" [0.68]
-  component "solar" [0.75]
+component education [0.40, 0.53]
+component sovereignty [0.58, 0.47]
+component food standards [0.68, 0.45]
+component behaviour [0.48, 0.29]
+component energy [0.06, 0.70]
+pipeline energy {
+  component synthetic [0.62]
+  component labour [0.68]
+  component solar [0.75]
 }
-component "farm" [0.41, 0.67]
-evolve "supply chain" 0.64
-component "enviormental labelling" [0.39, 0.26]
+component farm [0.41, 0.67]
+evolve supply chain 0.64
+component enviormental labelling [0.39, 0.26]
 
-"health" -> "food product"
-"bad actor" -> "adulteration"
-"bad actor" -> "food product"
-"producers" -> "food product"
-"consumers" -> "health"
-"food product" -> "supply chain"
-"goverment" -> "consumers"
-"trust" -> "supply chain"
-"trust" -> "traceability"
-"transparency" -> "traceability"
-"producers" -> "market"
-"market" -> "trust"
-"trust" -> "market"
-"food security" -> "goverment"
-"food security" -> "seasonality"
-"seasonality" -> "education"
-"adulteration" -> "regulation"
-"regulation" -> "sovereignty"
-"sovereignty" -> "landscape"
-"education" -> "behaviour"
-"educational content" -> "education"
-"education" -> "distribution mechanisms"
-"seasonality" -> "food product"
-"farm" -> "food product"
-"farm" -> "territory"
-"education" -> "substition"
-"seasonality" -> "substitution"
-"substitution" -> "educational content"
-"market" -> "regulation"
-"regulation" -> "market"
-"consumers" -> "convenience"
-"foraged" -> "education"
-"foraged" -> "territory"
-"distribution" -> "transportation"
-"transportation" -> "energy"
-"society" -> "consumers"
-"society" -> "social norms"
-"sustainability" -> "behaviour"
-"sustainability" -> "traceability"
-"preserved" -> "preservation"
-"education" -> "social media"
-"distribution" -> "energy"
-"substitution" -> "education"
-"behaviour" -> "enviormental labelling"
-"market" -> "food product"
-"market" -> "food product"
-"food product" -> "market"
-"convenience" -> "market"
-"industrial agriculture" -> "monoculture"
-"monoculture" -> "JIT"
-"market" -> "distribution"
-"distribution" -> "market"
-"substitution" -> "JIC"
-"substitution" -> "food product"
-"farm" -> "seed"
-"food security" -> "regulation"
-"health" -> "food standards"
-"food standards" -> "market"
-"food standards" -> "sovereignty"
-"substitution" -> "diversity"
-"farm" -> "land"
-"sovereignty" -> "awareness"
-"land" -> "energy"
+health -> food product
+bad actor -> adulteration
+bad actor -> food product
+producers -> food product
+consumers -> health
+food product -> supply chain
+goverment -> consumers
+trust -> supply chain
+trust -> traceability
+transparency -> traceability
+producers -> "market"
+"market" -> trust
+trust -> "market"
+food security -> goverment
+food security -> seasonality
+seasonality -> education
+adulteration -> regulation
+regulation -> sovereignty
+sovereignty -> landscape
+education -> behaviour
+educational content -> education
+education -> distribution mechanisms
+seasonality -> food product
+farm -> food product
+farm -> territory
+education -> substition
+seasonality -> substitution
+substitution -> educational content
+"market" -> regulation
+regulation -> "market"
+consumers -> convenience
+foraged -> education
+foraged -> territory
+distribution -> transportation
+transportation -> energy
+society -> consumers
+society -> social norms
+sustainability -> behaviour
+sustainability -> traceability
+preserved -> preservation
+education -> social media
+distribution -> energy
+substitution -> education
+behaviour -> enviormental labelling
+"market" -> food product
+"market" -> food product
+food product -> "market"
+convenience -> "market"
+industrial agriculture -> monoculture
+monoculture -> JIT
+"market" -> distribution
+distribution -> "market"
+substitution -> JIC
+substitution -> food product
+farm -> seed
+food security -> regulation
+health -> food standards
+food standards -> "market"
+food standards -> sovereignty
+substitution -> diversity
+farm -> land
+sovereignty -> awareness
+land -> energy
 
-evolve "sustainability" 0.55
+evolve sustainability 0.55
 

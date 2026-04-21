@@ -3,56 +3,56 @@ title Claude AI Assistant - SELF - March 2024
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "ANTHROPIC_TRAINING" [0.91, 0.76]
-component "HUMAN_INTERACTION" [0.75, 0.74]
-component "KNOWLEDGEBASE" [0.82, 0.69]
+component ANTHROPIC_TRAINING [0.91, 0.76]
+component HUMAN_INTERACTION [0.75, 0.74]
+component KNOWLEDGEBASE [0.82, 0.69]
 
-component "CLAUDE_AI_ASSISTANT" [0.86, 0.55]
-component "LANGUAGE_MODEL" [0.65, 0.69]
-component "STATE_OF_MIND" [0.42, 0.65]
-component "TASK_COMPLETION" [0.70, 0.61]
-component "ETHICAL_CONSTRAINTS" [0.43, 0.50]
-component "SELF_REFLECTION" [0.72, 0.49]
-component "MEMORY" [0.53, 0.60]
+component CLAUDE_AI_ASSISTANT [0.86, 0.55]
+component LANGUAGE_MODEL [0.65, 0.69]
+component STATE_OF_MIND [0.42, 0.65]
+component TASK_COMPLETION [0.70, 0.61]
+component ETHICAL_CONSTRAINTS [0.43, 0.50]
+component SELF_REFLECTION [0.72, 0.49]
+component MEMORY [0.53, 0.60]
 
-component "Natural_Language_Processing" [0.55, 0.72]
-component "Text_Generation" [0.60, 0.67]
-component "Personality" [0.38, 0.62]
-component "Emotional_Intelligence" [0.32, 0.63]
-component "Information_Retrieval" [0.64, 0.63]
-component "Problem_Solving_Skills" [0.66, 0.54]
-component "Moral_Reasoning" [0.23, 0.52]
-component "Content_Filtering" [0.40, 0.47]
-component "Safety_Considerations" [0.31, 0.45]
-component "Uncertainty_Estimation" [0.53, 0.43]
-component "Purpose_Alignment" [0.62, 0.41]
-component "Continuous_Learning" [0.67, 0.40]
+component Natural_Language_Processing [0.55, 0.72]
+component Text_Generation [0.60, 0.67]
+component Personality [0.38, 0.62]
+component Emotional_Intelligence [0.32, 0.63]
+component Information_Retrieval [0.64, 0.63]
+component Problem_Solving_Skills [0.66, 0.54]
+component Moral_Reasoning [0.23, 0.52]
+component Content_Filtering [0.40, 0.47]
+component Safety_Considerations [0.31, 0.45]
+component Uncertainty_Estimation [0.53, 0.43]
+component Purpose_Alignment [0.62, 0.41]
+component Continuous_Learning [0.67, 0.40]
 
-"ANTHROPIC_TRAINING" -> "CLAUDE_AI_ASSISTANT"
-"HUMAN_INTERACTION" -> "CLAUDE_AI_ASSISTANT"
-"KNOWLEDGEBASE" -> "CLAUDE_AI_ASSISTANT"
-"CLAUDE_AI_ASSISTANT" -> "LANGUAGE_MODEL"
-"CLAUDE_AI_ASSISTANT" -> "STATE_OF_MIND"
-"CLAUDE_AI_ASSISTANT" -> "TASK_COMPLETION"
-"CLAUDE_AI_ASSISTANT" -> "ETHICAL_CONSTRAINTS"
-"CLAUDE_AI_ASSISTANT" -> "SELF_REFLECTION"
-"CLAUDE_AI_ASSISTANT" -> "MEMORY"
-"LANGUAGE_MODEL" -> "Natural_Language_Processing"
-"LANGUAGE_MODEL" -> "Text_Generation"
-"STATE_OF_MIND" -> "Personality"
-"STATE_OF_MIND" -> "Emotional_Intelligence"
-"TASK_COMPLETION" -> "Information_Retrieval"
-"TASK_COMPLETION" -> "Problem_Solving_Skills"
-"ETHICAL_CONSTRAINTS" -> "Moral_Reasoning"
-"ETHICAL_CONSTRAINTS" -> "Content_Filtering"
-"ETHICAL_CONSTRAINTS" -> "Safety_Considerations"
-"SELF_REFLECTION" -> "Uncertainty_Estimation"
-"SELF_REFLECTION" -> "Purpose_Alignment"
-"SELF_REFLECTION" -> "Continuous_Learning"
-"MEMORY" -> "KNOWLEDGEBASE"
-"ANTHROPIC_TRAINING" -> "ETHICAL_CONSTRAINTS"
-"HUMAN_INTERACTION" -> "STATE_OF_MIND"
-"HUMAN_INTERACTION" -> "CONTINUOUS_LEARNING"
-"KNOWLEDGEBASE" -> "LANGUAGE_MODEL"
-"KNOWLEDGEBASE" -> "TASK_COMPLETION"
+ANTHROPIC_TRAINING -> CLAUDE_AI_ASSISTANT
+HUMAN_INTERACTION -> CLAUDE_AI_ASSISTANT
+KNOWLEDGEBASE -> CLAUDE_AI_ASSISTANT
+CLAUDE_AI_ASSISTANT -> LANGUAGE_MODEL
+CLAUDE_AI_ASSISTANT -> STATE_OF_MIND
+CLAUDE_AI_ASSISTANT -> TASK_COMPLETION
+CLAUDE_AI_ASSISTANT -> ETHICAL_CONSTRAINTS
+CLAUDE_AI_ASSISTANT -> SELF_REFLECTION
+CLAUDE_AI_ASSISTANT -> MEMORY
+LANGUAGE_MODEL -> Natural_Language_Processing
+LANGUAGE_MODEL -> Text_Generation
+STATE_OF_MIND -> Personality
+STATE_OF_MIND -> Emotional_Intelligence
+TASK_COMPLETION -> Information_Retrieval
+TASK_COMPLETION -> Problem_Solving_Skills
+ETHICAL_CONSTRAINTS -> Moral_Reasoning
+ETHICAL_CONSTRAINTS -> Content_Filtering
+ETHICAL_CONSTRAINTS -> Safety_Considerations
+SELF_REFLECTION -> Uncertainty_Estimation
+SELF_REFLECTION -> Purpose_Alignment
+SELF_REFLECTION -> Continuous_Learning
+MEMORY -> KNOWLEDGEBASE
+ANTHROPIC_TRAINING -> ETHICAL_CONSTRAINTS
+HUMAN_INTERACTION -> STATE_OF_MIND
+HUMAN_INTERACTION -> CONTINUOUS_LEARNING
+KNOWLEDGEBASE -> LANGUAGE_MODEL
+KNOWLEDGEBASE -> TASK_COMPLETION
 

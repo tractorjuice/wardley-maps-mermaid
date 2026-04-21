@@ -2,36 +2,36 @@ wardley-beta
 
 title Colombia v0.3, "AS IS" state
 size [1100, 800]
-component "fairness" [0.84, 0.62]
-component "accessibility" [0.42, 0.49]
-component "insurance" [0.73, 0.74]
-pipeline "insurance" {
+component fairness [0.84, 0.62]
+component accessibility [0.42, 0.49]
+component insurance [0.73, 0.74]
+pipeline insurance {
   component "premium (pre-paid)" [0.71]
-  component "public" [0.79]
+  component public [0.79]
 }
-component "medical services company" [0.91, 0.48]
+component medical services company [0.91, 0.48]
 
-component "providers" [0.34, 0.69]
-pipeline "providers" {
-  component "specialist" [0.42]
-  component "private" [0.58]
-  component "demand management" [0.59]
-  component "primary" [0.72]
+component providers [0.34, 0.69]
+pipeline providers {
+  component specialist [0.42]
+  component private [0.58]
+  component demand management [0.59]
+  component primary [0.72]
 }
-component "denial of service" [0.18, 0.78]
-component "mandatory healthcare" [0.87, 0.68]
-component "Government" [0.95, 0.66]
-component "queuing system" [0.11, 0.48]
-component "auditing" [0.27, 0.71]
-component "education" [0.25, 0.51]
-component "voters" [0.89, 0.61]
+component denial of service [0.18, 0.78]
+component mandatory healthcare [0.87, 0.68]
+component Government [0.95, 0.66]
+component queuing system [0.11, 0.48]
+component auditing [0.27, 0.71]
+component education [0.25, 0.51]
+component voters [0.89, 0.61]
 
-component "medical needs" [0.84, 0.58]
+component medical needs [0.84, 0.58]
 
-component "politicians" [0.95, 0.59]
-component "payment" [0.23, 0.59]
-component "guidelines (NICE)" [0.04, 0.58]
-component "treatment" [0.46, 0.62]
+component politicians [0.95, 0.59]
+component payment [0.23, 0.59]
+component guidelines (NICE) [0.04, 0.58]
+component treatment [0.46, 0.62]
 
 annotation 2,[0.36, 0.61] "Clinical pathway is managed by the insurance company i.e. what appointment and with whom (Vertical integration)"
 annotation 3,[0.15, 0.77] "Denial of service for medical treatment is used to maximise profit"
@@ -40,79 +40,79 @@ annotation 6,[0.78, 0.77] "6% are premium, 50% are contribution (incl. premium),
 annotation 7,[0.24, 0.71] "Insurers audit themselves. There are health inspectors but thats more on paper than practice and not related to outcome."
 annotations [0.79, 0.00]
 
-component "insurance companies" [0.66, 0.75]
-component "Social Health Insurance Pot (ADRES)" [0.80, 0.71]
+component insurance companies [0.66, 0.75]
+component Social Health Insurance Pot (ADRES) [0.80, 0.71]
 
-component "capitation fee" [0.66, 0.70]
-component "social charactertistics" [0.57, 0.62]
-pipeline "social charactertistics" {
-  component "social class" [0.6]
-  component "location" [0.64]
-  component "sex" [0.68]
-  component "fee per profile" [0.7]
-  component "age" [0.7]
+component capitation fee [0.66, 0.70]
+component social charactertistics [0.57, 0.62]
+pipeline social charactertistics {
+  component social class [0.6]
+  component location [0.64]
+  component sex [0.68]
+  component fee per profile [0.7]
+  component age [0.7]
 }
-component "profit per profile" [0.62, 0.75]
+component profit per profile [0.62, 0.75]
 
-component "medical facility services" [0.18, 0.64]
+component medical facility services [0.18, 0.64]
 
-component "risk of payment" [0.48, 0.69]
-component "private payment" [0.15, 0.55]
+component risk of payment [0.48, 0.69]
+component private payment [0.15, 0.55]
 
-"voters" -> "mandatory healthcare"
-"mandatory healthcare" -> "politicians"
-"Government" -> "budget"
-"mandatory healthcare" -> "budget"
-"insurance" -> "subscription model"
-"denial of service" -> "subscription model"
-"subscription model" -> "demand management"
-"demand management" -> "providers"
-"demand management" -> "queuing system"
-"demand management" -> "education"
-"providers" -> "treatment"
-"treatment" -> "auditing"
+voters -> mandatory healthcare
+mandatory healthcare -> politicians
+Government -> budget
+mandatory healthcare -> budget
+insurance -> subscription model
+denial of service -> subscription model
+subscription model -> demand management
+demand management -> providers
+demand management -> queuing system
+demand management -> education
+providers -> treatment
+treatment -> auditing
 
-"treatment" -> "payment"
-"payment" -> "budget"
-"guidelines (NICE)" -> "payment"
-"voters" -> "medical needs"
-"medical needs" -> "services"
-"medical needs" -> "treatment"
-"auditing" -> "guidelines (NICE)"
+treatment -> payment
+payment -> budget
+guidelines (NICE) -> payment
+voters -> medical needs
+medical needs -> services
+medical needs -> treatment
+auditing -> guidelines (NICE)
 
-"providers" -> "subscription model"
-"Social Health Insurance Pot (ADRES)" -> "mandatory healthcare"
-"insurance" -> "Social Health Insurance Pot (ADRES)"
-"insurance" -> "insurance companies"
-"public" -> "capitation fee"
+providers -> subscription model
+Social Health Insurance Pot (ADRES) -> mandatory healthcare
+insurance -> Social Health Insurance Pot (ADRES)
+insurance -> insurance companies
+public -> capitation fee
 
-"capitation fee" -> "fee per profile"
-"fee per profile" -> "social charactertistics"
-"medical needs" -> "social charactertistics"
-"treatment" -> "demand management"
-"profit per profile" -> "insurance companies"
-"profit per profile" -> "denial of service"
-"fee per profile" -> "profit per profile"
-"risk of payment" -> "profit per profile"
+capitation fee -> fee per profile
+fee per profile -> social charactertistics
+medical needs -> social charactertistics
+treatment -> demand management
+profit per profile -> insurance companies
+profit per profile -> denial of service
+fee per profile -> profit per profile
+risk of payment -> profit per profile
 
-"risk of payment" -> "treatment"
-"social charactertistics" -> "education"
-"providers" -> "payment"
-"specialist" -> "education"
-"private payment" -> "specialist"
-"demand management" -> "denial of service"
+risk of payment -> treatment
+social charactertistics -> education
+providers -> payment
+specialist -> education
+private payment -> specialist
+demand management -> denial of service
 
-"treatment" -> "accessibility"
-"accessibility" -> "education"
-"accessibility" -> "payment"
-"accessibility" -> "private payment"
-"voters" -> "fairness"
-"Government" -> "voters"
-"treatment" -> "social class"
+treatment -> accessibility
+accessibility -> education
+accessibility -> payment
+accessibility -> private payment
+voters -> fairness
+Government -> voters
+treatment -> social class
 
-"medical services company" -> "insurance companies"
-"medical services company" -> "providers"
-"medical services company" -> "private"
-"providers" -> "medical facility services"
-"medical facility services" -> "medical services company"
+medical services company -> insurance companies
+medical services company -> providers
+medical services company -> private
+providers -> medical facility services
+medical facility services -> medical services company
 

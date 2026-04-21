@@ -15,12 +15,12 @@ component "Senior-Operator" [0.90, 0.80]
 component "Junior-Operator" [0.90, 0.43]
 component "resolve-issue" [0.67, 0.51]
 component "Theorical-knowledge" [0.31, 0.82]
-component "travel" [0.33, 0.46]
+component travel [0.33, 0.46]
 component "Augmented-Reality" [0.42, 0.20]
 component "Accumulated-knowledge (Years)" [0.45, 0.79]
 component "machinery-specialist" [0.16, 0.75]
 component "real-experience-training" [0.74, 0.28]
-component "assistance" [0.59, 0.32]
+component assistance [0.59, 0.32]
 evolve "Augmented-Reality" 0.41
 
 "Junior-Operator" -> "resolve-issue"
@@ -30,7 +30,7 @@ evolve "Augmented-Reality" 0.41
 "Junior-Operator" -> "real-experience-training"
 "real-experience-training" -> "Senior-Operator"
 "Senior-Operator" -> "Theorical-knowledge"
-"machinery-specialist" -> "travel"
-"travel" -> "assistance"
-"assistance" -> "resolve-issue"
+"machinery-specialist" -> travel
+travel -> assistance
+assistance -> "resolve-issue"
 

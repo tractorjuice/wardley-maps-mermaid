@@ -4,101 +4,101 @@ title retail - SUSTAINABILITY, Jul 2022
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "corporation" [0.75, 0.59]
-component "government" [1.00, 0.58]
+component corporation [0.75, 0.59]
+component government [1.00, 0.58]
 
-component "ESG" [0.09, 0.44]
-pipeline "ESG" {
-  component "customer" [0.39]
-  component "suppliers" [0.45]
-  component "internal" [0.5]
+component ESG [0.09, 0.44]
+pipeline ESG {
+  component customer [0.39]
+  component suppliers [0.45]
+  component internal [0.5]
 }
-component "GOAL" [0.70, 0.47]
-pipeline "GOAL" {
-  component "carbon neutral" [0.368]
-  component "survival" [0.52]
-  component "resilience" [0.57]
-  component "KPI" [0.66]
-  component "cost optimisation" [0.712]
+component GOAL [0.70, 0.47]
+pipeline GOAL {
+  component carbon neutral [0.368]
+  component survival [0.52]
+  component resilience [0.57]
+  component KPI [0.66]
+  component cost optimisation [0.712]
 }
-component "supply chain" [0.29, 0.64]
-component "sanctions" [0.70, 0.21]
-component "AWARENESS" [0.39, 0.50]
-pipeline "AWARENESS" {
-  component "supply chain awareness" [0.298]
-  component "territorial awareness" [0.692]
+component supply chain [0.29, 0.64]
+component sanctions [0.70, 0.21]
+component AWARENESS [0.39, 0.50]
+pipeline AWARENESS {
+  component supply chain awareness [0.298]
+  component territorial awareness [0.692]
 }
-component "SOVEREIGNTY" [0.83, 0.60]
-pipeline "SOVEREIGNTY" {
-  component "political" [0.448]
-  component "economy" [0.59]
-  component "territorial" [0.782]
+component SOVEREIGNTY [0.83, 0.60]
+pipeline SOVEREIGNTY {
+  component political [0.448]
+  component economy [0.59]
+  component territorial [0.782]
 }
-component "CORPORATE SOVEREIGNTY" [0.53, 0.46]
-pipeline "CORPORATE SOVEREIGNTY" {
-  component "environment" [0.368]
-  component "social" [0.48]
-  component "economic" [0.582]
+component CORPORATE SOVEREIGNTY [0.53, 0.46]
+pipeline CORPORATE SOVEREIGNTY {
+  component environment [0.368]
+  component social [0.48]
+  component economic [0.582]
 }
-component "transparency" [0.30, 0.23]
+component transparency [0.30, 0.23]
 component "labelling" [0.82, 0.30]
-component "REGULATION" [0.23, 0.35]
-pipeline "REGULATION" {
-  component "self" [0.269]
-  component "gov" [0.412]
+component REGULATION [0.23, 0.35]
+pipeline REGULATION {
+  component self [0.269]
+  component gov [0.412]
 }
-component "MATERIALS" [0.20, 0.63]
-component "ENERGY" [0.20, 0.66]
-component "BEHAVIOUR" [0.94, 0.64]
-pipeline "BEHAVIOUR" {
-  component "community" [0.408]
-  component "convenience" [0.61]
-  component "public" [0.68]
-  component "price" [0.692]
+component MATERIALS [0.20, 0.63]
+component ENERGY [0.20, 0.66]
+component BEHAVIOUR [0.94, 0.64]
+pipeline BEHAVIOUR {
+  component community [0.408]
+  component convenience [0.61]
+  component public [0.68]
+  component price [0.692]
 }
-component "trust" [0.15, 0.32]
+component trust [0.15, 0.32]
 
-"meeting a measure" -> "ESG"
-"corporation" -> "GOAL"
-"sustainability" -> "CORPORATE SOVEREIGNTY"
-"environment" -> "carbon neutral"
-"carbon neutral" -> "carbon neutral"
-"economic" -> "supply chain"
-"supply chain" -> "suppliers"
-"supply chain" -> "advantage"
-"consumers" -> "labelling"
-"labelling" -> "transparency"
-"government" -> "SOVEREIGNTY"
-"corporation" -> "economy"
-"political" -> "gov"
-"profit" -> "advantage"
-"consumer" -> "BEHAVIOUR"
-"community" -> "environment"
-"community" -> "labelling"
-"price" -> "profit"
-"price" -> "environment"
-"price" -> "political"
-"political" -> "sanctions"
-"corporation" -> "profit"
-"supply chain" -> "supply chain awareness"
-"environment" -> "supply chain awareness"
-"sanctions" -> "supply chain awareness"
-"KPI" -> "ESG"
-"price" -> "cost"
-"cost" -> "supply chain"
-"resilience" -> "economic"
-"survival" -> "CORPORATE SOVEREIGNTY"
-"supply chain awareness" -> "transparency"
-"territorial" -> "territorial awareness"
-"MATERIALS" -> "supply chain"
-"ENERGY" -> "supply chain"
-"REGULATION" -> "transparency"
-"REGULATION" -> "trust"
-"ESG" -> "trust"
-"citizen" -> "BEHAVIOUR"
-"public" -> "BEHAVIOUR"
-"government" -> "public"
-"cost optimisation" -> "price"
-"cost optimisation" -> "supply chain"
-"CORPORATE SOVEREIGNTY" -> "ESG"
+meeting a measure -> ESG
+corporation -> GOAL
+sustainability -> CORPORATE SOVEREIGNTY
+environment -> carbon neutral
+carbon neutral -> carbon neutral
+economic -> supply chain
+supply chain -> suppliers
+supply chain -> advantage
+consumers -> "labelling"
+"labelling" -> transparency
+government -> SOVEREIGNTY
+corporation -> economy
+political -> gov
+profit -> advantage
+consumer -> BEHAVIOUR
+community -> environment
+community -> "labelling"
+price -> profit
+price -> environment
+price -> political
+political -> sanctions
+corporation -> profit
+supply chain -> supply chain awareness
+environment -> supply chain awareness
+sanctions -> supply chain awareness
+KPI -> ESG
+price -> cost
+cost -> supply chain
+resilience -> economic
+survival -> CORPORATE SOVEREIGNTY
+supply chain awareness -> transparency
+territorial -> territorial awareness
+MATERIALS -> supply chain
+ENERGY -> supply chain
+REGULATION -> transparency
+REGULATION -> trust
+ESG -> trust
+citizen -> BEHAVIOUR
+public -> BEHAVIOUR
+government -> public
+cost optimisation -> price
+cost optimisation -> supply chain
+CORPORATE SOVEREIGNTY -> ESG
 

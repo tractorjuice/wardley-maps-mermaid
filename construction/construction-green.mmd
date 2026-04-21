@@ -24,125 +24,125 @@ note "+ Limits to growth" [0.32, 0.02]
 note "+ Shedding" [0.29, 0.02]
 note "+ Multi generational sustainability" [0.26, 0.02]
 
-component "governance" [0.90, 0.66]
-pipeline "governance" {
-  component "principles" [0.44]
-  component "government" [0.63]
+component governance [0.90, 0.66]
+pipeline governance {
+  component principles [0.44]
+  component government [0.63]
   component "market" [0.69]
 }
-component "scope" [0.41, 0.70]
-pipeline "scope" {
-  component "inclusion" [0.64]
-  component "exclusion" [0.76]
+component scope [0.41, 0.70]
+pipeline scope {
+  component inclusion [0.64]
+  component exclusion [0.76]
 }
-component "society" [0.98, 0.59]
-pipeline "society" {
-  component "community" [0.46]
-  component "network" [0.61]
+component society [0.98, 0.59]
+pipeline society {
+  component community [0.46]
+  component network [0.61]
 }
-component "sustainability" [0.79, 0.62]
-component "manufacturer" [0.82, 0.64]
-component "regulators" [0.74, 0.46]
-component "consumer" [0.78, 0.72]
-component "price" [0.67, 0.75]
+component sustainability [0.79, 0.62]
+component manufacturer [0.82, 0.64]
+component regulators [0.74, 0.46]
+component consumer [0.78, 0.72]
+component price [0.67, 0.75]
 component "building" [0.65, 0.62]
 pipeline "building" {
-  component "green homes" [0.5]
-  component "ownership" [0.59]
-  component "property" [0.68]
+  component green homes [0.5]
+  component ownership [0.59]
+  component property [0.68]
 }
-component "material" [0.50, 0.66]
-component "EPDs" [0.33, 0.46]
-component "cleanup" [0.52, 0.56]
-component "standards" [0.03, 0.43]
-component "supply chain" [0.22, 0.34]
-component "BoM" [0.58, 0.65]
-component "awareness" [0.11, 0.29]
-component "energy" [0.20, 0.69]
-pipeline "energy" {
-  component "renewable" [0.67]
-  component "fossil" [0.73]
+component material [0.50, 0.66]
+component EPDs [0.33, 0.46]
+component cleanup [0.52, 0.56]
+component standards [0.03, 0.43]
+component supply chain [0.22, 0.34]
+component BoM [0.58, 0.65]
+component awareness [0.11, 0.29]
+component energy [0.20, 0.69]
+pipeline energy {
+  component renewable [0.67]
+  component fossil [0.73]
 }
-component "cost" [0.02, 0.68]
-component "regulation" [0.11, 0.41]
-component "shared service" [0.55, 0.42]
-component "status" [0.67, 0.42]
-component "neighbourhood" [0.90, 0.37]
-component "regulatory capture" [0.78, 0.35]
-component "methodology" [0.30, 0.61]
-pipeline "methodology" {
-  component "modular" [0.54]
+component cost [0.02, 0.68]
+component regulation [0.11, 0.41]
+component shared service [0.55, 0.42]
+component status [0.67, 0.42]
+component neighbourhood [0.90, 0.37]
+component regulatory capture [0.78, 0.35]
+component methodology [0.30, 0.61]
+pipeline methodology {
+  component modular [0.54]
 }
-component "provision" [0.10, 0.60]
-pipeline "provision" {
-  component "semi local" [0.51]
-  component "centralised" [0.74]
+component provision [0.10, 0.60]
+pipeline provision {
+  component semi local [0.51]
+  component centralised [0.74]
 }
-component "land" [0.40, 0.39]
-component "blueprints" [0.48, 0.41]
+component land [0.40, 0.39]
+component blueprints [0.48, 0.41]
 
-"government" -> "regulators"
-"regulators" -> "regulation"
-"green homes" -> "shared service"
-"government" -> "consumer"
-"consumer" -> "ownership"
-"consumer" -> "building"
-"price" -> "consumer"
-"building" -> "BoM"
-"BoM" -> "building"
-"BoM" -> "cleanup"
-"BoM" -> "material"
-"ownership" -> "government"
-"BoM" -> "methodology"
-"shared service" -> "renewable"
-"shared service" -> "modular"
-"energy" -> "regulation"
-"EPDs" -> "BoM"
-"EPDs" -> "regulation"
-"EPDs" -> "supply chain"
-"supply chain" -> "awareness"
-"EPDs" -> "standards"
-"methodology" -> "provision"
-"modular" -> "semi local"
-"material" -> "energy"
-"EPDs" -> "cost"
-"price" -> "cost"
-"modular" -> "standards"
-"regulation" -> "standards"
-"building" -> "land"
-"land" -> "building"
-"land" -> "regulation"
-"building" -> "blueprints"
-"blueprints" -> "building"
-"exclusion" -> "price"
-"exclusion" -> "regulation"
-"manufacturer" -> "building"
-"consumer" -> "status"
-"status" -> "green homes"
-"green homes" -> "modular"
-"neighbourhood" -> "land"
-"neighbourhood" -> "status"
-"status" -> "exclusion"
-"manufacturer" -> "regulatory capture"
-"regulatory capture" -> "regulators"
-"sustainability" -> "green homes"
-"sustainability" -> "society"
-"consumer" -> "consumer"
-"collective" -> "consumer"
-"neighbourhood" -> "community"
-"government" -> "collective"
-"property" -> "regulation"
-"property" -> "ownership"
-"property" -> "exclusion"
-"sustainability" -> "inclusion"
-"manufacturer" -> "property"
-"market" -> "manufacturer"
-"market" -> "consumer"
-"market" -> "manufacturer"
-"manufacturer" -> "market"
-"consumer" -> "market"
-"network" -> "governance"
-"community" -> "principles"
-"principles" -> "sustainability"
-"principles" -> "green homes"
+government -> regulators
+regulators -> regulation
+green homes -> shared service
+government -> consumer
+consumer -> ownership
+consumer -> "building"
+price -> consumer
+"building" -> BoM
+BoM -> "building"
+BoM -> cleanup
+BoM -> material
+ownership -> government
+BoM -> methodology
+shared service -> renewable
+shared service -> modular
+energy -> regulation
+EPDs -> BoM
+EPDs -> regulation
+EPDs -> supply chain
+supply chain -> awareness
+EPDs -> standards
+methodology -> provision
+modular -> semi local
+material -> energy
+EPDs -> cost
+price -> cost
+modular -> standards
+regulation -> standards
+"building" -> land
+land -> "building"
+land -> regulation
+"building" -> blueprints
+blueprints -> "building"
+exclusion -> price
+exclusion -> regulation
+manufacturer -> "building"
+consumer -> status
+status -> green homes
+green homes -> modular
+neighbourhood -> land
+neighbourhood -> status
+status -> exclusion
+manufacturer -> regulatory capture
+regulatory capture -> regulators
+sustainability -> green homes
+sustainability -> society
+consumer -> consumer
+collective -> consumer
+neighbourhood -> community
+government -> collective
+property -> regulation
+property -> ownership
+property -> exclusion
+sustainability -> inclusion
+manufacturer -> property
+"market" -> manufacturer
+"market" -> consumer
+"market" -> manufacturer
+manufacturer -> "market"
+consumer -> "market"
+network -> governance
+community -> principles
+principles -> sustainability
+principles -> green homes
 

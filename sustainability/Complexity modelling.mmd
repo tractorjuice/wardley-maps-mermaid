@@ -2,101 +2,101 @@ wardley-beta
 title sustainability from a complexity perspective
 size [1100, 800]
 
-component "organization" [0.96, 0.35]
-component "institutional environments" [0.96, 0.61]
+component organization [0.96, 0.35]
+component institutional environments [0.96, 0.61]
 component "macro-social phenomena" [0.72, 0.56]
-"macro-social phenomena" -> "assessment"
-"macro-social phenomena" -> "organizational cultural patterns"
-component "finanace" [0.87, 0.53]
+"macro-social phenomena" -> assessment
+"macro-social phenomena" -> organizational cultural patterns
+component finanace [0.87, 0.53]
 
-component "primary work system" [0.83, 0.37]
-"organization" -> "primary work system"
-component "sustainability" [0.87, 0.32]
-"organization" -> "sustainability"
-component "interventions" [0.80, 0.31]
-"sustainability" -> "interventions"
-"sustainability" -> "primary work system"
-"sustainability" -> "finanace"
-component "production system" [0.74, 0.36]
-"interventions" -> "production system"
-"leadership" -> "interventions"
-"primary work system" -> "production system"
-component "innovating" [0.69, 0.07]
-"interventions" -> "innovating"
-component "representation" [0.55, 0.37]
-pipeline "representation" {
-  component "energy return on energy invested" [0.33]
-  component "visualization" [0.37]
+component primary work system [0.83, 0.37]
+organization -> primary work system
+component sustainability [0.87, 0.32]
+organization -> sustainability
+component interventions [0.80, 0.31]
+sustainability -> interventions
+sustainability -> primary work system
+sustainability -> finanace
+component production system [0.74, 0.36]
+interventions -> production system
+leadership -> interventions
+primary work system -> production system
+component innovating [0.69, 0.07]
+interventions -> innovating
+component representation [0.55, 0.37]
+pipeline representation {
+  component energy return on energy invested [0.33]
+  component visualization [0.37]
 }
-component "understanding" [0.69, 0.30]
-"interventions" -> "understanding"
-"interventions" -> "organizational cultural patterns"
-"interventions" -> "compliance"
-component "organizational cultural patterns" [0.54, 0.17]
-pipeline "organizational cultural patterns" {
-  component "Adaptive Ways of Working" [0.1]
-  component "Agility" [0.13]
-  component "Traditional Project Management" [0.25]
+component understanding [0.69, 0.30]
+interventions -> understanding
+interventions -> organizational cultural patterns
+interventions -> compliance
+component organizational cultural patterns [0.54, 0.17]
+pipeline organizational cultural patterns {
+  component Adaptive Ways of Working [0.1]
+  component Agility [0.13]
+  component Traditional Project Management [0.25]
 }
-"innovating" -> "organizational cultural patterns"
-component "measurement" [0.27, 0.25]
-pipeline "measurement" {
-  component "flow of value" [0.16]
-  component "identifying process waste" [0.22]
-  component "efficiency calculation" [0.29]
-  component "bench mark" [0.35]
-  component "environmental impact measurement" [0.39]
+innovating -> organizational cultural patterns
+component measurement [0.27, 0.25]
+pipeline measurement {
+  component flow of value [0.16]
+  component identifying process waste [0.22]
+  component efficiency calculation [0.29]
+  component bench mark [0.35]
+  component environmental impact measurement [0.39]
 }
 
-component "modelling" [0.46, 0.42]
-pipeline "modelling" {
-  component "cynefin" [0.36]
-  component "digital twin" [0.4]
+component modelling [0.46, 0.42]
+pipeline modelling {
+  component cynefin [0.36]
+  component digital twin [0.4]
 }
-"representation" -> "modelling"
-"understanding" -> "modelling"
-"production system" -> "modelling"
-component "training and education" [0.64, 0.24]
-"understanding" -> "training and education"
+representation -> modelling
+understanding -> modelling
+production system -> modelling
+component training and education [0.64, 0.24]
+understanding -> training and education
 component "market requirements" [0.41, 0.24]
 
-"understanding" -> "market requirements"
-component "assessment" [0.58, 0.46]
-component "cycle time" [0.13, 0.11]
-component "lead time" [0.10, 0.13]
-component "throughput" [0.09, 0.05]
-component "variability of throughput" [0.08, 0.16]
-component "exogenous data" [0.03, 0.03]
+understanding -> "market requirements"
+component assessment [0.58, 0.46]
+component cycle time [0.13, 0.11]
+component lead time [0.10, 0.13]
+component throughput [0.09, 0.05]
+component variability of throughput [0.08, 0.16]
+component exogenous data [0.03, 0.03]
 
-component "standards" [0.66, 0.76]
-"institutional environments" -> "standards"
-"standards" -> "measurement"
-component "data" [0.06, 0.54]
-"measurement" -> "data"
+component standards [0.66, 0.76]
+institutional environments -> standards
+standards -> measurement
+component data [0.06, 0.54]
+measurement -> data
 
-"understanding" -> "representation"
-"modelling" -> "measurement"
-"understanding" -> "assessment"
-"assessment" -> "modelling"
-component "leadership" [0.82, 0.22]
-"organization" -> "leadership"
-"leadership" -> "understanding"
-component "awareness" [0.75, 0.14]
-"leadership" -> "awareness"
-component "compliance" [0.41, 0.58]
-pipeline "compliance" {
-  component "product compliance" [0.51]
-  component "company industry specific data" [0.55]
-  component "trade compliance" [0.6]
-  component "ESG compliance (GSCDDA)" [0.64]
+understanding -> representation
+modelling -> measurement
+understanding -> assessment
+assessment -> modelling
+component leadership [0.82, 0.22]
+organization -> leadership
+leadership -> understanding
+component awareness [0.75, 0.14]
+leadership -> awareness
+component compliance [0.41, 0.58]
+pipeline compliance {
+  component product compliance [0.51]
+  component company industry specific data [0.55]
+  component trade compliance [0.6]
+  component ESG compliance (GSCDDA) [0.64]
 }
-"standards" -> "compliance"
-"organization" -> "compliance"
-component "reporting" [0.30, 0.58]
-pipeline "reporting" {
+standards -> compliance
+organization -> compliance
+component reporting [0.30, 0.58]
+pipeline reporting {
   component "self-reporting" [0.46]
-  component "certification" [0.63]
+  component certification [0.63]
 }
-"compliance" -> "reporting"
-"reporting" -> "measurement"
+compliance -> reporting
+reporting -> measurement
 

@@ -4,137 +4,137 @@ title TELECOMS - business model - JULY 2022
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "public" [0.91, 0.77]
-component "Business" [0.98, 0.75]
+component public [0.91, 0.77]
+component Business [0.98, 0.75]
 
-component "SOVEREIGNTY" [0.93, 0.53]
-pipeline "SOVEREIGNTY" {
-  component "economic" [0.43]
-  component "political" [0.51]
-  component "gov" [0.61]
-  component "territorial" [0.69]
+component SOVEREIGNTY [0.93, 0.53]
+pipeline SOVEREIGNTY {
+  component economic [0.43]
+  component political [0.51]
+  component gov [0.61]
+  component territorial [0.69]
 }
 
-component "CONTENT" [0.83, 0.72]
-pipeline "CONTENT" {
-  component "location based content" [0.46]
-  component "local apps" [0.65]
-  component "exclusion" [0.68]
-  component "cloud based apps" [0.75]
+component CONTENT [0.83, 0.72]
+pipeline CONTENT {
+  component location based content [0.46]
+  component local apps [0.65]
+  component exclusion [0.68]
+  component cloud based apps [0.75]
 }
 
-component "content providers" [0.73, 0.66]
+component content providers [0.73, 0.66]
 
-component "USER DATA" [0.66, 0.67]
-pipeline "USER DATA" {
-  component "location" [0.6]
-  component "identity" [0.72]
+component USER DATA [0.66, 0.67]
+pipeline USER DATA {
+  component location [0.6]
+  component identity [0.72]
 }
 
-component "legislation" [0.66, 0.38]
-component "regulatory access" [0.20, 0.32]
+component legislation [0.66, 0.38]
+component regulatory access [0.20, 0.32]
 
-component "ACCESS NETWORK" [0.64, 0.50]
-pipeline "ACCESS NETWORK" {
-  component "Indoor" [0.45]
-  component "outdoor" [0.57]
+component ACCESS NETWORK [0.64, 0.50]
+pipeline ACCESS NETWORK {
+  component Indoor [0.45]
+  component outdoor [0.57]
 }
 
-component "POPULATION DENSITY" [0.53, 0.60]
-pipeline "POPULATION DENSITY" {
-  component "rural" [0.48]
-  component "urban" [0.74]
+component POPULATION DENSITY [0.53, 0.60]
+pipeline POPULATION DENSITY {
+  component rural [0.48]
+  component urban [0.74]
 }
 
-component "DEPLOYMENT" [0.40, 0.66]
-pipeline "DEPLOYMENT" {
-  component "Private networks" [0.39]
-  component "FTTx" [0.48]
-  component "mobile" [0.59]
-  component "satellite" [0.74]
+component DEPLOYMENT [0.40, 0.66]
+pipeline DEPLOYMENT {
+  component Private networks [0.39]
+  component FTTx [0.48]
+  component mobile [0.59]
+  component satellite [0.74]
 }
 
-component "NETWORK BUILDING BLOCKS" [0.27, 0.65]
-pipeline "NETWORK BUILDING BLOCKS" {
-  component "Small Cells" [0.44]
-  component "macrocells" [0.52]
-  component "Cloud VNFs" [0.66]
-  component "Satellite device" [0.76]
-  component "fibre" [0.85]
+component NETWORK BUILDING BLOCKS [0.27, 0.65]
+pipeline NETWORK BUILDING BLOCKS {
+  component Small Cells [0.44]
+  component macrocells [0.52]
+  component Cloud VNFs [0.66]
+  component Satellite device [0.76]
+  component fibre [0.85]
 }
 
-component "TOPOLOGY" [0.14, 0.54]
-pipeline "TOPOLOGY" {
-  component "real estate" [0.38]
-  component "space" [0.7]
+component TOPOLOGY [0.14, 0.54]
+pipeline TOPOLOGY {
+  component real estate [0.38]
+  component space [0.7]
 }
 
-component "spectrum license" [0.15, 0.76]
-component "territory" [0.05, 0.42]
+component spectrum license [0.15, 0.76]
+component territory [0.05, 0.42]
 
-"gov" -> "SOVEREIGNTY"
-"gov" -> "public"
+gov -> SOVEREIGNTY
+gov -> public
 
-"public" -> "CONTENT"
+public -> CONTENT
 
-"Business" -> "CONTENT"
-"Business" -> "exclusion"
+Business -> CONTENT
+Business -> exclusion
 
-"CONTENT" -> "content providers"
-"content providers" -> "USER DATA"
+CONTENT -> content providers
+content providers -> USER DATA
 
-"network" -> "access device"
-"network" -> "CONTENT"
+network -> access device
+network -> CONTENT
 
-"legislation" -> "territory"
-"legislation" -> "exclusion"
-"legislation" -> "regulatory access"
-"real estate" -> "territory"
+legislation -> territory
+legislation -> exclusion
+legislation -> regulatory access
+real estate -> territory
 
-"NETWORK BUILDING BLOCKS" -> "TOPOLOGY"
+NETWORK BUILDING BLOCKS -> TOPOLOGY
 
-"spectrum license" -> "regulatory access"
+spectrum license -> regulatory access
 
-"regulatory access" -> "real estate"
-"economic" -> "legislation"
+regulatory access -> real estate
+economic -> legislation
 
-"CONTENT" -> "ACCESS NETWORK"
-"ACCESS NETWORK" -> "TELCO PROVIDER"
-"TELCO PROVIDER" -> "POPULATION DENSITY"
+CONTENT -> ACCESS NETWORK
+ACCESS NETWORK -> TELCO PROVIDER
+TELCO PROVIDER -> POPULATION DENSITY
 
-"urban" -> "FTTx"
-"rural" -> "satellite connection"
+urban -> FTTx
+rural -> satellite connection
 
-"TELCO PROVIDER" -> "DEPLOYMENT"
+TELCO PROVIDER -> DEPLOYMENT
 
-"DEPLOYMENT" -> "NETWORK BUILDING BLOCKS"
+DEPLOYMENT -> NETWORK BUILDING BLOCKS
 
-"Neutral Hosts" -> "Private networks"
-"Private networks" -> "Cloud Native NFs"
+Neutral Hosts -> Private networks
+Private networks -> Cloud Native NFs
 
-"FTTx" -> "real estate"
+FTTx -> real estate
 
-"Satellite device" -> "space"
-"satellite" -> "space"
-"Satellite device" -> "satellite"
+Satellite device -> space
+satellite -> space
+Satellite device -> satellite
 
-"FTTx" -> "fibre"
-"mobile" -> "macrocells"
-"mobile" -> "urban"
-"macrocells" -> "regulatory access"
-"macrocells" -> "real estate"
+FTTx -> fibre
+mobile -> macrocells
+mobile -> urban
+macrocells -> regulatory access
+macrocells -> real estate
 
-"NETWORK BUILDING BLOCKS" -> "spectrum license"
+NETWORK BUILDING BLOCKS -> spectrum license
 
-"Local Network Provider" -> "Private networks"
-"rural" -> "satellite"
-"Private networks" -> "real estate"
-"Indoor" -> "Private networks"
+Local Network Provider -> Private networks
+rural -> satellite
+Private networks -> real estate
+Indoor -> Private networks
 note "+physics" [0.44, 0.75]
-component "Network Access" [0.72, 0.59]
-"Transmission" -> "real estate"
-"Indoor" -> "FTTx"
-"outdoor" -> "mobile"
-"outdoor" -> "satellite"
-"Private networks" -> "Small Cells"
+component Network Access [0.72, 0.59]
+Transmission -> real estate
+Indoor -> FTTx
+outdoor -> mobile
+outdoor -> satellite
+Private networks -> Small Cells
 

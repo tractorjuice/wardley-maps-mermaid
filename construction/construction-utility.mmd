@@ -4,128 +4,128 @@ title CONSTRUCTION - UTILITY services, OCT 2022
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "bad actors" [0.97, 0.54]
-component "CONSUMER" [0.88, 0.68]
-pipeline "CONSUMER" {
-  component "future user" [0.16]
+component bad actors [0.97, 0.54]
+component CONSUMER [0.88, 0.68]
+pipeline CONSUMER {
+  component future user [0.16]
   component "today's users" [0.71]
 }
 
 note "+short-termism" [0.79, 0.73]
 note "+long-termism" [0.83, 0.09]
 
-component "government" [0.97, 0.70]
-evolve "future user" 0.59
+component government [0.97, 0.70]
+evolve future user 0.59
 
-component "UTILITY" [0.71, 0.75]
-pipeline "UTILITY" {
-  component "payment" [0.72]
-  component "water" [0.76]
-  component "internet" [0.77]
-  component "power" [0.78]
+component UTILITY [0.71, 0.75]
+pipeline UTILITY {
+  component payment [0.72]
+  component water [0.76]
+  component internet [0.77]
+  component power [0.78]
 }
 
-component "supply chain" [0.04, 0.61]
-component "supply chain awareness" [0.10, 0.24]
+component supply chain [0.04, 0.61]
+component supply chain awareness [0.10, 0.24]
 
-component "standards" [0.41, 0.55]
+component standards [0.41, 0.55]
 
-component "DISTRIBUTION" [0.41, 0.62]
+component DISTRIBUTION [0.41, 0.62]
 
-component "enforcement" [0.61, 0.47]
+component enforcement [0.61, 0.47]
 
-component "GENERATION" [0.33, 0.66]
-pipeline "GENERATION" {
-  component "distributed" [0.54]
-  component "STORAGE" [0.6]
-  component "centralised" [0.71]
+component GENERATION [0.33, 0.66]
+pipeline GENERATION {
+  component distributed [0.54]
+  component STORAGE [0.6]
+  component centralised [0.71]
 }
 
-component "SAFETY" [0.81, 0.48]
-pipeline "SAFETY" {
-  component "sustainability" [0.36]
-  component "CNI" [0.57]
+component SAFETY [0.81, 0.48]
+pipeline SAFETY {
+  component sustainability [0.36]
+  component CNI [0.57]
 }
 
-component "PROVISION" [0.59, 0.67]
-pipeline "PROVISION" {
-  component "monopoly" [0.59]
+component PROVISION [0.59, 0.67]
+pipeline PROVISION {
+  component monopoly [0.59]
   component "market" [0.68]
-  component "national" [0.71]
+  component national [0.71]
 }
-component "SENSORS" [0.16, 0.65]
-pipeline "SENSORS" {
-  component "SCADA" [0.66]
+component SENSORS [0.16, 0.65]
+pipeline SENSORS {
+  component SCADA [0.66]
 }
-component "attack vector" [0.68, 0.31]
-component "regulation" [0.71, 0.48]
-component "planning" [0.16, 0.42]
-component "FINANCIAL OPTIONS" [0.24, 0.59]
-pipeline "FINANCIAL OPTIONS" {
-  component "government subsidy" [0.37]
-  component "forecasting" [0.44]
-  component "waste output" [0.65]
+component attack vector [0.68, 0.31]
+component regulation [0.71, 0.48]
+component planning [0.16, 0.42]
+component FINANCIAL OPTIONS [0.24, 0.59]
+pipeline FINANCIAL OPTIONS {
+  component government subsidy [0.37]
+  component forecasting [0.44]
+  component waste output [0.65]
   component "market loans" [0.71]
 }
 
-component "KNOWLEDGE SYSTEMS" [0.49, 0.44]
-pipeline "KNOWLEDGE SYSTEMS" {
+component KNOWLEDGE SYSTEMS [0.49, 0.44]
+pipeline KNOWLEDGE SYSTEMS {
   component "Construction Co-Pilot (AI)" [0.26]
-  component "observability" [0.32]
-  component "expertise" [0.36]
-  component "training" [0.46]
-  component "KPI" [0.56]
+  component observability [0.32]
+  component expertise [0.36]
+  component training [0.46]
+  component KPI [0.56]
 }
 
-component "corporates" [0.97, 0.65]
+component corporates [0.97, 0.65]
 
-component "CONSUMABLES" [0.10, 0.69]
-pipeline "CONSUMABLES" {
-  component "renewables" [0.68]
-  component "finite" [0.7]
+component CONSUMABLES [0.10, 0.69]
+pipeline CONSUMABLES {
+  component renewables [0.68]
+  component finite [0.7]
 }
-component "reserves" [0.02, 0.70]
+component reserves [0.02, 0.70]
 
-"government" -> "local government"
-"local government" -> "CONSUMER"
-"today's users" -> "UTILITY"
-"DISTRIBUTION" -> "PROVISION"
-"PROVISION" -> "GENERATION"
-"DISTRIBUTION" -> "STORAGE"
-"attack vector" -> "bad actors"
-"supply chain awareness" -> "attack vector"
-"GENERATION" -> "forecasting"
-"forecasting" -> "SENSORS"
-"SENSORS" -> "supply chain awareness"
-"supply chain awareness" -> "supply chain"
-"government" -> "SAFETY"
-"regulation" -> "supply chain awareness"
-"regulation" -> "PROVISION"
-"forecasting" -> "planning"
-"forecasting" -> "supply chain awareness"
-"GENERATION" -> "waste output"
-"GENERATION" -> "FINANCIAL OPTIONS"
-"CNI" -> "UTILITY"
-"PROVISION" -> "UTILITY"
-"PROVISION" -> "KNOWLEDGE SYSTEMS"
-"government" -> "CONSUMER"
-"today's users" -> "CNI"
-"UTILITY" -> "supply chain"
-"KNOWLEDGE SYSTEMS" -> "supply chain awareness"
-"regulation" -> "standards"
-"PROVISION" -> "standards"
-"standards" -> "training"
-"future user" -> "sustainability"
-"sustainability" -> "supply chain awareness"
-"sustainability" -> "planning"
-"corporates" -> "today's users"
-"SAFETY" -> "regulation"
-"standards" -> "KPI"
-"regulation" -> "enforcement"
-"enforcement" -> "standards"
-"government" -> "government subsidy"
-"government subsidy" -> "planning"
-"GENERATION" -> "CONSUMABLES"
-"CONSUMABLES" -> "supply chain"
-"reserves" -> "CONSUMABLES"
+government -> local government
+local government -> CONSUMER
+"today's users" -> UTILITY
+DISTRIBUTION -> PROVISION
+PROVISION -> GENERATION
+DISTRIBUTION -> STORAGE
+attack vector -> bad actors
+supply chain awareness -> attack vector
+GENERATION -> forecasting
+forecasting -> SENSORS
+SENSORS -> supply chain awareness
+supply chain awareness -> supply chain
+government -> SAFETY
+regulation -> supply chain awareness
+regulation -> PROVISION
+forecasting -> planning
+forecasting -> supply chain awareness
+GENERATION -> waste output
+GENERATION -> FINANCIAL OPTIONS
+CNI -> UTILITY
+PROVISION -> UTILITY
+PROVISION -> KNOWLEDGE SYSTEMS
+government -> CONSUMER
+"today's users" -> CNI
+UTILITY -> supply chain
+KNOWLEDGE SYSTEMS -> supply chain awareness
+regulation -> standards
+PROVISION -> standards
+standards -> training
+future user -> sustainability
+sustainability -> supply chain awareness
+sustainability -> planning
+corporates -> "today's users"
+SAFETY -> regulation
+standards -> KPI
+regulation -> enforcement
+enforcement -> standards
+government -> government subsidy
+government subsidy -> planning
+GENERATION -> CONSUMABLES
+CONSUMABLES -> supply chain
+reserves -> CONSUMABLES
 

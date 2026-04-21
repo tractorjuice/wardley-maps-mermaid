@@ -11,45 +11,45 @@ note "What are the universal principles of game designing?" [0.14, 0.03]
 
 note "EXPERIENCE = Emotional Engagement, Social Interaction, Presence/Immersion, Agency/Achievement" [0.04, 0.02]
 
-anchor "Consumer(Anchor)" [0.99, 0.49]
+anchor Consumer(Anchor) [0.99, 0.49]
 
-component "Experience" [0.92, 0.47]
-pipeline "Experience" {
-  component "Modders" [0.22]
+component Experience [0.92, 0.47]
+pipeline Experience {
+  component Modders [0.22]
   component "Emotional-Experience" [0.3]
   component "Social-Interaction" [0.64]
-  component "Quality" [0.76]
-  component "Gamers" [0.89]
+  component Quality [0.76]
+  component Gamers [0.89]
 }
 
-component "Games" [0.80, 0.62]
-pipeline "Games" {
+component Games [0.80, 0.62]
+pipeline Games {
   component "Unkown-Games" [0.06]
   component "VR/AR Games" [0.22]
   component "Individual-Games" [0.75]
   component "Gaming-Platforms" [0.94]
 }
-component "Status" [0.86, 0.65]
+component Status [0.86, 0.65]
 
-component "Features" [0.69, 0.57]
+component Features [0.69, 0.57]
 
 "maximize-profits" -> "Commercialization-model"
 "maximize-profits" -> "Monetization-model"
 "maximize-profits" -> "target-audience"
 "target-audience" -> "Build-user-base"
-"target-audience" -> "Status"
-"Monetization-model" -> "Laws"
-"Laws" -> "Incentives"
-"Modders" -> "Vision"
+"target-audience" -> Status
+"Monetization-model" -> Laws
+Laws -> Incentives
+Modders -> Vision
 
-"Consumer(Anchor)" -> "Experience"
-"Experience" -> "Games"
-"Games" -> "Features"
+Consumer(Anchor) -> Experience
+Experience -> Games
+Games -> Features
 
 "Build-story" -> "Drama-Tension-Curiosity"
 "Drama-Tension-Curiosity" -> "Building-&-release-of-tension"
 
-"Designer" -> "Ideal-gamer-persona"
-"Designer" -> "Design-a-Game"
+Designer -> "Ideal-gamer-persona"
+Designer -> "Design-a-Game"
 "Ideal-gamer-persona" -> "Build-user-base"
 

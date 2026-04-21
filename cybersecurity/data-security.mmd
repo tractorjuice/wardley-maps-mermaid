@@ -3,119 +3,119 @@ title Data (organizations), MAY 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component "Government Entity" [0.98, 0.72]
+component Government Entity [0.98, 0.72]
 component "Corporate/NGO Actor" [0.96, 0.60]
-component "THREAT ACTOR" [0.97, 0.34]
+component THREAT ACTOR [0.97, 0.34]
 
-component "VULNERABILITY" [0.89, 0.26]
-component "DATA POLICY" [0.86, 0.43]
-pipeline "DATA POLICY" {
-  component "Personnel" [0.38]
-  component "Sharing" [0.45]
-  component "Data Security" [0.52]
-  component "Retention" [0.57]
-  component "Enforcement" [0.61]
-  component "Analytics" [0.66]
+component VULNERABILITY [0.89, 0.26]
+component DATA POLICY [0.86, 0.43]
+pipeline DATA POLICY {
+  component Personnel [0.38]
+  component Sharing [0.45]
+  component Data Security [0.52]
+  component Retention [0.57]
+  component Enforcement [0.61]
+  component Analytics [0.66]
 }
 
-"Corporate/NGO Actor" -> "DATA POLICY"
-"Corporate/NGO Actor" -> "Informed"
-"Corporate/NGO Actor" -> "Integrity"
+"Corporate/NGO Actor" -> DATA POLICY
+"Corporate/NGO Actor" -> Informed
+"Corporate/NGO Actor" -> Integrity
 
-"THREAT ACTOR" -> "VULNERABILITY"
-"THREAT ACTOR" -> "Attribution"
-"THREAT ACTOR" -> "Availability"
+THREAT ACTOR -> VULNERABILITY
+THREAT ACTOR -> Attribution
+THREAT ACTOR -> Availability
 
-"VULNERABILITY" -> "DATA STORE"
-"VULNERABILITY" -> "DATA SOURCE"
+VULNERABILITY -> DATA STORE
+VULNERABILITY -> DATA SOURCE
 
-component "Data Location" [0.73, 0.58]
+component Data Location [0.73, 0.58]
 
-"DATA POLICY" -> "REGULATIONS"
-"Data Security" -> "Data Location"
-"Data Security" -> "Incident Response"
+DATA POLICY -> REGULATIONS
+Data Security -> Data Location
+Data Security -> Incident Response
 
-"Informed" -> "Analytics"
-"Analytics" -> "Incident Response"
-"Analytics" -> "FORENSICS"
-"Analytics" -> "DATA STORE"
-"Analytics" -> "Transmission"
+Informed -> Analytics
+Analytics -> Incident Response
+Analytics -> FORENSICS
+Analytics -> DATA STORE
+Analytics -> Transmission
 
-"DATA POLICY" -> "CRYPTOGRAPHY"
-"Data Security" -> "CRYPTOGRAPHY"
-"Incident Response" -> "Threat detection"
-"Threat detection" -> "Monitoring"
-"Monitoring" -> "Data Data Securityion"
+DATA POLICY -> CRYPTOGRAPHY
+Data Security -> CRYPTOGRAPHY
+Incident Response -> Threat detection
+Threat detection -> Monitoring
+Monitoring -> Data Data Securityion
 
-"Investigate Incidents" -> "FORENSICS"
+Investigate Incidents -> FORENSICS
 
-"Integrity" -> "Transmission"
-"CRYPTOGRAPHY" -> "Transmission"
-"Transmission" -> "DATA STORE"
-"Transmission" -> "Data sharing protocols"
-"Retention" -> "Policy"
+Integrity -> Transmission
+CRYPTOGRAPHY -> Transmission
+Transmission -> DATA STORE
+Transmission -> Data sharing protocols
+Retention -> Policy
 
-"History" -> "Analytics"
+History -> Analytics
 
-component "OPEN DATA STANDARDS" [0.65, 0.39]
+component OPEN DATA STANDARDS [0.65, 0.39]
 
-"Sharing" -> "OPEN DATA STANDARDS"
+Sharing -> OPEN DATA STANDARDS
 
-"OPEN DATA STANDARDS" -> "DATA SOURCE"
+OPEN DATA STANDARDS -> DATA SOURCE
 
-component "Data sharing protocols" [0.32, 0.73]
+component Data sharing protocols [0.32, 0.73]
 
-component "REGULATIONS" [0.54, 0.46]
-pipeline "REGULATIONS" {
-  component "ChatGPT interface ban" [0.16]
-  component "central govt crypto" [0.39]
-  component "GDPR" [0.64]
-  component "Monitoring" [0.64]
-  component "SOC" [0.71]
-  component "HIPPA" [0.75]
+component REGULATIONS [0.54, 0.46]
+pipeline REGULATIONS {
+  component ChatGPT interface ban [0.16]
+  component central govt crypto [0.39]
+  component GDPR [0.64]
+  component Monitoring [0.64]
+  component SOC [0.71]
+  component HIPPA [0.75]
 }
 
-component "Incident Response" [0.73, 0.53]
-component "FORENSICS" [0.65, 0.59]
-component "Threat detection" [0.67, 0.54]
+component Incident Response [0.73, 0.53]
+component FORENSICS [0.65, 0.59]
+component Threat detection [0.67, 0.54]
 
-"FORENSICS" -> "DATA STORE"
+FORENSICS -> DATA STORE
 
-component "CRYPTOGRAPHY" [0.42, 0.45]
-pipeline "CRYPTOGRAPHY" {
+component CRYPTOGRAPHY [0.42, 0.45]
+pipeline CRYPTOGRAPHY {
   component "zero-knowledge proofs" [0.35]
-  component "Quantum Resistant Cryptography" [0.4]
+  component Quantum Resistant Cryptography [0.4]
   component "end-to-end cryptography" [0.71]
   component "symmetric/asymmetric cryptography" [0.77]
 }
 
-"zero-knowledge proofs" -> "Digital Wallet"
+"zero-knowledge proofs" -> Digital Wallet
 
-component "Transmission" [0.35, 0.66]
+component Transmission [0.35, 0.66]
 
-component "DATA STORE" [0.25, 0.56]
-pipeline "DATA STORE" {
-  component "Digital Wallet" [0.41]
-  component "Distributed Ledger" [0.48]
-  component "CMDB" [0.71]
-  component "SIEM" [0.75]
+component DATA STORE [0.25, 0.56]
+pipeline DATA STORE {
+  component Digital Wallet [0.41]
+  component Distributed Ledger [0.48]
+  component CMDB [0.71]
+  component SIEM [0.75]
 }
 
-"DATA STORE" -> "DATA SOURCE"
-"Attribution" -> "DATA SOURCE"
+DATA STORE -> DATA SOURCE
+Attribution -> DATA SOURCE
 
-component "DATA SOURCE" [0.10, 0.45]
-pipeline "DATA SOURCE" {
-  component "completeness" [0.26]
-  component "validated" [0.38]
-  component "Open data" [0.61]
-  component "automated" [0.68]
-  component "manual entry" [0.71]
+component DATA SOURCE [0.10, 0.45]
+pipeline DATA SOURCE {
+  component completeness [0.26]
+  component validated [0.38]
+  component Open data [0.61]
+  component automated [0.68]
+  component manual entry [0.71]
 }
 
-"History" -> "Government Entity"
-"Corporate/NGO Actor" -> "Analytics"
-"Government Entity" -> "Analytics"
-"Incident Response" -> "FORENSICS"
-"FORENSICS" -> "Monitoring"
+History -> Government Entity
+"Corporate/NGO Actor" -> Analytics
+Government Entity -> Analytics
+Incident Response -> FORENSICS
+FORENSICS -> Monitoring
 

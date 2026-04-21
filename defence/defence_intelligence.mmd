@@ -3,108 +3,108 @@ title DEFENCE - intelligence - MAR 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "OPERATIONAL DECISION" [0.83, 0.65]
-pipeline "OPERATIONAL DECISION" {
-  component "HOTL" [0.55]
-  component "HITL" [0.7]
+component OPERATIONAL DECISION [0.83, 0.65]
+pipeline OPERATIONAL DECISION {
+  component HOTL [0.55]
+  component HITL [0.7]
 }
-evolve "HOTL" 0.6
+evolve HOTL 0.6
 
-component "target discovery" [0.77, 0.46]
+component target discovery [0.77, 0.46]
 
-component "INTELLIGENCE GATHERING" [0.73, 0.60]
-pipeline "INTELLIGENCE GATHERING" {
-  component "OSINT" [0.56]
-  component "agency" [0.69]
-}
-
-component "COLLECTORS" [0.38, 0.65]
-pipeline "COLLECTORS" {
-  component "social media" [0.6]
-  component "machine" [0.63]
-  component "public_data" [0.67]
-  component "people" [0.71]
+component INTELLIGENCE GATHERING [0.73, 0.60]
+pipeline INTELLIGENCE GATHERING {
+  component OSINT [0.56]
+  component agency [0.69]
 }
 
-component "ANALYSIS" [0.63, 0.61]
-pipeline "ANALYSIS" {
-  component "crowdsourcing" [0.46]
-  component "AI" [0.52]
-  component "desk ANALYSIS" [0.68]
-}
-component "data science" [0.27, 0.58]
-component "SOURCES" [0.50, 0.65]
-pipeline "SOURCES" {
-  component "diversity" [0.51]
-  component "verified" [0.69]
-}
-component "ML Engine" [0.20, 0.65]
-
-component "ACTORS" [0.99, 0.60]
-pipeline "ACTORS" {
-  component "opponent" [0.55]
-  component "military" [0.63]
-  component "government" [0.67]
+component COLLECTORS [0.38, 0.65]
+pipeline COLLECTORS {
+  component social media [0.6]
+  component machine [0.63]
+  component public_data [0.67]
+  component people [0.71]
 }
 
-component "citizen" [0.90, 0.70]
-component "privacy" [0.83, 0.33]
-component "regulation" [0.43, 0.30]
-component "data" [0.14, 0.71]
-component "ownership" [0.12, 0.64]
+component ANALYSIS [0.63, 0.61]
+pipeline ANALYSIS {
+  component crowdsourcing [0.46]
+  component AI [0.52]
+  component desk ANALYSIS [0.68]
+}
+component data science [0.27, 0.58]
+component SOURCES [0.50, 0.65]
+pipeline SOURCES {
+  component diversity [0.51]
+  component verified [0.69]
+}
+component ML Engine [0.20, 0.65]
 
-component "TRUST" [0.09, 0.45]
-pipeline "TRUST" {
-  component "competence" [0.36]
-  component "integrity" [0.43]
-  component "benevolence" [0.5]
+component ACTORS [0.99, 0.60]
+pipeline ACTORS {
+  component opponent [0.55]
+  component military [0.63]
+  component government [0.67]
 }
 
-component "CAPABILITY" [0.92, 0.51]
-pipeline "CAPABILITY" {
-  component "Prompt Engineering" [0.31]
-  component "attack vector" [0.43]
-  component "misinformation" [0.54]
+component citizen [0.90, 0.70]
+component privacy [0.83, 0.33]
+component regulation [0.43, 0.30]
+component data [0.14, 0.71]
+component ownership [0.12, 0.64]
+
+component TRUST [0.09, 0.45]
+pipeline TRUST {
+  component competence [0.36]
+  component integrity [0.43]
+  component benevolence [0.5]
 }
 
-component "SENSORS" [0.29, 0.69]
-pipeline "SENSORS" {
-  component "network signals" [0.67]
-  component "GPS" [0.7]
-  component "cameras" [0.72]
+component CAPABILITY [0.92, 0.51]
+pipeline CAPABILITY {
+  component Prompt Engineering [0.31]
+  component attack vector [0.43]
+  component misinformation [0.54]
 }
 
-evolve "AI" 0.59
-evolve "ML Engine" 0.75
+component SENSORS [0.29, 0.69]
+pipeline SENSORS {
+  component network signals [0.67]
+  component GPS [0.7]
+  component cameras [0.72]
+}
 
-"OPERATIONAL DECISION" -> "INTELLIGENCE GATHERING"
-"OPERATIONAL DECISION" -> "target discovery"
-"target discovery" -> "INTELLIGENCE GATHERING"
-"OSINT" -> "crowdsourcing"
-"crowdsourcing" -> "diversity"
-"INTELLIGENCE GATHERING" -> "ANALYSIS"
-"ANALYSIS" -> "SOURCES"
-"SOURCES" -> "COLLECTORS"
-"diversity" -> "social media"
-"diversity" -> "public_data"
-"diversity" -> "machine devices"
-"machine" -> "SENSORS"
-"AI" -> "data science"
-"data science" -> "ML Engine"
-"ACTORS" -> "OPERATIONAL DECISION"
-"Prompt Engineering" -> "AI"
+evolve AI 0.59
+evolve ML Engine 0.75
 
-"CAPABILITY" -> "INTELLIGENCE GATHERING"
-"government" -> "citizen"
-"citizen" -> "privacy"
-"privacy" -> "regulation"
-"regulation" -> "COLLECTORS"
-"government" -> "regulation"
-"ML Engine" -> "data"
-"SENSORS" -> "data"
-"data" -> "ownership"
-"regulation" -> "ownership"
-"ACTORS" -> "CAPABILITY"
-"ownership" -> "TRUST"
-"misinformation" -> "TRUST"
+OPERATIONAL DECISION -> INTELLIGENCE GATHERING
+OPERATIONAL DECISION -> target discovery
+target discovery -> INTELLIGENCE GATHERING
+OSINT -> crowdsourcing
+crowdsourcing -> diversity
+INTELLIGENCE GATHERING -> ANALYSIS
+ANALYSIS -> SOURCES
+SOURCES -> COLLECTORS
+diversity -> social media
+diversity -> public_data
+diversity -> machine devices
+machine -> SENSORS
+AI -> data science
+data science -> ML Engine
+ACTORS -> OPERATIONAL DECISION
+Prompt Engineering -> AI
+
+CAPABILITY -> INTELLIGENCE GATHERING
+government -> citizen
+citizen -> privacy
+privacy -> regulation
+regulation -> COLLECTORS
+government -> regulation
+ML Engine -> data
+SENSORS -> data
+data -> ownership
+regulation -> ownership
+ACTORS -> CAPABILITY
+ownership -> TRUST
+misinformation -> TRUST
 

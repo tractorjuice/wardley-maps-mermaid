@@ -3,83 +3,83 @@ title Cybersecurity, Threat, June 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component "Bad Actor" [0.98, 0.65]
-component "Good Actor" [0.98, 0.73]
-component "offence" [0.90, 0.66]
-component "defence" [0.90, 0.74]
+component Bad Actor [0.98, 0.65]
+component Good Actor [0.98, 0.73]
+component offence [0.90, 0.66]
+component defence [0.90, 0.74]
 
-component "KNOWLEDGE" [0.82, 0.53]
-pipeline "KNOWLEDGE" {
-  component "have an idea" [0.17]
-  component "TARGET EXPLOITATION" [0.4]
-  component "target identification" [0.5]
-  component "Identify vulnerabilities" [0.62]
+component KNOWLEDGE [0.82, 0.53]
+pipeline KNOWLEDGE {
+  component have an idea [0.17]
+  component TARGET EXPLOITATION [0.4]
+  component target identification [0.5]
+  component Identify vulnerabilities [0.62]
 }
 
-component "EXPLOIT" [0.35, 0.52]
-pipeline "EXPLOIT" {
-  component "Fully custom exploit" [0.33]
-  component "Exploit per public knowledge" [0.47]
+component EXPLOIT [0.35, 0.52]
+pipeline EXPLOIT {
+  component Fully custom exploit [0.33]
+  component Exploit per public knowledge [0.47]
   component "social-engineering" [0.58]
-  component "Script kiddie" [0.72]
+  component Script kiddie [0.72]
 }
 
-component "PRINCIPLES" [0.49, 0.59]
-pipeline "PRINCIPLES" {
-  component "Avoid responsibility" [0.42]
-  component "Avoid detection" [0.5]
-  component "security posture" [0.62]
-  component "risk management" [0.66]
-  component "reporting" [0.69]
+component PRINCIPLES [0.49, 0.59]
+pipeline PRINCIPLES {
+  component Avoid responsibility [0.42]
+  component Avoid detection [0.5]
+  component security posture [0.62]
+  component risk management [0.66]
+  component reporting [0.69]
 }
 
-component "CAPABILITY" [0.66, 0.50]
-pipeline "CAPABILITY" {
-  component "R&D" [0.2]
-  component "dark web marketplace" [0.4]
+component CAPABILITY [0.66, 0.50]
+pipeline CAPABILITY {
+  component R&D [0.2]
+  component dark web marketplace [0.4]
   component "MONITOR/SCAN" [0.58]
-  component "security frameworks" [0.62]
-  component "obfuscated Identity" [0.66]
-  component "cryptography" [0.7]
+  component security frameworks [0.62]
+  component obfuscated Identity [0.66]
+  component cryptography [0.7]
 }
 
-component "TOOL" [0.16, 0.42]
-pipeline "TOOL" {
+component TOOL [0.16, 0.42]
+pipeline TOOL {
   component "be-spoke tool" [0.26]
-  component "commercial tool" [0.51]
+  component commercial tool [0.51]
   component "open-source tool" [0.705]
 }
 
-evolve "commercial tool" 0.70
+evolve commercial tool 0.70
 note "+open source" [0.11, 0.56]
 
-"cryptography" -> "Not be discovered"
-"Not be discovered" -> "alternative Identity"
+cryptography -> Not be discovered
+Not be discovered -> alternative Identity
 
-"have an idea" -> "R&D"
-"R&D" -> "hardware"
-"Bad Actor" -> "offence"
-"Good Actor" -> "defence"
-"Good Actor" -> "offence"
-"offence" -> "KNOWLEDGE"
-"defence" -> "KNOWLEDGE"
-"R&D" -> "be-spoke tool"
-"R&D" -> "Fully custom exploit"
-"CAPABILITY" -> "EXPLOIT"
+have an idea -> R&D
+R&D -> hardware
+Bad Actor -> offence
+Good Actor -> defence
+Good Actor -> offence
+offence -> KNOWLEDGE
+defence -> KNOWLEDGE
+R&D -> "be-spoke tool"
+R&D -> Fully custom exploit
+CAPABILITY -> EXPLOIT
 
-"PRINCIPLES" -> "CAPABILITY"
-"KNOWLEDGE" -> "CAPABILITY"
-"R&D" -> "TARGET EXPLOITATION"
-"TARGET EXPLOITATION" -> "security marketplace"
-"target identification" -> "security marketplace"
-"TARGET EXPLOITATION" -> "dark web marketplace"
-"dark web marketplace" -> "target identification"
-"Identify vulnerabilities" -> "MONITOR/SCAN"
-"risk management" -> "MONITOR/SCAN"
-"MONITOR/SCAN" -> "reporting"
-"security posture" -> "security frameworks"
-"obfuscated Identity" -> "Avoid responsibility"
-"risk management" -> "cryptography"
-"cryptography" -> "Avoid detection"
-"target identification" -> "Monitoring / Scanning"
+PRINCIPLES -> CAPABILITY
+KNOWLEDGE -> CAPABILITY
+R&D -> TARGET EXPLOITATION
+TARGET EXPLOITATION -> security marketplace
+target identification -> security marketplace
+TARGET EXPLOITATION -> dark web marketplace
+dark web marketplace -> target identification
+Identify vulnerabilities -> "MONITOR/SCAN"
+risk management -> "MONITOR/SCAN"
+"MONITOR/SCAN" -> reporting
+security posture -> security frameworks
+obfuscated Identity -> Avoid responsibility
+risk management -> cryptography
+cryptography -> Avoid detection
+target identification -> "Monitoring / Scanning"
 

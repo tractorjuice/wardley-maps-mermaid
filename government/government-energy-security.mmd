@@ -5,100 +5,100 @@ size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
 note "unused" [0.25, 0.01]
-component "demand control" [0.13, 0.02]
-component "tax" [0.09, 0.02]
+component demand control [0.13, 0.02]
+component tax [0.09, 0.02]
 
-component "social license" [0.64, 0.37]
-component "society" [0.17, 0.02]
+component social license [0.64, 0.37]
+component society [0.17, 0.02]
 
-component "supply chain" [0.09, 0.58]
-component "awareness of supply chain" [0.03, 0.32]
+component supply chain [0.09, 0.58]
+component awareness of supply chain [0.03, 0.32]
 
-component "demand" [0.81, 0.67]
-pipeline "demand" {
-  component "demand response" [0.64]
-  component "power" [0.71]
-  component "efficiency" [0.73]
+component demand [0.81, 0.67]
+pipeline demand {
+  component demand response [0.64]
+  component power [0.71]
+  component efficiency [0.73]
 }
 
-component "political funds" [0.89, 0.54]
-component "bad actors" [0.21, 0.02]
-component "status" [0.83, 0.54]
+component political funds [0.89, 0.54]
+component bad actors [0.21, 0.02]
+component status [0.83, 0.54]
 
-component "government" [0.93, 0.60]
-component "consumers" [0.89, 0.67]
-component "fossil fuel companies" [0.92, 0.47]
-component "lobbyists" [0.83, 0.45]
+component government [0.93, 0.60]
+component consumers [0.89, 0.67]
+component fossil fuel companies [0.92, 0.47]
+component lobbyists [0.83, 0.45]
 
-component "sovereignty" [0.69, 0.57]
-pipeline "sovereignty" {
-  component "digital sovereignty" [0.51]
-  component "critical infrastructure" [0.61]
-  component "territorial" [0.69]
+component sovereignty [0.69, 0.57]
+pipeline sovereignty {
+  component digital sovereignty [0.51]
+  component critical infrastructure [0.61]
+  component territorial [0.69]
 }
 
-component "energy production" [0.30, 0.65]
-pipeline "energy production" {
-  component "large scale" [0.43]
-  component "modular" [0.69]
-  component "raw materials" [0.75]
+component energy production [0.30, 0.65]
+pipeline energy production {
+  component large scale [0.43]
+  component modular [0.69]
+  component raw materials [0.75]
 }
 
-component "fuel" [0.18, 0.65]
-pipeline "fuel" {
-  component "fusion" [0.38]
-  component "fission" [0.56]
-  component "renewable" [0.68]
-  component "fossil" [0.75]
+component fuel [0.18, 0.65]
+pipeline fuel {
+  component fusion [0.38]
+  component fission [0.56]
+  component renewable [0.68]
+  component fossil [0.75]
 }
 
-component "distribution" [0.55, 0.64]
-pipeline "distribution" {
-  component "distributed" [0.47]
-  component "microgrids" [0.54]
-  component "centralised" [0.68]
+component distribution [0.55, 0.64]
+pipeline distribution {
+  component distributed [0.47]
+  component microgrids [0.54]
+  component centralised [0.68]
 }
-component "storage" [0.42, 0.62]
-pipeline "storage" {
-  component "fuel cells" [0.45]
-  component "battery" [0.68]
+component storage [0.42, 0.62]
+pipeline storage {
+  component fuel cells [0.45]
+  component battery [0.68]
 }
 
-component "climate" [0.75, 0.40]
+component climate [0.75, 0.40]
 
-component "environmental impact" [0.59, 0.24]
+component environmental impact [0.59, 0.24]
 
-"consumers" -> "power"
-"power" -> "distribution"
-"distribution" -> "energy production"
-"energy production" -> "fuel"
-"distribution" -> "storage"
-"fossil" -> "large scale"
-"large scale" -> "centralised"
-"renewable" -> "modular"
-"critical infrastructure" -> "distribution"
-"government" -> "sovereignty"
-"fossil fuel companies" -> "lobbyists"
-"fossil fuel companies" -> "fossil"
+consumers -> power
+power -> distribution
+distribution -> energy production
+energy production -> fuel
+distribution -> storage
+fossil -> large scale
+large scale -> centralised
+renewable -> modular
+critical infrastructure -> distribution
+government -> sovereignty
+fossil fuel companies -> lobbyists
+fossil fuel companies -> fossil
 
-"government" -> "consumers"
-"climate" -> "renewable"
-"lobbyists" -> "climate"
-"distributed" -> "modular"
-"supply chain" -> "awareness of supply chain"
-"power" -> "demand"
-"battery" -> "raw materials"
-"climate" -> "environmental impact"
-"environmental impact" -> "awareness of supply chain"
-"government" -> "political funds"
-"political funds" -> "lobbyists"
+government -> consumers
+climate -> renewable
+lobbyists -> climate
+distributed -> modular
+supply chain -> awareness of supply chain
+power -> demand
+battery -> raw materials
+climate -> environmental impact
+environmental impact -> awareness of supply chain
+government -> political funds
+political funds -> lobbyists
 
-"demand" -> "climate"
-"consumers" -> "status"
-"status" -> "climate"
-"government" -> "status"
-"fossil fuel companies" -> "status"
-"status" -> "social license"
-"supply chain" -> "fuel"
-"territorial" -> "supply chain"
+demand -> climate
+consumers -> status
+status -> climate
+government -> status
+fossil fuel companies -> status
+status -> social license
+supply chain -> fuel
+territorial -> supply chain
 

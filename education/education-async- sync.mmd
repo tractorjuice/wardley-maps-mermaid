@@ -3,82 +3,82 @@ wardley-beta
 title education - synchronous vs asynchronous
 size [1100, 800]
 
-component "school" [0.92, 0.67]
-component "industry" [0.92, 0.61]
-component "media" [0.92, 0.55]
-component "pandemic" [0.92, 0.41]
-component "isolation economy" [0.87, 0.37]
+component school [0.92, 0.67]
+component industry [0.92, 0.61]
+component media [0.92, 0.55]
+component pandemic [0.92, 0.41]
+component isolation economy [0.87, 0.37]
 
-component "student" [0.87, 0.70]
-component "social network" [0.81, 0.60]
+component student [0.87, 0.70]
+component social network [0.81, 0.60]
 
-component "learning_mode" [0.30, 0.52]
-pipeline "learning_mode" {
-  component "asynchronous" [0.45]
-  component "synchronous" [0.71]
+component learning_mode [0.30, 0.52]
+pipeline learning_mode {
+  component asynchronous [0.45]
+  component synchronous [0.71]
 }
 
-component "collaboration" [0.16, 0.46]
-component "reflection" [0.11, 0.43]
-component "standaridisation" [0.05, 0.51]
+component collaboration [0.16, 0.46]
+component reflection [0.11, 0.43]
+component standaridisation [0.05, 0.51]
 
-component "transactional" [0.04, 0.72]
-component "value for money" [0.13, 0.67]
-component "factory" [0.48, 0.70]
+component transactional [0.04, 0.72]
+component value for money [0.13, 0.67]
+component factory [0.48, 0.70]
 
-component "teaching" [0.43, 0.59]
-pipeline "teaching" {
-  component "cognitivism" [0.49]
-  component "constructivism" [0.56]
-  component "behaviourism" [0.66]
+component teaching [0.43, 0.59]
+pipeline teaching {
+  component cognitivism [0.49]
+  component constructivism [0.56]
+  component behaviourism [0.66]
 }
 
-component "hybrid" [0.80, 0.35]
+component hybrid [0.80, 0.35]
 
-component "Space" [0.54, 0.65]
-component "remote" [0.54, 0.72]
-component "creative" [0.47, 0.37]
+component Space [0.54, 0.65]
+component remote [0.54, 0.72]
+component creative [0.47, 0.37]
 
-component "learning practices" [0.67, 0.56]
-pipeline "learning practices" {
-  component "virtual practices" [0.32]
-  component "physical practices" [0.71]
+component learning practices [0.67, 0.56]
+pipeline learning practices {
+  component virtual practices [0.32]
+  component physical practices [0.71]
 }
 
-component "assets" [0.81, 0.66]
-component "socialisation" [0.74, 0.68]
+component assets [0.81, 0.66]
+component socialisation [0.74, 0.68]
 
-evolve "Space" 0.72
-component "colocated" [0.54, 0.65]
+evolve Space 0.72
+component colocated [0.54, 0.65]
 
-"school" -> "student"
-"collaboration" -> "reflection"
-"pandemic" -> "isolation economy"
-"student" -> "social network"
-"student" -> "teaching"
-"student" -> "value for money"
-"synchronous" -> "value for money"
-"transactional" -> "value for money"
-"teaching" -> "learning_mode"
-"isolation economy" -> "hybrid"
-"isolation economy" -> "remote"
-"media" -> "value for money"
-"asynchronous" -> "remote"
-"social network" -> "physical practices"
-"collaboration" -> "asynchronous"
-"standaridisation" -> "synchronous"
+school -> student
+collaboration -> reflection
+pandemic -> isolation economy
+student -> social network
+student -> teaching
+student -> value for money
+synchronous -> value for money
+transactional -> value for money
+teaching -> learning_mode
+isolation economy -> hybrid
+isolation economy -> remote
+media -> value for money
+asynchronous -> remote
+social network -> physical practices
+collaboration -> asynchronous
+standaridisation -> synchronous
 
-"industry" -> "creative"
-"creative" -> "asynchronous"
-"assets" -> "school"
-"assets" -> "colocated"
-"physical practices" -> "colocated"
-"remote" -> "virtual practices"
+industry -> creative
+creative -> asynchronous
+assets -> school
+assets -> colocated
+physical practices -> colocated
+remote -> virtual practices
 
-"learning practices" -> "hybrid"
-"socialisation" -> "physical practices"
-"social network" -> "socialisation"
-"Space" -> "synchronous"
-"industry" -> "factory"
-"factory" -> "synchronous"
+learning practices -> hybrid
+socialisation -> physical practices
+social network -> socialisation
+Space -> synchronous
+industry -> factory
+factory -> synchronous
 

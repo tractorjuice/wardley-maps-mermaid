@@ -14,101 +14,101 @@ note "+impulse" [0.67, 0.45]
 note "+search" [0.08, 0.03]
 note "+latent needs" [0.86, 0.51]
 
-component "privacy" [0.37, 0.34]
-component "customer" [0.92, 0.70]
-component "producer" [0.96, 0.64]
-component "society" [0.97, 0.55]
-component "good" [0.64, 0.71]
-pipeline "good" {
-  component "luxury" [0.54]
-  component "service" [0.68]
-  component "mass produced" [0.74]
+component privacy [0.37, 0.34]
+component customer [0.92, 0.70]
+component producer [0.96, 0.64]
+component society [0.97, 0.55]
+component good [0.64, 0.71]
+pipeline good {
+  component luxury [0.54]
+  component service [0.68]
+  component mass produced [0.74]
 }
-component "need" [0.85, 0.68]
-pipeline "need" {
-  component "emotional" [0.51]
-  component "social needs" [0.63]
-  component "functional" [0.72]
-  component "urgency" [0.73]
+component need [0.85, 0.68]
+pipeline need {
+  component emotional [0.51]
+  component social needs [0.63]
+  component functional [0.72]
+  component urgency [0.73]
 }
-component "behaviour" [0.90, 0.42]
-component "channel" [0.52, 0.71]
-pipeline "channel" {
+component behaviour [0.90, 0.42]
+component channel [0.52, 0.71]
+pipeline channel {
   component "e-commerce" [0.67]
-  component "telesales" [0.7]
-  component "stores" [0.73]
+  component telesales [0.7]
+  component stores [0.73]
 }
-component "price" [0.75, 0.74]
-component "convenience" [0.71, 0.72]
-component "reducing friction" [0.61, 0.35]
-component "engagement" [0.75, 0.59]
-component "discovery" [0.70, 0.45]
-component "purchase" [0.13, 0.75]
-pipeline "purchase" {
-  component "social" [0.57]
-  component "online" [0.7]
-  component "POS" [0.79]
+component price [0.75, 0.74]
+component convenience [0.71, 0.72]
+component reducing friction [0.61, 0.35]
+component engagement [0.75, 0.59]
+component discovery [0.70, 0.45]
+component purchase [0.13, 0.75]
+pipeline purchase {
+  component social [0.57]
+  component online [0.7]
+  component POS [0.79]
 }
-component "experience" [0.46, 0.36]
-component "device" [0.03, 0.68]
-component "space" [0.24, 0.68]
-pipeline "space" {
-  component "physical" [0.54]
-  component "virtual" [0.72]
+component experience [0.46, 0.36]
+component device [0.03, 0.68]
+component space [0.24, 0.68]
+pipeline space {
+  component physical [0.54]
+  component virtual [0.72]
 }
-component "topology" [0.13, 0.36]
-component "demographics" [0.79, 0.29]
-component "senses" [0.38, 0.69]
-pipeline "senses" {
-  component "smell" [0.59]
-  component "sound" [0.64]
-  component "sight" [0.68]
-  component "touch" [0.71]
+component topology [0.13, 0.36]
+component demographics [0.79, 0.29]
+component senses [0.38, 0.69]
+pipeline senses {
+  component smell [0.59]
+  component sound [0.64]
+  component sight [0.68]
+  component touch [0.71]
 }
-component "returns" [0.40, 0.47]
-component "trust" [0.30, 0.40]
+component returns [0.40, 0.47]
+component trust [0.30, 0.40]
 
-"customer" -> "convenience"
-"convenience" -> "reducing friction"
-"producer" -> "engagement"
-"producer" -> "customer"
-"producer" -> "good"
-"engagement" -> "discovery"
-"good" -> "channel"
-"stores" -> "touch"
-"e-commerce" -> "sight"
-"telesales" -> "sound"
-"good" -> "experience"
-"experience" -> "returns"
-"engagement" -> "experience"
-"reducing friction" -> "experience"
-"senses" -> "physical"
-"sight" -> "virtual"
-"sound" -> "virtual"
-"virtual" -> "online"
-"physical" -> "purchase"
-"physical" -> "topology"
-"online" -> "device"
-"social" -> "device"
-"experience" -> "senses"
-"experience" -> "channel"
-"returns" -> "trust"
-"convenience" -> "returns"
-"customer" -> "need"
-"need" -> "engagement"
-"customer" -> "society"
-"society" -> "social needs"
-"society" -> "behaviour"
-"behaviour" -> "trust"
-"behaviour" -> "demographics"
-"need" -> "price"
-"experience" -> "purchase"
-"need" -> "good"
-"stores" -> "senses"
-"experience" -> "privacy"
-"trust" -> "privacy"
-"urgency" -> "customer"
-"customer" -> "context"
-"channel" -> "purchase"
-"discovery" -> "purchase"
+customer -> convenience
+convenience -> reducing friction
+producer -> engagement
+producer -> customer
+producer -> good
+engagement -> discovery
+good -> channel
+stores -> touch
+"e-commerce" -> sight
+telesales -> sound
+good -> experience
+experience -> returns
+engagement -> experience
+reducing friction -> experience
+senses -> physical
+sight -> virtual
+sound -> virtual
+virtual -> online
+physical -> purchase
+physical -> topology
+online -> device
+social -> device
+experience -> senses
+experience -> channel
+returns -> trust
+convenience -> returns
+customer -> need
+need -> engagement
+customer -> society
+society -> social needs
+society -> behaviour
+behaviour -> trust
+behaviour -> demographics
+need -> price
+experience -> purchase
+need -> good
+stores -> senses
+experience -> privacy
+trust -> privacy
+urgency -> customer
+customer -> context
+channel -> purchase
+discovery -> purchase
 

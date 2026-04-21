@@ -3,109 +3,109 @@ title Cybersecurity - May 2023 - Security Awareness - v3.2
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-anchor "Employee" [0.99, 0.50]
+anchor Employee [0.99, 0.50]
 anchor "CISO/Legal Counsel" [1.00, 0.60]
 
-component "security awareness (metric)" [0.92, 0.67]
-component "EXPECTATIONS" [0.87, 0.45]
-pipeline "EXPECTATIONS" {
+component security awareness (metric) [0.92, 0.67]
+component EXPECTATIONS [0.87, 0.45]
+pipeline EXPECTATIONS {
   component "personal/family choice" [0.22]
-  component "society" [0.4]
-  component "coporporate" [0.73]
+  component society [0.4]
+  component coporporate [0.73]
 }
 
-component "cultural norms" [0.76, 0.27]
+component cultural norms [0.76, 0.27]
 
-component "SECURITY PRACTICES" [0.70, 0.55]
-pipeline "SECURITY PRACTICES" {
-  component "responsible disclosure" [0.28]
-  component "ethical hacking" [0.34]
-  component "detecting org specific risks" [0.37]
-  component "MFA" [0.52]
-  component "VPN" [0.65]
-  component "general security behaviors" [0.69]
-  component "password rules" [0.8]
-  component "password hygiene" [0.82]
+component SECURITY PRACTICES [0.70, 0.55]
+pipeline SECURITY PRACTICES {
+  component responsible disclosure [0.28]
+  component ethical hacking [0.34]
+  component detecting org specific risks [0.37]
+  component MFA [0.52]
+  component VPN [0.65]
+  component general security behaviors [0.69]
+  component password rules [0.8]
+  component password hygiene [0.82]
   component "best/standard practices" [0.89]
 }
 
-component "TRAINING" [0.47, 0.66]
-pipeline "TRAINING" {
-  component "customized content" [0.24]
-  component "gamification" [0.35]
-  component "social engineering" [0.46]
-  component "learning from past incidents" [0.56]
-  component "video content" [0.73]
-  component "written content" [0.77]
-  component "standard content" [0.87]
+component TRAINING [0.47, 0.66]
+pipeline TRAINING {
+  component customized content [0.24]
+  component gamification [0.35]
+  component social engineering [0.46]
+  component learning from past incidents [0.56]
+  component video content [0.73]
+  component written content [0.77]
+  component standard content [0.87]
 }
 
 component "CMS/Application" [0.18, 0.92]
 
-component "TESTING" [0.34, 0.51]
-pipeline "TESTING" {
+component TESTING [0.34, 0.51]
+pipeline TESTING {
   component "physical/ anti-tailgating testing" [0.19]
-  component "voice phishing" [0.28]
+  component voice phishing [0.28]
   component "(multi-channel) Social engineering" [0.36]
-  component "spoofing" [0.85]
+  component spoofing [0.85]
   component "email/sms phishing" [0.88]
-  component "impersonation" [0.91]
-  component "survey" [0.94]
+  component impersonation [0.91]
+  component survey [0.94]
 }
 
 note "skills shortage" [0.29, 0.37]
 
-component "THREAT" [0.17, 0.52]
+component THREAT [0.17, 0.52]
 
-component "SECURITY CENTRE OF EXCELLENCE" [0.58, 0.36]
-pipeline "SECURITY CENTRE OF EXCELLENCE" {
+component SECURITY CENTRE OF EXCELLENCE [0.58, 0.36]
+pipeline SECURITY CENTRE OF EXCELLENCE {
   component "start-up" [0.19]
-  component "hyperscale" [0.43]
-  component "corporate" [0.63]
+  component hyperscale [0.43]
+  component corporate [0.63]
 }
-evolve "detecting org specific risks" 0.50
+evolve detecting org specific risks 0.50
 
 annotations [0.94, 0.02]
 
-component "AI (DEEP FAKES)" [0.06, 0.24]
-pipeline "AI (DEEP FAKES)" {
+component AI (DEEP FAKES) [0.06, 0.24]
+pipeline AI (DEEP FAKES) {
   component "non-celebrity deep fake" [0.16]
   component "celebrity deep-fake" [0.35]
 }
 note "uncanny valley" [0.01, 0.37]
 
-"Employee" -> "EXPECTATIONS"
-"CISO/Legal Counsel" -> "EXPECTATIONS"
-"CISO/Legal Counsel" -> "security awareness (metric)"
-"CISO/Legal Counsel" -> "detecting org specific risks t"
+Employee -> EXPECTATIONS
+"CISO/Legal Counsel" -> EXPECTATIONS
+"CISO/Legal Counsel" -> security awareness (metric)
+"CISO/Legal Counsel" -> detecting org specific risks t
 
-"EXPECTATIONS" -> "cultural norms"
-"EXPECTATIONS" -> "SECURITY PRACTICES"
+EXPECTATIONS -> cultural norms
+EXPECTATIONS -> SECURITY PRACTICES
 
-"security awareness (metric)" -> "EXPECTATIONS"
-"security awareness (metric)" -> "SECURITY PRACTICES"
-"security awareness (metric)" -> "SECURITY CENTRE OF EXCELLENCE"
-"security awareness (metric)" -> "TRAINING"
-"security awareness (metric)" -> "TESTING"
+security awareness (metric) -> EXPECTATIONS
+security awareness (metric) -> SECURITY PRACTICES
+security awareness (metric) -> SECURITY CENTRE OF EXCELLENCE
+security awareness (metric) -> TRAINING
+security awareness (metric) -> TESTING
 
-"TRAINING" -> "THREAT"
-"TESTING" -> "THREAT"
+TRAINING -> THREAT
+TESTING -> THREAT
 
-"SECURITY PRACTICES" -> "TRAINING"
-"TRAINING" -> "TESTING"
+SECURITY PRACTICES -> TRAINING
+TRAINING -> TESTING
 
-"detecting org specific risks" -> "THREAT"
+detecting org specific risks -> THREAT
 
 "(multi-channel) Social engineering" -> "non-celebrity deep fake"
 
-"voice phishing" -> "non-celebrity deep fake"
-"THREAT" -> "AI (DEEP FAKES)"
+voice phishing -> "non-celebrity deep fake"
+THREAT -> AI (DEEP FAKES)
 
-"standard content" -> "CMS/Application"
-"video content" -> "CMS/Application"
-"written content" -> "CMS/Application"
+standard content -> "CMS/Application"
+video content -> "CMS/Application"
+written content -> "CMS/Application"
 
 evolve "non-celebrity deep fake" 0.5
-evolve "voice phishing" 0.7
+evolve voice phishing 0.7
 evolve "(multi-channel) Social engineering" 0.6
 

@@ -4,84 +4,84 @@ title Energy - Centralisation
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component "citizen" [0.93, 0.77]
+component citizen [0.93, 0.77]
 
-component "Government" [0.96, 0.67]
+component Government [0.96, 0.67]
 
-component "standards" [0.38, 0.54]
-component "regulation" [0.31, 0.37]
+component standards [0.38, 0.54]
+component regulation [0.31, 0.37]
 
-component "belonging" [0.86, 0.72]
-component "appearance of success" [0.73, 0.88]
+component belonging [0.86, 0.72]
+component appearance of success [0.73, 0.88]
 
-component "Legitimacy" [0.88, 0.68]
+component Legitimacy [0.88, 0.68]
 
-component "sovereignty" [0.77, 0.62]
-pipeline "sovereignty" {
-  component "technological sovereignty" [0.48]
-  component "cultural sovereignty" [0.65]
-  component "physical sovereignty" [0.72]
+component sovereignty [0.77, 0.62]
+pipeline sovereignty {
+  component technological sovereignty [0.48]
+  component cultural sovereignty [0.65]
+  component physical sovereignty [0.72]
 }
 
 component "Enforement of Laws/Customs" [0.65, 0.45]
-component "Critical Infrastructure" [0.35, 0.69]
+component Critical Infrastructure [0.35, 0.69]
 
-component "control layer" [0.61, 0.63]
-pipeline "control layer" {
-  component "decentralised" [0.56]
+component control layer [0.61, 0.63]
+pipeline control layer {
+  component decentralised [0.56]
   component "command & control" [0.7]
 }
 
-component "network" [0.50, 0.64]
-pipeline "network" {
-  component "decoupled" [0.59]
-  component "coupled" [0.67]
+component network [0.50, 0.64]
+pipeline network {
+  component decoupled [0.59]
+  component coupled [0.67]
 }
 
-component "territorial control" [0.68, 0.80]
+component territorial control [0.68, 0.80]
 
-component "Communications" [0.23, 0.71]
-component "Health Care" [0.19, 0.60]
-component "Waste Management" [0.17, 0.52]
-component "Transport" [0.14, 0.76]
+component Communications [0.23, 0.71]
+component Health Care [0.19, 0.60]
+component Waste Management [0.17, 0.52]
+component Transport [0.14, 0.76]
 
 component "Food/Water" [0.21, 0.79]
 
-component "Energy" [0.07, 0.71]
-pipeline "Energy" {
-  component "large scale power plant" [0.37]
-  component "modular" [0.67]
+component Energy [0.07, 0.71]
+pipeline Energy {
+  component large scale power plant [0.37]
+  component modular [0.67]
 }
 
-"Critical Infrastructure" -> "Communications"
-"Critical Infrastructure" -> "Health Care"
-"Critical Infrastructure" -> "Waste Management"
-"Critical Infrastructure" -> "Transport"
-"Critical Infrastructure" -> "Energy"
-"Critical Infrastructure" -> "Food/Water"
-"Government" -> "Legitimacy"
-"Transport" -> "Energy"
-"Health Care" -> "Energy"
-"Energy" -> "Waste Management"
-"Communications" -> "Energy"
-"Food/Water" -> "Energy"
-"cultural sovereignty" -> "Enforement of Laws/Customs"
-"Legitimacy" -> "sovereignty"
-"technological sovereignty" -> "control layer"
-"control layer" -> "network"
-"network" -> "standards"
-"Enforement of Laws/Customs" -> "regulation"
-"standards" -> "regulation"
-"Critical Infrastructure" -> "network"
-"coupled" -> "large scale power plant"
-"command & control" -> "coupled"
-"modular" -> "decoupled"
-"decoupled" -> "decentralised"
-"citizen" -> "Government"
-"citizen" -> "modular"
-"physical sovereignty" -> "territorial control"
-"citizen" -> "belonging"
-"appearance of success" -> "belonging"
-"appearance of success" -> "territorial control"
-"appearance of success" -> "Critical Infrastructure"
+Critical Infrastructure -> Communications
+Critical Infrastructure -> Health Care
+Critical Infrastructure -> Waste Management
+Critical Infrastructure -> Transport
+Critical Infrastructure -> Energy
+Critical Infrastructure -> "Food/Water"
+Government -> Legitimacy
+Transport -> Energy
+Health Care -> Energy
+Energy -> Waste Management
+Communications -> Energy
+"Food/Water" -> Energy
+cultural sovereignty -> "Enforement of Laws/Customs"
+Legitimacy -> sovereignty
+technological sovereignty -> control layer
+control layer -> network
+network -> standards
+"Enforement of Laws/Customs" -> regulation
+standards -> regulation
+Critical Infrastructure -> network
+coupled -> large scale power plant
+"command & control" -> coupled
+modular -> decoupled
+decoupled -> decentralised
+citizen -> Government
+citizen -> modular
+physical sovereignty -> territorial control
+citizen -> belonging
+appearance of success -> belonging
+appearance of success -> territorial control
+appearance of success -> Critical Infrastructure
 

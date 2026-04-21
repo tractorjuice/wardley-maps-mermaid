@@ -4,108 +4,108 @@ title defence - multi domain
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "government" [0.96, 0.65]
-component "society" [0.93, 0.68]
-component "citizen" [0.90, 0.71]
+component government [0.96, 0.65]
+component society [0.93, 0.68]
+component citizen [0.90, 0.71]
 
-component "legitimacy" [0.92, 0.58]
+component legitimacy [0.92, 0.58]
 
-component "sovereignty" [0.71, 0.69]
-pipeline "sovereignty" {
-  component "digital" [0.46]
-  component "economic" [0.53]
-  component "political" [0.61]
-  component "cultural" [0.67]
-  component "physical" [0.75]
+component sovereignty [0.71, 0.69]
+pipeline sovereignty {
+  component digital [0.46]
+  component economic [0.53]
+  component political [0.61]
+  component cultural [0.67]
+  component physical [0.75]
 }
 
-component "theatre" [0.58, 0.62]
-pipeline "theatre" {
-  component "sanctions" [0.4]
-  component "critical national infrastructure" [0.66]
-  component "land" [0.73]
+component theatre [0.58, 0.62]
+pipeline theatre {
+  component sanctions [0.4]
+  component critical national infrastructure [0.66]
+  component land [0.73]
 }
 
-component "landscape" [0.25, 0.55]
-pipeline "landscape" {
-  component "territory" [0.38]
-  component "supply chain" [0.63]
+component landscape [0.25, 0.55]
+pipeline landscape {
+  component territory [0.38]
+  component supply chain [0.63]
 }
 
-component "situational awareness" [0.10, 0.60]
-pipeline "situational awareness" {
-  component "economic awareness" [0.31]
-  component "digital awareness" [0.39]
-  component "physical awareness" [0.69]
+component situational awareness [0.10, 0.60]
+pipeline situational awareness {
+  component economic awareness [0.31]
+  component digital awareness [0.39]
+  component physical awareness [0.69]
 }
 
-component "success" [0.83, 0.70]
-component "appearance of success" [0.84, 0.64]
+component success [0.83, 0.70]
+component appearance of success [0.84, 0.64]
 
-component "CNI" [0.42, 0.65]
-pipeline "CNI" {
-  component "telecoms" [0.6]
-  component "finance" [0.63]
-  component "energy" [0.71]
-  component "water" [0.73]
-  component "food" [0.76]
+component CNI [0.42, 0.65]
+pipeline CNI {
+  component telecoms [0.6]
+  component finance [0.63]
+  component energy [0.71]
+  component water [0.73]
+  component food [0.76]
 }
 
-"government" -> "society"
-"society" -> "citizen"
-"government" -> "legitimacy"
-"society" -> "success"
-"citizen" -> "belonging"
-"belonging" -> "trust"
-"legitimacy" -> "trust"
-"competence" -> "success"
-"belonging" -> "benevolence"
-"society" -> "norms"
-"norms" -> "integrity"
-"legitimacy" -> "sovereignty"
-"success" -> "physical"
-"success" -> "economic"
-"digital" -> "success"
-"integrity" -> "political"
-"integrity" -> "cultural"
-"cultural" -> "benevolence"
-"physical" -> "land"
-"physical" -> "sea"
-"sovereignty" -> "theatre"
-"physical" -> "air"
-"physical" -> "space"
-"cultural" -> "art"
-"digital" -> "cyber"
-"economic" -> "economy"
-"political" -> "cyber"
-"belonging" -> "appearance of success"
-"appearance of success" -> "political"
-"appearance of success" -> "critical national infrastructure"
-"critical national infrastructure" -> "CNI"
-"land" -> "territory"
-"air" -> "territory"
-"cyber" -> "telecoms"
-"space" -> "telecoms"
-"economy" -> "telecoms"
-"telecoms" -> "supply chain"
-"energy" -> "supply chain"
-"water" -> "supply chain"
-"food" -> "supply chain"
-"economy" -> "supply chain"
-"supply chain" -> "economic awareness"
-"territory" -> "physical awareness"
-"theatre" -> "situational awareness"
-"supply chain" -> "digital awareness"
-"theatre" -> "capability"
-"theatre" -> "operating model"
-"capability" -> "capability"
-"capability" -> "supply chain"
-"landscape" -> "situational awareness"
-"theatre" -> "landscape"
-"economy" -> "finance"
-"citizen" -> "appearance of success"
-"economic" -> "sanctions"
-"sanctions" -> "supply chain"
-"sanctions" -> "finance"
-"appearance of success" -> "cultural"
+government -> society
+society -> citizen
+government -> legitimacy
+society -> success
+citizen -> belonging
+belonging -> trust
+legitimacy -> trust
+competence -> success
+belonging -> benevolence
+society -> norms
+norms -> integrity
+legitimacy -> sovereignty
+success -> physical
+success -> economic
+digital -> success
+integrity -> political
+integrity -> cultural
+cultural -> benevolence
+physical -> land
+physical -> sea
+sovereignty -> theatre
+physical -> air
+physical -> space
+cultural -> art
+digital -> cyber
+economic -> economy
+political -> cyber
+belonging -> appearance of success
+appearance of success -> political
+appearance of success -> critical national infrastructure
+critical national infrastructure -> CNI
+land -> territory
+air -> territory
+cyber -> telecoms
+space -> telecoms
+economy -> telecoms
+telecoms -> supply chain
+energy -> supply chain
+water -> supply chain
+food -> supply chain
+economy -> supply chain
+supply chain -> economic awareness
+territory -> physical awareness
+theatre -> situational awareness
+supply chain -> digital awareness
+theatre -> capability
+theatre -> operating model
+capability -> capability
+capability -> supply chain
+landscape -> situational awareness
+theatre -> landscape
+economy -> finance
+citizen -> appearance of success
+economic -> sanctions
+sanctions -> supply chain
+sanctions -> finance
+appearance of success -> cultural
 

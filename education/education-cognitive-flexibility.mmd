@@ -2,70 +2,70 @@ wardley-beta
 
 title education - cognitive flexibility
 size [1100, 800]
-component "systems of education" [0.92, 0.32]
-component "policy" [0.88, 0.37]
-component "Government" [0.99, 0.39]
-component "regulators" [0.77, 0.05]
-component "schools" [0.98, 0.50]
-component "fees" [0.93, 0.48]
-component "scoring" [0.54, 0.06]
-component "learner motivation" [0.88, 0.66]
-component "goal" [0.86, 0.90]
-component "purpose" [0.96, 0.89]
-component "formal" [0.82, 0.08]
-component "informal" [0.76, 0.08]
-component "geography" [0.85, 0.04]
-component "culture" [0.69, 0.07]
-component "specialised" [0.11, 0.70]
-component "generalised" [0.15, 0.79]
-component "knowledge" [0.08, 0.77]
-component "teachers" [0.97, 0.59]
-component "student" [0.95, 0.68]
-component "curriculum" [0.89, 0.59]
-component "test" [0.28, 0.72]
-component "corporation" [0.97, 0.75]
-component "skills" [0.87, 0.75]
-component "content" [0.78, 0.63]
-pipeline "content" {
-  component "new" [0.3]
-  component "learning objectives" [0.56]
-  component "established" [0.73]
+component systems of education [0.92, 0.32]
+component policy [0.88, 0.37]
+component Government [0.99, 0.39]
+component regulators [0.77, 0.05]
+component schools [0.98, 0.50]
+component fees [0.93, 0.48]
+component scoring [0.54, 0.06]
+component learner motivation [0.88, 0.66]
+component goal [0.86, 0.90]
+component purpose [0.96, 0.89]
+component formal [0.82, 0.08]
+component informal [0.76, 0.08]
+component geography [0.85, 0.04]
+component culture [0.69, 0.07]
+component specialised [0.11, 0.70]
+component generalised [0.15, 0.79]
+component knowledge [0.08, 0.77]
+component teachers [0.97, 0.59]
+component student [0.95, 0.68]
+component curriculum [0.89, 0.59]
+component test [0.28, 0.72]
+component corporation [0.97, 0.75]
+component skills [0.87, 0.75]
+component content [0.78, 0.63]
+pipeline content {
+  component new [0.3]
+  component learning objectives [0.56]
+  component established [0.73]
 }
-component "delivery" [0.63, 0.64]
-pipeline "delivery" {
-  component "campus" [0.41]
-  component "online" [0.69]
+component delivery [0.63, 0.64]
+pipeline delivery {
+  component campus [0.41]
+  component online [0.69]
 }
-component "learning" [0.48, 0.55]
-pipeline "learning" {
-  component "understanding" [0.41]
-  component "exploration" [0.58]
-  component "repetiition" [0.62]
-  component "awareness" [0.66]
+component learning [0.48, 0.55]
+pipeline learning {
+  component understanding [0.41]
+  component exploration [0.58]
+  component repetiition [0.62]
+  component awareness [0.66]
 }
-component "critical thinking" [0.17, 0.41]
-component "metacognition" [0.28, 0.39]
-component "self reflection" [0.15, 0.38]
-"corporation" -> "skills"
-"skills" -> "repetiition"
-"repetiition" -> "test"
-"student" -> "curriculum"
-"teachers" -> "curriculum"
-"curriculum" -> "content"
-"content" -> "delivery"
-"content" -> "learning"
-"understanding" -> "metacognition"
-"metacognition" -> "critical thinking"
-"metacognition" -> "self reflection"
-"established" -> "repetiition"
-"new" -> "understanding"
-"skills" -> "test"
-"content" -> "understanding"
-"student" -> "skills"
-"curriculum" -> "learning objectives"
-"schools" -> "fees"
-"Government" -> "systems of education"
-"systems of education" -> "policy"
-"Government" -> "policy"
-"student" -> "learner motivation"
+component critical thinking [0.17, 0.41]
+component metacognition [0.28, 0.39]
+component self reflection [0.15, 0.38]
+corporation -> skills
+skills -> repetiition
+repetiition -> test
+student -> curriculum
+teachers -> curriculum
+curriculum -> content
+content -> delivery
+content -> learning
+understanding -> metacognition
+metacognition -> critical thinking
+metacognition -> self reflection
+established -> repetiition
+new -> understanding
+skills -> test
+content -> understanding
+student -> skills
+curriculum -> learning objectives
+schools -> fees
+Government -> systems of education
+systems of education -> policy
+Government -> policy
+student -> learner motivation
 

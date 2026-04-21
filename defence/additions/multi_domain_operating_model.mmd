@@ -3,109 +3,109 @@ title defence - multi domain - operating model
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "theatre" [0.84, 0.62]
-pipeline "theatre" {
-  component "economy" [0.33]
-  component "space" [0.43]
-  component "cyber" [0.48]
-  component "air" [0.71]
-  component "sea" [0.73]
-  component "land" [0.75]
+component theatre [0.84, 0.62]
+pipeline theatre {
+  component economy [0.33]
+  component space [0.43]
+  component cyber [0.48]
+  component air [0.71]
+  component sea [0.73]
+  component land [0.75]
 }
-component "operating model" [0.72, 0.54]
-pipeline "operating model" {
-  component "decentralised" [0.41]
-  component "asynchronous" [0.42]
-  component "synchronous" [0.68]
-  component "centralised" [0.69]
-}
-
-component "sovereignty" [0.98, 0.68]
-pipeline "sovereignty" {
-  component "digital" [0.46]
-  component "economic" [0.53]
-  component "political" [0.62]
-  component "cultural" [0.7]
-  component "physical" [0.75]
+component operating model [0.72, 0.54]
+pipeline operating model {
+  component decentralised [0.41]
+  component asynchronous [0.42]
+  component synchronous [0.68]
+  component centralised [0.69]
 }
 
-component "doctrine" [0.44, 0.63]
-pipeline "doctrine" {
-  component "Agile" [0.45]
-  component "SOP" [0.69]
+component sovereignty [0.98, 0.68]
+pipeline sovereignty {
+  component digital [0.46]
+  component economic [0.53]
+  component political [0.62]
+  component cultural [0.7]
+  component physical [0.75]
 }
 
-component "resources" [0.55, 0.53]
-pipeline "resources" {
-  component "tech superiority" [0.5]
-  component "volume operations" [0.72]
-}
-component "delivery" [0.24, 0.63]
-pipeline "delivery" {
-  component "big ticket" [0.44]
-  component "modern tanks" [0.53]
-  component "Light vehicles" [0.63]
-  component "drones" [0.71]
+component doctrine [0.44, 0.63]
+pipeline doctrine {
+  component Agile [0.45]
+  component SOP [0.69]
 }
 
-component "awareness of landscape" [0.09, 0.56]
-pipeline "awareness of landscape" {
-  component "supply chain" [0.3]
-  component "territory" [0.74]
+component resources [0.55, 0.53]
+pipeline resources {
+  component tech superiority [0.5]
+  component volume operations [0.72]
+}
+component delivery [0.24, 0.63]
+pipeline delivery {
+  component big ticket [0.44]
+  component modern tanks [0.53]
+  component Light vehicles [0.63]
+  component drones [0.71]
 }
 
-"operating model" -> "composition"
-"composition" -> "resources"
-"PMC" -> "profit"
-"operating model" -> "doctrine"
-"operating model" -> "weapon"
-"volume operations" -> "drones"
-"tech superiority" -> "modern tanks"
-"tech superiority" -> "big ticket"
-"Agile" -> "Light vehicles"
-"Agile" -> "drones"
-"SOP" -> "modern tanks"
-"SOP" -> "big ticket"
-"SOP" -> "hiearachy"
-"freedom" -> "Agile"
-"decentralised" -> "Agile"
-"centralised" -> "SOP"
-"lived experience" -> "culture"
-"territorial" -> "kinetic"
-"economic" -> "cyber"
-"corporate" -> "PMC"
-"military" -> "public"
-"centralised" -> "hiearachy"
-"operating model" -> "operating environment"
-"physical" -> "land"
-"physical" -> "sea"
-"physical" -> "air"
-"physical" -> "space"
-"digital" -> "cyber"
-"economic" -> "economy"
-"belonging" -> "appearance of success"
-"appearance of success" -> "political"
-"appearance of success" -> "critical national infrastructure"
-"critical national infrastructure" -> "CNI"
-"land" -> "territory"
-"cyber" -> "telecoms"
-"space" -> "telecoms"
-"economy" -> "telecoms"
-"supply chain" -> "economic awareness"
-"territory" -> "physical awareness"
-"theatre" -> "situational awareness"
-"supply chain" -> "digital awareness"
-"theatre" -> "capability"
-"theatre" -> "operating model"
-"landscape" -> "situational awareness"
-"military" -> "conscripts"
-"military" -> "professional"
-"operating model" -> "culture"
-"professional" -> "investment"
-"operating model" -> "operating model"
-"resources" -> "operating model"
-"economy" -> "supply chain"
-"supply chain" -> "cyber"
-"delivery" -> "supply chain"
-"delivery" -> "territory"
+component awareness of landscape [0.09, 0.56]
+pipeline awareness of landscape {
+  component supply chain [0.3]
+  component territory [0.74]
+}
+
+operating model -> composition
+composition -> resources
+PMC -> profit
+operating model -> doctrine
+operating model -> weapon
+volume operations -> drones
+tech superiority -> modern tanks
+tech superiority -> big ticket
+Agile -> Light vehicles
+Agile -> drones
+SOP -> modern tanks
+SOP -> big ticket
+SOP -> hiearachy
+freedom -> Agile
+decentralised -> Agile
+centralised -> SOP
+lived experience -> culture
+territorial -> kinetic
+economic -> cyber
+corporate -> PMC
+military -> public
+centralised -> hiearachy
+operating model -> operating environment
+physical -> land
+physical -> sea
+physical -> air
+physical -> space
+digital -> cyber
+economic -> economy
+belonging -> appearance of success
+appearance of success -> political
+appearance of success -> critical national infrastructure
+critical national infrastructure -> CNI
+land -> territory
+cyber -> telecoms
+space -> telecoms
+economy -> telecoms
+supply chain -> economic awareness
+territory -> physical awareness
+theatre -> situational awareness
+supply chain -> digital awareness
+theatre -> capability
+theatre -> operating model
+landscape -> situational awareness
+military -> conscripts
+military -> professional
+operating model -> culture
+professional -> investment
+operating model -> operating model
+resources -> operating model
+economy -> supply chain
+supply chain -> cyber
+delivery -> supply chain
+delivery -> territory
 

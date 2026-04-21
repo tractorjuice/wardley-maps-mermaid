@@ -3,132 +3,132 @@ title DEFENCE - supply chain - OCT 2022
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "GOVERNMENT" [0.99, 0.67]
-component "SOVEREIGNTY" [0.91, 0.60]
-pipeline "SOVEREIGNTY" {
-  component "digital" [0.41]
-  component "political" [0.45]
-  component "economic" [0.53]
-  component "security" [0.57]
-  component "legitimacy" [0.64]
-  component "cultural" [0.66]
-  component "territorial" [0.7]
-  component "society" [0.72]
+component GOVERNMENT [0.99, 0.67]
+component SOVEREIGNTY [0.91, 0.60]
+pipeline SOVEREIGNTY {
+  component digital [0.41]
+  component political [0.45]
+  component economic [0.53]
+  component security [0.57]
+  component legitimacy [0.64]
+  component cultural [0.66]
+  component territorial [0.7]
+  component society [0.72]
 }
-component "THEATRE" [0.82, 0.60]
-pipeline "THEATRE" {
-  component "supply chain" [0.468]
-  component "CNI" [0.51]
-  component "cyber" [0.55]
-  component "sea" [0.67]
-  component "land" [0.693]
+component THEATRE [0.82, 0.60]
+pipeline THEATRE {
+  component supply chain [0.468]
+  component CNI [0.51]
+  component cyber [0.55]
+  component sea [0.67]
+  component land [0.693]
 }
-component "COMPETITION" [0.74, 0.63]
-pipeline "COMPETITION" {
-  component "collaboration" [0.538]
-  component "conflict" [0.672]
+component COMPETITION [0.74, 0.63]
+pipeline COMPETITION {
+  component collaboration [0.538]
+  component conflict [0.672]
 }
-component "AWARENESS" [0.54, 0.63]
-pipeline "AWARENESS" {
-  component "supply chain awareness" [0.308]
-  component "digital chain awareness" [0.386]
-  component "covert" [0.558]
-  component "overt" [0.672]
-  component "territorial awareness" [0.722]
+component AWARENESS [0.54, 0.63]
+pipeline AWARENESS {
+  component supply chain awareness [0.308]
+  component digital chain awareness [0.386]
+  component covert [0.558]
+  component overt [0.672]
+  component territorial awareness [0.722]
 }
-component "CAPABILITY" [0.67, 0.55]
-pipeline "CAPABILITY" {
-  component "influence" [0.5]
-  component "inflitration" [0.58]
-  component "kinetic" [0.67]
+component CAPABILITY [0.67, 0.55]
+pipeline CAPABILITY {
+  component influence [0.5]
+  component inflitration [0.58]
+  component kinetic [0.67]
 }
-component "VISIBILITY" [0.60, 0.65]
-component "LANDSCAPE" [0.33, 0.55]
-pipeline "LANDSCAPE" {
-  component "territory" [0.378]
-  component "chain" [0.652]
-}
-
-component "FORECASTING" [0.46, 0.35]
-pipeline "FORECASTING" {
-  component "simulation" [0.258]
-  component "scenario planning" [0.392]
-}
-component "MODEL" [0.40, 0.36]
-pipeline "MODEL" {
-  component "HOOTL" [0.208]
-  component "whatif simulation" [0.28]
-  component "RT simuluation" [0.39]
-  component "visualisation" [0.472]
+component VISIBILITY [0.60, 0.65]
+component LANDSCAPE [0.33, 0.55]
+pipeline LANDSCAPE {
+  component territory [0.378]
+  component chain [0.652]
 }
 
-component "DELIVERY" [0.26, 0.67]
-pipeline "DELIVERY" {
-  component "logistics" [0.54]
+component FORECASTING [0.46, 0.35]
+pipeline FORECASTING {
+  component simulation [0.258]
+  component scenario planning [0.392]
+}
+component MODEL [0.40, 0.36]
+pipeline MODEL {
+  component HOOTL [0.208]
+  component whatif simulation [0.28]
+  component RT simuluation [0.39]
+  component visualisation [0.472]
+}
+
+component DELIVERY [0.26, 0.67]
+pipeline DELIVERY {
+  component logistics [0.54]
   component "marketplace" [0.65]
-  component "distributor" [0.692]
+  component distributor [0.692]
 }
-component "MANUFACTURER" [0.12, 0.61]
-pipeline "MANUFACTURER" {
-  component "additive" [0.428]
-  component "automation" [0.5]
-  component "robotics" [0.58]
-  component "analysis" [0.65]
-  component "factory" [0.682]
+component MANUFACTURER [0.12, 0.61]
+pipeline MANUFACTURER {
+  component additive [0.428]
+  component automation [0.5]
+  component robotics [0.58]
+  component analysis [0.65]
+  component factory [0.682]
 }
-component "SUPPLIER" [0.06, 0.68]
-pipeline "SUPPLIER" {
-  component "critical minerals" [0.598]
-  component "raw data" [0.63]
-  component "raw materials" [0.66]
-  component "energy" [0.712]
+component SUPPLIER [0.06, 0.68]
+pipeline SUPPLIER {
+  component critical minerals [0.598]
+  component raw data [0.63]
+  component raw materials [0.66]
+  component energy [0.712]
 }
-component "TRANSPORTATION" [0.20, 0.66]
-pipeline "TRANSPORTATION" {
-  component "drones" [0.648]
-  component "internet" [0.69]
-  component "HGV" [0.712]
+component TRANSPORTATION [0.20, 0.66]
+pipeline TRANSPORTATION {
+  component drones [0.648]
+  component internet [0.69]
+  component HGV [0.712]
 }
 
-component "other knowledge" [0.16, 0.22]
+component other knowledge [0.16, 0.22]
 
-"GOVERNMENT" -> "society"
-"GOVERNMENT" -> "legitimacy"
-"legitimacy" -> "SOVEREIGNTY"
-"territorial" -> "land"
-"economic" -> "supply chain"
-"SOVEREIGNTY" -> "THEATRE"
-"sea" -> "territorial"
-"economic" -> "cyber"
-"cyber" -> "technological"
-"cyber" -> "political"
-"SOVEREIGNTY" -> "COMPETITION"
-"COMPETITION" -> "AWARENESS"
-"THEATRE" -> "AWARENESS"
-"supply chain" -> "supply chain awareness"
-"land" -> "territorial awareness"
-"cyber" -> "digital chain awareness"
-"VISIBILITY" -> "COMPETITION"
-"SOVEREIGNTY" -> "CAPABILITY"
-"covert" -> "inflitration"
-"CAPABILITY" -> "AWARENESS"
-"cultural" -> "influence"
-"CNI" -> "supply chain awareness"
-"security" -> "CNI"
-"supply chain awareness" -> "chain"
-"chain" -> "digital chain awareness"
-"chain" -> "MANUFACTURER"
-"MANUFACTURER" -> "SUPPLIER"
-"chain" -> "DELIVERY"
-"DELIVERY" -> "MANUFACTURER"
-"CAPABILITY" -> "chain"
-"logistics" -> "TRANSPORTATION"
-"supply chain awareness" -> "FORECASTING"
-"digital chain awareness" -> "FORECASTING"
-"MODEL" -> "simulation"
-"chain" -> "MODEL"
-"digital" -> "cyber"
-"inflitration" -> "cyber"
-"other knowledge" -> "chain"
-"AWARENESS" -> "LANDSCAPE"
+GOVERNMENT -> society
+GOVERNMENT -> legitimacy
+legitimacy -> SOVEREIGNTY
+territorial -> land
+economic -> supply chain
+SOVEREIGNTY -> THEATRE
+sea -> territorial
+economic -> cyber
+cyber -> technological
+cyber -> political
+SOVEREIGNTY -> COMPETITION
+COMPETITION -> AWARENESS
+THEATRE -> AWARENESS
+supply chain -> supply chain awareness
+land -> territorial awareness
+cyber -> digital chain awareness
+VISIBILITY -> COMPETITION
+SOVEREIGNTY -> CAPABILITY
+covert -> inflitration
+CAPABILITY -> AWARENESS
+cultural -> influence
+CNI -> supply chain awareness
+security -> CNI
+supply chain awareness -> chain
+chain -> digital chain awareness
+chain -> MANUFACTURER
+MANUFACTURER -> SUPPLIER
+chain -> DELIVERY
+DELIVERY -> MANUFACTURER
+CAPABILITY -> chain
+logistics -> TRANSPORTATION
+supply chain awareness -> FORECASTING
+digital chain awareness -> FORECASTING
+MODEL -> simulation
+chain -> MODEL
+digital -> cyber
+inflitration -> cyber
+other knowledge -> chain
+AWARENESS -> LANDSCAPE
 

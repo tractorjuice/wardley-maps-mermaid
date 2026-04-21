@@ -4,80 +4,80 @@ title Economic Sovereignty in Defence Industry - Claude 3, Mar 2024
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component "GEOPOLITICAL_DYNAMICS" [0.07, 0.73]
-component "TECHNOLOGICAL_ADVANCEMENTS" [0.43, 0.62]
-component "ECONOMIC_CONDITIONS" [0.40, 0.77]
+component GEOPOLITICAL_DYNAMICS [0.07, 0.73]
+component TECHNOLOGICAL_ADVANCEMENTS [0.43, 0.62]
+component ECONOMIC_CONDITIONS [0.40, 0.77]
 
-component "GOVERNMENT" [0.99, 0.67]
-component "DEFENCE_INDUSTRY" [0.95, 0.68]
-component "ECONOMIC_SOVEREIGNTY" [0.94, 0.56]
-component "SITUATIONAL_AWARENESS" [0.86, 0.45]
-component "CYBER_DEFENCE" [0.76, 0.79]
-component "INTELLIGENCE_GATHERING" [0.69, 0.65]
-component "SUPPLY_CHAIN_RESILIENCE" [0.89, 0.31]
-component "SUPPLY_CHAIN_AWARENESS" [0.60, 0.21]
-component "INDUSTRY_PARTNERSHIPS" [0.3, 0.35]
-component "RD_AND_INNOVATION" [0.15, 0.21]
+component GOVERNMENT [0.99, 0.67]
+component DEFENCE_INDUSTRY [0.95, 0.68]
+component ECONOMIC_SOVEREIGNTY [0.94, 0.56]
+component SITUATIONAL_AWARENESS [0.86, 0.45]
+component CYBER_DEFENCE [0.76, 0.79]
+component INTELLIGENCE_GATHERING [0.69, 0.65]
+component SUPPLY_CHAIN_RESILIENCE [0.89, 0.31]
+component SUPPLY_CHAIN_AWARENESS [0.60, 0.21]
+component INDUSTRY_PARTNERSHIPS [0.3, 0.35]
+component RD_AND_INNOVATION [0.15, 0.21]
 
-component "Territorial_Awareness" [0.26, 0.74]
-component "Economic_awareness" [0.78, 0.66]
-component "Cultural_Awareness" [0.80, 0.44]
-component "Political_Awareness" [0.80, 0.54]
-component "Threat_Intelligence" [0.66, 0.81]
-component "Incident_Response" [0.59, 0.79]
-component "Vulnerability_Management" [0.69, 0.73]
-component "OSINT" [0.66, 0.67]
-component "HUMINT" [0.62, 0.60]
-component "SIGINT" [0.56, 0.66]
-component "Secure_Sourcing" [0.46, 0.49]
-component "Logistics_Management" [0.43, 0.44]
-component "Inventory_Management" [0.50, 0.44]
-component "Public_Private_Partnerships" [0.18, 0.43]
-component "International_Collaborations" [0.27, 0.36]
-component "Technology_Transfer" [0.25, 0.3]
-component "Basic_Research" [0.10, 0.24]
-component "Applied_Research" [0.12, 0.26]
-component "Prototype_Development" [0.09, 0.19]
+component Territorial_Awareness [0.26, 0.74]
+component Economic_awareness [0.78, 0.66]
+component Cultural_Awareness [0.80, 0.44]
+component Political_Awareness [0.80, 0.54]
+component Threat_Intelligence [0.66, 0.81]
+component Incident_Response [0.59, 0.79]
+component Vulnerability_Management [0.69, 0.73]
+component OSINT [0.66, 0.67]
+component HUMINT [0.62, 0.60]
+component SIGINT [0.56, 0.66]
+component Secure_Sourcing [0.46, 0.49]
+component Logistics_Management [0.43, 0.44]
+component Inventory_Management [0.50, 0.44]
+component Public_Private_Partnerships [0.18, 0.43]
+component International_Collaborations [0.27, 0.36]
+component Technology_Transfer [0.25, 0.3]
+component Basic_Research [0.10, 0.24]
+component Applied_Research [0.12, 0.26]
+component Prototype_Development [0.09, 0.19]
 
-"GOVERNMENT" -> "DEFENCE_INDUSTRY"
-"DEFENCE_INDUSTRY" -> "ECONOMIC_SOVEREIGNTY"
-"ECONOMIC_SOVEREIGNTY" -> "SITUATIONAL_AWARENESS"
-"SITUATIONAL_AWARENESS" -> "Territorial_Awareness"
-"SITUATIONAL_AWARENESS" -> "Cultural_Awareness"
-"SITUATIONAL_AWARENESS" -> "Political_Awareness"
-"ECONOMIC_SOVEREIGNTY" -> "CYBER_DEFENCE"
-"CYBER_DEFENCE" -> "Threat_Intelligence"
-"CYBER_DEFENCE" -> "Incident_Response"
-"CYBER_DEFENCE" -> "Vulnerability_Management"
-"ECONOMIC_SOVEREIGNTY" -> "INTELLIGENCE_GATHERING"
-"INTELLIGENCE_GATHERING" -> "OSINT"
-"INTELLIGENCE_GATHERING" -> "HUMINT"
-"INTELLIGENCE_GATHERING" -> "SIGINT"
-"ECONOMIC_SOVEREIGNTY" -> "SUPPLY_CHAIN_RESILIENCE"
-"SUPPLY_CHAIN_AWARENESS" -> "SUPPLY_CHAIN_RESILIENCE"
-"SUPPLY_CHAIN_RESILIENCE" -> "Inventory_Management"
-"ECONOMIC_SOVEREIGNTY" -> "INDUSTRY_PARTNERSHIPS"
-"INDUSTRY_PARTNERSHIPS" -> "Public_Private_Partnerships"
-"INDUSTRY_PARTNERSHIPS" -> "International_Collaborations"
-"INDUSTRY_PARTNERSHIPS" -> "Technology_Transfer"
-"ECONOMIC_SOVEREIGNTY" -> "RD_AND_INNOVATION"
-"RD_AND_INNOVATION" -> "Basic_Research"
-"RD_AND_INNOVATION" -> "Applied_Research"
-"RD_AND_INNOVATION" -> "Prototype_Development"
-"GEOPOLITICAL_DYNAMICS" -> "RD_AND_INNOVATION"
-"GEOPOLITICAL_DYNAMICS" -> "INDUSTRY_PARTNERSHIPS"
-"GEOPOLITICAL_DYNAMICS" -> "SUPPLY_CHAIN_RESILIENCE"
-"TECHNOLOGICAL_ADVANCEMENTS" -> "RD_AND_INNOVATION"
-"TECHNOLOGICAL_ADVANCEMENTS" -> "CYBER_DEFENCE"
-"ECONOMIC_CONDITIONS" -> "SUPPLY_CHAIN_RESILIENCE"
-"ECONOMIC_CONDITIONS" -> "INDUSTRY_PARTNERSHIPS"
-"SITUATIONAL_AWARENESS" -> "SUPPLY_CHAIN_AWARENESS"
-"Economic_awareness" -> "SITUATIONAL_AWARENESS"
-"Logistics_Management" -> "Inventory_Management"
-"Secure_Sourcing" -> "Inventory_Management"
-"Secure_Sourcing" -> "SUPPLY_CHAIN_AWARENESS"
-"Economic_awareness" -> "ECONOMIC_CONDITIONS"
-"Economic_awareness" -> "SUPPLY_CHAIN_AWARENESS"
-"Logistics_Management" -> "Territorial_Awareness"
-"TECHNOLOGICAL_ADVANCEMENTS" -> "ECONOMIC_CONDITIONS"
+GOVERNMENT -> DEFENCE_INDUSTRY
+DEFENCE_INDUSTRY -> ECONOMIC_SOVEREIGNTY
+ECONOMIC_SOVEREIGNTY -> SITUATIONAL_AWARENESS
+SITUATIONAL_AWARENESS -> Territorial_Awareness
+SITUATIONAL_AWARENESS -> Cultural_Awareness
+SITUATIONAL_AWARENESS -> Political_Awareness
+ECONOMIC_SOVEREIGNTY -> CYBER_DEFENCE
+CYBER_DEFENCE -> Threat_Intelligence
+CYBER_DEFENCE -> Incident_Response
+CYBER_DEFENCE -> Vulnerability_Management
+ECONOMIC_SOVEREIGNTY -> INTELLIGENCE_GATHERING
+INTELLIGENCE_GATHERING -> OSINT
+INTELLIGENCE_GATHERING -> HUMINT
+INTELLIGENCE_GATHERING -> SIGINT
+ECONOMIC_SOVEREIGNTY -> SUPPLY_CHAIN_RESILIENCE
+SUPPLY_CHAIN_AWARENESS -> SUPPLY_CHAIN_RESILIENCE
+SUPPLY_CHAIN_RESILIENCE -> Inventory_Management
+ECONOMIC_SOVEREIGNTY -> INDUSTRY_PARTNERSHIPS
+INDUSTRY_PARTNERSHIPS -> Public_Private_Partnerships
+INDUSTRY_PARTNERSHIPS -> International_Collaborations
+INDUSTRY_PARTNERSHIPS -> Technology_Transfer
+ECONOMIC_SOVEREIGNTY -> RD_AND_INNOVATION
+RD_AND_INNOVATION -> Basic_Research
+RD_AND_INNOVATION -> Applied_Research
+RD_AND_INNOVATION -> Prototype_Development
+GEOPOLITICAL_DYNAMICS -> RD_AND_INNOVATION
+GEOPOLITICAL_DYNAMICS -> INDUSTRY_PARTNERSHIPS
+GEOPOLITICAL_DYNAMICS -> SUPPLY_CHAIN_RESILIENCE
+TECHNOLOGICAL_ADVANCEMENTS -> RD_AND_INNOVATION
+TECHNOLOGICAL_ADVANCEMENTS -> CYBER_DEFENCE
+ECONOMIC_CONDITIONS -> SUPPLY_CHAIN_RESILIENCE
+ECONOMIC_CONDITIONS -> INDUSTRY_PARTNERSHIPS
+SITUATIONAL_AWARENESS -> SUPPLY_CHAIN_AWARENESS
+Economic_awareness -> SITUATIONAL_AWARENESS
+Logistics_Management -> Inventory_Management
+Secure_Sourcing -> Inventory_Management
+Secure_Sourcing -> SUPPLY_CHAIN_AWARENESS
+Economic_awareness -> ECONOMIC_CONDITIONS
+Economic_awareness -> SUPPLY_CHAIN_AWARENESS
+Logistics_Management -> Territorial_Awareness
+TECHNOLOGICAL_ADVANCEMENTS -> ECONOMIC_CONDITIONS
 
