@@ -1,0 +1,96 @@
+wardley-beta
+title healthcare - clinical decision making - AUG 2022
+size [1100, 800]
+
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+component "REVIEWS" [0.33, 0.45]
+
+component "fairness" [0.66, 0.67]
+component "exceptions (individual funding requests)" [0.66, 0.37]
+component "status" [0.84, 0.65]
+component "medical practioner" [0.87, 0.69]
+component "medical institute" [0.95, 0.62]
+component "patient" [0.18, 0.81]
+component "HEALTH" [0.34, 0.79]
+component "TREATMENT OF AILMENT" [0.57, 0.64]
+pipeline "TREATMENT OF AILMENT" {
+  component "cause" [0.38]
+  component "symptoms" [0.73]
+}
+component "clinical_decision" [0.47, 0.67]
+component "historical DATA" [0.32, 0.38]
+component "diagnosis" [0.50, 0.40]
+component "SETTINGS OF CARE" [0.11, 0.59]
+pipeline "SETTINGS OF CARE" {
+  component "Dr Google" [0.32]
+  component "virtual visits" [0.4]
+  component "assisted living" [0.43]
+  component "111" [0.47]
+  component "ER" [0.63]
+  component "primary care" [0.73]
+}
+component "health outcome" [0.42, 0.78]
+component "CLINICAL OUTCOME" [0.71, 0.65]
+component "DECISION SUPPORT" [0.42, 0.51]
+pipeline "DECISION SUPPORT" {
+  component "applied AI" [0.28]
+  component "intuition" [0.33]
+  component "local protocols" [0.39]
+  component "national clinical guidelines" [0.54]
+  component "permissable treatment" [0.61]
+}
+component "DATA" [0.26, 0.57]
+pipeline "DATA" {
+  component "individual" [0.36]
+  component "social determinant" [0.4]
+  component "clinical trials" [0.43]
+  component "comorbidity" [0.47]
+  component "biosensors" [0.53]
+  component "lab tests" [0.61]
+  component "observation" [0.71]
+}
+component "PAYERS" [0.88, 0.53]
+
+component "compliance to standards of care" [0.68, 0.71]
+
+component "codes of practice" [0.64, 0.54]
+
+"clinical_decision" -> "DATA"
+"clinical_decision" -> "DECISION SUPPORT"
+"DECISION SUPPORT" -> "historical DATA"
+"DATA" -> "historical DATA"
+"treatment" -> "clinical_decision"
+"symptoms" -> "observation"
+"cause" -> "diagnosis"
+"diagnosis" -> "DECISION SUPPORT"
+"TREATMENT OF AILMENT" -> "clinical_decision"
+"HEALTH" -> "outcome"
+"outcome" -> "TREATMENT OF AILMENT"
+"patient" -> "HEALTH"
+"TREATMENT OF AILMENT" -> "health outcome"
+"HEALTH" -> "health outcome"
+"TREATMENT OF AILMENT" -> "CLINICAL OUTCOME"
+"DATA" -> "SETTINGS OF CARE"
+"medical institute" -> "PAYERS"
+"PAYERS" -> "compliance to standards of care"
+"medical practioner" -> "medical institute"
+"medical practioner" -> "CLINICAL OUTCOME"
+"medical practioner" -> "status"
+"compliance to standards of care" -> "status"
+"status" -> "codes of practice"
+"compliance to standards of care" -> "CLINICAL OUTCOME"
+"codes of practice" -> "CLINICAL OUTCOME"
+"CLINICAL OUTCOME" -> "health of patient"
+"CLINICAL OUTCOME" -> "exceptions (individual funding requests)"
+"PAYERS" -> "exceptions (individual funding requests)"
+"fairness" -> "CLINICAL OUTCOME"
+"codes of practice" -> "local protocols"
+"codes of practice" -> "national clinical guidelines"
+"permissable treatment" -> "codes of practice"
+"REVIEWS" -> "historical DATA"
+"REVIEWS" -> "local protocols"
+"REVIEWS" -> "national clinical guidelines"
+"REVIEWS" -> "permissable treatment"
+"clinical trials" -> "REVIEWS"
+

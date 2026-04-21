@@ -1,0 +1,163 @@
+wardley-beta
+
+title CNI - Energy
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "appearance of success" [0.88, 0.67]
+component "landscape" [0.24, 0.55]
+pipeline "landscape" {
+  component "territory" [0.38]
+  component "supply chain" [0.63]
+}
+component "situational awareness" [0.10, 0.60]
+pipeline "situational awareness" {
+  component "digital awareness" [0.31]
+  component "physical awareness" [0.69]
+}
+component "CNI" [0.80, 0.66]
+pipeline "CNI" {
+  component "energy" [0.74]
+}
+
+component "security" [0.68, 0.62]
+pipeline "security" {
+  component "safety cases" [0.39]
+  component "power factors" [0.48]
+  component "surplus" [0.56]
+  component "reliability" [0.67]
+  component "continuity" [0.71]
+}
+component "grid" [0.56, 0.65]
+pipeline "grid" {
+  component "storage" [0.61]
+  component "transmission" [0.67]
+  component "generation" [0.72]
+}
+component "energy mix" [0.37, 0.66]
+pipeline "energy mix" {
+  component "fusion" [0.19]
+  component "3" [0.28]
+  component "workable hydrogen" [0.28]
+  component "2" [0.58]
+  component "battery storage" [0.58]
+  component "self generation" [0.62]
+  component "renewable" [0.68]
+  component "fossil" [0.72]
+}
+
+component "standards" [0.43, 0.42]
+component "grid model" [0.50, 0.42]
+component "cost" [0.58, 0.79]
+
+component "society" [0.97, 0.67]
+component "citizen" [0.93, 0.70]
+component "sustainability" [0.84, 0.46]
+
+component "success" [0.88, 0.70]
+component "sanctions" [0.76, 0.41]
+evolve "2" 0.65
+evolve "3" 0.32
+component "1" [0.84, 0.46]
+evolve "1" 0.59
+component "4" [0.76, 0.41]
+evolve "4" 0.55
+component "5" [0.50, 0.42]
+evolve "5" 0.46
+
+"government" -> "society"
+"society" -> "consumer"
+"consumer" -> "perception of success"
+"perception of success" -> "price"
+"CNI" -> "perception of success"
+"government" -> "legitimacy"
+"legitimacy" -> "CNI"
+"government" -> "regulation"
+"regulation" -> "CNI"
+"regulation" -> "security"
+"regulation" -> "standards"
+"security" -> "grid"
+"security" -> "cost"
+"security" -> "grid model"
+"grid model" -> "grid"
+"grid" -> "energy mix"
+"supply chain" -> "energy mix"
+"supply chain" -> "awareness"
+"grid" -> "standards"
+"grid model" -> "awareness"
+"regulation" -> "grid model"
+"distributors" -> "profit"
+"profit" -> "cost"
+"price" -> "cost"
+"distributors" -> "grid"
+"cost" -> "supply chain"
+"society" -> "sustainability"
+"sustainability" -> "supply chain"
+"distributors" -> "investors"
+"investors" -> "perception"
+"perception" -> "sustainability"
+"government" -> "society"
+"society" -> "citizen"
+"government" -> "legitimacy"
+"society" -> "success"
+"citizen" -> "belonging"
+"belonging" -> "trust"
+"legitimacy" -> "trust"
+"competence" -> "success"
+"belonging" -> "benevolence"
+"society" -> "norms"
+"norms" -> "integrity"
+"legitimacy" -> "sovereignty"
+"success" -> "physical"
+"success" -> "economic"
+"digital" -> "success"
+"integrity" -> "political"
+"integrity" -> "cultural"
+"cultural" -> "benevolence"
+"physical" -> "land"
+"physical" -> "sea"
+"sovereignty" -> "theatre"
+"physical" -> "air"
+"physical" -> "space"
+"cultural" -> "art"
+"digital" -> "cyber"
+"economic" -> "economy"
+"political" -> "cyber"
+"belonging" -> "appearance of success"
+"appearance of success" -> "political"
+"appearance of success" -> "critical national infrastructure"
+"critical national infrastructure" -> "CNI"
+"land" -> "territory"
+"air" -> "territory"
+"cyber" -> "telecoms"
+"space" -> "telecoms"
+"economy" -> "telecoms"
+"telecoms" -> "supply chain"
+"energy" -> "supply chain"
+"water" -> "supply chain"
+"food" -> "supply chain"
+"economy" -> "supply chain"
+"supply chain" -> "economic awareness"
+"territory" -> "physical awareness"
+"theatre" -> "situational awareness"
+"supply chain" -> "digital awareness"
+"theatre" -> "capability"
+"theatre" -> "operating model"
+"capability" -> "capability"
+"capability" -> "supply chain"
+"landscape" -> "situational awareness"
+"theatre" -> "landscape"
+"economy" -> "finance"
+"citizen" -> "appearance of success"
+"appearance of success" -> "CNI"
+"grid model" -> "standards"
+"energy" -> "security"
+"power factors" -> "grid model"
+"grid model" -> "energy mix"
+"appearance of success" -> "cost"
+"storage" -> "battery storage"
+"sustainability" -> "grid"
+"sustainability" -> "grid model"
+"success" -> "sanctions"
+"sanctions" -> "supply chain"
+

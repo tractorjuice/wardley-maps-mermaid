@@ -1,0 +1,146 @@
+wardley-beta
+title GOVERNMENT-SOVEREIGNTY - APRIL 2023
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "SUPRANATIONAL" [0.98, 0.62]
+
+component "INTL LAW" [0.62, 0.53]
+
+component "GOVERNMENT" [0.95, 0.67]
+
+component "CORPORATIONS" [0.90, 0.62]
+
+component "shareholders" [0.84, 0.71]
+
+component "society" [0.88, 0.72]
+component "legitimacy" [0.90, 0.66]
+component "perception of success" [0.77, 0.67]
+component "public belonging" [0.84, 0.55]
+component "inclusion" [0.79, 0.52]
+component "CRISIS" [0.97, 0.38]
+component "crisis response" [0.83, 0.33]
+component "MEDIA" [0.07, 0.50]
+pipeline "MEDIA" {
+  component "ART" [0.4]
+  component "Social media" [0.6]
+  component "Education" [0.67]
+  component "Mainstream media" [0.73]
+}
+component "SOVEREIGNTY" [0.55, 0.59]
+pipeline "SOVEREIGNTY" {
+  component "digital" [0.41]
+  component "political" [0.47]
+  component "security" [0.52]
+  component "economic" [0.55]
+  component "cultural" [0.64]
+  component "territorial" [0.7]
+}
+component "THEATRE" [0.16, 0.61]
+pipeline "THEATRE" {
+  component "cyber" [0.57]
+  component "elections" [0.64]
+  component "supply chain" [0.67]
+  component "land" [0.69]
+}
+component "AWARENESS" [0.31, 0.65]
+pipeline "AWARENESS" {
+  component "supply chain awareness" [0.31]
+  component "digital chain awareness" [0.43]
+  component "territorial awareness" [0.72]
+}
+
+component "OSINT" [0.20, 0.34]
+
+component "CNI" [0.47, 0.51]
+
+component "CAPABILITY" [0.43, 0.65]
+pipeline "CAPABILITY" {
+  component "soft power" [0.58]
+  component "propaganda" [0.62]
+  component "laws" [0.68]
+  component "military power" [0.72]
+}
+
+component "SOCIAL NORMS" [0.72, 0.52]
+pipeline "SOCIAL NORMS" {
+  component "benevolence" [0.37]
+  component "identity" [0.42]
+  component "integrity" [0.47]
+  component "competency" [0.57]
+  component "fairness" [0.71]
+}
+
+"GOVERNMENT" -> "society"
+"GOVERNMENT" -> "legitimacy"
+"legitimacy" -> "SOVEREIGNTY"
+"territorial" -> "land"
+"economic" -> "supply chain"
+"sea" -> "territorial"
+"economic" -> "cyber"
+"cyber" -> "technological"
+"cyber" -> "political"
+"SOVEREIGNTY" -> "COMPETITION"
+"COMPETITION" -> "AWARENESS"
+"THEATRE" -> "AWARENESS"
+"supply chain" -> "supply chain awareness"
+"land" -> "territorial awareness"
+"cyber" -> "digital chain awareness"
+"VISIBILITY" -> "COMPETITION"
+"covert" -> "inflitration"
+"cultural" -> "influence"
+"security" -> "CNI"
+"supply chain awareness" -> "chain"
+"chain" -> "digital chain awareness"
+"chain" -> "manufacturer"
+"manufacturer" -> "supplier"
+"chain" -> "delivery"
+"delivery" -> "manufacturer"
+"CAPABILITY" -> "chain"
+"logistics" -> "transportation"
+"supply chain awareness" -> "FORECASTING"
+"digital chain awareness" -> "FORECASTING"
+"MODEL" -> "simulation"
+"chain" -> "MODEL"
+"digital" -> "cyber"
+"inflitration" -> "cyber"
+"other knowledge" -> "chain"
+"AWARENESS" -> "LANDSCAPE"
+"territory" -> "territorial awareness"
+"society" -> "success"
+"society" -> "public belonging"
+"public belonging" -> "inclusion"
+"CRISIS" -> "crisis response"
+"perception of success" -> "SOVEREIGNTY"
+"success" -> "COMPETITION"
+"fairness" -> "inclusion"
+"supply chain" -> "Trade"
+"Trade" -> "exclusion"
+"law" -> "exclusion"
+"Trade" -> "COMPETITION"
+"exclusion" -> "conflict"
+"public belonging" -> "crisis response"
+"THEATRE" -> "crisis response"
+"SOCIAL NORMS" -> "crisis response"
+"public belonging" -> "SOCIAL NORMS"
+"public belonging" -> "perception of success"
+"political" -> "elections"
+"cyber" -> "Social media"
+"laws" -> "SOVEREIGNTY"
+"propaganda" -> "MEDIA"
+"CAPABILITY" -> "AWARENESS"
+"SOVEREIGNTY" -> "CAPABILITY"
+"elections" -> "Social media"
+"AWARENESS" -> "OSINT"
+"OSINT" -> "Social media"
+"SOCIAL NORMS" -> "SOVEREIGNTY"
+"SUPRANATIONAL" -> "GOVERNMENT"
+"SUPRANATIONAL" -> "INTL LAW"
+"INTL LAW" -> "SOVEREIGNTY"
+"SUPRANATIONAL" -> "public belonging"
+"CORPORATIONS" -> "SOVEREIGNTY"
+"CORPORATIONS" -> "shareholders"
+"CORPORATIONS" -> "GOVERNMENT"
+"AWARENESS" -> "MEDIA"
+"security" -> "security"
+

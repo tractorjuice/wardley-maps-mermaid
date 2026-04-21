@@ -1,0 +1,86 @@
+wardley-beta
+title manufacturing - supply chains - dynamics between IP & safety
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+note "Positive tension between IP and Safety" [0.13, 0.00]
+note "+Protect your IP" [0.09, 0.02]
+note "+Not disclosure relevant design data" [0.05, 0.02]
+note "+Provide the required data for certification" [0.01, 0.02]
+
+component "R&D" [0.63, 0.16]
+component "government" [0.92, 0.56]
+component "manufacturer" [0.92, 0.63]
+component "bad actor" [0.92, 0.41]
+component "regulation" [0.59, 0.48]
+component "safety" [0.82, 0.56]
+component "distributor" [0.92, 0.48]
+component "IP" [0.75, 0.41]
+pipeline "IP" {
+  component "relationships" [0.54]
+}
+component "materials" [0.57, 0.64]
+
+component "design" [0.78, 0.34]
+component "supply chain" [0.46, 0.29]
+
+component "agility" [0.84, 0.11]
+component "transparency" [0.05, 0.54]
+component "awareness" [0.24, 0.27]
+component "certification" [0.31, 0.87]
+
+component "reliability" [0.78, 0.67]
+component "inventory management" [0.38, 0.64]
+pipeline "inventory management" {
+  component "just in case" [0.52]
+  component "just in time" [0.69]
+}
+
+component "warehousing" [0.22, 0.67]
+component "cost" [0.79, 0.76]
+component "forecasting" [0.35, 0.41]
+component "logistics" [0.14, 0.60]
+pipeline "logistics" {
+  component "clipboard" [0.44]
+  component "automation" [0.71]
+}
+
+component "data" [0.02, 0.66]
+component "ROCE" [0.89, 0.72]
+
+component "capital" [0.86, 0.77]
+
+"manufacturer" -> "agility"
+"manufacturer" -> "reliability"
+"distributor" -> "relationships"
+"government" -> "safety"
+"safety" -> "regulation"
+"manufacturer" -> "materials"
+"reliability" -> "supply chain"
+"supply chain" -> "inventory management"
+"supply chain" -> "logistics"
+"manufacturer" -> "forecasting"
+"regulation" -> "certification"
+"awareness" -> "transparency"
+"warehousing" -> "inventory management"
+"forecasting" -> "awareness"
+"supply chain" -> "awareness"
+"certification" -> "transparency"
+"materials" -> "supply chain"
+"bad actor" -> "transparency"
+"agility" -> "transparency"
+"data" -> "transparency"
+"cost" -> "inventory management"
+"cost" -> "logistics"
+"warehousing" -> "cost"
+"manufacturer" -> "ROCE"
+"ROCE" -> "cost"
+"relationships" -> "supply chain"
+"manufacturer" -> "design"
+"government" -> "critical national infrastructure"
+"critical national infrastructure" -> "supply chain"
+"capital" -> "ROCE"
+"cost" -> "materials"
+"data" -> "automation"
+"design" -> "R&D"
+

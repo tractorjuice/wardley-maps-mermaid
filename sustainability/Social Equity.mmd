@@ -1,0 +1,130 @@
+wardley-beta
+title Sustainability: Social Equity, September 2023
+size [1100, 800]
+
+note "We map to how things are in the market not how we would like them to be" [0.01, 0.01]
+
+anchor "Society" [1.00, 0.51]
+
+component "security" [0.06, 0.49]
+component "land" [0.12, 0.44]
+component "habitable living" [0.19, 0.50]
+pipeline "habitable living" {
+  component "thriving living?" [0.21]
+  component "care" [0.25]
+  component "basic needs met" [0.6]
+  component "survival living" [0.66]
+  component "clean water" [0.74]
+  component "not survivable living" [0.79]
+}
+component "communities" [0.90, 0.55]
+component "stabilised climate" [0.12, 0.37]
+component "ecosystem" [0.07, 0.72]
+
+component "social stability" [0.79, 0.38]
+"social stability" -> "security services"
+"social stability" -> "social capital"
+"social stability" -> "financial capital"
+"communities" -> "social stability"
+
+component "reserves" [0.09, 0.24]
+component "surplus" [0.13, 0.31]
+
+component "governance" [0.98, 0.40]
+pipeline "governance" {
+  component "constitution" [0.31]
+}
+
+component "institutions" [0.37, 0.49]
+pipeline "institutions" {
+  component "security services" [0.34]
+  component "access control" [0.39]
+  component "capital rules" [0.45]
+  component "rights" [0.55]
+  component "bureaucracy" [0.64]
+}
+
+"governance" -> "rights"
+"rights" -> "schools"
+"rights" -> "healthcare"
+"governance" -> "bureaucracy"
+"governance" -> "institutions"
+
+component "forms of capital" [0.61, 0.64]
+pipeline "forms of capital" {
+  component "social capital" [0.53]
+  component "knowledge capital" [0.59]
+  component "time capital" [0.67]
+  component "financial capital" [0.74]
+  component "material resources" [0.79]
+  component "natural capital" [0.84]
+}
+
+"individuals" -> "forms of capital"
+"communities" -> "forms of capital"
+
+component "capital exchange/market" [0.48, 0.44]
+"forms of capital" -> "capital exchange/market"
+"capital exchange/market" -> "capital rules"
+
+component "belonging" [0.78, 0.57]
+component "shared interests" [0.82, 0.66]
+component "social norms" [0.64, 0.24]
+
+component "contentment?" [0.72, 0.09]
+component "happiness?" [0.76, 0.09]
+
+component "food" [0.11, 0.61]
+component "clean air" [0.13, 0.67]
+
+component "wellbeing" [0.28, 0.39]
+
+component "individuals" [0.88, 0.30]
+"wellbeing" -> "habitable living"
+"communities" -> "individuals"
+"individuals" -> "wellbeing"
+"wellbeing" -> "care"
+
+"habitable living" -> "clean water"
+"habitable living" -> "clean air"
+"habitable living" -> "food"
+"habitable living" -> "land"
+"habitable living" -> "stabilised climate"
+"clean air" -> "ecosystem"
+"clean water" -> "ecosystem"
+"food" -> "ecosystem"
+"stabilised climate" -> "ecosystem"
+
+"Society" -> "habitable living"
+"Society" -> "governance"
+"Society" -> "communities"
+
+"communities" -> "shared interests"
+"communities" -> "communication"
+"communities" -> "belonging"
+"communities" -> "knowledge transfer"
+"communities" -> "social norms"
+
+"governance" -> "access control"
+"access control" -> "land"
+"governance" -> "knowledge transfer"
+
+"natural capital" -> "clean air"
+"natural capital" -> "clean water"
+"material resources" -> "food"
+
+"habitable living" -> "security"
+
+"social norms" -> "capital exchange/market"
+"social norms" -> "knowledge capital"
+
+"communities" -> "care"
+"individuals" -> "care"
+
+"thriving living?" -> "reserves"
+"capital exchange/market" -> "reserves"
+"surplus" -> "reserves"
+"capital exchange/market" -> "surplus"
+
+evolve "basic needs met" 0.75
+

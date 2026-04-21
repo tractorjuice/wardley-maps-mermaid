@@ -1,0 +1,103 @@
+wardley-beta
+title LEADERSHIP AND GOVERNANCE (only value chain not evolution)
+size [1100, 800]
+
+anchor "Uk Prime minister" [0.99, 0.69]
+component "Awarness" [0.60, 0.14]
+"Uk Prime minister" -> "Awarness"
+component "Information" [0.51, 0.11]
+"Awarness" -> "Information"
+note "(Understanding the impact of their actions)" [0.50, 0.13]
+component "Media" [0.39, 0.18]
+pipeline "Media" {
+  component "social media" [0.29]
+  component "radio" [0.45]
+  component "Democratic Mandate" [0.53]
+  component "podcast" [0.59]
+  component "People" [0.69]
+  component "newspaper" [0.7]
+}
+"Information" -> "Media"
+
+component "Credibility" [0.85, 0.35]
+"Uk Prime minister" -> "Credibility"
+component "Influence" [0.17, 0.40]
+pipeline "Influence" {
+  component "Charisma" [0.34]
+  component "Coercion" [0.59]
+}
+"Influence" -> "Media"
+note "Schwartz’s theory of culture-level value prioritie" [0.17, 0.42]
+
+"Credibility" -> "Influence"
+component "Trust" [0.10, 0.41]
+"Influence" -> "Trust"
+
+component "Authenticity" [0.05, 0.43]
+"Trust" -> "Authenticity"
+
+component "Power" [0.62, 0.70]
+pipeline "Power" {
+  component "Soft Power" [0.65]
+  component "Hard Power" [0.74]
+}
+
+"Soft Power" -> "Media"
+note "(Military, economic)" [0.59, 0.67]
+
+component "Authority" [0.26, 0.75]
+pipeline "Authority" {
+  component "Chaos" [0.58]
+  component "Leadeship (collective authority)" [0.7]
+  component "Controle" [0.84]
+}
+
+"Uk Prime minister" -> "Power"
+"Power" -> "Influence"
+component "Finance" [0.56, 0.53]
+"Power" -> "Finance"
+component "Filtering the highest political priority" [0.50, 0.64]
+"Finance" -> "Filtering the highest political priority"
+"Power" -> "Democratic Mandate"
+
+component "Pressure" [0.31, 0.08]
+pipeline "Pressure" {
+  component "Conformity (social)" [0.03]
+  component "technological advancement pressure" [0.11]
+  component "economic pressure" [0.19]
+  component "Obedience (social)" [0.36]
+}
+
+"Information" -> "Pressure"
+
+anchor "Collectives (communities)" [0.59, 0.87]
+"Collectives (communities)" -> "People"
+
+"Democratic Mandate" -> "People"
+
+component "Common value" [0.21, 0.85]
+"Collectives (communities)" -> "Common value"
+note "Not discuss" [0.20, 0.87]
+note "Not discuss" [0.01, 0.13]
+
+"Influence" -> "Democratic Mandate"
+
+component "Agent (execution)" [0.48, 0.54]
+"Power" -> "Agent (execution)"
+"Agent (execution)" -> "Influence"
+
+"Power" -> "Media"
+
+"People" -> "Filtering the highest political priority"
+"Media" -> "Pressure"
+
+component "Moral Value" [0.09, 0.73]
+
+component "Coping Menanism" [0.15, 0.16]
+
+"Pressure" -> "Coping Menanism"
+"Coping Menanism" -> "Coping Menanism"
+"Coping Menanism" -> "Trust"
+
+"Power" -> "Authority"
+

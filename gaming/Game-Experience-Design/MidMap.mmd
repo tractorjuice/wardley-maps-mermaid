@@ -1,0 +1,89 @@
+wardley-beta
+title Game Design and UX
+size [1100, 800]
+
+evolution Unmodelled / Novel->Divergent->Convergent->Modelled / Accepted
+
+note "Our relevant Questions" [0.65, 0.01]
+note "What really matters in game design?" [0.62, 0.02]
+note "What are the emerging opportunities for game design?" [0.59, 0.02]
+note "What are the universal principles of game designing?" [0.57, 0.02]
+
+note "Specific climatic patterns we can have in the Gaming Industry" [0.08, 0.03]
+note "-Distributor channel rules change" [0.06, 0.05]
+note "-Social media trends" [0.04, 0.05]
+
+anchor "Producers" [0.61, 0.91]
+
+anchor "Consumer(Anchor)" [0.99, 0.49]
+
+anchor "Modders" [0.40, 0.66]
+anchor "Designer" [0.75, 0.05]
+
+component "maximize-profits" [0.50, 0.88]
+component "target-audience" [0.38, 0.89]
+
+component "Games" [0.80, 0.62]
+pipeline "Games" {
+  component "Gaming-Platforms" [0.94]
+}
+
+component "Vision" [0.35, 0.62]
+component "Focus-on-elements" [0.47, 0.35]
+component "Build-story" [0.30, 0.35]
+component "Commercialization-model" [0.28, 0.80]
+component "Visualize-end-product" [0.24, 0.48]
+component "Monetization-model" [0.22, 0.85]
+component "Drama-Tension-Curiosity" [0.20, 0.15]
+component "Building-&-release-of-tension" [0.16, 0.12]
+
+component "Ideal-gamer-persona" [0.70, 0.05]
+component "Build-user-base" [0.55, 0.34]
+
+component "Design-a-Game" [0.69, 0.21]
+component "Prototyping" [0.18, 0.60]
+
+component "Mental-space" [0.14, 0.43]
+
+component "Experience" [0.92, 0.47]
+pipeline "Experience" {
+  component "Modders" [0.22]
+  component "Quality" [0.76]
+  component "Gamers" [0.89]
+}
+
+component "First-Impression" [0.63, 0.59]
+component "Status" [0.86, 0.65]
+
+component "Laws" [0.11, 0.76]
+component "Incentives" [0.07, 0.82]
+
+"Producers" -> "maximize-profits"
+
+"maximize-profits" -> "Commercialization-model"
+"maximize-profits" -> "Monetization-model"
+"maximize-profits" -> "target-audience"
+"target-audience" -> "Build-user-base"
+"target-audience" -> "Status"
+"Monetization-model" -> "Laws"
+"Laws" -> "Incentives"
+"Modders" -> "Vision"
+
+"Consumer(Anchor)" -> "Experience"
+"Experience" -> "Vision"
+"Experience" -> "First-Impression"
+"Experience" -> "Status"
+
+"Vision" -> "Focus-on-elements"
+"Vision" -> "Build-story"
+"Vision" -> "Visualize-end-product"
+"Vision" -> "Commercialization-model"
+"Vision" -> "Monetization-model"
+
+"Build-story" -> "Drama-Tension-Curiosity"
+"Drama-Tension-Curiosity" -> "Building-&-release-of-tension"
+
+"Designer" -> "Ideal-gamer-persona"
+"Designer" -> "Design-a-Game"
+"Ideal-gamer-persona" -> "Build-user-base"
+

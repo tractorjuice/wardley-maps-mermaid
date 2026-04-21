@@ -1,0 +1,61 @@
+wardley-beta
+title ORCA
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "corporation" [0.92, 0.66]
+
+component "code" [0.81, 0.67]
+component "user" [0.93, 0.76]
+component "application" [0.86, 0.69]
+
+component "developer" [0.75, 0.64]
+pipeline "developer" {
+  component "contributor" [0.59]
+  component "employee" [0.69]
+}
+
+component "financial_contribution" [0.65, 0.67]
+
+component "price_point" [0.47, 0.62]
+pipeline "price_point" {
+  component "consumer_set" [0.39]
+  component "owner_set" [0.7]
+}
+
+component "agreement" [0.57, 0.55]
+pipeline "agreement" {
+  component "ORCA" [0.39]
+  component "polyform" [0.62]
+  component "commercial_license" [0.73]
+}
+
+component "transparency" [0.31, 0.58]
+pipeline "transparency" {
+  component "visible" [0.47]
+  component "closed" [0.69]
+}
+
+component "social" [0.20, 0.60]
+pipeline "social" {
+  component "proof" [0.57]
+  component "pressure" [0.65]
+}
+
+"corporation" -> "application"
+"user" -> "application"
+"application" -> "code"
+"code" -> "developer"
+"contributor" -> "financial_contribution"
+"financial_contribution" -> "agreement"
+"owner_set" -> "polyform"
+"ORCA" -> "consumer_set"
+"financial_contribution" -> "price_point"
+"commercial_license" -> "owner_set"
+"commercial_license" -> "closed"
+"visible" -> "consumer_set"
+"polyform" -> "visible"
+"visible" -> "social pressure"
+"social" -> "visible"
+"user" -> "social"
+

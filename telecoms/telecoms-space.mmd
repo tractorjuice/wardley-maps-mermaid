@@ -1,0 +1,146 @@
+wardley-beta
+
+title TELECOMS - Space - FEB 2023
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "corporation" [0.99, 0.53]
+component "government" [0.99, 0.60]
+
+component "backhaul" [0.50, 0.73]
+component "USER TERMINAL" [0.61, 0.72]
+component "SATELLITE" [0.73, 0.66]
+pipeline "SATELLITE" {
+  component "GEO Sat" [0.34]
+  component "LEO microsat" [0.7]
+  component "launchers" [0.72]
+}
+
+component "geography" [0.66, 0.39]
+
+component "NETWORK ACCESS" [0.90, 0.68]
+pipeline "NETWORK ACCESS" {
+  component "mesh network" [0.47]
+  component "physical network" [0.59]
+  component "consumer" [0.67]
+  component "broadcast" [0.76]
+}
+
+component "TOPOLOGY" [0.81, 0.66]
+pipeline "TOPOLOGY" {
+  component "fibre" [0.35]
+  component "mobile" [0.42]
+  component "NTN (non terrestrial Network)" [0.73]
+}
+component "groundstation" [0.53, 0.67]
+
+component "SPECTRUM" [0.33, 0.68]
+pipeline "SPECTRUM" {
+  component "V (40GHz)" [0.67]
+  component "Ka (27GHz)" [0.68]
+  component "Ku (12GHz)" [0.7]
+}
+
+component "Optical Sat2Sat Coms" [0.56, 0.40]
+component "PROPULSION" [0.59, 0.66]
+pipeline "PROPULSION" {
+  component "Xenon" [0.59]
+  component "Krypton" [0.67]
+}
+
+component "power" [0.65, 0.72]
+component "COOLING" [0.67, 0.60]
+pipeline "COOLING" {
+  component "Thermal Electric" [0.51]
+  component "Cryogens" [0.61]
+  component "Radiative" [0.63]
+}
+
+component "CONTROL SYSTEMS" [0.22, 0.55]
+pipeline "CONTROL SYSTEMS" {
+  component "fleet management" [0.38]
+  component "debris tracking" [0.46]
+  component "orbit tracking" [0.69]
+}
+
+component "AUTOMATION" [0.11, 0.61]
+
+component "supply chains" [0.02, 0.65]
+
+component "beamforming" [0.39, 0.67]
+component "ANTENNA" [0.47, 0.68]
+pipeline "ANTENNA" {
+  component "beam_steering" [0.65]
+  component "phased array antennas" [0.67]
+}
+
+component "supply chain awareness" [0.05, 0.34]
+"fibre" -> "wire"
+"5G" -> "masts"
+"masts" -> "geography"
+"wire" -> "geography"
+"NETWORK ACCESS" -> "TOPOLOGY"
+"physical network" -> "fibre"
+"virtual practices" -> "virtual space"
+"physical practices" -> "physical space"
+"physical space" -> "geography"
+
+"socialisation" -> "social"
+"collaboration" -> "social"
+"work" -> "collaboration"
+"work" -> "socialisation"
+"consumer" -> "work"
+"virtual space" -> "NETWORK ACCESS"
+"social" -> "space"
+"consumer" -> "status"
+"status" -> "physical space"
+"status" -> "physical practices"
+"physical space" -> "NETWORK ACCESS"
+"fibre" -> "geography"
+"5G" -> "geography"
+"consumer" -> "government"
+"government" -> "NETWORK ACCESS"
+"consumer" -> "learning"
+"learning" -> "social"
+"broadcast" -> "5G"
+"corporation" -> "NETWORK ACCESS"
+"masts" -> "maintenance"
+"wire" -> "maintenance"
+"masts" -> "land"
+"consumer" -> "collaboration"
+"consumer" -> "NETWORK ACCESS"
+"mobile" -> "geography"
+"masts" -> "mobile"
+"broadcast" -> "NTN (non terrestrial Network)"
+"broadcast" -> "mobile"
+"NTN (non terrestrial Network)" -> "SATELLITE"
+"USER TERMINAL" -> "SATELLITE"
+"groundstation" -> "SATELLITE"
+"backhaul" -> "groundstation"
+"LEO microsat" -> "phased array ANTENNAs"
+"phased array ANTENNAs" -> "groundstation"
+"LEO microsat" -> "launchers"
+"LEO microsat" -> "ANTENNA"
+"ANTENNA" -> "SPECTRUM"
+"groundstation" -> "ANTENNA"
+"phased array antennas" -> "beam_steering"
+"beamforming" -> "phased array antennas"
+"groundstation" -> "CONTROL SYSTEMS"
+"SATELLITE" -> "CONTROL SYSTEMS"
+"LEO microsat" -> "PROPULSION"
+"PROPULSION" -> "fleet management"
+"LEO microsat" -> "Sat2Satp"
+"LEO microsat" -> "Optical Sat2Sat Coms"
+"power" -> "SATELLITE"
+"SATELLITE" -> "COOLING"
+"LEO microsat" -> "automated factory"
+"LEO microsat" -> "AUTOMATION"
+
+"AUTOMATION" -> "supply chain awareness"
+"supply chains" -> "supply chain awareness"
+"AUTOMATION" -> "supply chains"
+component "SPACE REGULATION" [0.10, 0.39]
+"SPECTRUM" -> "SPACE REGULATION"
+"orbit tracking" -> "SPACE REGULATION"
+"SPACE REGULATION" -> "SPACE REGULATION"
+

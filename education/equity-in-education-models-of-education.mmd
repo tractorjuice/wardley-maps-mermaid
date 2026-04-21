@@ -1,0 +1,98 @@
+wardley-beta
+title Models of Education + individual
+size [1100, 800]
+
+anchor "government" [0.95, 0.59]
+anchor "business" [0.87, 0.77]
+anchor "student" [0.85, 0.60]
+anchor "teachers" [0.75, 0.52]
+
+component "policy" [0.91, 0.72]
+component "behaviors" [0.91, 0.65]
+component "competence" [0.83, 0.67]
+
+component "competence" [0.83, 0.67]
+component "experience" [0.68, 0.37]
+component "learning" [0.74, 0.60]
+
+component "cognitive ability" [0.23, 0.35]
+component "notion of intelligence" [0.10, 0.44]
+
+component "motivation" [0.70, 0.65]
+component "outcome" [0.65, 0.57]
+
+component "influencers" [0.81, 0.44]
+
+component "mentorship" [0.61, 0.34]
+
+component "values/beliefs" [0.61, 0.48]
+
+component "diversity approach" [0.58, 0.65]
+
+component "progression" [0.55, 0.61]
+
+component "assessment" [0.51, 0.46]
+
+component "teaching practices" [0.43, 0.57]
+pipeline "teaching practices" {
+  component "stream model" [0.37]
+  component "learning habitat" [0.52]
+  component "conveyor belt" [0.76]
+}
+
+component "theories of learning" [0.05, 0.58]
+
+component "access" [0.28, 0.64]
+
+component "infrastructure" [0.18, 0.67]
+pipeline "infrastructure" {
+  component "physical" [0.62]
+  component "digital" [0.71]
+}
+
+component "content" [0.37, 0.50]
+component "media" [0.33, 0.67]
+
+"government" -> "behaviors"
+"government" -> "policy"
+"behaviors" -> "competence"
+"policy" -> "competence"
+"student" -> "competence"
+"business" -> "competence"
+"competence" -> "learning"
+"learning" -> "experience"
+"student" -> "motivation"
+"learning" -> "motivation"
+
+"motivation" -> "visible outcome"
+"student" -> "influencers"
+"motivation" -> "intrinsic outcome"
+"motivation" -> "outcome"
+"experience" -> "mentorship"
+"learning" -> "mentorship"
+"learning" -> "values/beliefs"
+
+"progression" -> "assessment"
+"outcome" -> "assessment"
+"assessment" -> "learning habitat"
+"student" -> "learning"
+"values/beliefs" -> "diversity approach"
+"diversity approach" -> "progression"
+"learning habitat" -> "teaching practices"
+
+"teaching practices" -> "theories of learning"
+"teaching practices" -> "access"
+"diversity approach" -> "access"
+"access" -> "infrastructure"
+"learning habitat" -> "infrastructure"
+"teachers" -> "values/beliefs"
+"teaching practices" -> "content"
+"content" -> "theories of learning"
+"content" -> "media"
+"media" -> "infrastructure"
+"learning" -> "teaching practices"
+"learning" -> "cognitive ability"
+"cognitive ability" -> "notion of intelligence"
+"progression" -> "cognitive ability"
+"assessment" -> "notion of intelligence"
+

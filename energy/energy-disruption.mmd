@@ -1,0 +1,134 @@
+wardley-beta
+
+title ENERGY - disruption, JULY 2022
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+note ">110kV" [0.30, 0.35]
+note "<110kV" [0.36, 0.60]
+
+component "awareness" [0.50, 0.31]
+component "supply chain" [0.40, 0.42]
+
+component "USER" [0.94, 0.54]
+pipeline "USER" {
+  component "tomorrow" [0.42]
+  component "today" [0.63]
+}
+component "COST" [0.72, 0.63]
+pipeline "COST" {
+  component "externality" [0.43]
+  component "price" [0.69]
+}
+component "transmission" [0.32, 0.41]
+component "capital" [0.06, 0.72]
+component "protection system" [0.04, 0.27]
+
+component "RESERVE" [0.02, 0.70]
+
+component "distribution" [0.35, 0.63]
+component "landscape" [0.12, 0.25]
+
+component "ENERGY USAGE" [0.57, 0.65]
+component "ENERGY MIX" [0.43, 0.67]
+pipeline "ENERGY MIX" {
+  component "renewable" [0.6]
+  component "fossil" [0.73]
+}
+
+note "(grid)" [0.38, 0.38]
+
+component "ENERGY PRODUCTION" [0.13, 0.68]
+pipeline "ENERGY PRODUCTION" {
+  component "nuclear" [0.38]
+  component "solar collectors" [0.41]
+  component "gas" [0.44]
+  component "solar microgen" [0.74]
+}
+component "ENERGY GENERATION" [0.51, 0.65]
+pipeline "ENERGY GENERATION" {
+  component "OTC market" [0.59]
+  component "spotmarket" [0.7]
+  component "public good" [0.78]
+}
+
+component "BATTERY (POWER) STORAGE" [0.25, 0.57]
+pipeline "BATTERY (POWER) STORAGE" {
+  component "synthetic" [0.2]
+  component "hydrogen" [0.4]
+  component "potential energy" [0.53]
+  component "electrical" [0.7]
+}
+component "SURVIVABILITY" [0.82, 0.55]
+pipeline "SURVIVABILITY" {
+  component "sustainability" [0.43]
+  component "security" [0.68]
+}
+component "education" [0.74, 0.35]
+component "CO2" [0.60, 0.49]
+
+component "CONTROL" [0.63, 0.64]
+pipeline "CONTROL" {
+  component "regulation" [0.6]
+  component "market" [0.69]
+}
+
+evolve "transmission" 0.49
+evolve "distribution" 0.75
+note "+constraint" [0.30, 0.66]
+
+"society" -> "consumers"
+"consumers" -> "behaviour"
+"society" -> "survival"
+"mkt_competition" -> "ENERGY USAGE"
+"education" -> "efficiency"
+"behaviour" -> "expectations"
+"political" -> "expectations"
+"ENERGY USAGE" -> "ENERGY GENERATION"
+"ENERGY GENERATION" -> "ENERGY MIX"
+"renewable" -> "BATTERY (POWER) STORAGE"
+"ENERGY MIX" -> "ENERGY PRODUCTION"
+"efficiency" -> "ENERGY USAGE"
+"eco luddites" -> "expectations"
+"expectations" -> "history"
+"generators" -> "ENERGY USAGE"
+"government" -> "society"
+"government" -> "political"
+"government" -> "regulation"
+"mkt_competition" -> "other"
+"ENERGY GENERATION" -> "supply chain"
+"regulation" -> "awareness"
+"awareness" -> "awareness"
+"supply chain" -> "awareness"
+"encumbents" -> "ENERGY USAGE"
+"consumers" -> "mkt_competition"
+"providers" -> "mkt_competition"
+"sustainability" -> "education"
+"sustainability" -> "renewable"
+"tomorrow" -> "sustainability"
+"sustainability" -> "externality"
+"USER" -> "behaviour"
+"behaviour" -> "COST"
+"price" -> "market"
+"externality" -> "regulation"
+"today" -> "security"
+"security" -> "price"
+"security" -> "ENERGY USAGE"
+"USER" -> "SURVIVABILITY"
+"SURVIVABILITY" -> "COST"
+"SURVIVABILITY" -> "CONTROL"
+"ENERGY MIX" -> "transmission"
+"transmission" -> "protection system"
+"ENERGY PRODUCTION" -> "capital"
+"capital" -> "transmission"
+"capital" -> "BATTERY (POWER) STORAGE"
+"distribution" -> "ENERGY MIX"
+"supply chain" -> "transmission"
+"supply chain" -> "distribution"
+"distribution" -> "capital"
+"transmission" -> "landscape"
+"RESERVE" -> "gas"
+"externality" -> "CO2"
+
+"CO2" -> "ENERGY MIX"
+

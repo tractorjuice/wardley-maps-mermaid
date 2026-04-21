@@ -1,0 +1,80 @@
+wardley-beta
+
+title healthcare - ethics
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+component "commercial" [0.98, 0.64]
+component "lobbyists" [0.85, 0.47]
+component "public health" [0.86, 0.60]
+component "citizens" [0.91, 0.75]
+component "media" [0.85, 0.68]
+component "government" [0.97, 0.56]
+component "society" [0.94, 0.39]
+
+note "unused" [0.27, 0.04]
+component "research" [0.22, 0.06]
+component "population" [0.12, 0.06]
+component "preventative healthcare" [0.07, 0.06]
+component "locality" [0.17, 0.06]
+component "clinical code of practice" [0.26, 0.23]
+component "inequality" [0.16, 0.23]
+component "exclusion" [0.08, 0.23]
+component "trade" [0.12, 0.23]
+
+component "ethics" [0.45, 0.58]
+pipeline "ethics" {
+  component "research ethics" [0.39]
+  component "code of practice" [0.68]
+}
+
+component "access" [0.51, 0.67]
+component "data" [0.29, 0.48]
+component "privacy" [0.11, 0.60]
+component "trade off" [0.21, 0.62]
+component "health and safety" [0.10, 0.50]
+component "economy" [0.05, 0.69]
+component "treatment" [0.69, 0.58]
+pipeline "treatment" {
+  component "health services research" [0.19]
+  component "status" [0.34]
+  component "clinical practice" [0.73]
+}
+
+component "payment" [0.27, 0.74]
+component "health outcomes" [0.77, 0.69]
+component "committees" [0.57, 0.40]
+
+"commercial" -> "commercial"
+"commercial" -> "lobbyists"
+"public health" -> "health outcomes"
+"citizens" -> "health outcomes"
+"health outcomes" -> "treatment"
+"media" -> "ethics"
+"access" -> "treatment"
+"healthcare" -> "data"
+"code of practice" -> "payment"
+"trade off" -> "data"
+"trade off" -> "ethics"
+"trade off" -> "health and safety"
+"trade off" -> "economy"
+"trade off" -> "privacy"
+"health outcomes" -> "health and safety"
+"lobbyists" -> "ethics"
+"payment" -> "commercial"
+"ethics" -> "committees"
+"code of practice" -> "committees"
+"public health" -> "status"
+"status" -> "committees"
+"government" -> "public health"
+"citizens" -> "government"
+"government" -> "society"
+"society" -> "ethics"
+"society" -> "citizens"
+"health outcomes" -> "ethics"
+"treatment" -> "data"
+"research ethics" -> "health services research"
+"clinical practice" -> "code of practice"
+"payment" -> "payment"
+"payment" -> "health services research"
+

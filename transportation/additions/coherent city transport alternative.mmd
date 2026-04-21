@@ -1,0 +1,129 @@
+wardley-beta
+title Coherent City Transport
+size [1100, 800]
+component "people" [0.98, 0.45]
+component "goods" [0.94, 0.68]
+component "services" [0.94, 0.60]
+component "culture" [0.92, 0.44]
+component "health" [0.94, 0.51]
+component "culture" [0.92, 0.44]
+component "safety & security" [0.93, 0.35]
+component "government" [0.99, 0.32]
+component "City Functions" [0.87, 0.45]
+pipeline "City Functions" {
+  component "dwellings" [0.31]
+  component "shops" [0.36]
+  component "restaurants" [0.41]
+  component "police station" [0.48]
+  component "banks" [0.53]
+  component "factories w'hses" [0.6]
+  component "data centres" [0.65]
+  component "zoom meetID" [0.71]
+}
+component "space" [0.77, 0.41]
+pipeline "space" {
+  component "physical" [0.3]
+  component "virtual" [0.68]
+}
+component "ways" [0.70, 0.45]
+pipeline "ways" {
+  component "paths" [0.37]
+  component "rivers" [0.43]
+  component "roads" [0.53]
+  component "rail" [0.59]
+  component "pipes" [0.66]
+  component "cables" [0.72]
+}
+component "borders" [0.77, 0.22]
+
+component "construction/maintenance" [0.63, 0.35]
+component "modulation" [0.63, 0.47]
+
+component "enforcement" [0.50, 0.33]
+component "vehicles" [0.54, 0.64]
+pipeline "vehicles" {
+  component "walk" [0.48]
+  component "cycle" [0.54]
+  component "trains" [0.58]
+  component "automobiles" [0.63]
+  component "planes" [0.69]
+  component "e-scooters" [0.74]
+  component "internet access" [0.79]
+}
+component "functional transport system" [0.67, 0.22]
+component "obstruction removal" [0.62, 0.62]
+component "Transport Planning" [0.54, 0.21]
+component "transport information" [0.43, 0.22]
+pipeline "transport information" {
+  component "now" [0.12]
+  component "historical" [0.18]
+  component "digital twin" [0.41]
+}
+component "regulation" [0.30, 0.31]
+component "decision making" [0.36, 0.36]
+component "Transport Policy" [0.32, 0.18]
+component "stable climate" [0.92, 0.23]
+component "sensors" [0.23, 0.38]
+component "surveys" [0.21, 0.29]
+component "data analysis" [0.23, 0.21]
+component "fuel" [0.33, 0.73]
+pipeline "fuel" {
+  component "animal power" [0.56]
+  component "hydrogen" [0.67]
+  component "petroleum" [0.79]
+  component "electricity" [0.87]
+}
+component "food & water" [0.24, 0.53]
+component "hubs" [0.45, 0.60]
+pipeline "hubs" {
+  component "car parks" [0.48]
+  component "e-transport hubs" [0.69]
+}
+
+"people" -> "goods"
+"people" -> "services"
+"people" -> "health"
+"people" -> "culture"
+"people" -> "safety & security"
+"government" -> "people"
+"goods" -> "City Functions"
+"services" -> "City Functions"
+"health" -> "City Functions"
+"culture" -> "City Functions"
+"safety & security" -> "City Functions"
+"City Functions" -> "space"
+"City Functions" -> "ways"
+"virtual" -> "cables"
+"virtual" -> "data centres"
+"physical" -> "borders"
+"ways" -> "construction/maintenance"
+"people" -> "vehicles"
+"goods" -> "vehicles"
+"City Functions" -> "vehicles"
+"vehicles" -> "ways"
+"ways" -> "obstruction removal"
+"ways" -> "modulation"
+"government" -> "functional transport system"
+"people" -> "functional transport system"
+"functional transport system" -> "ways"
+"functional transport system" -> "vehicles"
+"functional transport system" -> "Transport Planning"
+"Transport Planning" -> "transport information"
+"Transport Planning" -> "enforcement"
+"Transport Planning" -> "regulation"
+"Transport Planning" -> "decision making"
+"Transport Planning" -> "Transport Policy"
+"ways" -> "space"
+"government" -> "stable climate"
+"people" -> "stable climate"
+"transport information" -> "data analysis"
+"transport information" -> "surveys"
+"transport information" -> "sensors"
+"food & water" -> "stable climate"
+"animal power" -> "food & water"
+"vehicles" -> "fuel"
+"government" -> "borders"
+"ways" -> "hubs"
+"vehicles" -> "hubs"
+"functional transport system" -> "hubs"
+

@@ -1,0 +1,118 @@
+wardley-beta
+
+title Supply Chain Sustainability
+size [1100, 800]
+
+component "Producer" [0.95, 0.54]
+
+component "Retailer" [0.94, 0.46]
+
+component "Packaging & Presentation" [0.78, 0.42]
+
+component "Temperature & Freshness" [0.74, 0.38]
+
+component "Manufacturing" [0.69, 0.45]
+
+component "Sourcing" [0.52, 0.49]
+pipeline "Sourcing" {
+  component "Sustainbility regulated" [0.44]
+  component "Open market driven" [0.56]
+}
+
+component "Product" [0.25, 0.51]
+pipeline "Product" {
+  component "Complex Product" [0.45]
+  component "Raw Materials" [0.57]
+}
+
+component "Measurements" [0.62, 0.60]
+pipeline "Measurements" {
+  component "Waste" [0.55]
+  component "Cost" [0.65]
+}
+
+component "Maintainability" [0.63, 0.47]
+
+component "Reusability" [0.59, 0.43]
+
+component "Transportation" [0.15, 0.37]
+pipeline "Transportation" {
+  component "Backhaul" [0.34]
+  component "Last mile" [0.42]
+}
+
+component "Choice" [0.31, 0.41]
+
+component "R&D" [0.64, 0.29]
+
+component "Resource Efficiency" [0.56, 0.32]
+
+component "Scientific Research" [0.48, 0.24]
+
+component "Regulator" [0.95, 0.68]
+
+component "Guidelines" [0.58, 0.80]
+pipeline "Guidelines" {
+  component "Actionable" [0.75]
+  component "Bureacracy" [0.86]
+}
+
+component "Consumer" [0.38, 0.40]
+
+component "Distribution" [0.90, 0.38]
+pipeline "Distribution" {
+  component "Coop" [0.3]
+  component "Storefront" [0.35]
+  component "Online" [0.43]
+}
+
+component "Compliance" [0.79, 0.70]
+pipeline "Compliance" {
+  component "Disclosure" [0.67]
+  component "Monitoring & Audit" [0.73]
+  component "Laws" [0.8]
+  component "Label" [0.81]
+}
+
+component "Regulations" [0.86, 0.81]
+pipeline "Regulations" {
+  component "Sanctions" [0.84]
+  component "Trade agreements" [0.89]
+}
+
+component "Compliance mechanisms" [0.43, 0.66]
+pipeline "Compliance mechanisms" {
+  component "My Rating" [0.65]
+  component "Compliance Certs" [0.72]
+}
+
+"Guidelines" -> "Actionable"
+"Manufacturing" -> "R&D"
+"Producer" -> "Packaging & Presentation"
+"Packaging & Presentation" -> "Temperature & Freshness"
+"Temperature & Freshness" -> "Manufacturing"
+"Sourcing" -> "Product"
+"Choice" -> "Consumer"
+"Consumer" -> "My Rating"
+"Product" -> "Transportation"
+"R&D" -> "Resource Efficiency"
+"R&D" -> "Scientific Research"
+"Packaging & Presentation" -> "Manufacturing"
+"Manufacturing" -> "Resource Efficiency"
+"Choice" -> "Product"
+"Choice" -> "Transportation"
+"Manufacturing" -> "Sourcing"
+"Manufacturing" -> "Maintainability"
+"Manufacturing" -> "Measurements"
+"Manufacturing" -> "Reusability"
+"Retailer" -> "Distribution"
+"Distribution" -> "Packaging & Presentation"
+"Sustainbility regulated" -> "Regulator"
+"Guidelines" -> "Bureacracy"
+"Producer" -> "Compliance"
+"Retailer" -> "Compliance"
+"Compliance" -> "Guidelines"
+"Regulator" -> "Regulations"
+"Regulations" -> "Compliance"
+"Compliance" -> "Compliance mechanisms"
+

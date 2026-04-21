@@ -1,0 +1,146 @@
+wardley-beta
+
+title GOVERNMENT - IDENTITY - NOV 2022
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
+
+component "bad actor" [0.97, 0.50]
+component "government" [0.98, 0.61]
+component "society" [0.96, 0.67]
+component "ENTITY" [0.90, 0.72]
+note "(subordinate)" [0.89, 0.73]
+note "(reliant party)" [0.83, 0.72]
+note "(issuing party == ENTITY)" [0.21, 0.62]
+note "(what I am)" [0.70, 0.77]
+
+component "claim" [0.79, 0.68]
+
+component "POWER" [0.06, 0.66]
+pipeline "POWER" {
+  component "symbolic" [0.51]
+  component "exception" [0.55]
+  component "to" [0.57]
+  component "over" [0.63]
+  component "with" [0.68]
+}
+
+component "regulators (authorities)" [0.79, 0.40]
+
+component "services" [0.86, 0.72]
+component "IDENTITY" [0.69, 0.72]
+pipeline "IDENTITY" {
+  component "digital material" [0.64]
+  component "collective (company)" [0.68]
+  component "physical material" [0.71]
+  component "people" [0.74]
+}
+
+component "credential" [0.33, 0.62]
+
+component "IDENTIFICATION" [0.53, 0.73]
+pipeline "IDENTIFICATION" {
+  component "physical" [0.67]
+  component "digital" [0.76]
+}
+component "AUTHORITY" [0.26, 0.68]
+pipeline "AUTHORITY" {
+  component "decentralised authority" [0.42]
+  component "centralised authority" [0.75]
+}
+
+component "IDENTIFIERS" [0.43, 0.61]
+pipeline "IDENTIFIERS" {
+  component "connectedness (FOAF)" [0.47]
+  component "immutable (facial geometry)" [0.64]
+  component "mutable (name)" [0.7]
+}
+
+component "rules" [0.14, 0.58]
+
+component "regulation" [0.89, 0.45]
+
+component "TRUST" [0.17, 0.43]
+pipeline "TRUST" {
+  component "INTEGRITY" [0.37]
+  component "BENEVOLENCE" [0.45]
+  component "CAPABILITY" [0.52]
+}
+
+component "situation" [0.03, 0.25]
+
+component "TRANSPORT LAYER" [0.45, 0.77]
+
+note "(e.g. internet)" [0.42, 0.82]
+
+"government" -> "services"
+"citizen" -> "services"
+"avoiding harm" -> "regulation"
+"governance" -> "avoiding harm"
+"governance" -> "government"
+"TRUST" -> "narratives"
+"biometric" -> "storage"
+"narratives" -> "ethics"
+"avoiding harm" -> "POWER over"
+"POWER over" -> "self sovereign"
+"government" -> "POWER over"
+"corporations" -> "POWER over"
+"government" -> "society"
+"permission to act" -> "centralised AUTHORITY"
+"government" -> "regulation"
+"citizen" -> "avoiding harm"
+"self sovereign" -> "freedom"
+"POWER" -> "ethics"
+"freedom" -> "self IDENTITY"
+"privacy" -> "digital IDENTITY"
+"privacy" -> "centralised paper"
+"self sovereign" -> "decentralised authority"
+"permission to modify" -> "centralised AUTHORITY"
+"regulation" -> "regulators (authorities)"
+"regulators (authorities)" -> "permission to act"
+"privacy" -> "centralised AUTHORITY"
+"corporations" -> "centralised AUTHORITY"
+"IDENTIFICATION" -> "biometric"
+"POWER" -> "AUTHORITY"
+"centralised AUTHORITY" -> "issuing AUTHORITY"
+"consensus alogrithm" -> "decentralised authority"
+"decentralised authority" -> "self signed"
+"issuing AUTHORITY" -> "exclusion"
+"society" -> "ENTITY"
+"ENTITY" -> "services"
+"services" -> "services"
+"services" -> "claims"
+"claims" -> "IDENTITY"
+"claims" -> "AUTHORITY"
+"services" -> "claims of credentials"
+"claims of credentials" -> "IDENTITY"
+"claims of credentials" -> "token"
+"token" -> "AUTHORITY"
+"services" -> "claim"
+"claim" -> "IDENTITY"
+"claim" -> "credential"
+"AUTHORITY" -> "credential"
+"evidence" -> "IDENTIFICATION"
+"IDENTIFICATION" -> "credential"
+"IDENTIFICATION" -> "IDENTIFIERS"
+"collective (company)" -> "connectedness (FOAF)"
+"people" -> "IDENTIFICATION"
+"material" -> "physical"
+"physical material" -> "physical"
+"digital material" -> "digital"
+"regulation" -> "rules"
+"AUTHORITY" -> "rules"
+"rules" -> "exception"
+"corporate" -> "services"
+"bridge" -> "services"
+"services" -> "robots"
+"river" -> "services"
+"digital" -> "physical material"
+"digital" -> "collective (company)"
+"bad actor" -> "rules"
+"bad actor" -> "TRUST"
+"AUTHORITY" -> "TRUST"
+"bad actor" -> "claim"
+"TRUST" -> "awareness of context"
+"TRUST" -> "situation"
+"TRANSPORT LAYER" -> "digital"
+

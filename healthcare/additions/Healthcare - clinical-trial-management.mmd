@@ -1,0 +1,105 @@
+wardley-beta
+
+title healthcare - clinical trials management
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+note "+indication" [0.66, 0.69]
+component "stakeholder" [0.25, 0.68]
+
+component "trial management" [0.30, 0.42]
+pipeline "trial management" {
+  component "CRO" [0.43]
+}
+
+component "trial design" [0.42, 0.43]
+pipeline "trial design" {
+  component "umbrella" [0.37]
+  component "basket" [0.4]
+  component "platform" [0.47]
+  component "Decentralised CT" [0.55]
+  component "traditional" [0.71]
+}
+component "report" [0.70, 0.66]
+component "citizens" [0.90, 0.69]
+component "pharma" [0.95, 0.62]
+component "government" [0.95, 0.67]
+component "drug" [0.82, 0.65]
+pipeline "drug" {
+  component "IP" [0.44]
+  component "license" [0.55]
+  component "biosimilars" [0.57]
+  component "generic" [0.69]
+  component "health" [0.7]
+}
+component "safety" [0.74, 0.56]
+component "clinical research" [0.55, 0.35]
+pipeline "clinical research" {
+  component "digital simulation" [0.2]
+  component "discovery" [0.29]
+  component "licensing trials" [0.4]
+}
+component "randomisation" [0.57, 0.67]
+component "scope" [0.67, 0.68]
+component "FDA" [0.73, 0.66]
+component "sample" [0.25, 0.60]
+component "costs" [0.15, 0.67]
+pipeline "costs" {
+  component "analysis" [0.52]
+  component "management" [0.7]
+}
+component "candidates" [0.68, 0.32]
+component "protocol doc" [0.64, 0.67]
+component "funding" [0.06, 0.70]
+pipeline "funding" {
+  component "private" [0.65]
+  component "public" [0.73]
+}
+component "selection" [0.21, 0.43]
+pipeline "selection" {
+  component "site" [0.38]
+  component "participant" [0.45]
+}
+component "clinical liability" [0.62, 0.69]
+component "clinical systems" [0.09, 0.39]
+component "data collection" [0.04, 0.31]
+
+"government" -> "citizens"
+"citizens" -> "health"
+"health" -> "drug"
+"pharma" -> "drug"
+"drug" -> "safety"
+"clinical research" -> "stakeholder"
+"drug" -> "scope"
+"safety" -> "FDA"
+"pharma" -> "license"
+"license" -> "FDA"
+"license" -> "IP"
+"trial" -> "scale"
+"randomisation" -> "sample"
+"sample" -> "costs"
+"IP" -> "candidates"
+"trial" -> "protocol doc"
+"funding" -> "costs"
+"safety" -> "clinical liability"
+"clinical research" -> "clinical liability"
+"candidates" -> "digital simulation"
+"sample" -> "selection"
+"costs" -> "clinical systems"
+"selection" -> "clinical systems"
+"stakeholder" -> "clinical systems"
+"digital simulation" -> "data collection"
+"clinical systems" -> "data collection"
+"discovery" -> "data collection"
+"biosimilars" -> "license"
+"candidates" -> "discovery"
+"scope" -> "protocol doc"
+"scope" -> "report"
+"protocol doc" -> "randomisation"
+
+"FDA" -> "report"
+"protocol doc" -> "clinical research"
+"clinical research" -> "trial design"
+"trial design" -> "trial management"
+"CRO" -> "sample"
+

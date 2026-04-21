@@ -1,0 +1,179 @@
+wardley-beta
+title CONSTRUCTION - alternatives, JUNE 2022
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "Developer" [0.71, 0.64]
+
+component "GOVERNANCE" [0.90, 0.66]
+pipeline "GOVERNANCE" {
+  component "principles" [0.44]
+  component "insurance" [0.56]
+  component "government" [0.63]
+  component "market" [0.69]
+}
+component "SOCIETY" [0.98, 0.59]
+pipeline "SOCIETY" {
+  component "community" [0.46]
+  component "network" [0.61]
+}
+evolve "standards" 0.5
+
+component "PROPERTY" [0.79, 0.65]
+
+component "INSPECTION" [0.70, 0.38]
+pipeline "INSPECTION" {
+  component "factory mode" [0.18]
+  component "building control" [0.44]
+}
+
+component "MACHINERY" [0.30, 0.59]
+pipeline "MACHINERY" {
+  component "3D printing" [0.46]
+  component "machine" [0.59]
+  component "robotic" [0.63]
+  component "human orientated" [0.72]
+  component "brick oven" [0.73]
+}
+
+evolve "3D printing" 0.55
+evolve "prefabrication" 0.58
+
+component "CONSTRUCTION TECHNOLOGIES" [0.37, 0.64]
+
+component "ALTERNATIVE MATERIALS" [0.18, 0.51]
+pipeline "ALTERNATIVE MATERIALS" {
+  component "smart materials" [0.33]
+  component "artificial wood" [0.4]
+  component "recycled containters" [0.52]
+}
+component "longevity" [0.43, 0.40]
+
+component "CONSTRUCTION" [0.55, 0.62]
+pipeline "CONSTRUCTION" {
+  component "planning permission" [0.47]
+  component "building" [0.59]
+  component "land" [0.69]
+}
+
+component "METHODS" [0.46, 0.60]
+pipeline "METHODS" {
+  component "prefabrication" [0.49]
+  component "onsite" [0.73]
+}
+
+evolve "smart materials" 0.38
+
+component "OBSERVABILITY" [0.61, 0.44]
+pipeline "OBSERVABILITY" {
+  component "embedded building sensors" [0.41]
+  component "eyeballs" [0.5]
+}
+
+component "benchmark" [0.25, 0.42]
+evolve "machine" 0.7
+
+component "standards" [0.34, 0.43]
+
+component "STANDARD MATERIALS" [0.19, 0.68]
+pipeline "STANDARD MATERIALS" {
+  component "wood" [0.68]
+  component "concrete" [0.72]
+}
+
+component "VALUES" [0.83, 0.49]
+pipeline "VALUES" {
+  component "equality" [0.34]
+  component "sustainability" [0.44]
+  component "aesthetics" [0.52]
+}
+
+component "supply chain" [0.10, 0.62]
+component "supply chain awareness" [0.06, 0.21]
+
+evolve "supply chain awareness" 0.56
+
+"PPP" -> "Developer"
+"public" -> "cost"
+"cost" -> "CONSTRUCTION"
+"building" -> "METHODS"
+"METHODS" -> "building"
+"building" -> "land"
+"regulation" -> "planning permission"
+"government" -> "regulation"
+
+"METHODS" -> "CONSTRUCTION TECHNOLOGIES"
+"CONSTRUCTION TECHNOLOGIES" -> "lifecycle management"
+"lifecycle management" -> "maintenance"
+"CONSTRUCTION TECHNOLOGIES" -> "materials"
+"alternative material" -> "safety"
+"standardisation" -> "maintenance"
+"safety" -> "standardisation"
+"regulation" -> "standardisation"
+"sustainability" -> "METHODS"
+"sustainability" -> "longevity"
+"alternative material" -> "longevity"
+"building" -> "sensors"
+
+"OBSERVABILITY" -> "building"
+
+"INSPECTION" -> "OBSERVABILITY"
+
+"planning permission" -> "standardisation"
+"longevity" -> "standardisation"
+"INSPECTION" -> "planning permission"
+"SOCIETY" -> "public"
+"SOCIETY" -> "VALUES"
+"safety" -> "research"
+"safety" -> "firesafety"
+"regulation" -> "safety"
+"CONSTRUCTION TECHNOLOGIES" -> "access"
+"equality" -> "access"
+"Developer" -> "CONSTRUCTION"
+"cost" -> "market"
+"PROPERTY" -> "market"
+"PROPERTY" -> "regulation"
+"externality" -> "market"
+"externality" -> "discounting future"
+"longevity" -> "discounting future"
+"Developer" -> "composition"
+"network" -> "GOVERNANCE"
+"community" -> "principles"
+"PPP" -> "risk mitigation"
+"composition" -> "componentisation"
+
+"standardisation" -> "componentisation"
+"prefabrication" -> "componentisation"
+"machine" -> "MACHINERY"
+"government" -> "PPP"
+"VALUES" -> "regulation"
+"composition" -> "INSPECTION"
+"standardisation" -> "material data"
+"material data" -> "materials"
+"aesthetics" -> "CONSTRUCTION"
+"government" -> "INSPECTION"
+"insurance" -> "INSPECTION"
+"government" -> "PROPERTY"
+"PROPERTY" -> "insurance"
+"PROPERTY" -> "Developer"
+"prefabrication" -> "standardisation"
+"building control" -> "eyeballs"
+"building control" -> "eyeballs"
+"eyeballs" -> "building control"
+"factory mode" -> "embedded building sensors"
+"planning permission" -> "standards"
+"longevity" -> "standards"
+"standards" -> "material data"
+"prefabrication" -> "standards"
+"material data" -> "ALTERNATIVE MATERIALS"
+"CONSTRUCTION TECHNOLOGIES" -> "ALTERNATIVE MATERIALS"
+"CONSTRUCTION TECHNOLOGIES" -> "STANDARD MATERIALS"
+"benchmark" -> "standards"
+"benchmark" -> "ALTERNATIVE MATERIALS"
+"benchmark" -> "STANDARD MATERIALS"
+"supply chain" -> "STANDARD MATERIALS"
+"supply chain" -> "ALTERNATIVE MATERIALS"
+"supply chain" -> "awareness of supply chain"
+"sustainability" -> "awareness of supply chain"
+"supply chain" -> "supply chain awareness"
+

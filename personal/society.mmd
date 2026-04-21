@@ -1,0 +1,55 @@
+wardley-beta
+title society. AUGUST 2022
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+component "Government" [0.97, 0.68]
+component "society" [0.92, 0.71]
+component "people" [0.83, 0.74]
+component "belonging" [0.76, 0.56]
+
+component "VALUES" [0.66, 0.61]
+
+pipeline "VALUES" {
+  component "property" [0.72]
+  component "fairness" [0.70]
+  component "other" [0.40]
+}
+
+component "inclusion" [0.50, 0.63]
+component "exclusion" [0.51, 0.72]
+
+component "law" [0.27, 0.72]
+component "enforcement" [0.20, 0.65]
+
+component "redistribution" [0.40, 0.60]
+component "taxation" [0.33, 0.67]
+
+component "market" [0.92, 0.67]
+component "trade" [0.88, 0.65]
+component "policy" [0.13, 0.66]
+
+component "Parliament" [0.06, 0.67]
+
+"society" -> "people"
+"Government" -> "society"
+"people" -> "belonging"
+"belonging" -> "society"
+"belonging" -> "fairness"
+
+"trade" -> "market"
+"trade" -> "people"
+"trade" -> "property"
+"property" -> "exclusion"
+"fairness" -> "inclusion"
+"inclusion" -> "redistribution"
+"redistribution" -> "taxation"
+"law" -> "enforcement"
+"law" -> "exclusion"
+"government" -> "taxation"
+"taxation" -> "law"
+"Government" -> "market"
+"people" -> "VALUES"
+"law" -> "policy"
+"Parliament" -> "policy"
+

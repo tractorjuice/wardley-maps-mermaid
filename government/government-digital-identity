@@ -1,0 +1,256 @@
+// General
+// Map is licensed under creative commons share alike.
+// https://creativecommons.org/licenses/by-sa/4.0/
+// As this is a dynamic document, contributors to the map can be found on the github repository - https://github.com/swardley/Research2022
+
+style wardley
+title GOVERNMENT - IDENTITY - NOV 2022
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
+
+// note (enity == AUTHORITY) [0.91, 0.75]
+///actors
+component bad actor [0.97, 0.50] label [-46, -10]
+component government [0.98, 0.61] label [-15, -14]
+component society [0.96, 0.67] label [9, -4]
+// component corporate [0.89, 0.69] label [-51, -12]
+// // component illegal [0.89, 0.64] label [-49, 24]
+// // component residents [0.89, 0.72] label [-6, 22]
+// component citizen [0.89, 0.76] label [20, 8]
+// component robots [0.88, 0.41] label [-65, 1]
+// component river [0.88, 0.59] label [-29, -18]
+component ENTITY [0.90, 0.72] label [0, -11]
+pipeline ENTITY // [0.40, 0.77]
+note (subordinate) [0.89, 0.73]
+note (reliant party) [0.83, 0.72]
+note (issuing party == ENTITY) [0.21, 0.62]
+// note (legal) [0.84, 0.86]
+note (what I am) [0.70, 0.77]
+// pipeline ENTITY [0.40, 0.77]
+
+component claim  [0.79, 0.68] label [10, 3]
+// note (right) [0.78, 0.64]
+
+// component corporations [0.98, 0.54] label [-75, -10]
+// note +competition [0.92, 0.06]
+// note +corporation [0.94, 0.06]
+// note +reputation [0.90, 0.06]
+// note +digital TRUST [0.88, 0.06]
+// note +credentials [0.84, 0.06]
+// note +veified person [0.86, 0.06]
+
+component POWER [0.06, 0.66] label [-39, -10]
+pipeline POWER [0.50, 0.69]
+
+component regulators (authorities) [0.79, 0.40] label [-82, -6]
+
+// note +permission to modify? [0.74, 0.23]
+// To add
+// component community [0.80, 0.03] label [11, 5]
+// component ownership [0.84, 0.03] label [10, 3]
+// component property [0.88, 0.03] label [14, 3]
+// component POWER with [0.92, 0.03] label [9, 3]
+// component POWER to [0.76, 0.03] label [11, 3]
+
+/// Need
+component services [0.86, 0.72] label [8, 9]
+component IDENTITY [0.69, 0.72] label [8, -10]
+pipeline IDENTITY [0.63, 0.75]
+
+// component multifaceted [0.43, 0.46] label [-104, 4]
+// component centralised paper [0.43, 0.58] label [-40, 15]
+// component digital IDENTITY [0.43, 0.74] label [17, -12]
+// component self IDENTITY [0.43, 0.65] label [-27, 23]
+component centralised authority [0.24, 0.75] label [27, -15]
+component decentralised authority [0.24, 0.42] label [-95, -21]
+component credential [0.33, 0.62] label [-65, 19]
+
+// component exclusion [0.35, 0.71] label [11, 1]
+
+component IDENTIFICATION [0.53, 0.73] label [-22, -14]
+pipeline IDENTIFICATION [0.66, 0.77]
+component physical [0.51, 0.67] label [-51, -22]
+component digital [0.51, 0.76] label [19, 1]
+component AUTHORITY [0.26, 0.68] label [-4, -11]
+pipeline AUTHORITY [0.41, 0.76]
+
+component IDENTIFIERS [0.43, 0.61] label [-79, -10]
+pipeline IDENTIFIERS [0.46, 0.71]
+component mutable (name) [0.41, 0.70] label [-1, 22]
+component immutable (facial geometry) [0.41, 0.64] label [4, 13]
+component connectedness (FOAF) [0.41, 0.47] label [-4, 19]
+component people [0.67, 0.74] label [16, -2]
+component physical material [0.67, 0.71] label [-31, 15]
+component digital material [0.67, 0.64] label [-78, -17]
+component collective (company) [0.67, 0.68] label [-40, -46]
+
+component rules [0.14, 0.58] label [5, 10]
+component exception [0.10, 0.55] label [-76, 6]
+
+component over [0.04, 0.63] label [-18, 21]
+component with [0.04, 0.68] label [21, 2]
+// component referential [0.31, 0.17] label [-93, 2]
+// component legitimate [0.15, 0.16] label [-84, 8]
+component symbolic [0.04, 0.51] label [-76, 3]
+// component information [0.57, 0.17] label [-102, 1]
+// component coercive [0.37, 0.16] label [-75, 6]
+// component expert [0.54, 0.16] label [-57, 2]
+component to [0.04, 0.57] label [-10, -19]
+
+// component self signed [0.30, 0.42] label [-96, 4]
+// component government IDENTITY [0.42, 0.17]
+// component governance [0.89, 0.56] label [-45, -15]
+component regulation [0.89, 0.45] label [-84, 5]
+
+// component legitimacy [0.44, 0.11] label [-93, 3]
+// component sovereignty [0.47, 0.11] label [-92, 0]
+component TRUST [0.17, 0.43] label [-47, -5]
+pipeline TRUST [0.36, 0.53]
+
+component BENEVOLENCE [0.15, 0.45] label [-41, 24]
+pipeline BENEVOLENCE
+component CAPABILITY [0.15, 0.52] label [-8, -18]
+pipeline CAPABILITY
+component INTEGRITY [0.15, 0.37] label [-81, 5]
+pipeline INTEGRITY
+
+component situation [0.03, 0.25] label [-81, 2]
+
+component TRANSPORT LAYER [0.45, 0.77] label [13, -4]
+pipeline TRANSPORT LAYER
+
+note (e.g. internet) [0.42, 0.82]
+
+// component credibility [0.17, 0.45] label [-50, 23]
+// pipeline credibility 
+// component reliability [0.17, 0.53] label [-36, 24]
+// pipeline reliability
+// component evidence [0.05, 0.69] label [9, 2]
+
+// component permission to act [0.61, 0.66] label [24, -9]
+// component permission to modify [0.61, 0.62] label [-57, 16]
+
+
+// /// Practice of
+// component biometric [0.07, 0.74] label [12, 5]
+// component storage [0.02, 0.74] label [10, 2]
+
+// /// TRUST
+// component TRUST [0.17, 0.43] label [-41, -7]
+// // component narratives [0.07, 0.39] label [-17, 24]
+// component avoiding harm [0.29, 0.58] label [-29, -13]
+// pipeline avoiding harm [0.41, 0.62]
+// component ethics [0.27, 0.42] label [-60, 1]
+// component privacy [0.27, 0.61] label [-20, 21]
+// component freedom [0.27, 0.51] label [-18, 25]
+
+/// POWER
+//component POWER over [0.67, 0.54] label [-42, 22]
+// component self sovereign [0.75, 0.31] label [-118, 2]
+// component issuing AUTHORITY [0.42, 0.65] label [-35, -45]
+// component consensus alogrithm [0.42, 0.50] label [-37, 11]
+// component delegated [0.42, 0.54] label [-6, 20]
+
+// note credibility reliability safety valued heard [0.54, 0.03]
+// note is the mechanism of issuing different from the IDENTIFIERS? [0.51, 0.03]
+
+
+//links
+// government->citizen
+government->services
+citizen->services
+// services->IDENTITY
+// IDENTITY->biometric
+// IDENTITY->avoiding harm
+avoiding harm->regulation
+governance->avoiding harm
+governance->government
+// avoiding harm->privacy
+// avoiding harm->TRUST
+TRUST->narratives
+biometric->storage
+// avoiding harm->ethics
+narratives->ethics
+// avoiding harm->freedom
+avoiding harm->POWER over
+POWER over->self sovereign
+// citizen->POWER over
+government->POWER over
+corporations->POWER over
+// citizen->self sovereign
+government->society
+// society->citizen
+// citizen->permission to act
+permission to act -> centralised AUTHORITY
+// permission to act->IDENTITY
+// permission to act->avoiding harm
+// corporations->POWER
+// government->POWER
+government->regulation
+citizen->avoiding harm
+self sovereign->freedom
+// TRUST->government
+// privacy->IDENTITY
+POWER->ethics
+freedom->self IDENTITY
+privacy->digital IDENTITY
+privacy->centralised paper
+self sovereign->decentralised authority
+permission to modify->centralised AUTHORITY
+regulation->regulators (authorities)
+regulators (authorities)->permission to act
+privacy->centralised AUTHORITY
+corporations->centralised AUTHORITY
+// IDENTITY->IDENTIFICATION
+IDENTIFICATION->biometric
+// self signed->self sovereign
+POWER->AUTHORITY
+centralised AUTHORITY->issuing AUTHORITY
+consensus alogrithm->decentralised authority
+decentralised authority->self signed
+// IDENTITY->AUTHORITY
+issuing AUTHORITY->exclusion
+// digital->consensus alogrithm
+// digital->self signed
+// AUTHORITY->TRUST
+// POWER->citizen
+// corporate->POWER
+society->ENTITY
+ENTITY->services
+services->services
+services->claims
+claims->IDENTITY
+claims->AUTHORITY
+services->claims of credentials
+claims of credentials->IDENTITY
+claims of credentials->token
+token -> AUTHORITY
+services->claim
+claim->IDENTITY
+claim->credential
+AUTHORITY->credential
+// claim->AUTHORITY
+evidence->IDENTIFICATION
+IDENTIFICATION->credential
+IDENTIFICATION->IDENTIFIERS
+collective (company)->connectedness (FOAF)
+people->IDENTIFICATION
+material->physical
+physical material->physical
+digital material->digital
+regulation->rules
+AUTHORITY->rules
+rules->exception
+corporate->services
+bridge->services
+services->robots
+river->services
+digital->physical material
+digital->collective (company)
+bad actor->rules
+bad actor->TRUST
+//ENTITY->TRUST
+AUTHORITY->TRUST
+bad actor->claim
+TRUST->awareness of context
+TRUST->situation
+TRANSPORT LAYER->digital

@@ -1,0 +1,193 @@
+wardley-beta
+title CONSTRUCTION - supply chain - MARCH, 2023
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "government" [1.00, 0.65]
+component "HOMES" [0.93, 0.73]
+pipeline "HOMES" {
+  component "citizens" [0.71]
+  component "social" [0.71]
+  component "private" [0.75]
+}
+component "mortgage company" [0.99, 0.53]
+
+component "BUILDING INSPECTORS" [0.84, 0.47]
+
+component "EQUIPMENT" [0.73, 0.66]
+component "BUILDING MATERIALS" [0.63, 0.57]
+pipeline "BUILDING MATERIALS" {
+  component "prefab" [0.5]
+  component "circular materials" [0.54]
+}
+
+component "LABOUR" [0.58, 0.66]
+pipeline "LABOUR" {
+  component "skilled" [0.63]
+  component "unskilled" [0.72]
+}
+
+component "certification" [0.40, 0.57]
+
+component "SKILLS" [0.49, 0.62]
+pipeline "SKILLS" {
+  component "project management" [0.46]
+  component "machinery" [0.56]
+  component "trade" [0.68]
+}
+
+"construction" -> "project management"
+"project management" -> "LOGISTICS"
+
+component "test driven development" [0.06, 0.40]
+component "stock" [0.87, 0.71]
+component "market" [0.78, 0.77]
+component "material supply chain" [0.03, 0.70]
+component "FINANCE" [0.81, 0.69]
+
+component "construction" [0.83, 0.64]
+component "MANUFACTURE" [0.19, 0.66]
+pipeline "MANUFACTURE" {
+  component "benchmarks" [0.43]
+  component "factory mode (Inflight)" [0.45]
+  component "standards" [0.58]
+  component "EoL Inspection" [0.71]
+}
+
+component "MATERIALS" [0.12, 0.58]
+pipeline "MATERIALS" {
+  component "recycled" [0.45]
+  component "raw" [0.69]
+}
+
+component "blueprint" [0.79, 0.52]
+component "planning permission" [0.75, 0.41]
+component "quality assurance" [0.92, 0.46]
+
+component "TESTING" [0.34, 0.51]
+pipeline "TESTING" {
+  component "modular" [0.46]
+  component "building codes" [0.59]
+}
+component "REGULATION" [0.71, 0.52]
+
+component "laws" [0.66, 0.68]
+component "land" [0.73, 0.58]
+
+component "waste materials" [0.06, 0.70]
+
+"recycled" -> "waste materials"
+"waste materials" -> "material supply chain"
+
+"government" -> "buyer"
+"buyer" -> "building"
+"purchasor" -> "FINANCE"
+"government" -> "purchasor"
+"purchasor" -> "building"
+"building" -> "EQUIPMENT"
+"EQUIPMENT" -> "building"
+
+"purchasor" -> "construction"
+"construction" -> "EQUIPMENT"
+"construction" -> "BUILDING MATERIALS"
+"mortgage company" -> "assurance"
+"construction" -> "blueprint"
+"construction" -> "maintenance"
+"government" -> "assurance"
+"assurance" -> "planning permission"
+"planning permission" -> "past examples"
+"MANUFACTURE" -> "MATERIALS"
+"maintenance" -> "TESTING"
+"TESTING" -> "past examples"
+
+"certification" -> "training content"
+"training" -> "training content"
+
+"EQUIPMENT_SKILLS" -> "training"
+"EQUIPMENT_SKILLS" -> "certification"
+
+"prefab" -> "process automation"
+"factory mode" -> "process automation"
+"process automation" -> "specialist_EQUIPMENT"
+"specialist_EQUIPMENT" -> "specialist_LABOUR"
+
+"blueprint" -> "blueprint"
+"blueprint" -> "planning permission"
+"planning permission" -> "REGULATION"
+"decomission" -> "REGULATION"
+"planning permission" -> "tradeoffs"
+"tradeoffs" -> "REGULATION"
+"construction" -> "stock"
+
+"stock" -> "market"
+"market" -> "FINANCE"
+"monopoly" -> "market"
+"FINANCE" -> "stock"
+"MATERIALS" -> "material supply chain"
+"raw" -> "sourcing"
+"prefab" -> "modular tests"
+"modular tests" -> "test driven development"
+"modular tests" -> "factory mode"
+"test driven development" -> "factory mode"
+"citizens" -> "government"
+"citizens" -> "HOMES"
+"social" -> "government"
+"stock" -> "HOMES"
+"HOMES" -> "mortgage company"
+"quality assurance" -> "mortgage company"
+"government" -> "quality assurance"
+"quality assurance" -> "BUILDING INSPECTORS"
+"BUILDING INSPECTORS" -> "blueprint"
+"blueprint" -> "BUILDING INSPECTORS"
+"BUILDING INSPECTORS" -> "planning permission"
+"planning permission" -> "BUILDING INSPECTORS"
+"stock" -> "BUILDING INSPECTORS"
+"market" -> "laws"
+"laws" -> "market"
+"REGULATION" -> "laws"
+"government" -> "laws"
+"construction" -> "land"
+"land" -> "laws"
+"LABOUR" -> "construction"
+"EQUIPMENT" -> "EQUIPMENT_SKILLS"
+"skilled" -> "SKILLS"
+"EQUIPMENT" -> "machinery"
+"certification" -> "TESTING"
+"certification" -> "SKILLS"
+"BUILDING MATERIALS" -> "certification"
+"certification" -> "BUILDING MATERIALS"
+"TESTING" -> "standards"
+"standards" -> "planning permission"
+"benchmarks" -> "standards"
+"prefab" -> "modular"
+"raw materialols" -> "material supply chain"
+"factory mode (Inflight)" -> "test driven development"
+component "LOGISTICS" [0.54, 0.52]
+
+component "DISTRIBUTORS" [0.29, 0.64]
+pipeline "DISTRIBUTORS" {
+  component "platform" [0.42]
+  component "integrated" [0.49]
+  component "traditional" [0.71]
+}
+"DISTRIBUTORS" -> "MANUFACTURE"
+component "Supply Chain Awareness" [0.44, 0.25]
+"LOGISTICS" -> "BUILDING MATERIALS"
+"prefab" -> "LOGISTICS"
+"skilled" -> "LOGISTICS"
+"LOGISTICS" -> "DISTRIBUTORS"
+"project management" -> "Supply Chain Awareness"
+"LOGISTICS" -> "Supply Chain Awareness"
+
+"material supply chain" -> "Supply Chain Awareness"
+component "substitutability" [0.55, 0.29]
+"Supply Chain Awareness" -> "substitutability"
+"blueprint" -> "Supply Chain Awareness"
+"blueprint" -> "substitutability"
+component "CNI" [0.80, 0.26]
+"government" -> "CNI"
+"CNI" -> "Supply Chain Awareness"
+"CNI" -> "skilled"
+component "locality" [0.71, 0.29]
+"CNI" -> "locality"
+

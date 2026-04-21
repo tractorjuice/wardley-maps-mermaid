@@ -1,0 +1,29 @@
+wardley-beta
+title primitives
+size [1100, 800]
+
+component "tribe" [1.00, 0.69]
+
+component "Need0" [0.90, 0.13]
+pipeline "Need0" {
+  component "hunter" [0.71]
+}
+
+component "Need1" [0.80, 0.11]
+
+component "Need2" [0.69, 0.30]
+
+component "Need3" [0.58, 0.61]
+
+component "ConstrainedNeed1" [0.35, 0.62]
+
+component "ConstrainedNeed2" [0.24, 0.80]
+
+component "ConstrainedNeed3" [0.10, 0.81]
+
+component "Need4" [0.48, 0.81]
+
+"hunter" -> "telltime0"
+"tribe" -> "hunter"
+"hunter" -> "Need0"
+

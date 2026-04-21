@@ -1,0 +1,70 @@
+wardley-beta
+
+title inequality in education (physical access only)
+size [1100, 800]
+
+component "infrastructure" [0.82, 0.39]
+component "student cohorts" [0.95, 0.63]
+
+component "urbanization" [0.78, 0.73]
+component "low child mortality" [0.90, 0.79]
+
+component "food surplus" [0.71, 0.80]
+
+component "clean indoor cooking" [0.81, 0.77]
+
+component "concrete" [0.25, 0.87]
+component "steel" [0.30, 0.86]
+component "steel recycling" [0.34, 0.58]
+
+note "+++" [0.60, 0.52]
+
+component "fertilizers" [0.56, 0.73]
+component "agricultural practices" [0.64, 0.62]
+component "ammonia" [0.46, 0.81]
+
+component "energy inputs" [0.11, 0.64]
+pipeline "energy inputs" {
+  component "renewables" [0.54]
+  component "nuclear" [0.6]
+  component "Natural Gas" [0.72]
+  component "Coal" [0.82]
+}
+
+component "power" [0.68, 0.74]
+component "grid" [0.31, 0.63]
+
+component "childcare" [0.85, 0.55]
+component "transport" [0.91, 0.64]
+
+"student cohorts" -> "childcare"
+"student cohorts" -> "transport"
+"childcare" -> "infrastructure"
+"low child mortality" -> "childcare"
+"transport" -> "infrastructure"
+"infrastructure" -> "urbanization"
+"infrastructure" -> "concrete"
+"infrastructure" -> "steel"
+"student cohorts" -> "low child mortality"
+"low child mortality" -> "food surplus"
+"food surplus" -> "agricultural practices"
+"agricultural practices" -> "fertilizers"
+"fertilizers" -> "ammonia"
+"ammonia" -> "Natural Gas"
+"concrete" -> "Natural Gas"
+"steel" -> "Coal"
+"urbanization" -> "food surplus"
+"steel" -> "steel recycling"
+"infrastructure" -> "steel recycling"
+"urbanization" -> "power"
+"food surplus" -> "power"
+"power" -> "grid"
+"grid" -> "steel"
+evolve "agricultural practices->agricultural best practices" 0.8
+
+"grid" -> "energy inputs"
+"low child mortality" -> "clean indoor cooking"
+"clean indoor cooking" -> "Coal"
+"clean indoor cooking" -> "Natural Gas"
+"steel recycling" -> "grid"
+

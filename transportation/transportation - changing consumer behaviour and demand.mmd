@@ -1,0 +1,129 @@
+wardley-beta
+
+title transportation - changing consumer behaviour and demand, May 2022
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "government" [0.98, 0.58]
+component "transport public" [0.96, 0.66]
+component "transport operator" [0.91, 0.57]
+note "+open?" [0.11, 0.21]
+component "SHOCKS" [0.75, 0.46]
+pipeline "SHOCKS" {
+  component "cybersecurity" [0.42]
+  component "climate" [0.49]
+}
+component "connectivity" [0.06, 0.67]
+component "A to B" [0.90, 0.63]
+component "regulation" [0.87, 0.40]
+component "public infrastructure" [0.22, 0.66]
+component "sustainability" [0.92, 0.45]
+component "private infrastructure" [0.23, 0.57]
+component "critical national infrastructure" [0.03, 0.32]
+component "SPACE" [0.67, 0.67]
+pipeline "SPACE" {
+  component "physical" [0.31]
+  component "virtual" [0.68]
+}
+component "SAFETY" [0.77, 0.70]
+pipeline "SAFETY" {
+  component "personal safety" [0.62]
+  component "cost" [0.63]
+  component "ease of use" [0.69]
+  component "physical safety" [0.73]
+}
+component "awareness" [0.81, 0.53]
+component "transport information" [0.50, 0.50]
+component "access to service" [0.78, 0.34]
+component "situational services" [0.40, 0.21]
+component "transport integration" [0.37, 0.37]
+component "mobility hubs" [0.55, 0.32]
+component "TRANSPORTATION MODE" [0.40, 0.60]
+pipeline "TRANSPORTATION MODE" {
+  component "shared" [0.49]
+  component "distributed public" [0.64]
+  component "zoom" [0.68]
+  component "private" [0.72]
+}
+component "city planning" [0.17, 0.38]
+component "VEHICLE" [0.14, 0.61]
+pipeline "VEHICLE" {
+  component "train" [0.58]
+  component "car" [0.69]
+}
+evolve "connectivity" 0.8
+evolve "virtual" 0.77
+component "model" [0.11, 0.26]
+
+"supranational" -> "government"
+"bad actor" -> "trust"
+"transport information" -> "TRANSPORTATION MODE"
+"transport information" -> "transport integration"
+"bad actor" -> "cybersecurity"
+"trust" -> "news"
+"SHOCKS" -> "awareness"
+"awareness" -> "news"
+"connectivity" -> "news"
+"transport users" -> "behaviour"
+"behaviour" -> "ease of use"
+"behaviour" -> "awareness"
+"behaviour" -> "access to service"
+"awareness" -> "transport information"
+"transport information" -> "public sources"
+"access to service" -> "mobility hubs"
+"public sources" -> "connection details"
+"transport information" -> "connection details"
+"connection details" -> "transport integration"
+"connection details" -> "TRANSPORTATION MODE"
+"SAFETY" -> "health"
+"health" -> "shared"
+"transport integration" -> "open data"
+"situational services" -> "mobility hubs"
+"mobility hubs" -> "open data"
+"TRANSPORTATION MODE" -> "city planning"
+"TRANSPORTATION MODE" -> "VEHICLE"
+"transport operator" -> "transport information"
+"behaviour" -> "cost"
+"climate" -> "TRANSPORTATION MODE"
+"TRANSPORTATION MODE" -> "cost"
+"situational services" -> "open data"
+"transport integration" -> "city planning"
+"government" -> "transport users"
+"sustainability" -> "government"
+"climate" -> "sustainability"
+"behaviour" -> "A to B"
+"A to B" -> "SPACE"
+"sustainability" -> "regulation"
+"government" -> "distributed public"
+"private" -> "private infrastructure"
+"private infrastructure" -> "critical national infrastructure"
+"public infrastructure" -> "critical national infrastructure"
+"ease of use" -> "transport information"
+"ease of use" -> "TRANSPORTATION MODE"
+"SAFETY" -> "awareness"
+"awareness" -> "sensors"
+"VEHICLE" -> "connectivity"
+"transport information" -> "connectivity"
+"critical national infrastructure" -> "connectivity"
+"regulation" -> "city planning"
+"mobility hubs" -> "city planning"
+"city planning" -> "VEHICLE"
+"public infrastructure" -> "city planning"
+"city planning" -> "model"
+"government" -> "transport people"
+"transport people" -> "behaviour"
+"government" -> "public transport"
+"public transport" -> "behaviour"
+"government" -> "transport public"
+"transport public" -> "behaviour"
+"mobility hubs" -> "transport information"
+"A to B" -> "access to service"
+"A to B" -> "awareness"
+"cost" -> "A to B"
+"A to B" -> "ease of use"
+"transport public" -> "A to B"
+"virtual" -> "zoom"
+"zoom" -> "connectivity"
+"zoom" -> "private infrastructure"
+"TRANSPORTATION MODE" -> "public infrastructure"
+

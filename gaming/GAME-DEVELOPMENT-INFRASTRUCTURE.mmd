@@ -1,0 +1,111 @@
+wardley-beta
+title 2023-11-07 -- Game Development & Infrastructure
+size [1100, 800]
+
+component "Gamer co-creation" [0.98, 0.14]
+component "Modders" [0.98, 0.22]
+component "Indie Game studio" [0.98, 0.27]
+component "Gamers (End user)" [0.98, 0.68]
+component "Game Creator" [0.98, 0.57]
+component "Established game studio" [0.98, 0.81]
+component "Established Tech Companies" [0.98, 0.91]
+
+component "PURPOSE" [0.87, 0.46]
+pipeline "PURPOSE" {
+  component "Passion/Meaning" [0.21]
+  component "Create Addicts" [0.32]
+  component "Profit" [0.74]
+}
+
+component "Mod Framework / Dev Kit" [0.78, 0.18]
+component "Game" [0.74, 0.36]
+
+"Gamer co-creation" -> "Mod Framework / Dev Kit"
+"Modders" -> "Mod Framework / Dev Kit"
+"Gamers (End user)" -> "Game"
+"Established game studio" -> "Profit"
+"Established Tech Companies" -> "Profit"
+"Indie Game studio" -> "Passion/Meaning"
+"Passion/Meaning" -> "Game"
+"Profit" -> "Game"
+"Mod Framework / Dev Kit" -> "Game"
+
+component "INTELLECTUAL PROPERTY" [0.67, 0.67]
+pipeline "INTELLECTUAL PROPERTY" {
+  component "Original IP" [0.61]
+  component "Film/TV/Literary/Franchise" [0.79]
+}
+component "Creator Experience" [0.67, 0.41]
+component "Assets" [0.60, 0.34]
+component "Game Identity / Universe" [0.66, 0.20]
+component "ASSET CREATION TOOL" [0.54, 0.41]
+pipeline "ASSET CREATION TOOL" {
+  component "AI Generated 3D models" [0.11]
+  component "AI Generated Stories" [0.17]
+  component "AI Generated Music" [0.19]
+  component "Data" [0.38]
+  component "Maya 3D" [0.74]
+  component "Music - Sounds" [0.79]
+}
+component "Copyright" [0.54, 0.85]
+component "Dopamine" [0.78, 0.89]
+component "Exclusion" [0.39, 0.94]
+component "Story" [0.52, 0.95]
+component "Immersion" [0.61, 0.85]
+component "Game Engine" [0.43, 0.47]
+component "Version Management Tool" [0.45, 0.38]
+component "CREATION CULTURE" [0.35, 0.56]
+pipeline "CREATION CULTURE" {
+  component "Experimentation" [0.36]
+  component "Experience Feedback" [0.42]
+  component "CI/CD" [0.58]
+  component "Agile" [0.62]
+  component "Kanban" [0.65]
+  component "waterfall" [0.74]
+}
+
+component "AI Driven" [0.54, 0.06]
+
+component "HARDWARE / DEVICE INFRA" [0.17, 0.50]
+pipeline "HARDWARE / DEVICE INFRA" {
+  component "BCI" [0.17]
+  component "FPGA" [0.41]
+  component "VR" [0.43]
+  component "motion sensors" [0.67]
+  component "GPUs" [0.69]
+  component "PCs" [0.74]
+}
+
+"Game Creator" -> "Creator Experience"
+"Game" -> "Assets"
+"Game Identity / Universe" -> "Assets"
+"Mod Framework / Dev Kit" -> "Game Identity / Universe"
+"Game" -> "Game Identity / Universe"
+"Creator Experience" -> "ASSET CREATION TOOL"
+"Assets" -> "ASSET CREATION TOOL"
+"Game" -> "INTELLECTUAL PROPERTY"
+"Profit" -> "Dopamine"
+"Game" -> "Dopamine"
+"INTELLECTUAL PROPERTY" -> "Copyright"
+"Copyright" -> "Exclusion"
+"Indie Game studio" -> "Create Addicts"
+"Established game studio" -> "Create Addicts"
+"Create Addicts" -> "Dopamine"
+"Game" -> "Game Creator"
+"Immersion" -> "Story"
+"Game Identity / Universe" -> "Immersion"
+"ASSET CREATION TOOL" -> "Game Engine"
+"ASSET CREATION TOOL" -> "Version Management Tool"
+"Game Engine" -> "CREATION CULTURE"
+"Game Engine" -> "HARDWARE / DEVICE INFRA"
+"INTELLECTUAL PROPERTY" -> "Story"
+"Game Identity / Universe" -> "Experience Feedback"
+"AI Driven" -> "Game Identity / Universe"
+"AI Driven" -> "Gamer co-creation"
+
+annotations [0.04, 0.02]
+annotation 1,[0.68, 0.76] "Universe, Stories, Assets, Game Framework, Game engine, etc."
+
+evolve "ASSET CREATION TOOL" 0.06
+"Gamer co-creation" -> "ASSET CREATION TOOL"
+

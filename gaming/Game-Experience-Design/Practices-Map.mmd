@@ -1,0 +1,148 @@
+wardley-beta
+title Game & Experience Design
+size [1100, 800]
+
+component "gamers" [0.98, 0.85]
+
+component "designers" [0.98, 0.47]
+component "vision" [0.77, 0.51]
+"designers" -> "vision"
+"gamers" -> "experience"
+
+component "technical platforms" [0.05, 0.84]
+pipeline "technical platforms" {
+  component "custom" [0.37]
+  component "unreal" [0.67]
+  component "unity" [0.68]
+  component "roblox" [0.69]
+}
+component "distribution platforms" [0.19, 0.76]
+pipeline "distribution platforms" {
+  component "webpage" [0.44]
+  component "streaming platforms" [0.88]
+  component "play store, apple store," [0.91]
+}
+component "game engine" [0.12, 0.67]
+component "game mechanics" [0.59, 0.44]
+component "world building" [0.65, 0.47]
+component "story" [0.71, 0.38]
+pipeline "story" {
+  component "artisan" [0.31]
+  component "continous challenge" [0.53]
+  component "progression" [0.62]
+  component "genre" [0.76]
+  component "conveyor belt" [0.79]
+}
+component "monetisation strategy" [0.41, 0.74]
+pipeline "monetisation strategy" {
+  component "pay to win" [0.68]
+  component "ads" [0.71]
+  component "subscription" [0.79]
+}
+component "streamers" [0.97, 0.71]
+component "watchers" [0.96, 0.91]
+"streaming platforms" -> "watchers"
+"streaming platforms" -> "streamers"
+component "target audience" [0.56, 0.43]
+"vision" -> "story"
+"story" -> "target audience"
+component "producers" [0.99, 0.42]
+"producers" -> "monetisation strategy"
+"vision" -> "game mechanics"
+"story" -> "world building"
+"story" -> "game mechanics"
+
+"drama" -> "story"
+"gamers" -> "experience"
+"watchers" -> "drama"
+"watchers" -> "tension"
+"streamers" -> "monetisation strategy"
+component "tension creation" [0.77, 0.24]
+"vision" -> "tension creation"
+"tension creation" -> "story"
+component "coop vs competitive" [0.43, 0.47]
+component "betatesting" [0.49, 0.76]
+"story" -> "betatesting"
+component "data" [0.53, 0.65]
+"betatesting" -> "data"
+component "modders" [0.98, 0.56]
+"modders" -> "game engine"
+component "evaluation" [0.62, 0.76]
+"evaluation" -> "betatesting"
+"story" -> "evaluation"
+"evaluation" -> "data"
+component "build release cycle" [0.63, 0.55]
+"story" -> "build release cycle"
+component "profit" [0.79, 0.69]
+"designers" -> "profit"
+"producers" -> "profit"
+"streamers" -> "profit"
+"profit" -> "monetisation strategy"
+"monetisation strategy" -> "game engine"
+"monetisation strategy" -> "distribution platforms"
+"monetisation strategy" -> "streaming platforms"
+"monetisation strategy" -> "technical platforms"
+component "agency" [0.73, 0.28]
+"drama" -> "agency"
+"dopamine" -> "agency"
+"social" -> "agency"
+"gamers" -> "agency"
+"designers" -> "story"
+"betatesting" -> "target audience"
+component "marketing" [0.31, 0.59]
+pipeline "marketing" {
+  component "growth hacking" [0.34]
+  component "nurturing habits" [0.68]
+  component "crossselling" [0.79]
+}
+"target audience" -> "marketing"
+"game mechanics" -> "coop vs competitive"
+
+"game engine" -> "technical platforms"
+"distribution platforms" -> "technical platforms"
+"monetisation strategy" -> "marketing"
+component "experience" [0.92, 0.32]
+pipeline "experience" {
+  component "status" [0.23]
+  component "mod support" [0.25]
+  component "disconnect from life" [0.27]
+  component "control" [0.32]
+  component "dopamine" [0.38]
+  component "drama" [0.39]
+  component "social" [0.46]
+  component "tension" [0.49]
+}
+"profit" -> "monetisation strategy"
+"coop vs competitive" -> "game engine"
+"coop vs competitive" -> "technical platforms"
+component "empathy" [0.49, 0.24]
+"story" -> "empathy"
+"target audience" -> "empathy"
+"evaluation" -> "empathy"
+component "story building (?)" [0.59, 0.27]
+"story" -> "story building (?)"
+"story building (?)" -> "empathy"
+"drama" -> "tension creation"
+"tension" -> "tension creation"
+"dopamine" -> "tension creation"
+"tension creation" -> "agency"
+"agency" -> "story"
+"agency" -> "game mechanics"
+"profit" -> "evaluation"
+"target audience" -> "data"
+component "in game monitoring (?)" [0.44, 0.24]
+"data" -> "in game monitoring (?)"
+"empathy" -> "in game monitoring (?)"
+component "game context monitoring" [0.43, 0.28]
+"empathy" -> "game context monitoring"
+"designers" -> "game context monitoring"
+"story" -> "game context monitoring"
+"world building" -> "game mechanics"
+"producers" -> "in game monitoring (?)"
+"modders" -> "status"
+"modders" -> "social"
+"modders" -> "mod support"
+"vision" -> "empathy"
+"continous challenge" -> "build release cycle"
+component "developers" [0.99, 0.64]
+

@@ -1,0 +1,186 @@
+// https://onlinewardleymaps.com/#teHWp93XwxdnNpKX3b
+
+title TELECOMS - Space - FEB 2023
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+//Copyright - Creative commmons 4.0 share alike - CC by SA - by the mapping community
+
+style wardley
+
+//additions
+// component device [0.87, 0.09] label [8, 3]
+// component routing [0.76, 0.09] label [8, 2]
+// component peering [0.82, 0.09] label [9, 5]
+// component data access [0.71, 0.09] label [9, 4]
+// component backbone [0.66, 0.09] label [10, 5]
+
+//Basics
+component consumer [0.95, 0.67] label [5, -10]
+component corporation [0.99, 0.53] label [-55, -10]
+// component collaboration [0.86, 0.71] label [2, 14]
+// component learning [0.88, 0.67] label [-66, -6]
+// component social [0.79, 0.61] label [-52, -3]
+// component space [0.64, 0.69] label [11, -7]
+component government [0.99, 0.60] label [-14, -15]
+
+component LEO microsat [0.71, 0.70] label [-2, -18]
+component GEO Sat [0.71, 0.34] label [-69, 4]
+component backhaul [0.50, 0.73] label [10, 5]
+component USER TERMINAL [0.61, 0.72] label [13, 7]
+pipeline USER TERMINAL
+component phased array antennas [0.45, 0.67] label [-75, -36]
+component SATELLITE [0.73, 0.66] label [-72, -11]
+pipeline SATELLITE [0.33, 0.71]
+
+// component maintenance [0.03, 0.64] label [-118, 4]
+//component land [0.04, 0.47] label [-25, 26]
+
+// Social and Space
+// pipeline social [0.42, 0.73]
+// component physical practices [0.77, 0.72] label [28, -4]
+// component virtual practices [0.78, 0.43] label [-75, 4]
+
+pipeline space [0.51, 0.76]
+// component physical space [0.63, 0.52] label [-129, 6]
+// component virtual space [0.62, 0.75] label [22, 4]
+component geography [0.66, 0.39] label [-74, 12]
+
+//Network
+component NETWORK ACCESS [0.90, 0.68] label [8, -7]
+pipeline NETWORK ACCESS [0.46, 0.77]
+
+component physical network [0.88, 0.59] label [-57, -42]
+component broadcast [0.88, 0.76] label [18, 5]
+component TOPOLOGY [0.81, 0.66] label [11, -5]
+component groundstation [0.53, 0.67] label [9, -1]
+
+component SPECTRUM [0.33, 0.68] label [9, -6]
+pipeline SPECTRUM [0.66, 0.71]
+component fleet management [0.20, 0.38] label [-84, -12]
+
+component Optical Sat2Sat Coms [0.56, 0.40] label [-44, 12]
+component PROPULSION [0.59, 0.66] label [-80, -3]
+pipeline PROPULSION [0.58, 0.68]
+
+component Krypton [0.57, 0.67] label [18, 3]
+component Xenon [0.57, 0.59] label [-52, 4]
+
+component power [0.65, 0.72] label [11, 3]
+component COOLING [0.67, 0.60] label [-61, -5]
+pipeline COOLING [0.5, 0.64]
+
+// Network Analysis
+pipeline TOPOLOGY [0.34, 0.74]
+component mobile [0.79, 0.42] label [-22, 23]
+component fibre [0.79, 0.35] label [-56, 3]
+component NTN (non terrestrial Network) [0.79, 0.73] label [28, -41]
+pipeline NTN (non terrestrial Network)
+
+component CONTROL SYSTEMS [0.22, 0.55] label [13, -27]
+pipeline CONTROL SYSTEMS [0.37, 0.7]
+
+component orbit tracking [0.20, 0.69] label [19, 1]
+component debris tracking [0.20, 0.46] label [-34, -43]
+
+component Thermal Electric [0.65, 0.51] label [-78, -17]
+component Radiative [0.65, 0.63] label [17, 4]
+component Cryogens [0.65, 0.61] label [-48, 18]
+
+
+component AUTOMATION [0.11, 0.61] label [14, 2]
+pipeline AUTOMATION
+
+component supply chains [0.02, 0.65] label [11, 1]
+
+// Network components
+component fibre [0.79, 0.35] label [-56, 3]
+// component masts [0.09, 0.69] label [18, 7]
+// component cubesat [0.43, 0.65] label [-39, 16]
+// component wire [0.06, 0.69] label [3, 11]
+component launchers [0.68, 0.72] label [6, -7]
+component mesh network [0.88, 0.47] label [-107, 0]
+
+//SATELLITE
+component beamforming [0.39, 0.67] label [-77, 18]
+component beam_steering [0.42, 0.65] label [-100, 15]
+component ANTENNA [0.47, 0.68] label [4, -7]
+pipeline ANTENNA [0.66, 0.7]
+
+component Ku (12GHz) [0.31, 0.70] label [16, 1]
+component Ka (27GHz) [0.31, 0.68] label [-11, 22]
+component V (40GHz) [0.31, 0.67] label [-81, 3]
+component supply chain awareness [0.05, 0.34] label [-66, -14]
+//links
+fibre->wire
+5G->masts
+masts->geography
+wire->geography
+// SATELLITE->cubesat
+NETWORK ACCESS ->TOPOLOGY
+physical network->fibre
+virtual practices->virtual space
+physical practices->physical space
+physical space->geography
+
+socialisation->social
+collaboration->social
+work->collaboration
+work->socialisation
+consumer->work
+virtual space->NETWORK ACCESS
+social->space
+consumer->status
+status->physical space
+status->physical practices
+physical space->NETWORK ACCESS
+fibre->geography
+5G->geography
+// launchers->SATELLITE
+consumer->government
+government->NETWORK ACCESS
+consumer->learning
+learning->social
+// broadcast->SATELLITE
+broadcast->5G
+corporation->NETWORK ACCESS
+// SATELLITE->groundstation
+masts->maintenance
+wire->maintenance
+masts->land
+consumer->collaboration
+consumer->NETWORK ACCESS
+mobile->geography
+masts->mobile
+broadcast->NTN (non terrestrial Network)
+broadcast->mobile
+NTN (non terrestrial Network)->SATELLITE
+USER TERMINAL->SATELLITE
+groundstation->SATELLITE
+backhaul->groundstation
+LEO microsat->phased array ANTENNAs
+phased array ANTENNAs->groundstation
+LEO microsat->launchers
+LEO microsat->ANTENNA
+ANTENNA->SPECTRUM
+groundstation->ANTENNA
+phased array antennas->beam_steering
+beamforming->phased array antennas
+groundstation->CONTROL SYSTEMS
+SATELLITE->CONTROL SYSTEMS
+LEO microsat->PROPULSION
+PROPULSION->fleet management
+LEO microsat->Sat2Satp
+LEO microsat->Optical Sat2Sat Coms
+power->SATELLITE
+SATELLITE->COOLING
+LEO microsat->automated factory
+LEO microsat->AUTOMATION
+
+AUTOMATION->supply chain awareness
+supply chains->supply chain awareness
+AUTOMATION->supply chains
+component SPACE REGULATION [0.10, 0.39] label [-80, -34]
+pipeline SPACE REGULATION 
+SPECTRUM->SPACE REGULATION
+orbit tracking->SPACE REGULATION
+SPACE REGULATION->SPACE REGULATION

@@ -1,0 +1,149 @@
+wardley-beta
+title TELECOMS - Sovereignty - OCT 2022
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "corporation" [1.00, 0.57]
+
+component "people" [0.94, 0.69]
+component "GOVERNMENT" [1.00, 0.63]
+component "COLLECTIVE" [0.98, 0.67]
+component "perception of success" [0.92, 0.63]
+component "LEGITIMACY" [0.95, 0.60]
+
+component "SOVEREIGNTY" [0.86, 0.53]
+pipeline "SOVEREIGNTY" {
+  component "digital" [0.33]
+  component "economic" [0.44]
+  component "CNI" [0.52]
+  component "political" [0.62]
+  component "cultural" [0.67]
+  component "territorial" [0.72]
+}
+
+component "ACCESS DEVICE" [0.74, 0.70]
+pipeline "ACCESS DEVICE" {
+  component "IoT" [0.56]
+  component "sat phone" [0.6]
+  component "COMMUNICATION" [0.66]
+  component "smartphone" [0.66]
+  component "computer" [0.73]
+  component "radio/TV" [0.76]
+}
+evolve "doves" 0.72
+
+component "ACCESS NETWORK" [0.64, 0.73]
+pipeline "ACCESS NETWORK" {
+  component "Mobile" [0.68]
+  component "Fixed" [0.74]
+}
+component "launch vehicles" [0.31, 0.65]
+component "NETWORK EQPT" [0.30, 0.51]
+
+component "NETWORK TOPOLOGY" [0.39, 0.64]
+pipeline "NETWORK TOPOLOGY" {
+  component "cable" [0.37]
+  component "Towers" [0.45]
+  component "satellite" [0.72]
+}
+evolve "launch vehicles" 0.72
+
+evolve "BACKHAUL/INTERNET CORE" 0.8
+component "THEATRE" [0.21, 0.50]
+pipeline "THEATRE" {
+  component "awareness of supply-chains" [0.35]
+  component "doves" [0.67]
+  component "awareness of land-sea-air-space" [0.7]
+}
+
+component "REALITY" [0.09, 0.49]
+pipeline "REALITY" {
+  component "geography" [0.31]
+  component "information supply chain" [0.59]
+  component "physical supply chain" [0.64]
+  component "space" [0.72]
+}
+component "Compute" [0.19, 0.83]
+component "Power" [0.05, 0.84]
+
+evolve "awareness of supply-chains" 0.50
+evolve "freespace laser" 0.8
+
+component "CONTROL LAYER" [0.55, 0.67]
+pipeline "CONTROL LAYER" {
+  component "quantum network" [0.19]
+  component "NationStateFirewalls" [0.44]
+  component "DNSoverHTTPS" [0.51]
+  component "geofencing" [0.56]
+  component "peering" [0.63]
+  component "SIMS" [0.73]
+}
+evolve "DNSoverHTTPS" 0.70
+
+"GOVERNMENT" -> "COLLECTIVE"
+"COLLECTIVE" -> "people"
+"COLLECTIVE" -> "behaviours"
+"GOVERNMENT" -> "LEGITIMACY"
+"LEGITIMACY" -> "SOVEREIGNTY"
+"people" -> "perception of success"
+"perception of success" -> "CNI"
+"territorial" -> "landscape"
+"digital" -> "supply-chains"
+"economic" -> "supply-chains"
+"physical geography" -> "territorial"
+"awareness of physical geography" -> "territorial"
+"digital" -> "awareness of supply-chains"
+"awareness of supply-chains" -> "economic"
+"awareness of physical geography" -> "geography"
+"supply chain" -> "awareness of supply-chains"
+"satellite" -> "launch vehicles"
+"awareness of land-sea-air-space" -> "territorial"
+"geography" -> "awareness of land-sea-air-space"
+"space" -> "awareness of land-sea-air-space"
+"COMMUNICATION" -> "ACCESS DEVICE"
+"COMMUNICATION" -> "ACCESS NETWORK"
+"ACCESS NETWORK" -> "Compute"
+"Compute" -> "Power"
+"CNI" -> "COMMUNICATION"
+component "Real estate" [0.29, 0.31]
+"mobile" -> "Real estate"
+component "EXPERTISE" [0.27, 0.46]
+"Software" -> "EXPERTISE"
+"CNI" -> "BACKHAUL/INTERNET CORE"
+"BACKHAUL/INTERNET CORE" -> "Real estate"
+"Real estate" -> "geography"
+"NETWORK EQPT" -> "supply chain"
+"NETWORK EQPT" -> "EXPERTISE"
+"BACKHAUL/INTERNET CORE" -> "NETWORK EQPT"
+"awareness of supply-chains" -> "EXPERTISE"
+"EXPERTISE" -> "awareness of land-sea-air-space"
+"information supply chain" -> "NETWORK EQPT"
+"NETWORK EQPT" -> "physical supply chain"
+"information supply chain" -> "awareness of supply-chains"
+"physical supply chain" -> "awareness of supply-chains"
+"people" -> "individual sovereignty"
+"1" -> "P2P"
+"Fixed" -> "P2P"
+"Towers" -> "Real estate"
+"Mobile" -> "broadcast"
+"Mobile" -> "broadcast topology"
+"broadcast topology" -> "P2P"
+"P2P" -> "peering"
+"P2P" -> "NETWORK EQPT"
+"cable" -> "Real estate"
+"FTTP" -> "Real estate"
+"satellite" -> "freespace laser"
+"Fixed" -> "Directionally Constrained Medium"
+"Fixed" -> "Isolated Tunnel"
+"Fixed" -> "Isolated Medium"
+"Shared Medium" -> "Mobile"
+"Fixed" -> "Isolated Medium Topology"
+"NETWORK EQPT" -> "Isolated Medium Topology"
+"Isolated Medium Topology" -> "peering"
+"NETWORK TOPOLOGY" -> "NETWORK EQPT"
+"Mobile" -> "satellite"
+"CONTROL LAYER" -> "NETWORK TOPOLOGY"
+"CONTROL LAYER" -> "ACCESS NETWORK"
+"corporation" -> "SOVEREIGNTY"
+"satellite" -> "doves"
+

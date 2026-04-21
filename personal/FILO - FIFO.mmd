@@ -1,0 +1,20 @@
+wardley-beta
+title FILO   FIFO
+size [1100, 800]
+component "app" [0.88, 0.62]
+component "FIFO" [0.73, 0.73]
+pipeline "FIFO" {
+  component "swardley's SNS" [0.24]
+  component "AWS SNS" [0.71]
+}
+
+evolve "swardley's SNS" 0.42
+"app" -> "AWS SNS"
+
+component "FILO" [0.46, 0.73]
+pipeline "FILO" {
+  component "AWS SNS (FILO)" [0.71]
+}
+
+"AWS SNS (FILO)" -> "app"
+

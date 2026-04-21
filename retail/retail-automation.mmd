@@ -1,0 +1,102 @@
+wardley-beta
+
+title retail - automation
+size [1100, 800]
+
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+note "unused" [0.13, 0.01]
+note "+guidance" [0.10, 0.02]
+note "+upsell" [0.07, 0.02]
+
+component "customer" [0.91, 0.70]
+component "goods" [0.71, 0.65]
+pipeline "goods" {
+  component "luxury" [0.45]
+  component "staples" [0.69]
+}
+component "vision" [0.14, 0.68]
+component "DSC" [0.03, 0.72]
+component "tracking" [0.47, 0.65]
+pipeline "tracking" {
+  component "stock counts" [0.43]
+  component "MAC" [0.61]
+  component "object recognition" [0.68]
+  component "RFID" [0.72]
+}
+component "payment" [0.52, 0.72]
+component "ML" [0.11, 0.74]
+component "identification" [0.86, 0.65]
+component "waste" [0.14, 0.47]
+component "store" [0.23, 0.55]
+pipeline "store" {
+  component "showrooms" [0.34]
+  component "physical" [0.41]
+  component "digital twin" [0.59]
+  component "virtual (e-commerce)" [0.7]
+}
+component "customer journey" [0.80, 0.53]
+pipeline "customer journey" {
+  component "behaviour" [0.42]
+  component "experience" [0.51]
+  component "dwell time" [0.59]
+  component "convenience" [0.63]
+}
+component "checkout" [0.61, 0.67]
+pipeline "checkout" {
+  component "self" [0.57]
+  component "POS" [0.7]
+}
+component "data" [0.07, 0.73]
+component "ethics" [0.90, 0.45]
+pipeline "ethics" {
+  component "exclusion" [0.41]
+  component "privacy" [0.48]
+}
+component "restock" [0.33, 0.55]
+pipeline "restock" {
+  component "human" [0.45]
+  component "inventory" [0.59]
+  component "robot" [0.59]
+}
+component "retailer" [0.96, 0.62]
+component "society" [0.95, 0.68]
+
+"society" -> "customer"
+"society" -> "ethics"
+"customer" -> "goods"
+"retailer" -> "identification"
+"retailer" -> "customer journey"
+"customer journey" -> "goods"
+"goods" -> "checkout"
+"checkout" -> "payment"
+"checkout" -> "tracking"
+"self" -> "object recognition"
+"POS" -> "RFID"
+"POS" -> "stock counts"
+"tracking" -> "inventory"
+"inventory" -> "restock"
+"goods" -> "restock"
+"stock counts" -> "human"
+"restock" -> "store"
+"object recognition" -> "digital twin"
+"stock counts" -> "physical"
+"POS" -> "physical"
+"RFID" -> "virtual (e-commerce)"
+"robot" -> "virtual (e-commerce)"
+"object recognition" -> "vision"
+"vision" -> "ML"
+"ML" -> "data"
+"vision" -> "DSC"
+"restock" -> "waste"
+"customer journey" -> "tracking"
+"customer" -> "convenience"
+"identification" -> "data"
+"privacy" -> "privacy"
+"privacy" -> "identification"
+"customer" -> "identification"
+"exclusion" -> "luxury"
+"payment" -> "exclusion"
+"experience" -> "human"
+"experience" -> "showrooms"
+

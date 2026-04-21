@@ -1,0 +1,144 @@
+wardley-beta
+
+title Expand Digital Finance Inclusion
+size [1100, 800]
+
+evolution concept / genesis -> emerging / custom -> converging / product -> accepted / commodity
+
+component "Chodsani" [1.01, 0.78]
+
+component "options" [0.97, 0.78]
+component "trade" [0.92, 0.78]
+component "equality" [0.93, 0.73]
+component "sustainability" [0.95, 0.66]
+
+component "inclusion" [0.91, 0.69]
+
+component "collective" [0.81, 0.61]
+component "information" [0.87, 0.62]
+
+component "identity" [0.83, 0.67]
+component "trust" [0.81, 0.69]
+component "risk" [0.79, 0.74]
+component "behaviour" [0.72, 0.59]
+
+component "market" [0.87, 0.75]
+component "property" [0.77, 0.77]
+component "exclusion" [0.75, 0.73]
+component "exchange protocol" [0.70, 0.51]
+
+component "authority" [0.60, 0.65]
+component "centralised" [0.58, 0.72]
+component "decentralised" [0.58, 0.50]
+component "redistribution" [0.65, 0.71]
+
+component "provision" [0.49, 0.67]
+pipeline "provision" {
+  component "branches" [0.5]
+  component "banking services" [0.58]
+  component "online payment" [0.7]
+}
+component "landscape" [0.11, 0.36]
+
+component "currency" [0.35, 0.70]
+pipeline "currency" {
+  component "CBDC" [0.39]
+  component "financial infrastructure" [0.51]
+  component "cryptocurrency" [0.62]
+  component "fiat" [0.71]
+  component "mobile device" [0.72]
+}
+
+component "internet access" [0.41, 0.69]
+
+component "network topology" [0.21, 0.67]
+pipeline "network topology" {
+  component "copper" [0.48]
+  component "5G" [0.51]
+  component "consensus Algorithms" [0.59]
+  component "mesh" [0.61]
+  component "satellite" [0.71]
+}
+
+component "energy" [0.06, 0.69]
+pipeline "energy" {
+  component "fossil" [0.41]
+  component "minigrids" [0.44]
+  component "renewable" [0.7]
+  component "computing infrastucture" [0.71]
+}
+note "(generation)" [0.07, 0.73]
+
+"Chodsani" -> "options"
+"equality" -> "inclusion"
+"options" -> "trade"
+"options" -> "sustainability"
+"inclusion" -> "identity"
+"trade" -> "identity"
+"trust" -> "risk"
+"identity" -> "trust"
+"risk" -> "property"
+"trade" -> "market"
+"market" -> "property"
+"property" -> "market"
+"property" -> "exclusion"
+"inclusion" -> "information"
+"inclusion" -> "collective"
+"exclusion" -> "authority"
+"exclusion" -> "behaviour"
+"inclusion" -> "authority"
+"collective" -> "authority"
+"trust" -> "authority"
+"behaviour" -> "values"
+"collective" -> "behaviour"
+"collective" -> "values"
+"market" -> "exchange protocol"
+"market" -> "exchange protocol"
+"exchange protocol" -> "market"
+"exchange protocol" -> "authority"
+"exchange protocol" -> "provision"
+"provision" -> "currency"
+"exchange protocol" -> "currency"
+"provision" -> "network topology"
+"copper" -> "landscape"
+"5G" -> "landscape"
+"decentralised" -> "consensus Algorithms"
+"cryptocurrency" -> "consensus Algorithms"
+"consensus Algorithms" -> "network topology"
+"consensus Algorithms" -> "computing infrastucture"
+"network topology" -> "computing infrastucture"
+"computing infrastucture" -> "energy"
+"micro lending" -> "internet access"
+"online payment" -> "internet access"
+"internet access" -> "network topology"
+"internet access" -> "mobile device"
+"sustainability" -> "renewable"
+"identity" -> "collective"
+"Government" -> "power"
+"power" -> "authority"
+"power" -> "behaviour"
+"power" -> "collective"
+"branches" -> "financial infrastructure"
+"banking services" -> "financial infrastructure"
+"online payment" -> "financial infrastructure"
+"computing infrastucture" -> "reliability"
+"corporate" -> "options"
+"corporate" -> "investment"
+"investment" -> "risk"
+"investment" -> "information"
+"corporate" -> "opportunity"
+"opportunity" -> "information"
+"opportunity" -> "risk"
+"opportunity" -> "power"
+"centralised" -> "CBDC"
+"decentralised" -> "cryptocurrency"
+"exclusion" -> "redistribution"
+"redistribution" -> "centralised"
+"behaviour" -> "gaming"
+"gaming" -> "Other"
+"Other" -> "opportunity"
+"branches" -> "landscape"
+"inclusion" -> "behaviour"
+"options" -> "equality"
+"equality" -> "redistribution"
+

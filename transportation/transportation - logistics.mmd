@@ -1,0 +1,135 @@
+wardley-beta
+title transportation - logistics
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+evolve "1" 0.59
+evolve "2" 0.74
+
+evolve "3" 0.51
+
+component "Public" [0.92, 0.76]
+component "producer" [0.78, 0.71]
+component "good" [0.87, 0.70]
+pipeline "good" {
+  component "local" [0.63]
+  component "mass" [0.72]
+}
+component "topology" [0.38, 0.51]
+pipeline "topology" {
+  component "rural" [0.43]
+  component "city" [0.55]
+}
+component "commmerce" [0.73, 0.76]
+pipeline "commmerce" {
+  component "e-commerce" [0.71]
+  component "shop" [0.79]
+}
+component "vehicle" [0.12, 0.60]
+pipeline "vehicle" {
+  component "autotrucks" [0.43]
+  component "scout" [0.61]
+  component "drones" [0.69]
+  component "trucks" [0.74]
+}
+
+component "awareness of supply chain" [0.73, 0.35]
+
+component "delivery" [0.20, 0.59]
+pipeline "delivery" {
+  component "1" [0.54]
+  component "automated delivery" [0.54]
+  component "skills / HGV" [0.63]
+}
+component "power" [0.04, 0.73]
+pipeline "power" {
+  component "electric" [0.71]
+  component "fossil" [0.75]
+}
+
+evolve "real time stock" 0.5
+
+component "information" [0.46, 0.65]
+pipeline "information" {
+  component "real time stock" [0.43]
+  component "regulation" [0.45]
+  component "telematics" [0.62]
+  component "traffic" [0.72]
+}
+component "data" [0.37, 0.71]
+
+component "storage" [0.30, 0.59]
+pipeline "storage" {
+  component "3" [0.43]
+  component "2" [0.6]
+  component "warehouse" [0.6]
+}
+
+component "society" [0.94, 0.66]
+component "government" [0.95, 0.59]
+
+note "kerbside" [0.24, 0.40]
+
+component "logistics" [0.62, 0.72]
+pipeline "logistics" {
+  component "last mile" [0.61]
+  component "supply chain" [0.63]
+  component "longhaul" [0.65]
+  component "logistic_hubs" [0.75]
+}
+component "sovereignty" [0.90, 0.42]
+pipeline "sovereignty" {
+  component "economy" [0.38]
+  component "CNI" [0.43]
+  component "territorial" [0.49]
+}
+
+"consumer" -> "good"
+"warehouse" -> "community spaces"
+"topology" -> "community spaces"
+"automated delivery" -> "robots"
+"robots" -> "power"
+"government" -> "regulation"
+"government" -> "society"
+"society" -> "consumer"
+"producer" -> "consumer"
+"producer" -> "commmerce"
+"society" -> "behaviour"
+"behaviour" -> "community spaces"
+"society" -> "cohesion"
+"cohesion" -> "community spaces"
+"community spaces" -> "planning"
+"producer" -> "good"
+"commmerce" -> "logistics"
+"logistics" -> "delivery"
+"logistics" -> "topology"
+"consumer" -> "privacy"
+"privacy" -> "data"
+"government" -> "sovereignty"
+"CNI" -> "logistics"
+"territorial" -> "topology"
+"consumer" -> "skills"
+"skills" -> "longhaul"
+"logistics" -> "supply chain"
+"supply chain" -> "awareness of supply chain"
+"commmerce" -> "supply chain"
+"logistic_hubs" -> "storage"
+"storage" -> "delivery"
+"regulation" -> "logistics"
+"vehicle" -> "robots"
+"vehicle" -> "power"
+"delivery" -> "vehicle"
+"skills / HGV" -> "trucks"
+"logistics" -> "information"
+"information" -> "data"
+"economy" -> "awareness of supply chain"
+"territory" -> "territorial"
+"producer" -> "awareness of supply chain"
+"regulation" -> "awareness of supply chain"
+"Public" -> "society"
+"Public" -> "good"
+"real time stock" -> "awareness of supply chain"
+"e-commerce" -> "real time stock"
+"shop" -> "consumer transportation"
+"consumer transportation" -> "last mile"
+

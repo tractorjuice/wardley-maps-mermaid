@@ -1,0 +1,105 @@
+wardley-beta
+
+title telecom - network
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+note "unused" [0.33, 0.02]
+note "+ break wireless into fixed, mobile and unlicensed" [0.30, 0.02]
+note "+ physics reduces free space" [0.27, 0.02]
+note "+ capacity - download / upload" [0.24, 0.02]
+note "+ capacity - fibre - no co channel interference" [0.18, 0.02]
+note "+ capacity - wire - local interference" [0.21, 0.02]
+note "+ capacity - satellite - multi plexing of different signals" [0.15, 0.02]
+note "+ capacity - increasing density / split cells to a network" [0.12, 0.02]
+note "+ need to examine communication" [0.09, 0.02]
+note "+ do we care about protocol? Just mobile network." [0.06, 0.02]
+
+component "consumer" [0.84, 0.66]
+pipeline "consumer" {
+  component "M2M" [0.52]
+  component "government" [0.62]
+  component "B2B" [0.68]
+  component "public" [0.79]
+}
+component "network access" [0.71, 0.72]
+pipeline "network access" {
+  component "satellite" [0.61]
+  component "wireless" [0.7]
+  component "wired" [0.75]
+}
+
+component "net_topology" [0.54, 0.67]
+pipeline "net_topology" {
+  component "wires" [0.39]
+  component "towers" [0.45]
+  component "space" [0.74]
+}
+
+component "ownership" [0.38, 0.71]
+pipeline "ownership" {
+  component "commmunity" [0.58]
+  component "cubesat" [0.64]
+  component "commercial" [0.75]
+}
+
+component "territory" [0.21, 0.40]
+component "price" [0.75, 0.85]
+component "telco" [0.94, 0.75]
+
+component "protocol" [0.22, 0.70]
+pipeline "protocol" {
+  component "5G" [0.67]
+  component "6G" [0.73]
+}
+component "spectrum" [0.12, 0.69]
+pipeline "spectrum" {
+  component "availability" [0.73]
+}
+
+component "physics" [0.04, 0.64]
+component "use cases" [0.76, 0.67]
+
+component "location" [0.69, 0.31]
+component "Starlink" [0.93, 0.51]
+component "launchers" [0.46, 0.64]
+evolve "launchers" 0.8
+evolve "cubesat" 0.8
+component "MTBF" [0.30, 0.63]
+pipeline "MTBF" {
+  component "valued" [0.51]
+  component "cattle" [0.71]
+}
+component "cost" [0.57, 0.85]
+component "identity" [0.68, 0.41]
+
+"telco" -> "network access"
+"network access" -> "net_topology"
+"net_topology" -> "ownership"
+"net_topology" -> "protocol"
+"spectrum" -> "protocol"
+"spectrum" -> "physics"
+"public" -> "price"
+"government" -> "spectrum"
+"wires" -> "territory"
+"towers" -> "territory"
+"government" -> "territory"
+"consumer" -> "use cases"
+"satellite" -> "space"
+"use cases" -> "network access"
+"use cases" -> "location"
+"location" -> "territory"
+"Starlink" -> "satellite"
+"space" -> "launchers"
+"space" -> "cubesat"
+"ownership" -> "MBTF"
+"Starlink" -> "cattle"
+"telco" -> "valued"
+"wires" -> "valued"
+"towers" -> "valued"
+"price" -> "cost"
+"cost" -> "valued"
+"use cases" -> "identity"
+"wireless" -> "towers"
+"wired" -> "wires"
+

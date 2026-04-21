@@ -1,0 +1,71 @@
+wardley-beta
+title Models of Education
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "progression" [0.63, 0.39]
+pipeline "progression" {
+  component "personalised progression over time" [0.19]
+  component "predictable with time" [0.64]
+}
+
+component "conveyor belt" [0.15, 0.64]
+component "individual goals" [0.31, 0.21]
+component "classrooms" [0.66, 0.74]
+component "values/beliefs" [0.89, 0.32]
+pipeline "values/beliefs" {
+  component "embrace uncertain futures" [0.25]
+  component "seek certain futures" [0.79]
+}
+
+evolve "diversity is a superpower" 0.4
+component "approach" [0.80, 0.42]
+pipeline "approach" {
+  component "diversity is a superpower" [0.22]
+  component "loose - flexible approach" [0.33]
+  component "one size fits all approach" [0.79]
+}
+
+component "curriculum" [0.68, 0.68]
+component "learners" [0.99, 0.37]
+component "teachers" [0.99, 0.23]
+component "assessment" [0.49, 0.29]
+pipeline "assessment" {
+  component "feedback based assessment" [0.28]
+  component "assessment as ranking or comparing" [0.47]
+}
+
+component "learning from failure" [0.38, 0.23]
+component "personalised learning" [0.13, 0.15]
+component "successful lifelong learning" [0.52, 0.18]
+evolve "embrace uncertain futures" 0.5
+component "learning culture" [0.22, 0.31]
+pipeline "learning culture" {
+  component "playground" [0.09]
+  component "temple" [0.23]
+  component "market place" [0.38]
+  component "knowledge" [0.59]
+}
+
+component "driven by talent shortage" [0.97, 0.85]
+
+"teachers" -> "values/beliefs"
+"learners" -> "values/beliefs"
+"embrace uncertain futures" -> "diversity is a superpower"
+"seek certain futures" -> "one size fits all approach"
+"diversity is a superpower" -> "feedback based assessment"
+"personalised progression over time" -> "successful lifelong learning"
+"one size fits all approach" -> "curriculum"
+"one size fits all approach" -> "classrooms"
+"one size fits all approach" -> "predictable with time"
+"diversity is a superpower" -> "personalised progression over time"
+"curriculum" -> "assessment as ranking or comparing"
+"feedback based assessment" -> "learning from failure"
+"learning from failure" -> "individual goals"
+"classrooms" -> "learning culture"
+"successful lifelong learning" -> "individual goals"
+"knowledge" -> "conveyor belt"
+"playground" -> "personalised learning"
+"individual goals" -> "playground"
+"progression" -> "assessment"
+

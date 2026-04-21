@@ -1,0 +1,60 @@
+wardley-beta
+title ENGINEERING EDUCATION, SEPT 2023
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "developer" [0.99, 0.73]
+
+component "ENGINEERING SKILLS" [0.86, 0.67]
+pipeline "ENGINEERING SKILLS" {
+  component "AI Enabled Development" [0.36]
+  component "traditional coding" [0.79]
+}
+
+component "TOOLS" [0.70, 0.62]
+pipeline "TOOLS" {
+  component "coversational programming" [0.33]
+  component "codepilot" [0.44]
+  component "Vi" [0.79]
+}
+
+component "EDUCATION" [0.49, 0.69]
+pipeline "EDUCATION" {
+  component "prompt engineering" [0.39]
+  component "python" [0.79]
+}
+
+component "EDUCATIONAL CONTENT" [0.35, 0.54]
+pipeline "EDUCATIONAL CONTENT" {
+  component "AI STUFF THAT HASN'T BEEN WRITTEN" [0.19]
+  component "LEARN PYTHON IN 100 DAYS" [0.79]
+}
+
+component "DELIVERY MECHANISM" [0.19, 0.59]
+pipeline "DELIVERY MECHANISM" {
+  component "AI Tutor" [0.31]
+  component "video courses" [0.79]
+}
+
+evolve "AI Enabled Development" 0.6
+evolve "coversational programming" 0.65
+evolve "prompt engineering" 0.6
+evolve "AI STUFF THAT HASN'T BEEN WRITTEN" 0.6
+evolve "AI Tutor" 0.6
+
+"developer" -> "ENGINEERING SKILLS"
+"TOOLS" -> "ENGINEERING SKILLS"
+"EDUCATION" -> "ENGINEERING SKILLS"
+"AI Enabled Development" -> "coversational programming"
+"AI Enabled Development" -> "codepilot"
+"codepilot" -> "prompt engineering"
+"prompt engineering" -> "coversational programming"
+"Vi" -> "traditional coding"
+"Vi" -> "python"
+"LEARN PYTHON IN 100 DAYS" -> "python"
+"prompt engineering" -> "AI STUFF THAT HASN'T BEEN WRITTEN"
+"EDUCATION" -> "EDUCATIONAL CONTENT"
+"EDUCATION" -> "DELIVERY MECHANISM"
+"prompt engineering" -> "AI Tutor"
+"video courses" -> "LEARN PYTHON IN 100 DAYS"
+

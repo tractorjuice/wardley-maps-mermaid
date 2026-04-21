@@ -1,0 +1,116 @@
+wardley-beta
+title LLM - v 1.0 - 28/02/23
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+component "USERS" [0.98, 0.61]
+component "FUNDERS" [0.97, 0.70]
+component "GOV" [0.97, 0.66]
+
+component "ADJACENT POSSIBLES" [0.93, 0.18]
+component "KNOWLEDGE TASKS" [0.87, 0.63]
+pipeline "KNOWLEDGE TASKS" {
+  component "lobbying" [0.35]
+  component "unstructured data parsing" [0.46]
+  component "generated content" [0.52]
+  component "legal letter" [0.71]
+  component "summarising" [0.79]
+}
+
+component "advertising" [0.49, 0.71]
+component "transfer learning" [0.10, 0.38]
+
+component "GENERATIVE AI" [0.78, 0.62]
+pipeline "GENERATIVE AI" {
+  component "chatGPT" [0.51]
+  component "stable diffusion" [0.55]
+}
+
+component "EVALUATION" [0.35, 0.24]
+pipeline "EVALUATION" {
+  component "quality measure" [0.3]
+}
+
+component "TRAINING DATA" [0.25, 0.48]
+
+component "IP" [0.22, 0.65]
+pipeline "IP" {
+  component "CC by SA" [0.63]
+  component "licensing" [0.66]
+  component "copyright" [0.69]
+}
+component "FOUNDATION MODELS" [0.33, 0.56]
+pipeline "FOUNDATION MODELS" {
+  component "embedding model" [0.52]
+  component "GPT3" [0.58]
+}
+
+component "ENGINEERING PRACTICE" [0.67, 0.40]
+pipeline "ENGINEERING PRACTICE" {
+  component "prompt injection" [0.31]
+  component "retrieval augmented generation" [0.37]
+  component "prompt engineering" [0.42]
+}
+
+component "ARCHITECTURE" [0.13, 0.57]
+pipeline "ARCHITECTURE" {
+  component "fine tuning" [0.51]
+  component "multi-modal" [0.51]
+  component "tokenizer" [0.56]
+  component "CN Network" [0.67]
+}
+component "ECOSYSTEM" [0.45, 0.42]
+pipeline "ECOSYSTEM" {
+  component "Research" [0.31]
+  component "Open Collectives" [0.41]
+  component "foundation" [0.49]
+  component "industrial lab" [0.55]
+  component "captured ecosystem" [0.59]
+}
+
+component "TRUST" [0.79, 0.32]
+pipeline "TRUST" {
+  component "bias" [0.26]
+  component "ethics" [0.29]
+  component "Safety" [0.36]
+}
+component "COMPETITION" [0.65, 0.62]
+pipeline "COMPETITION" {
+  component "collaboration" [0.56]
+  component "conflict" [0.69]
+}
+component "brand" [0.53, 0.68]
+
+component "COMPUTE" [0.07, 0.75]
+pipeline "COMPUTE" {
+  component "FPGA" [0.62]
+  component "Edge TPU" [0.69]
+  component "GPU" [0.76]
+  component "CPU" [0.79]
+}
+
+"KNOWLEDGE TASKS" -> "USERS"
+"USERS" -> "ADJACENT POSSIBLES"
+"ADJACENT POSSIBLES" -> "KNOWLEDGE TASKS"
+"KNOWLEDGE TASKS" -> "GENERATIVE AI"
+"GENERATIVE AI" -> "ENGINEERING PRACTICE"
+"ECOSYSTEM" -> "ENGINEERING PRACTICE"
+"ECOSYSTEM" -> "collaboration"
+"KNOWLEDGE TASKS" -> "TRUST"
+"GENERATIVE AI" -> "COMPETITION"
+"FUNDERS" -> "GENERATIVE AI"
+"TRUST" -> "EVALUATION"
+"conflict" -> "brand"
+"conflict" -> "captured ecosystem"
+"brand" -> "chatGPT"
+"advertising" -> "brand"
+"FUNDERS" -> "conflict"
+"conflict" -> "industrial lab"
+"GENERATIVE AI" -> "FOUNDATION MODELS"
+"ARCHITECTURE" -> "FOUNDATION MODELS"
+"FOUNDATION MODELS" -> "TRAINING DATA"
+"fine tuning" -> "FOUNDATION MODELS"
+"ARCHITECTURE" -> "COMPUTE"
+"transfer learning" -> "fine tuning"
+"TRAINING DATA" -> "IP"
+

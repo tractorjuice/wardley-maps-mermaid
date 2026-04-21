@@ -1,0 +1,106 @@
+wardley-beta
+title defence - supply chain
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "GOVERNMENT" [0.99, 0.67]
+component "SOVEREIGNTY" [0.91, 0.64]
+pipeline "SOVEREIGNTY" {
+  component "technological" [0.44]
+  component "economic" [0.47]
+  component "political" [0.52]
+  component "security" [0.56]
+  component "cultural" [0.62]
+  component "LEGITIMACY" [0.64]
+  component "territorial" [0.7]
+  component "SOCIETY" [0.72]
+}
+component "THEATRE" [0.79, 0.65]
+pipeline "THEATRE" {
+  component "supply chain" [0.39]
+  component "cyber" [0.49]
+  component "CNI" [0.52]
+  component "culture" [0.57]
+  component "sea" [0.67]
+  component "land" [0.69]
+}
+component "COMPETITION" [0.67, 0.62]
+pipeline "COMPETITION" {
+  component "collaboration" [0.52]
+  component "co-operation" [0.61]
+  component "conflict" [0.72]
+}
+component "AWARENESS" [0.31, 0.57]
+pipeline "AWARENESS" {
+  component "supply chain awareness" [0.31]
+  component "digital chain awareness" [0.38]
+  component "cultural awareness" [0.41]
+  component "territorial awareness" [0.72]
+}
+component "CAPABILITY" [0.54, 0.55]
+pipeline "CAPABILITY" {
+  component "influence" [0.51]
+  component "inflitration" [0.59]
+  component "kinetic" [0.67]
+}
+component "VISIBILITY" [0.42, 0.65]
+pipeline "VISIBILITY" {
+  component "covert" [0.53]
+  component "overt" [0.67]
+}
+component "LANDSCAPE" [0.10, 0.55]
+pipeline "LANDSCAPE" {
+  component "geography" [0.41]
+  component "behavioural landscape" [0.44]
+  component "chain" [0.69]
+}
+
+"GOVERNMENT" -> "SOCIETY"
+"GOVERNMENT" -> "LEGITIMACY"
+"LEGITIMACY" -> "SOVEREIGNTY"
+"territorial" -> "land"
+"economic" -> "supply chain"
+"SOVEREIGNTY" -> "THEATRE"
+"sea" -> "territorial"
+"economic" -> "cyber"
+"cyber" -> "technological"
+"cyber" -> "political"
+"SOVEREIGNTY" -> "COMPETITION"
+"competition" -> "awareness"
+"theatre" -> "awareness"
+"supply chain" -> "supply chain awareness"
+"land" -> "territorial awareness"
+"cyber" -> "digital chain awareness"
+"visibility" -> "competition"
+"SOVEREIGNTY" -> "CAPABILITY"
+"covert" -> "inflitration"
+"CAPABILITY" -> "AWARENESS"
+"CNI" -> "supply chain awareness"
+"security" -> "CNI"
+"AWARENESS" -> "LANDSCAPE"
+
+"supply chain awareness" -> "chain"
+"chain" -> "digital chain awareness"
+"chain" -> "manufacturer"
+"manufacturer" -> "supplier"
+"chain" -> "delivery"
+"delivery" -> "manufacturer"
+"capability" -> "chain"
+"logistics" -> "transportation"
+"supply chain awareness" -> "forecasting"
+"digital chain awareness" -> "forecasting"
+"model" -> "simulation"
+"chain" -> "model"
+"culture" -> "political"
+"culture" -> "cultural"
+"territorial awareness" -> "geography"
+"influence" -> "covert"
+"forecasting" -> "chain"
+"culture" -> "cultural awareness"
+"cultural awareness" -> "behavioural landscape"
+"influence" -> "culture"
+"land" -> "kinetic"
+"inflitration" -> "cyber"
+"VISIBILITY" -> "COMPETITION"
+"AWARENESS" -> "VISIBILITY"
+

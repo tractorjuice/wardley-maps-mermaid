@@ -1,0 +1,106 @@
+wardley-beta
+title Sustainability in the perspective of Education and Awareness Sept 6, 2023
+size [1100, 800]
+
+anchor "Producer" [0.98, 0.46]
+anchor "Consumer" [0.98, 0.62]
+
+component "Information" [0.62, 0.54]
+"Society" -> "Information"
+
+component "Media" [0.50, 0.65]
+component "Community" [0.23, 0.29]
+component "Resources" [0.41, 0.35]
+component "Communications" [0.47, 0.65]
+component "Accountability" [0.22, 0.42] (inertia)
+component "Autonomy" [0.24, 0.20]
+component "Feedback" [0.07, 0.35] (inertia)
+component "Behavior" [0.50, 0.38]
+component "Values" [0.72, 0.36] (inertia)
+component "Roadmap" [0.48, 0.81]
+component "Critical Thinking" [0.18, 0.33]
+component "Trust" [0.69, 0.34]
+component "Sharing Lessons Learned" [0.41, 0.60]
+component "Leadership" [0.42, 0.80]
+component "Diversity" [0.13, 0.40]
+component "Coordination" [0.33, 0.54]
+pipeline "Coordination" {
+  component "Self-Organizing" [0.1]
+  component "Funding" [0.3]
+  component "Tools & Equipment" [0.42]
+  component "Governance" [0.77]
+}
+component "Product-Service" [0.90, 0.48]
+pipeline "Product-Service" {
+  component "Waste" [0.21]
+  component "Process" [0.42]
+  component "Renewable Resources" [0.69]
+}
+component "Belief" [0.74, 0.34]
+
+component "Education" [0.56, 0.48]
+pipeline "Education" {
+  component "Elementary" [0.3]
+  component "Evidence" [0.34]
+  component "Higher" [0.62]
+  component "Data" [0.64]
+  component "Continuous" [0.77]
+}
+
+"Producer" -> "Education"
+"Consumer" -> "Education"
+"Information" -> "Education"
+"Communications" -> "Media"
+"Belief" -> "Values"
+"Belief" -> "Trust"
+"Tools & Equipment" -> "Education"
+"Tools & Equipment" -> "Media"
+"Communications" -> "Roadmap"
+"Autonomy" -> "Critical Thinking"
+"Producer" -> "Belief"
+"Consumer" -> "Belief"
+
+"Education" -> "Behavior"
+"Media" -> "Values"
+
+"Information" -> "Media"
+"Product-Service" -> "OWNER"
+"Media" -> "Sharing Lessons Learned"
+"Funding" -> "Resources"
+"Behavior" -> "Resources"
+"Resources" -> "Tools & Equipment"
+
+"Governance" -> "Accountability"
+
+"Leadership" -> "Governance"
+"Leadership" -> "Roadmap"
+"Community" -> "Critical Thinking"
+"Diversity" -> "Critical Thinking"
+"Diversity" -> "Feedback"
+"Society" -> "Behavior"
+"Society" -> "Communications"
+"Society" -> "OWNER"
+"Society" -> "Media"
+"Values" -> "Trust"
+"Producer" -> "Product-Service"
+"Consumer" -> "Product-Service"
+"Values" -> "Behavior"
+"Communications" -> "Resources"
+"Product-Service" -> "Information"
+
+"Self-Organizing" -> "Autonomy"
+"Auonomy" -> "Community"
+
+evolve "Feedback" 0.68
+
+evolve "Critical Thinking" 0.68
+
+component "OWNER" [0.81, 0.49]
+pipeline "OWNER" {
+  component "Private" [0.43]
+  component "Public" [0.73]
+}
+"Public" -> "Coordination"
+"Self-Organizing" -> "Community"
+"Governance" -> "OWNER"
+

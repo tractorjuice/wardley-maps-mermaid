@@ -1,0 +1,157 @@
+wardley-beta
+title manufacturing - AUTOMATION, June 2022
+size [1100, 800]
+
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+note "POV - manufacturer (2022)" [0.95, 0.01]
+note "*recursive to start of map" [0.15, 0.65]
+note "+observability" [0.53, 0.24]
+note "+market" [0.57, 0.07]
+evolve "AI model" 0.6
+component "AI engine" [0.06, 0.71]
+component "good" [0.90, 0.65]
+pipeline "good" {
+  component "future line" [0.3]
+}
+component "Subject Expert" [0.68, 0.41]
+component "standards" [0.30, 0.28]
+component "2" [0.3, 0.28]
+evolve "2" 0.44
+
+"quality" -> "COGS"
+"COGS" -> "actors"
+component "labour" [0.35, 0.65]
+evolve "labour" 0.8
+component "robotics" [0.35, 0.71]
+evolve "good" 0.8
+evolve "facilities" 0.71
+
+component "l" [0.35, 0.65]
+"l" -> "SC process"
+
+component "AI model" [0.11, 0.37]
+component "KMS" [0.68, 0.48]
+
+evolve "SC process" 0.75
+component "automation" [0.44, 0.70]
+
+component "manufacturer" [0.98, 0.57]
+pipeline "manufacturer" {
+  component "digital" [0.41]
+  component "traditional" [0.65]
+}
+"manufacturer" -> "need"
+"manufacturer" -> "continued existence"
+"manufacturer" -> "quality threshold"
+"continued existence" -> "good"
+
+component "SC process" [0.44, 0.65]
+
+component "service" [0.74, 0.70]
+
+"quality service" -> "continued existence"
+"good" -> "service"
+"quality service" -> "service"
+
+"quality service" -> "quality"
+
+"quality service" -> "market need"
+
+"quality" -> "need"
+
+"need" -> "customer [0.91, 0.10]"
+
+component "COGS" [0.59, 0.66]
+
+component "cashflow" [0.68, 0.66]
+
+"continued existence" -> "cashflow"
+
+"cashflow" -> "efficiency"
+
+"cashflow" -> "opex"
+
+"cashflow" -> "subsidies"
+"cashflow" -> "investors"
+"cashflow" -> "debt"
+
+component "opex" [0.58, 0.55]
+
+"COGS" -> "time"
+
+"need" -> "customer"
+
+"quality" -> "process"
+
+"continued existence" -> "sustainability"
+
+"continued existence" -> "need"
+
+"service" -> "need"
+
+"quality" -> "sustainability"
+
+"cashflow" -> "COGS"
+
+"COGS" -> "SC process"
+
+"service" -> "SC process"
+
+"SC process" -> "time"
+
+"process" -> "efficiency"
+
+component "external supply chain" [0.18, 0.69]
+component "awareness of" [0.55, 0.35]
+component "1" [0.55. 0.18]
+evolve "1" 0.35
+
+component "materials" [0.29, 0.68]
+
+"SC process" -> "materials"
+"process" -> "materials"
+"sustainability" -> "materials"
+
+component "facilities" [0.03, 0.43]
+"sustainability" -> "facilities"
+"process" -> "facilities"
+"facilities" -> "actors"
+
+evolve "Subject Expert" 0.54
+
+"opex" -> "facilities"
+
+"sustainability" -> "process"
+
+component "customer" [0.79, 0.72]
+
+component "quality" [0.80, 0.57]
+pipeline "quality" {
+  component "quality threshold" [0.51]
+}
+
+component "sustainability" [0.44, 0.39]
+"manufacturer" -> "good"
+"manufacturer" -> "quality service"
+"manufacturer" -> "cashflow"
+"customer" -> "good"
+"good" -> "quality"
+"customer" -> "service"
+"quality" -> "Subject Expert"
+"labour" -> "labour_future"
+"future line" -> "Subject Expert"
+"robotics" -> "AI"
+"automation" -> "AI"
+"AI" -> "Subject Expert"
+"AI engine" -> "AI"
+"KMS" -> "AI model"
+"AI model" -> "automation"
+"robotics" -> "AI model"
+"AI engine" -> "AI model"
+"materials" -> "external supply chain"
+"1" -> "external supply chain"
+"traditional" -> "1"
+"digital" -> "awareness of"
+"standards" -> "1"
+

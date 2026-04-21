@@ -1,0 +1,110 @@
+wardley-beta
+
+title government - procedures vs principles
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+note "unused" [0.22, 0.03]
+note "+civil-service" [0.15, 0.03]
+note "+consequence" [0.13, 0.03]
+note "+whistle-blowing" [0.11, 0.03]
+note "+technology" [0.09, 0.03]
+note "+marketing" [0.02, 0.03]
+note "+NGO" [0.06, 0.03]
+note "+standards" [0.04, 0.03]
+
+component "lobbying" [0.66, 0.36]
+component "corporate" [0.96, 0.67]
+component "government" [0.90, 0.71]
+component "citizen" [0.80, 0.75]
+component "society" [0.94, 0.62]
+
+component "bad actor" [0.94, 0.44]
+
+component "bad action" [0.88, 0.38]
+pipeline "bad action" {
+  component "exploitation" [0.3]
+  component "corruption" [0.43]
+  component "theft" [0.49]
+}
+
+component "sustainability" [0.90, 0.53]
+
+component "trust" [0.08, 0.68]
+pipeline "trust" {
+  component "competence" [0.56]
+  component "speed" [0.57]
+  component "integrity" [0.66]
+  component "benevolence" [0.72]
+}
+
+component "value" [0.47, 0.36]
+component "authority" [0.75, 0.64]
+component "power" [0.69, 0.64]
+pipeline "power" {
+  component "power over" [0.56]
+  component "power with" [0.68]
+}
+
+component "control" [0.46, 0.62]
+pipeline "control" {
+  component "principle" [0.45]
+  component "rules" [0.75]
+}
+
+component "accountability" [0.28, 0.62]
+pipeline "accountability" {
+  component "legal norms" [0.57]
+  component "economic norms" [0.64]
+  component "social norm" [0.72]
+}
+component "transparency" [0.12, 0.52]
+component "beneficial ownership" [0.05, 0.41]
+component "legislation" [0.53, 0.28]
+
+component "structure" [0.31, 0.36]
+
+component "capital" [0.59, 0.55]
+
+"accountability" -> "speed"
+"accountability" -> "transparency"
+"social norm" -> "trust"
+"beneficial ownership" -> "beneficial ownership"
+"transparency" -> "beneficial ownership"
+"legal norms" -> "rules"
+"social norm" -> "principle"
+"social norm" -> "value"
+"society" -> "value"
+"sustainability" -> "society"
+"society" -> "citizen"
+"government" -> "authority"
+"government" -> "citizen"
+"authority" -> "power"
+"society" -> "power with"
+"power over" -> "rules"
+"power" -> "process"
+"power with" -> "principle"
+"government" -> "legislation"
+"legislation" -> "rules"
+"bad actor" -> "bad action"
+"exploitation" -> "rules"
+"citizen" -> "social norm"
+"government" -> "trust"
+"sustainability" -> "social norm"
+"power" -> "control"
+"control" -> "hierarchy"
+"control" -> "accountability"
+"bad actor" -> "power over"
+"control" -> "structure"
+"sustainability" -> "structure"
+"power" -> "capital"
+"capital" -> "legislation"
+"legislation" -> "structure"
+"rules" -> "lobbying"
+"corporate" -> "lobbying"
+"corporate" -> "capital"
+"lobbying" -> "speed"
+"bad actor" -> "lobbying"
+"citizen" -> "lobbying"
+"bad action" -> "legislation"
+

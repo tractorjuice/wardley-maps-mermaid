@@ -1,0 +1,78 @@
+wardley-beta
+
+title Disruption in the energy industry
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+component "Secure Power System" [0.77, 0.73]
+component "Contingency Analysis" [0.61, 0.73]
+component "Short Circuit Analysis" [0.56, 0.80]
+component "System Models" [0.31, 0.72]
+
+evolve "1" 0.72
+evolve "2" 0.48
+evolve "3" 0.48
+
+component "state" [0.45, 0.59]
+pipeline "state" {
+  component "2" [0.23]
+  component "State Solution" [0.23]
+  component "storage" [0.69]
+  component "State Estimation" [0.74]
+}
+
+component "renewable" [0.81, 0.74]
+component "intermitancy" [0.61, 0.61]
+component "microgrids" [0.57, 0.65]
+component "user" [0.97, 0.69]
+
+component "networks" [0.09, 0.73]
+
+component "measurer" [0.22, 0.63]
+pipeline "measurer" {
+  component "1" [0.38]
+  component "synchrophasor" [0.73]
+  component "SCADA" [0.81]
+}
+
+component "secure power" [0.90, 0.66]
+pipeline "secure power" {
+  component "secure renewable" [0.62]
+}
+
+component "Architectural model" [0.69, 0.67]
+pipeline "Architectural model" {
+  component "3" [0.41]
+  component "chaos engines" [0.41]
+  component "N+1" [0.7]
+}
+
+note "SCADA = 8 Bytes every 1-4 seconds per point (error bar +/- 1-3%)" [0.97, 0.04]
+note "synchrophasor = (30 bytes * 30Hz) * Per Bus, sub 100ms delay" [0.95, 0.04]
+note "+efficiency, visibility of supply chain" [0.46, 0.28]
+
+"State Estimation" -> "System Models"
+"State Estimation" -> "SCADA"
+"Secure Power System" -> "Contingency Analysis"
+"Secure Power System" -> "Short Circuit Analysis"
+
+"State Solution" -> "System Models"
+"State Solution" -> "synchrophasor"
+"Contingency Analysis" -> "state"
+"Short Circuit Analysis" -> "state"
+"Secure Power System" -> "Contingency Analysis"
+"Secure Power System" -> "Short Circuit Analysis"
+"networks" -> "State Solution"
+"variability" -> "renewable"
+"variability" -> "State Solution"
+"intermitancy" -> "State Solution"
+"microgrids" -> "intermitancy"
+"secure renewable" -> "Secure Power System"
+"renewable" -> "secure renewable"
+"user" -> "secure power"
+"secure renewable" -> "intermitancy"
+"microgrids" -> "storage"
+"Secure Power System" -> "Architectural model"
+"chaos engines" -> "2"
+"N+1" -> "State Estimation"
+

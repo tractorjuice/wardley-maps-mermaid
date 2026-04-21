@@ -1,0 +1,37 @@
+wardley-beta
+title Example
+size [1100, 800]
+
+component "tribe" [1.00, 0.69]
+component "hunter" [0.95, 0.71]
+
+component "Need2" [0.82, 0.38]
+pipeline "Need2" {
+  component "Existing2" [0.22]
+}
+
+component "Entrant2" [0.80, 0.46]
+
+component "Need25" [0.71, 0.47]
+pipeline "Need25" {
+  component "Existing25" [0.22]
+  component "Entrant25" [0.45]
+}
+
+component "Need3a" [0.57, 0.68]
+pipeline "Need3a" {
+  component "Existing3a" [0.24]
+  component "Entrant3a" [0.43]
+}
+
+component "Need3b" [0.43, 0.68]
+pipeline "Need3b" {
+  component "Existing3b" [0.23]
+  component "Existing3b2" [0.43]
+  component "Entrant3b" [0.64]
+}
+
+"hunter" -> "telltime0"
+"tribe" -> "hunter"
+"hunter" -> "Need0"
+

@@ -1,0 +1,72 @@
+wardley-beta
+title SUSTAINABILITY, MAR 2021
+size [1100, 800]
+
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "company" [0.95, 0.67]
+component "FINANCIAL SURVIVAL" [0.88, 0.64]
+pipeline "FINANCIAL SURVIVAL" {
+  component "1" [0.31]
+  component "tomorrow" [0.31]
+  component "today" [0.7]
+}
+component "sustainability" [0.64, 0.30]
+component "profit" [0.77, 0.76]
+component "GOODS" [0.74, 0.70]
+component "supply chain" [0.19, 0.73]
+component "awareness of supply chain" [0.56, 0.20]
+component "standards" [0.11, 0.25] (inertia)
+component "cost" [0.03, 0.65]
+component "COMPETITION" [0.56, 0.55]
+pipeline "COMPETITION" {
+  component "collaboration" [0.32]
+  component "conflict" [0.63]
+}
+component "open data" [0.19, 0.38] (inertia)
+component "advantage" [0.43, 0.58]
+component "society" [0.97, 0.59]
+
+component "status" [0.70, 0.63]
+evolve "1" 0.70
+component "2" [0.64, 0.30]
+evolve "2" 0.6
+
+evolve "open data" 0.6
+evolve "standards" 0.61
+
+note "(+counters)" [0.27, 0.66]
+note "(+counters)" [0.25, 0.37]
+note "(+counters)" [0.28, 0.44]
+note "(+counters)" [0.47, 0.44]
+
+evolve "collaboration" 0.5
+
+"company" -> "FINANCIAL SURVIVAL"
+"tomorrow" -> "sustainability"
+"today" -> "profit"
+"profit" -> "GOODS"
+"GOODS" -> "supply chain"
+"sustainability" -> "awareness of supply chain"
+"awareness of supply chain" -> "supply chain"
+"standards" -> "awareness of supply chain"
+"COMPETITION" -> "FINANCIAL SURVIVAL"
+"GOODS" -> "conflict"
+"sustainability" -> "collaboration"
+"open data" -> "awareness of supply chain"
+"standards" -> "cost"
+"awareness of supply chain" -> "cost"
+"profit" -> "cost"
+"conflict" -> "advantage"
+"advantage" -> "open data"
+"advantage" -> "standards"
+
+"collaboration" -> "advantage"
+"GOODS" -> "marketing"
+"marketing" -> "sustainability"
+"marketing" -> "sustainability"
+"GOODS" -> "status"
+"status" -> "sustainability"
+"society" -> "sustainability"
+"awareness of supply chain" -> "collaboration"
+

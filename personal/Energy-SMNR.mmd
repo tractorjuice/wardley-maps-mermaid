@@ -1,0 +1,155 @@
+wardley-beta
+
+title Energy - SMNR
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+note "$1M / km air, 10x underground" [0.28, 0.25]
+note ">110kV" [0.32, 0.39]
+note "<110kV" [0.36, 0.61]
+note "(+ SMNR)" [0.39, 0.52]
+evolve "sustainability" 0.5
+component "awareness" [0.48, 0.31]
+component "supply chain" [0.40, 0.48]
+component "sovereignty" [0.93, 0.59]
+pipeline "sovereignty" {
+  component "economic" [0.45]
+  component "CNI" [0.56]
+  component "government" [0.68]
+  component "society" [0.71]
+  component "territorial" [0.73]
+}
+
+component "user" [0.85, 0.68]
+pipeline "user" {
+  component "tomorrow" [0.42]
+  component "today" [0.72]
+}
+evolve "tomorrow" 0.59
+component "cost" [0.70, 0.63]
+pipeline "cost" {
+  component "externality" [0.42]
+  component "price" [0.69]
+}
+component "capital" [0.06, 0.72]
+component "protection system" [0.04, 0.27]
+
+component "reserve" [0.02, 0.70]
+
+component "distribution" [0.35, 0.63]
+component "landscape" [0.12, 0.25]
+
+component "energy usage" [0.58, 0.65]
+component "energy mix" [0.43, 0.67]
+pipeline "energy mix" {
+  component "renewable" [0.58]
+  component "fossil" [0.73]
+}
+
+note "(grid)" [0.37, 0.42]
+
+component "energy production" [0.13, 0.68]
+pipeline "energy production" {
+  component "nuclear" [0.38]
+  component "solar collectors" [0.41]
+  component "gas" [0.44]
+  component "SMNR" [0.51]
+  component "solar microgen" [0.74]
+}
+component "energy generation" [0.51, 0.65]
+pipeline "energy generation" {
+  component "OTC market" [0.59]
+  component "spotmarket" [0.7]
+  component "public good" [0.78]
+}
+
+component "SMNR supply chain" [0.03, 0.38]
+
+component "storage" [0.25, 0.56]
+pipeline "storage" {
+  component "synthetic" [0.2]
+  component "transmission" [0.41]
+  component "hydrogen" [0.41]
+  component "potential energy" [0.53]
+  component "battery" [0.7]
+}
+component "survivability" [0.77, 0.55]
+pipeline "survivability" {
+  component "sustainability" [0.43]
+  component "security" [0.68]
+}
+component "education" [0.72, 0.35]
+note "(people)" [0.80, 0.73]
+component "CO2" [0.59, 0.38]
+
+component "control" [0.63, 0.64]
+pipeline "control" {
+  component "regulation" [0.6]
+  component "market" [0.69]
+}
+
+evolve "transmission" 0.52
+evolve "distribution" 0.75
+note "+constraint" [0.31, 0.66]
+evolve "awareness" 0.4
+evolve "SMNR" 0.6
+
+"society" -> "consumers"
+"consumers" -> "behaviour"
+"society" -> "survival"
+"mkt_competition" -> "energy usage"
+"education" -> "efficiency"
+"behaviour" -> "expectations"
+"political" -> "expectations"
+"energy usage" -> "energy generation"
+"energy generation" -> "energy mix"
+"renewable" -> "storage"
+"energy mix" -> "energy production"
+"efficiency" -> "energy usage"
+"eco luddites" -> "expectations"
+"expectations" -> "history"
+"generators" -> "energy usage"
+"government" -> "society"
+"government" -> "political"
+"mkt_competition" -> "other"
+"energy generation" -> "supply chain"
+"regulation" -> "awareness"
+"awareness" -> "awareness"
+"supply chain" -> "awareness"
+"encumbents" -> "energy usage"
+"consumers" -> "mkt_competition"
+"providers" -> "mkt_competition"
+"sustainability" -> "education"
+"sustainability" -> "renewable"
+"tomorrow" -> "sustainability"
+"sustainability" -> "externality"
+"user" -> "behaviour"
+"behaviour" -> "cost"
+"price" -> "market"
+"externality" -> "regulation"
+"today" -> "security"
+"security" -> "price"
+"security" -> "energy usage"
+"user" -> "survivability"
+"survivability" -> "cost"
+"survivability" -> "control"
+"energy mix" -> "transmission"
+"transmission" -> "protection system"
+"energy production" -> "capital"
+"capital" -> "transmission"
+"capital" -> "storage"
+"distribution" -> "energy mix"
+"supply chain" -> "transmission"
+"supply chain" -> "distribution"
+"distribution" -> "capital"
+"transmission" -> "landscape"
+"reserve" -> "gas"
+"externality" -> "CO2"
+"CO2" -> "energy mix"
+"today" -> "society"
+"sovereignty" -> "government"
+"CNI" -> "security"
+
+"SMNR" -> "SMNR supply chain"
+"economic" -> "SMNR supply chain"
+

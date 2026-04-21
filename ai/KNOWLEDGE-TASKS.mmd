@@ -1,0 +1,114 @@
+wardley-beta
+title AI, KNOWLEDGE TASKS, JUNE 2023
+size [1100, 800]
+evolution genesis / concept  -> custom / emerging  -> product / converging  -> commodity / accepted
+
+component "USERS" [0.95, 0.59]
+pipeline "USERS" {
+  component "Researcher" [0.51]
+  component "SME" [0.56]
+  component "Enterprises" [0.6]
+  component "Citizens" [0.66]
+  component "Gov" [0.7]
+}
+
+component "JTBD" [0.85, 0.55]
+pipeline "JTBD" {
+  component "proposable" [0.41]
+  component "definable" [0.57]
+  component "executable" [0.69]
+}
+
+component "TRUST" [0.57, 0.32]
+
+component "PRACTICE" [0.77, 0.37]
+pipeline "PRACTICE" {
+  component "strategic" [0.31]
+  component "tactical" [0.44]
+}
+
+component "KNOWLEDGE TASKS" [0.68, 0.51]
+pipeline "KNOWLEDGE TASKS" {
+  component "creating" [0.11]
+  component "designing" [0.22]
+  component "empathizing" [0.3]
+  component "optimizing" [0.37]
+  component "operating" [0.41]
+  component "augmenting" [0.46]
+  component "sensing" [0.54]
+  component "conversing" [0.59]
+  component "automating" [0.65]
+  component "converting" [0.67]
+  component "summarizing" [0.7]
+  component "recommending" [0.76]
+  component "analyzing" [0.82]
+}
+
+component "INTERFACE" [0.57, 0.52]
+
+component "APPLIED MODEL" [0.49, 0.50]
+pipeline "APPLIED MODEL" {
+  component "custom" [0.38]
+  component "fine-tuned" [0.45]
+  component "out-of-the-box" [0.64]
+}
+
+component "FOUNDATIONAL MODEL" [0.12, 0.66]
+pipeline "FOUNDATIONAL MODEL" {
+  component "multimodal" [0.26]
+  component "llm" [0.49]
+  component "neural network" [0.61]
+  component "classical (markov)" [0.71]
+}
+
+component "MLOPS" [0.39, 0.49]
+pipeline "MLOPS" {
+  component "bespoke" [0.31]
+  component "managed service" [0.51]
+  component "automated" [0.57]
+}
+
+component "TRAINING DATA" [0.32, 0.69]
+pipeline "TRAINING DATA" {
+  component "private" [0.36]
+  component "commercial" [0.57]
+  component "public" [0.86]
+}
+
+component "MODEL TRAINING" [0.23, 0.31]
+pipeline "MODEL TRAINING" {
+  component "rlhf" [0.21]
+  component "reinforcement" [0.4]
+  component "(un)supervised" [0.48]
+}
+
+component "COMPUTE" [0.06, 0.75]
+pipeline "COMPUTE" {
+  component "quantum" [0.11]
+  component "fpga" [0.63]
+  component "gpu" [0.72]
+  component "tpu" [0.79]
+}
+
+component "STORAGE" [0.04, 0.88]
+
+"JTBD" -> "PRACTICE"
+"PRACTICE" -> "KNOWLEDGE TASKS"
+"KNOWLEDGE TASKS" -> "APPLIED MODEL"
+"APPLIED MODEL" -> "TRUST"
+
+"APPLIED MODEL" -> "FOUNDATIONAL MODEL"
+"APPLIED MODEL" -> "MLOPS"
+"APPLIED MODEL" -> "TRAINING DATA"
+
+"FOUNDATIONAL MODEL" -> "MODEL TRAINING"
+"FOUNDATIONAL MODEL" -> "COMPUTE"
+"FOUNDATIONAL MODEL" -> "TRUST"
+
+"TRAINING DATA" -> "STORAGE"
+"TRAINING DATA" -> "TRUST"
+
+"MLOPS" -> "MODEL TRAINING"
+"KNOWLEDGE TASKS" -> "INTERFACE"
+"KNOWLEDGE TASKS" -> "TRUST"
+

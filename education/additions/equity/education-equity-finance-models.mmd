@@ -1,0 +1,66 @@
+wardley-beta
+
+title Education Equity - financial models
+size [1100, 800]
+
+component "pupil (root)" [0.95, 0.42]
+component "pupil" [0.79, 0.44]
+component "establishment (root)" [0.96, 0.56]
+component "establishment" [0.78, 0.61]
+component "teacher" [0.96, 0.66]
+
+component "resources" [0.65, 0.43]
+component "time to study" [0.65, 0.55]
+component "pay fees" [0.65, 0.36]
+
+component "financial security" [0.53, 0.56]
+pipeline "financial security" {
+  component "self-provided" [0.22]
+  component "informal support" [0.27]
+  component "informal loans" [0.35]
+  component "formal loans" [0.43]
+  component "bursaries" [0.5]
+  component "state provided" [0.65]
+}
+
+component "state-funding" [0.40, 0.52]
+component "taxation" [0.32, 0.72]
+component "personal economic growth" [0.35, 0.35]
+
+component "training" [0.89, 0.65]
+component "incentivisation" [0.90, 0.72]
+component "pay" [0.81, 0.78]
+component "status" [0.81, 0.73]
+
+component "funding model" [0.73, 0.68]
+pipeline "funding model" {
+  component "philanthropy" [0.37]
+  component "demographic-based" [0.63]
+  component "per-pupil" [0.79]
+}
+
+"pupil (root)" -> "pupil"
+"pupil" -> "resources"
+"pupil" -> "time to study"
+"pupil" -> "pay fees"
+"time to study" -> "financial security"
+"resources" -> "financial security"
+"pay fees" -> "financial security"
+
+"state provided" -> "taxation"
+"bursaries" -> "state-funding"
+"state-funding" -> "taxation"
+"formal loans" -> "personal economic growth"
+"informal loans" -> "personal economic growth"
+"informal support" -> "personal economic growth"
+
+"teacher" -> "training"
+"teacher" -> "incentivisation"
+"incentivisation" -> "pay"
+"incentivisation" -> "status"
+"training" -> "pupil"
+"training" -> "establishment"
+
+"establishment (root)" -> "establishment"
+"establishment" -> "funding model"
+

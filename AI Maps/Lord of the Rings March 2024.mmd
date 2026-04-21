@@ -1,0 +1,62 @@
+wardley-beta
+title The Lord of the Rings - March 2024
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "FANTASY_GENRE" [0.89, 0.71]
+component "TOLKIEN_MYTHOLOGY" [0.76, 0.71]
+component "PUBLISHING_INDUSTRY" [0.93, 0.59]
+
+component "THE_LORD_OF_THE_RINGS_BOOK" [0.84, 0.51]
+component "STORY_AND_PLOT" [0.54, 0.77]
+component "CHARACTERS" [0.57, 0.66]
+component "WORLDBUILDING" [0.68, 0.57]
+component "THEMES_AND_SYMBOLISM" [0.30, 0.51]
+component "WRITING_STYLE" [0.67, 0.45]
+
+component "Hero_Journey" [0.48, 0.75]
+component "Epic_Quest" [0.48, 0.79]
+component "Friendship" [0.43, 0.63]
+component "Frodo" [0.52, 0.68]
+component "Gandalf" [0.44, 0.66]
+component "Aragorn" [0.52, 0.63]
+component "Middle_Earth" [0.57, 0.59]
+component "Detailed_History" [0.49, 0.56]
+component "Maps" [0.63, 0.55]
+component "Good_vs_Evil" [0.17, 0.52]
+component "Power_Corruption" [0.21, 0.56]
+component "Heroism" [0.22, 0.49]
+component "Prose" [0.46, 0.41]
+component "Pacing" [0.57, 0.40]
+component "Dialogue" [0.62, 0.41]
+
+"PUBLISHING_INDUSTRY" -> "THE_LORD_OF_THE_RINGS_BOOK"
+"FANTASY_GENRE" -> "THE_LORD_OF_THE_RINGS_BOOK"
+"TOLKIEN_MYTHOLOGY" -> "THE_LORD_OF_THE_RINGS_BOOK"
+"THE_LORD_OF_THE_RINGS_BOOK" -> "STORY_AND_PLOT"
+"THE_LORD_OF_THE_RINGS_BOOK" -> "CHARACTERS"
+"THE_LORD_OF_THE_RINGS_BOOK" -> "WORLDBUILDING"
+"THE_LORD_OF_THE_RINGS_BOOK" -> "THEMES_AND_SYMBOLISM"
+"THE_LORD_OF_THE_RINGS_BOOK" -> "WRITING_STYLE"
+"STORY_AND_PLOT" -> "Hero_Journey"
+"STORY_AND_PLOT" -> "Epic_Quest"
+"CHARACTERS" -> "Friendship"
+"CHARACTERS" -> "Frodo"
+"CHARACTERS" -> "Gandalf"
+"CHARACTERS" -> "Aragorn"
+"WORLDBUILDING" -> "Middle_Earth"
+"WORLDBUILDING" -> "Detailed_History"
+"WORLDBUILDING" -> "Maps"
+"THEMES_AND_SYMBOLISM" -> "Good_vs_Evil"
+"THEMES_AND_SYMBOLISM" -> "Power_Corruption"
+"THEMES_AND_SYMBOLISM" -> "Heroism"
+"WRITING_STYLE" -> "Prose"
+"WRITING_STYLE" -> "Pacing"
+"WRITING_STYLE" -> "Dialogue"
+"TOLKIEN_MYTHOLOGY" -> "WORLDBUILDING"
+"TOLKIEN_MYTHOLOGY" -> "STORY_AND_PLOT"
+"FANTASY_GENRE" -> "WORLDBUILDING"
+"CHARACTERS" -> "STORY_AND_PLOT"
+"WORLDBUILDING" -> "CHARACTERS"
+"Detailed_History" -> "THEMES_AND_SYMBOLISM"
+

@@ -1,0 +1,53 @@
+wardley-beta
+
+title Example of Perspectives, August 2023
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
+
+component "Electricity company" [0.96, 0.64]
+component "Electricity generation company" [0.37, 0.59]
+component "Software Vendor" [0.64, 0.53]
+
+component "consumer" [0.88, 0.74]
+component "kettle" [0.81, 0.73]
+component "POWER" [0.71, 0.74]
+pipeline "POWER" {
+  component "gas" [0.71]
+  component "electricity" [0.75]
+}
+
+component "DISTRIBUTION" [0.53, 0.67]
+pipeline "DISTRIBUTION" {
+  component "Automation Generation Control systems" [0.39]
+  component "Substation Transformers" [0.61]
+  component "Pylons" [0.7]
+  component "Standard wires" [0.73]
+}
+
+component "ELECTRICITY MARKET" [0.38, 0.70]
+
+component "GENERATION" [0.28, 0.67]
+pipeline "GENERATION" {
+  component "CHP Gas plant" [0.4]
+  component "wind farm" [0.7]
+}
+
+component "wind turbines" [0.11, 0.70]
+component "land" [0.10, 0.39]
+
+"electricity" -> "DISTRIBUTION"
+
+"POWER" -> "kettle"
+"kettle" -> "consumer"
+"DISTRIBUTION" -> "electricity market"
+"ELECTRICITY MARKET" -> "DISTRIBUTION"
+"ELECTRICITY MARKET" -> "GENERATION"
+"wind farm" -> "land"
+"wind farm" -> "wind turbines"
+"GENERATION" -> "electricity generation company"
+
+"Software Vendor" -> "Automation Generation Control systems"
+"Electricity company" -> "consumer"
+"DISTRIBUTION" -> "Electricity company"
+"GENERATION" -> "Electricity generation company"
+

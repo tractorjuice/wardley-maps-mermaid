@@ -1,0 +1,124 @@
+wardley-beta
+
+title Finance- crypto
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
+note "unused" [0.21, 0.04]
+component "transparency" [0.34, 0.56]
+component "taxation" [0.84, 0.75]
+component "trade" [0.78, 0.68]
+component "sovereignty" [0.94, 0.52]
+component "wallet" [0.50, 0.61]
+pipeline "wallet" {
+  component "crypto wallet" [0.46]
+  component "physical wallet" [0.68]
+}
+component "security" [0.13, 0.04]
+component "liquidity" [0.77, 0.42]
+component "foreign exchange" [0.48, 0.34]
+component "government" [0.96, 0.64]
+component "bank" [0.57, 0.80]
+component "settlement" [0.54, 0.33]
+component "citizen" [0.94, 0.69]
+component "financial options" [0.86, 0.58]
+component "store of value" [0.60, 0.73]
+component "property (physical)" [0.72, 0.74]
+component "exchange protocol" [0.64, 0.48]
+component "sustainability" [0.88, 0.35]
+component "education" [0.63, 0.54]
+component "consensus algorithm" [0.14, 0.57]
+pipeline "consensus algorithm" {
+  component "proof of stake" [0.51]
+  component "proof of work" [0.59]
+}
+component "control" [0.41, 0.63]
+pipeline "control" {
+  component "decentralised" [0.47]
+  component "centralised" [0.67]
+  component "assurance" [0.7]
+}
+component "financial token" [0.28, 0.66]
+pipeline "financial token" {
+  component "CDBC" [0.46]
+  component "crypto" [0.59]
+  component "fiat" [0.68]
+}
+component "access" [0.71, 0.54]
+component "power" [0.05, 0.71]
+pipeline "power" {
+  component "fossil power" [0.4]
+  component "renewable" [0.68]
+  component "compute" [0.71]
+}
+component "redistribution" [0.61, 0.37]
+component "wealth" [0.78, 0.57]
+component "identity" [0.62, 0.19]
+component "equality" [0.84, 0.44]
+component "legal system" [0.65, 0.79]
+"citizen" -> "financial options"
+"citizen" -> "sustainability"
+"government" -> "sustainability"
+"wealth" -> "financial options"
+"redistribution" -> "welath"
+"liquidity" -> "financial options"
+"trade" -> "financial options"
+"wealth" -> "redistribution"
+"financial options" -> "equality"
+"wealth" -> "property (physical)"
+"wealth" -> "store of value"
+"trade" -> "property (physical)"
+"property (physical)" -> "legal system"
+"exclusion" -> "property (physical)"
+"store of value" -> "financial token"
+"equality" -> "redistribution"
+"redistribution" -> "exclusion"
+"government" -> "citizen"
+"trade" -> "identity"
+"trade" -> "exchange protocol"
+"sovereignty" -> "taxation"
+"sovereignty" -> "monetary policy"
+"sovereignty" -> "fiscal policy"
+"fiscal policy" -> "legal system"
+"monetary policy" -> "legal system"
+"equality" -> "access"
+"identity" -> "bank"
+"liquidity" -> "bank"
+"liquidity" -> "P2P"
+"exchange protocol" -> "financial token"
+"bank" -> "trade"
+"store of value" -> "bank"
+"centralised" -> "redistribution"
+"exchange protocol" -> "control"
+"centralised" -> "fiat"
+"centralised" -> "CDBC"
+"crypto" -> "decentralised"
+"crypto" -> "consensus algorithm"
+"consensus algorithm" -> "compute"
+"compute" -> "power"
+"CDBC" -> "compute"
+"access" -> "exchange protocol"
+"access" -> "education"
+"equality" -> "taxation"
+"sanctions" -> "exchange protocol"
+"exchange protocol" -> "settlement"
+"sustainability" -> "renewable"
+"exchange protocol" -> "foreign exchange"
+"identity" -> "wallet"
+"store of value" -> "wallet"
+"crypto wallet" -> "crypto"
+"crypto wallet" -> "CDBC"
+"wallet" -> "assurance"
+"government" -> "assurance"
+"assurance" -> "centralised"
+"government" -> "taxation"
+"taxation" -> "transparency"
+"transparency" -> "CDBC"
+"transparency" -> "fiat"
+"settlement" -> "transparency"
+"government" -> "sovereignty"
+"sovereignty" -> "sanctions"
+"sovereignty" -> "exchange protocol"
+component "fiscal policy" [0.72, 0.85]
+component "monetary policy" [0.77, 0.81]
+component "P2P" [0.58, 0.63]
+

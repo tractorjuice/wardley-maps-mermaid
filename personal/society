@@ -1,0 +1,55 @@
+title society. AUGUST 2022
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+style wardley
+
+component Government [0.97, 0.68] label [-33, -13]
+component society [0.92, 0.71] label [13, -1]
+component people [0.83, 0.74] label [11, 7]
+component belonging [0.76, 0.56] label [-83, 4]
+
+component VALUES [0.66, 0.61] label [-50, -11]
+
+pipeline VALUES
+{
+component property [0.72] label [28, 17]
+component fairness [0.70] label [-58, 36]
+component other [0.40] label [-55, 15]
+}
+
+component inclusion [0.50, 0.63] label [-89, 4]
+component exclusion [0.51, 0.72] label [21, 6]
+
+component law [0.27, 0.72] label [13, 2]
+component enforcement [0.20, 0.65] label [-97, 1]
+
+component redistribution [0.40, 0.60] label [-118, 3]
+component taxation [0.33, 0.67] label [-56, 17]
+
+component market [0.92, 0.67] label [-52, 2]
+component trade [0.88, 0.65] label [-48, 5]
+component policy [0.13, 0.66] label [-59, 3]
+
+component Parliament [0.06, 0.67] label [-13, 24]
+
+//links
+society->people
+Government->society
+people->belonging
+belonging->society
+belonging->fairness
+
+trade->market
+trade->people
+trade->property
+property->exclusion
+fairness->inclusion
+inclusion->redistribution
+redistribution->taxation
+law->enforcement
+law->exclusion
+government->taxation
+taxation->law
+Government->market
+people->VALUES
+law->policy
+Parliament->policy

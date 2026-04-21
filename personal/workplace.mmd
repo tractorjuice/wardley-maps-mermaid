@@ -1,0 +1,93 @@
+wardley-beta
+
+title workplace
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+component "workplace" [0.21, 0.59]
+pipeline "workplace" {
+  component "physical" [0.47]
+  component "virtual" [0.71]
+}
+
+component "workplace_practices" [0.35, 0.62]
+pipeline "workplace_practices" {
+  component "virtual_practices" [0.37]
+  component "physical_practices" [0.69]
+}
+
+component "behaviours" [0.76, 0.57]
+pipeline "behaviours" {
+  component "gift" [0.26]
+  component "status" [0.44]
+  component "knowledge management" [0.55]
+  component "socialisation" [0.64]
+}
+
+component "trust" [0.89, 0.55]
+pipeline "trust" {
+  component "benevolence" [0.44]
+  component "integrity" [0.52]
+  component "competency" [0.59]
+}
+
+component "sales" [0.74, 0.74]
+component "devices" [0.02, 0.66]
+
+component "office" [0.05, 0.71]
+
+component "DAO" [0.91, 0.29]
+
+component "workplace services" [0.48, 0.69]
+pipeline "workplace services" {
+  component "discord" [0.54]
+  component "support" [0.68]
+  component "intelligent collaboration" [0.71]
+  component "device management" [0.75]
+  component "asset management" [0.77]
+}
+
+component "Workplace Business" [0.96, 0.69]
+component "Customers" [0.91, 0.77]
+
+component "competition" [0.59, 0.55]
+pipeline "competition" {
+  component "collaboration" [0.47]
+  component "co-operation" [0.57]
+  component "conflict" [0.62]
+}
+
+"Business" -> "Customers"
+"Business" -> "trust"
+"Customers" -> "behaviours"
+"Business" -> "Uptime platform"
+"Uptime platform" -> "digital support"
+"Uptime platform" -> "intelligent collaboration"
+"Uptime platform" -> "device management"
+"Uptime platform" -> "asset management"
+"behaviours" -> "workplace services"
+"physical_practices" -> "physical"
+"virtual_practices" -> "virtual"
+"office" -> "physical"
+"devices" -> "virtual"
+"device management" -> "devices"
+"competency" -> "physical_practices"
+"workplace_practices" -> "behaviours"
+"status" -> "office"
+"knowledge management" -> "competition"
+"virtual_practices" -> "collaboration"
+"physical_practices" -> "conflict"
+"Workplace Business" -> "Customers"
+"Workplace Business" -> "DAO"
+"DAO" -> "knowledge management"
+"DAO" -> "collaboration"
+"DAO" -> "virtual_practices"
+"Workplace Business" -> "trust"
+"gift" -> "DAO"
+"discord" -> "gift"
+"Workplace Business" -> "sales"
+"sales" -> "asset management"
+"sales" -> "device management"
+"sales" -> "intelligent collaboration"
+"sales" -> "support"
+

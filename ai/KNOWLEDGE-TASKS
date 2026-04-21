@@ -1,0 +1,122 @@
+title AI, KNOWLEDGE TASKS, JUNE 2023
+evolution genesis / concept  -> custom / emerging  -> product / converging  -> commodity / accepted
+style wardley
+//Copyright - Creative commmons 4.0 share alike - CC by SA - by the mapping community
+//ORIGINAL Contributors
+// Kurt Sterzl <ksterzl@gmail.com>
+// Xavier de Lecaros-Aquise <xavdla@gmail.com>
+// Bill Murray <bmurray25@dxc.com>
+// Josh Schairbaum <josh.schairbaum@ttecdigital.com>
+// Arttu Laitinen <laitinen.arttu@gmail.com>
+// MODIFIED BY @swardley
+
+//users
+component USERS [0.95, 0.59] label [-4, -10]
+pipeline USERS [0.50, 0.71]
+component Citizens [0.93, 0.66] label [-10, -21]
+component Gov [0.93, 0.70] label [20, 4]
+component Enterprises [0.93, 0.60] label [-18, 24]
+component SME [0.93, 0.56] label [-17, -18]
+component Researcher [0.93, 0.51] label [-91, 2]
+
+//needs
+component JTBD [0.85, 0.55] label [-35, -8]
+pipeline JTBD [0.40, 0.70]
+component proposable [0.83, 0.41] label [-90, 2]
+component definable [0.83, 0.57] label [-35, 24]
+component executable [0.83, 0.69] label [18, 3]
+
+component TRUST [0.57, 0.32] label [-46, 4]
+pipeline TRUST //[0.25, 0.45]
+
+component PRACTICE [0.77, 0.37] label [-62, -8]
+pipeline PRACTICE [0.30, 0.45]
+component tactical [0.75, 0.44] label [19, 3]
+component strategic [0.75, 0.31] label [-85, 4]
+
+component KNOWLEDGE TASKS [0.68, 0.51] label [-4, -30] // inertia
+pipeline KNOWLEDGE TASKS [0.1, 0.83]
+component empathizing [0.66, 0.30] label [-59, 23]
+component creating [0.66, 0.11] label [-82, -1]
+component designing [0.66, 0.22] label [-60, -21]
+component operating [0.66, 0.41] label [-54, 22] ?
+component optimizing [0.66, 0.37] label [-65, -20]
+component augmenting [0.66, 0.46] label [-55, -19]
+component sensing [0.66, 0.54] label [-24, 24]
+component conversing [0.66, 0.59] label [-19, 22] //CONVERTING?
+component converting [0.66, 0.67] label [-29, 23]
+component summarizing [0.66, 0.70] label [-13, -20]
+component automating [0.66, 0.65] label [-50, -21]
+component recommending [0.66, 0.76] label [-19, 21]
+component analyzing [0.66, 0.82] label [19, 3]
+
+component INTERFACE [0.57, 0.52] label [9, 4]
+pipeline INTERFACE
+//  pipeline INTERFACE [0.2, 0.62]
+//  component intent-erface [0.56, 0.21] label [-20, -20]
+//  component SaaS-Embedded [0.56, 0.32] label [-20, -20]
+//  component chatbot [0.56, 0.42] label [-20, -23]
+//  component API [0.56, 0.57] label [-10, -20]
+//  component conversational [0.56, 0.61] label [20, 0]
+
+component APPLIED MODEL [0.49, 0.50] label [5, -10]
+pipeline APPLIED MODEL [0.37, 0.65]
+component custom [0.47, 0.38] label [-64, 5]
+component fine-tuned [0.47, 0.45] label [-41, 22]
+component out-of-the-box [0.47, 0.64] label [18, 2]
+
+component FOUNDATIONAL MODEL [0.12, 0.66] label [-1, -34]
+pipeline FOUNDATIONAL MODEL [0.25, 0.72]
+component multimodal [0.10, 0.26] label [-91, -1]
+component llm [0.10, 0.49] label [-11, -22]
+component neural network [0.10, 0.61] label [-97, -18]
+component classical (markov) [0.10, 0.71] label [19, -30]
+
+component MLOPS [0.39, 0.49] label [-39, -11]
+pipeline MLOPS [0.3, 0.58]
+component bespoke [0.37, 0.31] label [-68, 0]
+component automated [0.37, 0.57] label [6, 21]
+component managed service [0.37, 0.51] label [-5, 8]
+
+component TRAINING DATA [0.32, 0.69]
+pipeline TRAINING DATA [0.35, 0.87]
+component private [0.30, 0.36] label [-73, 1]
+component commercial [0.30, 0.57] label [-33, 23]
+component public [0.30, 0.86] label [21, 2]
+
+component MODEL TRAINING [0.23, 0.31] label [-94, -12]
+pipeline MODEL TRAINING [0.2, 0.49]
+component reinforcement [0.21, 0.40] label [-56, 25]
+component (un)supervised [0.21, 0.48] label [20, 2]
+component rlhf [0.21, 0.21] label [-51, 1]
+
+component COMPUTE [0.06, 0.75] label [9, -6]
+pipeline COMPUTE [0.10, 0.80]
+component quantum [0.04, 0.11] label [-72, 3]
+component fpga [0.04, 0.63] label [-14, 19]
+component gpu [0.04, 0.72] label [-13, 22]
+component tpu [0.04, 0.79] label [17, 1]
+
+component STORAGE [0.04, 0.88]
+pipeline STORAGE
+
+//flows
+JTBD->PRACTICE
+PRACTICE->KNOWLEDGE TASKS
+KNOWLEDGE TASKS->APPLIED MODEL
+APPLIED MODEL->TRUST
+
+APPLIED MODEL->FOUNDATIONAL MODEL
+APPLIED MODEL->MLOPS
+APPLIED MODEL->TRAINING DATA
+
+FOUNDATIONAL MODEL->MODEL TRAINING
+FOUNDATIONAL MODEL->COMPUTE
+FOUNDATIONAL MODEL->TRUST
+
+TRAINING DATA->STORAGE
+TRAINING DATA->TRUST
+
+MLOPS->MODEL TRAINING
+KNOWLEDGE TASKS->INTERFACE
+KNOWLEDGE TASKS->TRUST

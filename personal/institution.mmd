@@ -1,0 +1,90 @@
+wardley-beta
+title institutions
+size [1100, 800]
+evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
+
+component "supranational government" [0.97, 0.61]
+
+component "Government" [0.91, 0.63]
+
+component "collective" [0.80, 0.68]
+pipeline "collective" {
+  component "corporation" [0.64]
+  component "society" [0.72]
+}
+component "people" [0.70, 0.72]
+component "legitimacy" [0.88, 0.58]
+
+component "trust" [0.82, 0.44]
+pipeline "trust" {
+  component "benevolence" [0.35]
+  component "integrity" [0.4]
+  component "competency" [0.46]
+}
+
+component "sovereignty" [0.63, 0.51]
+pipeline "sovereignty" {
+  component "economic" [0.39]
+  component "social" [0.44]
+  component "technological" [0.48]
+  component "cultural" [0.55]
+  component "political" [0.6]
+  component "values" [0.66]
+  component "territorial" [0.69]
+}
+
+component "success" [0.70, 0.64]
+
+component "landscapes" [0.10, 0.57]
+pipeline "landscapes" {
+  component "behaviour" [0.36]
+  component "territory" [0.41]
+  component "supply chain" [0.69]
+}
+
+component "awareness" [0.24, 0.51]
+pipeline "awareness" {
+  component "supply chain awareness" [0.28]
+  component "behavioural awareness" [0.38]
+  component "institutions" [0.6]
+  component "territorial awareness" [0.7]
+}
+
+component "capability" [0.38, 0.53]
+
+component "competition" [0.47, 0.59]
+pipeline "competition" {
+  component "complacency" [0.39]
+  component "co-operation" [0.45]
+  component "collaboration" [0.54]
+  component "conflict" [0.65]
+}
+
+"collective" -> "people"
+"Government" -> "collective"
+"Government" -> "supranational government"
+"Government" -> "legitimacy"
+"legitimacy" -> "trust"
+"sovereignty" -> "legitimacy"
+"collective" -> "success"
+
+"success" -> "sovereignty"
+"success" -> "values"
+"territorial" -> "territorial awareness"
+"territorial awareness" -> "territory"
+"supply chain" -> "supply chain awareness"
+"supply chain awareness" -> "economic"
+"technological" -> "supply chain awareness"
+"behavioural awareness" -> "behaviour"
+"behavioural awareness" -> "social"
+"behavioural awareness" -> "cultural"
+"sovereignty" -> "capability"
+"instituations" -> "capability"
+"capability" -> "institutions"
+"success" -> "competition"
+"competition" -> "sovereignty"
+"competency" -> "success"
+"competency" -> "capability"
+"competition" -> "competency"
+"values" -> "institutions"
+

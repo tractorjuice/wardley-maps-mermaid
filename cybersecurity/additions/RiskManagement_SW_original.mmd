@@ -1,0 +1,76 @@
+wardley-beta
+title Security - Risk management, May 2023
+size [1100, 800]
+
+component "government" [0.97, 0.67]
+component "society" [0.86, 0.69]
+component "citizens" [0.77, 0.69]
+component "SAFETY" [0.67, 0.63]
+pipeline "SAFETY" {
+  component "cultural" [0.41]
+  component "digital" [0.5]
+  component "economic" [0.57]
+  component "physical" [0.69]
+}
+component "corporations" [0.88, 0.60]
+component "shareholders" [0.94, 0.59]
+component "regulation" [0.74, 0.49]
+component "profits" [0.85, 0.65]
+component "risk management" [0.79, 0.59]
+
+component "AWARENESS" [0.43, 0.48]
+pipeline "AWARENESS" {
+  component "stories" [0.29]
+  component "wardley maps" [0.41]
+  component "radars" [0.68]
+  component "ordinance surveys" [0.71]
+}
+component "LANDSCAPE" [0.13, 0.49]
+pipeline "LANDSCAPE" {
+  component "beliefs & behaviours" [0.34]
+  component "territorial" [0.4]
+  component "technology" [0.55]
+  component "supply chains" [0.62]
+}
+
+component "CAPABILITY" [0.56, 0.60]
+
+"government" -> "society"
+"government" -> "corporations"
+"regulation" -> "risk management"
+"society" -> "citizens"
+"citizens" -> "SAFETY"
+"SAFETY" -> "risk management"
+"corporations" -> "shareholders"
+"corporations" -> "profits"
+"risk management" -> "corporations"
+"SAFETY" -> "AWARENESS"
+"AWARENESS" -> "LANDSCAPE"
+"government" -> "risk management"
+"profits" -> "citizens"
+
+note "Citizens wants SAFETY from cyber threat/risks [0.75, 0.70] label" [0.75, 0.70]
+note "corporations wants to avoid losses in order to make profits for its shareholders" [0.91, 0.17]
+note "corporations are forced to manage risk in order to avoid moral hazards" [0.81, 0.23]
+note "SAFERTY assumes something to protect (a landscape), awareness of the landscape and capability to protect it" [0.62, 0.34]
+note "we have very good awareness and protection of territorial spaces" [0.38, 0.62]
+note "this we protect well" [0.05, 0.36]
+note "this is know as softpower and is considered 'fuzzy" [0.07, 0.05]
+note "these can be protected but we have poor awareness of the spaces (no radars, no maps)" [0.05, 0.50]
+
+"shareholders" -> "government"
+"ordinance surveys" -> "territorial"
+"wardley maps" -> "technology"
+"wardley maps" -> "supply chains"
+"digital" -> "technology"
+"economic" -> "supply chains"
+"physical" -> "territorial"
+"cultural" -> "beliefs & behaviours"
+"beliefs & behaviours" -> "stories"
+"radars" -> "territorial"
+"SAFETY" -> "CAPABILITY"
+"supply chains" -> "stories"
+"technology" -> "stories"
+
+evolve "wardley maps" 0.6
+

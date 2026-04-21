@@ -1,0 +1,138 @@
+wardley-beta
+title manufacturing - AGILE METHODS, AUG 2022
+size [1100, 800]
+
+evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
+
+note "+adaptability" [0.89, 0.74]
+note "ontology" [0.07, 0.47]
+
+component "manifest" [0.97, 0.69]
+component "speed of change" [0.91, 0.69]
+component "methodology" [0.84, 0.64]
+pipeline "methodology" {
+  component "architecture" [0.54]
+  component "agile" [0.55]
+  component "lean" [0.67]
+}
+component "demand forecasting" [0.85, 0.36]
+component "manufacturer" [1.00, 0.69]
+component "implement change" [0.96, 0.71]
+component "supply chain" [0.64, 0.58]
+component "scenario planning" [0.90, 0.36]
+component "value chain awareness" [0.75, 0.38]
+pipeline "value chain awareness" {
+  component "wardley mapping" [0.26]
+  component "value stream mapping" [0.59]
+}
+component "Vendor Lists" [0.58, 0.69]
+component "trust" [0.60, 0.41]
+component "transparancy" [0.58, 0.37]
+component "configuration" [0.47, 0.67]
+
+component "factory" [0.40, 0.69]
+component "retooling" [0.29, 0.69]
+
+component "production line" [0.52, 0.69]
+
+component "observability" [0.38, 0.49]
+pipeline "observability" {
+  component "factory mode" [0.28]
+  component "KPI" [0.64]
+}
+
+component "representation of chain" [0.03, 0.35]
+
+component "optimisation" [0.54, 0.56]
+pipeline "optimisation" {
+  component "flow" [0.41]
+  component "stocks" [0.59]
+}
+component "exposure of bottlenecks" [0.44, 0.63]
+component "digital twin" [0.24, 0.44]
+pipeline "digital twin" {
+  component "WhatIf simulation" [0.19]
+  component "RT simulation" [0.4]
+  component "visualisation of production line" [0.5]
+}
+component "sensors" [0.02, 0.69]
+component "information" [0.14, 0.58]
+component "raw data" [0.08, 0.67]
+component "model" [0.10, 0.49]
+
+note "*1 (link)" [0.07, 0.31]
+note "*1" [0.82, 0.39]
+
+"speed of change" -> "methodology"
+"stocks" -> "exposure of constraints"
+"modular" -> "architecture"
+"architecture" -> "substitutability"
+"architecture" -> "disposability"
+"flow" -> "test driven development"
+"test driven development" -> "factory mode"
+"digital twin" -> "chain"
+"digital twin" -> "simulation"
+"simulation" -> "data"
+"OTA" -> "factory mode"
+
+"production line" -> "factory"
+"factory" -> "retooling"
+
+"disposability" -> "reuse"
+"substitutability" -> "reuse"
+"optimisation" -> "quality"
+"test driven development" -> "loop"
+"consumer" -> "convenience"
+"OTA" -> "convenience"
+"exposure of constraints" -> "KPI"
+"speed of change" -> "supply chain"
+"methodology" -> "supply chain awareness"
+"supply chain awareness" -> "supply chain"
+"speed of change" -> "scenario planning"
+"scenario planning" -> "supply chain awareness"
+"scenario planning" -> "demand forecasting"
+"demand forecasting" -> "supply chain awareness"
+"methodology" -> "value chain awareness"
+"value chain awareness" -> "demand forecasting"
+"supply chain" -> "value chain awareness"
+"external" -> "trust"
+"value chain awareness" -> "transparancy"
+"trust" -> "transparancy"
+"supply chain" -> "optimisation"
+"supply chain" -> "production line"
+"lean" -> "stocks"
+"agile" -> "flow"
+"supply chain" -> "modular"
+"speed of change" -> "architecture"
+"value chain awareness" -> "architecture"
+"supply chain" -> "trust"
+"exposure of constraints" -> "Awareness of constraint"
+"exposure of constraints" -> "awareness of constraint"
+"stocks" -> "bottlenecks"
+"bottlenecks" -> "awareness of constraint"
+"bottlenecks" -> "KPI"
+"bottlenecks" -> "awareness of bottlenecks"
+"stocks" -> "exposure of bottlenecks"
+"exposure of bottlenecks" -> "KPI"
+"digital twin" -> "data"
+"flow" -> "RT simulation"
+"stocks" -> "visualisation of production line"
+"RT simulation" -> "factory mode"
+"lean" -> "value stream mapping"
+"flow" -> "factory mode"
+"KPI" -> "data"
+"data" -> "sensors"
+"information" -> "digital twin"
+"information" -> "KPI"
+"information" -> "raw data"
+"raw data" -> "sensors"
+"information" -> "model"
+"model" -> "chain"
+"value chain awareness" -> "WhatIf simulation"
+"Vendor Lists" -> "supply chain"
+"model" -> "representation of chain"
+"production line" -> "configuration"
+"implement change" -> "speed of change"
+"manufacturer" -> "manifest"
+"manifest" -> "implement change"
+
