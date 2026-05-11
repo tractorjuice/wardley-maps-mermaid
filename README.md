@@ -2,14 +2,14 @@
 
 A mirror of [`swardley/WARDLEY-MAP-REPOSITORY`](https://github.com/swardley/WARDLEY-MAP-REPOSITORY) with each map also rendered as Mermaid `wardley-beta` (`.mmd`) alongside the original OnlineWardleyMaps (`.owm`-format) source.
 
-Every source file is kept verbatim; each one has a sibling `.mmd` in the same directory that will render directly on GitHub, in VS Code, on Mermaid Live Editor, or anywhere Mermaid 11.14.0+ is available.
+Every source file is kept verbatim; each one has a sibling `.mmd` in the same directory that will render directly on GitHub, in VS Code, on Mermaid Live Editor, or anywhere Mermaid 11.14.0+ is available. Mermaid 11.15.0+ is recommended for the latest Wardley parser and text-rendering fixes.
 
 ## What's here
 
 - **147 Wardley maps** converted from the source repo
 - Directory structure mirrors the upstream — `agriculture/`, `ai/`, `defence/`, `healthcare/`, etc.
 - Every conversion is lossless for components, anchors, links, and evolution coordinates (see [fidelity notes](#conversion-fidelity))
-- **All 147 `.mmd` files parse cleanly** under Mermaid 11.14.0+
+- **All 147 `.mmd` files parse and render cleanly** under Mermaid 11.15.0
 
 ## Rendering a map
 
@@ -28,7 +28,7 @@ title AI Trust, June 2023
 ```
 ````
 
-`wardley-beta` was added to Mermaid in [v11.14.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.14.0) (2026-04-01) via [PR #7147](https://github.com/mermaid-js/mermaid/pull/7147).
+`wardley-beta` was added to Mermaid in [v11.14.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.14.0) (2026-04-01) via [PR #7147](https://github.com/mermaid-js/mermaid/pull/7147). Mermaid [v11.15.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0) (2026-05-11) includes Wardley fixes for unnecessary text sanitization and unquoted hyphenated component names.
 
 ## Conversion fidelity
 
@@ -43,6 +43,8 @@ Across all 147 maps (4,905 components, 5,172 links):
 | Visibility drift `\|Δν\|` (mean) | 0.008 |
 
 The small `|Δν|` is grammar-level, not a conversion bug: `wardley-beta`'s pipeline-block syntax uses 1-D `[evo]` for children, forcing them to inherit parent visibility. A handful of source maps place children at slightly different visibility to their parent; that offset cannot be expressed in `wardley-beta` pipelines.
+
+Current validation against Mermaid 11.15.0: all 147 generated `.mmd` files parse and render successfully. The converter still quotes names conservatively, including hyphenated names, so generated output remains compatible with Mermaid 11.14.0 while also benefiting from Mermaid 11.15.0's Wardley fixes.
 
 ## Deviations from upstream
 
