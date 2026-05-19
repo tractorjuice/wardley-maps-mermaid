@@ -22,7 +22,7 @@ pipeline topology {
 }
 component commmerce [0.73, 0.76] label [9, -6]
 pipeline commmerce {
-  component "e-commerce" [0.71] label [-90, 0]
+  component e-commerce [0.71] label [-90, 0]
   component shop [0.79] label [16, 3]
 }
 component vehicle [0.12, 0.60] label [7, -4]
@@ -129,7 +129,7 @@ regulation -> awareness of supply chain
 Public -> society
 Public -> good
 real time stock -> awareness of supply chain
-"e-commerce" -> real time stock
+e-commerce -> real time stock
 shop -> consumer transportation
 consumer transportation -> last mile
 

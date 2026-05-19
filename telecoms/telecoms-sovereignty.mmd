@@ -51,9 +51,9 @@ evolve launch vehicles 0.72
 evolve "BACKHAUL/INTERNET CORE" 0.8
 component THEATRE [0.21, 0.50] label [-25, -13]
 pipeline THEATRE {
-  component "awareness of supply-chains" [0.35] label [-80, -19]
+  component awareness of supply-chains [0.35] label [-80, -19]
   component doves [0.67] label [-43, 4]
-  component "awareness of land-sea-air-space" [0.7] label [24, -13]
+  component awareness of land-sea-air-space [0.7] label [24, -13]
 }
 
 component REALITY [0.09, 0.49] label [-58, -4]
@@ -66,7 +66,7 @@ pipeline REALITY {
 component Compute [0.19, 0.83] label [12, 0]
 component Power [0.05, 0.84] label [16, 2]
 
-evolve "awareness of supply-chains" 0.50
+evolve awareness of supply-chains 0.50
 evolve freespace laser 0.8
 
 component CONTROL LAYER [0.55, 0.67] label [-93, -11]
@@ -88,18 +88,18 @@ LEGITIMACY -> SOVEREIGNTY
 people -> perception of success
 perception of success -> CNI
 territorial -> landscape
-digital -> "supply-chains"
-economic -> "supply-chains"
+digital -> supply-chains
+economic -> supply-chains
 physical geography -> territorial
 awareness of physical geography -> territorial
-digital -> "awareness of supply-chains"
-"awareness of supply-chains" -> economic
+digital -> awareness of supply-chains
+awareness of supply-chains -> economic
 awareness of physical geography -> geography
-supply chain -> "awareness of supply-chains"
+supply chain -> awareness of supply-chains
 satellite -> launch vehicles
-"awareness of land-sea-air-space" -> territorial
-geography -> "awareness of land-sea-air-space"
-space -> "awareness of land-sea-air-space"
+awareness of land-sea-air-space -> territorial
+geography -> awareness of land-sea-air-space
+space -> awareness of land-sea-air-space
 COMMUNICATION -> ACCESS DEVICE
 COMMUNICATION -> ACCESS NETWORK
 ACCESS NETWORK -> Compute
@@ -115,12 +115,12 @@ Real estate -> geography
 NETWORK EQPT -> supply chain
 NETWORK EQPT -> EXPERTISE
 "BACKHAUL/INTERNET CORE" -> NETWORK EQPT
-"awareness of supply-chains" -> EXPERTISE
-EXPERTISE -> "awareness of land-sea-air-space"
+awareness of supply-chains -> EXPERTISE
+EXPERTISE -> awareness of land-sea-air-space
 information supply chain -> NETWORK EQPT
 NETWORK EQPT -> physical supply chain
-information supply chain -> "awareness of supply-chains"
-physical supply chain -> "awareness of supply-chains"
+information supply chain -> awareness of supply-chains
+physical supply chain -> awareness of supply-chains
 people -> individual sovereignty
 "1" -> P2P
 Fixed -> P2P

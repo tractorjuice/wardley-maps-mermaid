@@ -51,7 +51,7 @@ component awareness of chain [0.36, 0.32] label [-68, -20]
 component INTEGRATION [0.46, 0.52] label [-35, -9]
 pipeline INTEGRATION {
   component adaptive [0.34] label [-77, 3]
-  component "pre-approval (discovery)" [0.61] label [33, -7]
+  component pre-approval (discovery) [0.61] label [33, -7]
 }
 
 component plug and play [0.62, 0.25] label [-105, 2]
@@ -91,9 +91,9 @@ Auto Generation Control -> spinning reserve
 
 energy supply chain -> BATTERY (POWER) STORAGE
 energy supply chain -> GENERATION
-spinning reserve -> "pre-approval (discovery)"
+spinning reserve -> pre-approval (discovery)
 
-"pre-approval (discovery)" -> awareness of chain
+pre-approval (discovery) -> awareness of chain
 awareness of chain -> energy supply chain
 "fast response (<1s)" -> electrical
 "Fault Tolerant (TCP/IP like)" -> fast control system

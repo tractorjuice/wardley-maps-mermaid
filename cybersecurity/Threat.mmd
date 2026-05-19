@@ -20,7 +20,7 @@ component EXPLOIT [0.35, 0.52] label [7, -10]
 pipeline EXPLOIT {
   component Fully custom exploit [0.33] label [-74, -13]
   component Exploit per public knowledge [0.47] label [-36, 14]
-  component "social-engineering" [0.58] label [-12, 20]
+  component social-engineering [0.58] label [-12, 20]
   component Script kiddie [0.72] label [20, 0]
 }
 
@@ -45,9 +45,9 @@ pipeline CAPABILITY {
 
 component TOOL [0.16, 0.42] label [-46, -13]
 pipeline TOOL {
-  component "be-spoke tool" [0.26] label [-114, 8]
+  component be-spoke tool [0.26] label [-114, 8]
   component commercial tool [0.51] label [-19, -43]
-  component "open-source tool" [0.705] label [4, -33]
+  component open-source tool [0.705] label [4, -33]
 }
 
 evolve commercial tool 0.70
@@ -63,7 +63,7 @@ Good Actor -> defence
 Good Actor -> offence
 offence -> KNOWLEDGE
 defence -> KNOWLEDGE
-R&D -> "be-spoke tool"
+R&D -> be-spoke tool
 R&D -> Fully custom exploit
 CAPABILITY -> EXPLOIT
 

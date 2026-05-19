@@ -37,8 +37,8 @@ pipeline AI assistant {
   component auto generation content [0.56] label [-28, 12]
 }
 
-component "social media co-ordination" [0.50, 0.62] label [-55, -55]
-pipeline "social media co-ordination" {
+component social media co-ordination [0.50, 0.62] label [-55, -55]
+pipeline social media co-ordination {
   component analysis [0.6] label [-77, 3]
   component content [0.68] label [-14, -21]
 }
@@ -57,7 +57,7 @@ customers -> scheduling
 
 customer capture -> AI driven site builder
 AI assistant -> SMBO
-social media presence -> "social media co-ordination"
+social media presence -> social media co-ordination
 ChatGPT -> auto generation content
 auto generation content -> content
 ChatGPT -> social media data

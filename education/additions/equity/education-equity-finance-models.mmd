@@ -15,7 +15,7 @@ component pay fees [0.65, 0.36] label [-53, -10]
 
 component financial security [0.53, 0.56] label [8, -31]
 pipeline financial security {
-  component "self-provided" [0.22] label [-56, -22]
+  component self-provided [0.22] label [-56, -22]
   component informal support [0.27] label [3, -39]
   component informal loans [0.35] label [6, 31]
   component formal loans [0.43] label [-30, -17]
@@ -23,7 +23,7 @@ pipeline financial security {
   component state provided [0.65] label [4, -15]
 }
 
-component "state-funding" [0.40, 0.52]
+component state-funding [0.40, 0.52]
 component taxation [0.32, 0.72]
 component personal economic growth [0.35, 0.35]
 
@@ -35,8 +35,8 @@ component status [0.81, 0.73]
 component funding model [0.73, 0.68]
 pipeline funding model {
   component philanthropy [0.37] label [-82, -17]
-  component "demographic-based" [0.63] label [-71, -26]
-  component "per-pupil" [0.79] label [5, -16]
+  component demographic-based [0.63] label [-71, -26]
+  component per-pupil [0.79] label [5, -16]
 }
 
 pupil (root) -> pupil
@@ -48,8 +48,8 @@ resources -> financial security
 pay fees -> financial security
 
 state provided -> taxation
-bursaries -> "state-funding"
-"state-funding" -> taxation
+bursaries -> state-funding
+state-funding -> taxation
 formal loans -> personal economic growth
 informal loans -> personal economic growth
 informal support -> personal economic growth

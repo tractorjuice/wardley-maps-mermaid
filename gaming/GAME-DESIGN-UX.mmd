@@ -18,44 +18,44 @@ anchor Consumer(Anchor) [0.99, 0.49]
 component Experience [0.92, 0.47] label [30, -1]
 pipeline Experience {
   component Modders [0.22] label [-24, -21]
-  component "Emotional-Experience" [0.3] label [-1, -30]
-  component "Social-Interaction" [0.64] label [-25, -25]
+  component Emotional-Experience [0.3] label [-1, -30]
+  component Social-Interaction [0.64] label [-25, -25]
   component Quality [0.76] label [-19, 26]
 }
 
 component Games [0.80, 0.62] label [5, -10]
 pipeline Games {
-  component "Unkown-Games" [0.06] label [-37, -26]
+  component Unkown-Games [0.06] label [-37, -26]
   component "VR/AR Games" [0.36] label [-40, -23]
   component "Marketing-Actions" [0.43] label [35, -4]
-  component "Individual-Games" [0.75] label [-20, -36]
-  component "Gaming-Platforms" [0.94] label [-23, -31]
+  component Individual-Games [0.75] label [-20, -36]
+  component Gaming-Platforms [0.94] label [-23, -31]
 }
-component "Gen-AI" [0.57, 0.03] label [9, -14]
+component Gen-AI [0.57, 0.03] label [9, -14]
 
-component "Legal-&-Ethical-Constraints" [0.31, 0.01] label [61, -5]
+component Legal-&-Ethical-Constraints [0.31, 0.01] label [61, -5]
 
 component Status [0.86, 0.65] label [18, 4]
 
 component Features [0.69, 0.57] label [9, 0]
 pipeline Features {
-  component "Major-Changes" [0.11] label [-103, 2]
-  component "AI-powered-features" [0.16] label [-4, -33]
-  component "UGC-Tools" [0.36] label [-14, -20]
-  component "Established-Genre" [0.7] label [-23, -34]
-  component "Small-Changes" [0.94] label [-33, -21]
+  component Major-Changes [0.11] label [-103, 2]
+  component AI-powered-features [0.16] label [-4, -33]
+  component UGC-Tools [0.36] label [-14, -20]
+  component Established-Genre [0.7] label [-23, -34]
+  component Small-Changes [0.94] label [-33, -21]
 }
 
-component "Game-Design" [0.60, 0.25] label [24, 5]
+component Game-Design [0.60, 0.25] label [24, 5]
 
 component Resources [0.48, 0.58] label [-10, -12]
-component "Production-Practices" [0.42, 0.26] label [-29, 8] (inertia)
+component Production-Practices [0.42, 0.26] label [-29, 8] (inertia)
 component Team [0.32, 0.24] label [12, 6]
-component "Past-Experiences" [0.25, 0.27] label [7, 10] (inertia)
+component Past-Experiences [0.25, 0.27] label [7, 10] (inertia)
 component Skills [0.21, 0.25] label [-5, 18]
 
-component "Game-Design-Theory" [0.42, 0.19] label [-102, -5]
-component "Existing-IP" [0.16, 0.76] label [13, 7]
+component Game-Design-Theory [0.42, 0.19] label [-102, -5]
+component Existing-IP [0.16, 0.76] label [13, 7]
 
 component Culture [0.15, 0.20] label [11, -6]
 pipeline Culture {
@@ -63,7 +63,7 @@ pipeline Culture {
   component Corporate [0.59] label [-22, -22]
 }
 
-component "Commercialization-&-Distribution" [0.39, 0.73] label [80, -6]
+component Commercialization-&-Distribution [0.39, 0.73] label [80, -6]
 component "Marketing-Strategy" [0.31, 0.74] label [41, -2]
 
 component Tools [0.36, 0.53] label [-47, 5] (inertia)
@@ -73,35 +73,35 @@ Consumer(Anchor) -> Experience
 Experience -> Games
 Experience -> "Marketing-Actions"
 Experience -> Status
-Modders -> "UGC-Tools"
+Modders -> UGC-Tools
 
 Games -> Features
-Features -> "Game-Design"
+Features -> Game-Design
 Features -> Tools
 
-"Game-Design" -> "Commercialization-&-Distribution"
-"Game-Design" -> Tools
-"Game-Design" -> "Production-Practices"
-"Game-Design" -> Team
-"Game-Design" -> "Game-Design-Theory"
-"Game-Design" -> Resources
+Game-Design -> Commercialization-&-Distribution
+Game-Design -> Tools
+Game-Design -> Production-Practices
+Game-Design -> Team
+Game-Design -> Game-Design-Theory
+Game-Design -> Resources
 
 Team -> Culture
 Team -> Skills
-Team -> "Past-Experiences"
+Team -> Past-Experiences
 
-"Gen-AI" -> Skills
-"Gen-AI" -> Tools
-"Gen-AI" -> "Marketing-Strategy"
-"Gen-AI" -> "Legal-&-Ethical-Constraints"
-"Gen-AI" -> "AI-powered-features"
+Gen-AI -> Skills
+Gen-AI -> Tools
+Gen-AI -> "Marketing-Strategy"
+Gen-AI -> Legal-&-Ethical-Constraints
+Gen-AI -> AI-powered-features
 
-"Unkown-Games" -> "AI-powered-features"
+Unkown-Games -> AI-powered-features
 Tools -> Platforms
 Tools -> Skills
 
-"Commercialization-&-Distribution" -> "Marketing-Strategy"
+Commercialization-&-Distribution -> "Marketing-Strategy"
 "Marketing-Strategy" -> Platforms
 "Marketing-Strategy" -> "Marketing-Actions"
-"Marketing-Strategy" -> "Existing-IP"
+"Marketing-Strategy" -> Existing-IP
 

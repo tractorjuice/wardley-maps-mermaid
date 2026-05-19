@@ -8,8 +8,9 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join, basename } from 'node:path';
 
 // Characters that require quoting in the Mermaid wardley-beta grammar
-// Includes hyphen (-) because it triggers arrow parsing (->)
-export const NEEDS_QUOTING = /[&/+?'.<>=:%#(){};!@$^~`\\|[\]\-]/;
+// (Mermaid >= 11.15.0; PR #7642 widened NAME_WITH_SPACES to accept hyphens
+// inside words, so hyphens are no longer in this set).
+export const NEEDS_QUOTING = /[&/+?'.<>=:%#(){};!@$^~`\\|[\]]/;
 
 // Keywords that shadow grammar terminals and need quoting
 export const KEYWORDS = new Set([
@@ -29,13 +30,15 @@ function normaliseLabel(labelStr) {
   return `[${Math.round(parseFloat(m[1]))}, ${Math.round(parseFloat(m[2]))}]`;
 }
 
-// Matches the Mermaid wardley-beta NAME_WITH_SPACES terminal verbatim:
-//   [A-Za-z][A-Za-z0-9_()&]*(?:[ \t]+[A-Za-z(][A-Za-z0-9_()&]*)*
-// A name is safe unquoted iff it matches this; anything else (hyphens,
-// dots, slashes, digit-start, standalone ampersand between spaces, etc.)
-// must be wrapped in "..." — which the grammar accepts as STRING in every
-// place a name appears.
-const SAFE_NAME = /^[A-Za-z][A-Za-z0-9_()&]*(?:[ \t]+[A-Za-z(][A-Za-z0-9_()&]*)*$/;
+// Matches the Mermaid wardley-beta NAME_WITH_SPACES terminal verbatim
+// (Mermaid >= 11.15.0; PR #7642 added the `-(?!>)` alternation so hyphens
+// are allowed inside words except before `>`, preserving `A->B` arrow
+// tokenisation):
+//   [A-Za-z](?:[A-Za-z0-9_()&]|-(?!>))*(?:[ \t]+[A-Za-z(](?:[A-Za-z0-9_()&]|-(?!>))*)*
+// A name is safe unquoted iff it matches this; anything else (dots, slashes,
+// digit-start, standalone ampersand between spaces, etc.) must be wrapped in
+// "..." — which the grammar accepts as STRING in every place a name appears.
+const SAFE_NAME = /^[A-Za-z](?:[A-Za-z0-9_()&]|-(?!>))*(?:[ \t]+[A-Za-z(](?:[A-Za-z0-9_()&]|-(?!>))*)*$/;
 
 // Keywords that shadow grammar terminals. These must be quoted when they
 // appear either (a) as the first *word* of a name (e.g. `build release

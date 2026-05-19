@@ -7,9 +7,9 @@ component Quality [0.95, 0.44] label [10, 1]
 component Testing [0.42, 0.37] label [9, -4]
 component Compliance [0.83, 0.77] label [9, 4]
 component Audits [0.41, 0.72]
-component "AI-Vision-Inspection" [0.50, 0.19] label [-42, -19]
-component "quality-control" [0.53, 0.59] label [39, -8]
-component "quality-assurance" [0.72, 0.72] label [44, -2]
+component AI-Vision-Inspection [0.50, 0.19] label [-42, -19]
+component quality-control [0.53, 0.59] label [39, -8]
+component quality-assurance [0.72, 0.72] label [44, -2]
 
 component inspection [0.09, 0.75] label [-35, 16]
 evolve inspection 0.84
@@ -24,10 +24,10 @@ note "+Automated" [0.35, 0.58]
 Quality -> Testing
 Quality -> Compliance
 Compliance -> Audits
-Compliance -> "quality-assurance"
-Testing -> "Quality-Checks"
-"quality-assurance" -> Testing
-"quality-assurance" -> "quality-control"
-"quality-control" -> inspection
-"quality-control" -> Audits
+Compliance -> quality-assurance
+Testing -> Quality-Checks
+quality-assurance -> Testing
+quality-assurance -> quality-control
+quality-control -> inspection
+quality-control -> Audits
 

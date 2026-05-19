@@ -24,7 +24,7 @@ pipeline network_access {
 component protocol [0.79, 0.72] label [-62, -15]
 pipeline protocol {
   component graphQL [0.7] label [-66, 1]
-  component "TLS-API" [0.73] label [20, 4]
+  component TLS-API [0.73] label [20, 4]
 }
 
 component timeline_mixer_(Control) [0.70, 0.68] label [-115, -21]
@@ -80,12 +80,12 @@ front_end -> twitter
 advertisers -> adverts
 network_access -> front_end
 graphQL -> mobile
-"TLS-API" -> web
+TLS-API -> web
 business_process -> foundational components
 foundational components -> infrastructure
 graphQL -> timeline_mixer_(Control)
 graphQL -> home_mixer_(Control)
-timeline_mixer_(Control) -> "TLS-API"
+timeline_mixer_(Control) -> TLS-API
 home_mixer_(Control) -> backend components
 timeline_mixer_(Control) -> backend components
 home_mixer_(Control) -> foundational components

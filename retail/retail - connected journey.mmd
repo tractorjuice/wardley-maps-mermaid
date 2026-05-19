@@ -34,7 +34,7 @@ pipeline need {
 component behaviour [0.90, 0.42] label [-67, -11]
 component channel [0.52, 0.71] label [7, -10]
 pipeline channel {
-  component "e-commerce" [0.67] label [-80, 17]
+  component e-commerce [0.67] label [-80, 17]
   component telesales [0.7] label [-35, 23]
   component stores [0.73] label [8, 20]
 }
@@ -76,7 +76,7 @@ producer -> good
 engagement -> discovery
 good -> channel
 stores -> touch
-"e-commerce" -> sight
+e-commerce -> sight
 telesales -> sound
 good -> experience
 experience -> returns

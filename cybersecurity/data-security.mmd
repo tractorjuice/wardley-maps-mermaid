@@ -83,13 +83,13 @@ FORENSICS -> DATA STORE
 
 component CRYPTOGRAPHY [0.42, 0.45] label [-9, -16]
 pipeline CRYPTOGRAPHY {
-  component "zero-knowledge proofs" [0.35] label [-107, -17]
+  component zero-knowledge proofs [0.35] label [-107, -17]
   component Quantum Resistant Cryptography [0.4] label [-17, 15]
-  component "end-to-end cryptography" [0.71] label [-1, -46]
+  component end-to-end cryptography [0.71] label [-1, -46]
   component "symmetric/asymmetric cryptography" [0.77] label [59, -9]
 }
 
-"zero-knowledge proofs" -> Digital Wallet
+zero-knowledge proofs -> Digital Wallet
 
 component Transmission [0.35, 0.66] label [9, -2]
 

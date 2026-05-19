@@ -15,59 +15,59 @@ anchor Consumer [0.97, 0.58]
 anchor Moders [0.97, 0.23]
 anchor Designer [0.98, 0.37]
 
-component "maximize-profits" [0.88, 0.83] label [33, -7]
-component "target-audience" [0.64, 0.89]
+component maximize-profits [0.88, 0.83] label [33, -7]
+component target-audience [0.64, 0.89]
 
 component Vision [0.62, 0.62]
-component "Focus-on-elements" [0.69, 0.34] label [-97, -9]
-component "Build-story" [0.62, 0.44]
-component "Commercialization-model" [0.54, 0.78] label [57, -5]
-component "Visualize-end-product" [0.47, 0.51] label [56, -4]
-component "Monetization-model" [0.45, 0.87] label [40, -4]
-component "Drama-Tension-Curiosity" [0.66, 0.15] label [-112, -5]
+component Focus-on-elements [0.69, 0.34] label [-97, -9]
+component Build-story [0.62, 0.44]
+component Commercialization-model [0.54, 0.78] label [57, -5]
+component Visualize-end-product [0.47, 0.51] label [56, -4]
+component Monetization-model [0.45, 0.87] label [40, -4]
+component Drama-Tension-Curiosity [0.66, 0.15] label [-112, -5]
 component "Building-&-release-of-tension" [0.58, 0.12] label [-128, -6]
 
-component "Ideal-gamer-persona" [0.92, 0.36] label [45, -3]
-component "Build-user-base" [0.71, 0.72] label [28, -5]
+component Ideal-gamer-persona [0.92, 0.36] label [45, -3]
+component Build-user-base [0.71, 0.72] label [28, -5]
 
-component "Design-a-Game" [0.91, 0.48] label [9, 2]
+component Design-a-Game [0.91, 0.48] label [9, 2]
 component Prototyping [0.32, 0.73] label [10, 5]
 
-component "Mental-space" [0.36, 0.44] label [9, 4]
+component Mental-space [0.36, 0.44] label [9, 4]
 
 component Experience [0.91, 0.64]
-component "First-Impression" [0.84, 0.64] label [28, -3]
+component First-Impression [0.84, 0.64] label [28, -3]
 component Status [0.86, 0.74] label [18, 4]
 
 component Laws [0.24, 0.75] label [14, 4]
 component Incentives [0.17, 0.78] label [11, 4]
 
-Producers -> "maximize-profits"
+Producers -> maximize-profits
 
-"maximize-profits" -> "Commercialization-model"
-"maximize-profits" -> "Monetization-model"
-"maximize-profits" -> "target-audience"
-"target-audience" -> "Build-user-base"
-"target-audience" -> Status
-"Monetization-model" -> Laws
+maximize-profits -> Commercialization-model
+maximize-profits -> Monetization-model
+maximize-profits -> target-audience
+target-audience -> Build-user-base
+target-audience -> Status
+Monetization-model -> Laws
 Laws -> Incentives
 Moders -> Vision
 
 Consumer -> Experience
 Experience -> Vision
-Experience -> "First-Impression"
+Experience -> First-Impression
 Experience -> Status
 
-Vision -> "Focus-on-elements"
-Vision -> "Build-story"
-Vision -> "Visualize-end-product"
-Vision -> "Commercialization-model"
-Vision -> "Monetization-model"
+Vision -> Focus-on-elements
+Vision -> Build-story
+Vision -> Visualize-end-product
+Vision -> Commercialization-model
+Vision -> Monetization-model
 
-"Build-story" -> "Drama-Tension-Curiosity"
-"Drama-Tension-Curiosity" -> "Building-&-release-of-tension"
+Build-story -> Drama-Tension-Curiosity
+Drama-Tension-Curiosity -> "Building-&-release-of-tension"
 
-Designer -> "Ideal-gamer-persona"
-Designer -> "Design-a-Game"
-"Ideal-gamer-persona" -> "Build-user-base"
+Designer -> Ideal-gamer-persona
+Designer -> Design-a-Game
+Ideal-gamer-persona -> Build-user-base
 

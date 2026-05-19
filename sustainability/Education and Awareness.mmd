@@ -25,13 +25,13 @@ component Leadership [0.42, 0.80]
 component Diversity [0.13, 0.40]
 component Coordination [0.33, 0.54] label [-79, -9]
 pipeline Coordination {
-  component "Self-Organizing" [0.1] label [-30, -29]
+  component Self-Organizing [0.1] label [-30, -29]
   component Funding [0.3] label [-46, -13]
   component "Tools & Equipment" [0.42] label [-6, -22]
   component Governance [0.77] label [15, 1]
 }
-component "Product-Service" [0.90, 0.48] label [5, -20]
-pipeline "Product-Service" {
+component Product-Service [0.90, 0.48] label [5, -20]
+pipeline Product-Service {
   component Waste [0.21] label [-54, -6]
   component Process [0.42] label [6, -8]
   component Renewable Resources [0.69] label [21, -12]
@@ -64,7 +64,7 @@ Education -> Behavior
 Media -> Values
 
 Information -> Media
-"Product-Service" -> OWNER
+Product-Service -> OWNER
 Media -> Sharing Lessons Learned
 Funding -> Resources
 Behavior -> Resources
@@ -82,13 +82,13 @@ Society -> Communications
 Society -> OWNER
 Society -> Media
 Values -> Trust
-Producer -> "Product-Service"
-Consumer -> "Product-Service"
+Producer -> Product-Service
+Consumer -> Product-Service
 Values -> Behavior
 Communications -> Resources
-"Product-Service" -> Information
+Product-Service -> Information
 
-"Self-Organizing" -> Autonomy
+Self-Organizing -> Autonomy
 Auonomy -> Community
 
 evolve Feedback 0.68
@@ -101,6 +101,6 @@ pipeline OWNER {
   component Public [0.73] label [10, 4]
 }
 Public -> Coordination
-"Self-Organizing" -> Community
+Self-Organizing -> Community
 Governance -> OWNER
 

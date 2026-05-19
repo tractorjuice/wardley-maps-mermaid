@@ -33,7 +33,7 @@ pipeline store {
   component showrooms [0.34] label [-80, 8]
   component physical [0.41] label [-28, 21]
   component digital twin [0.59] label [-80, 23]
-  component "virtual (e-commerce)" [0.7] label [25, -10]
+  component virtual (e-commerce) [0.7] label [25, -10]
 }
 component customer journey [0.80, 0.53] label [-59, -32]
 pipeline customer journey {
@@ -82,8 +82,8 @@ restock -> store
 object recognition -> digital twin
 stock counts -> physical
 POS -> physical
-RFID -> "virtual (e-commerce)"
-robot -> "virtual (e-commerce)"
+RFID -> virtual (e-commerce)
+robot -> virtual (e-commerce)
 object recognition -> vision
 vision -> ML
 ML -> data
