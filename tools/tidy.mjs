@@ -315,6 +315,44 @@ export const tidyMap = (mmdText) => {
   return { text: outLines.join('\n'), changed, total };
 };
 
+/**
+ * Apply `tidyMap` repeatedly until the result is stable.
+ *
+ * A single `tidyMap` pass is not always a fixpoint: the first pass auto-places
+ * an untuned map, and the second pass re-reads every result as an authored
+ * `manualRect`, which can shift a few keep-vs-replace decisions. Most maps
+ * converge within two passes. A few have two equally-scored candidate slots
+ * that flip each pass — a 2-cycle that never reaches a true fixpoint. When a
+ * cycle is detected, the lexicographically smallest member is returned so the
+ * result is deterministic and `tidyToFixpoint` is idempotent for every input.
+ *
+ * @param {string} mmdText
+ * @param {number} [maxPasses]
+ * @returns {{ text: string, changed: boolean, total: number, passes: number }}
+ */
+export const tidyToFixpoint = (mmdText, maxPasses = 12) => {
+  const seen = [mmdText];
+  let text = mmdText;
+  let total = 0;
+  let passes = 0;
+  for (; passes < maxPasses; passes++) {
+    const r = tidyMap(text);
+    total = r.total;
+    if (r.text === text) {
+      break; // true fixpoint
+    }
+    const cycleStart = seen.indexOf(r.text);
+    if (cycleStart !== -1) {
+      // Oscillation — pick a canonical member of the cycle.
+      text = seen.slice(cycleStart).reduce((a, b) => (b < a ? b : a));
+      break;
+    }
+    seen.push(r.text);
+    text = r.text;
+  }
+  return { text, changed: text !== mmdText, total, passes };
+};
+
 // ---- CLI ----
 // Usage:
 //   node tools/tidy.mjs <file.mmd>          rewrite the file in place
@@ -348,10 +386,10 @@ if (isMain) {
   }
   const path = resolve(file);
   const src = readFileSync(path, 'utf8');
-  const { text, changed, total } = tidyMap(src);
+  const { text, changed, total } = tidyToFixpoint(src);
   if (check) {
-    if (text !== src) {
-      console.error(`tidy: ${file} would change (${changed}/${total} labels)`);
+    if (changed) {
+      console.error(`tidy: ${file} would change (${total} labels)`);
       process.exit(1);
     }
     console.error(`tidy: ${file} already tidy`);
@@ -361,9 +399,9 @@ if (isMain) {
     process.stdout.write(text);
     process.exit(0);
   }
-  if (text !== src) {
+  if (changed) {
     writeFileSync(path, text, 'utf8');
-    console.error(`tidy: ${file} — ${changed}/${total} labels updated`);
+    console.error(`tidy: ${file} — ${total} labels tidied`);
   } else {
     console.error(`tidy: ${file} — already tidy`);
   }
