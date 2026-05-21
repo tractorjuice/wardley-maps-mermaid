@@ -1,0 +1,16 @@
+{
+  "name": "wardley-maps-mermaid",
+  "version": "0.1.0",
+  "description": "Wardley maps in mermaid wardley-beta format, with conversion and label-tidying tools.",
+  "type": "module",
+  "license": "CC-BY-SA-4.0",
+  "bin": {
+    "wardley-tidy": "tools/tidy.mjs"
+  },
+  "files": [
+    "tools/"
+  ],
+  "scripts": {
+    "test": "node --test tools/"
+  }
+}

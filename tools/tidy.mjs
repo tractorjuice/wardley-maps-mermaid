@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * tidy.mjs — tidy the labels of a mermaid `wardley-beta` map.
  *
