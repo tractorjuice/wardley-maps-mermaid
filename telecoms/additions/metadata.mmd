@@ -2,16 +2,16 @@ wardley-beta
 title Telecom Core Business opportunistic banking on meta data
 size [1100, 800]
 
-component User [0.96, 0.64]
+component User [0.96, 0.64] label [4, -10]
 
-component Communicate [0.87, 0.67]
+component Communicate [0.87, 0.67] label [-8, -19]
 
 User -> Communicate
 note "Content Communication ..." [0.86, 0.68]
 
-component Last Mile [0.69, 0.69]
-component Transport [0.69, 0.60]
-component Peering [0.65, 0.53]
+component Last Mile [0.69, 0.69] label [-2, -19]
+component Transport [0.69, 0.60] label [-2, -19]
+component Peering [0.65, 0.53] label [15, 6]
 
 Communicate -> Peering
 Communicate -> Last Mile
@@ -19,16 +19,16 @@ Communicate -> Transport
 
 User -> Last Mile
 
-component Topology [0.54, 0.60]
+component Topology [0.54, 0.60] label [12, 6]
 
 Last Mile -> Topology
 Transport -> Topology
 
-component Access to commons [0.46, 0.41]
+component Access to commons [0.46, 0.41] label [-13, -32]
 Topology -> Access to commons
 
-component telco [0.98, 0.46]
-component government [0.97, 0.54]
+component telco [0.98, 0.46] label [7, 6]
+component government [0.97, 0.54] label [24, 6]
 
 component commications meta data [0.74, 0.44] label [-100, -39]
 
@@ -40,15 +40,15 @@ component accountabilty [0.86, 0.38] label [-94, 5]
 government -> accountabilty
 accountabilty -> commications meta data
 
-component "Marketable data" [0.87, 0.50]
+component "Marketable data" [0.87, 0.50] label [-35, -10]
 telco -> "Marketable data"
 "Marketable data" -> commications meta data
 
-component privacy [0.91, 0.56]
+component privacy [0.91, 0.56] label [4, -19]
 
 government -> privacy
 
-component Law [0.36, 0.52]
+component Law [0.36, 0.52] label [7, -10]
 
 privacy -> Law
 

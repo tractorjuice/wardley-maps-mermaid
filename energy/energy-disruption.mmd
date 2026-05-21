@@ -10,7 +10,7 @@ note "<110kV" [0.36, 0.60]
 component awareness [0.50, 0.31] label [-78, 2]
 component supply chain [0.40, 0.42] label [-101, 4]
 
-component USER [0.94, 0.54]
+component USER [0.94, 0.54] label [4, -10]
 pipeline USER {
   component tomorrow [0.42] label [-75, 3]
   component today [0.63] label [18, 5]
@@ -41,22 +41,22 @@ note "(grid)" [0.38, 0.38]
 component ENERGY PRODUCTION [0.13, 0.68] label [-62, -37]
 pipeline ENERGY PRODUCTION {
   component nuclear [0.38] label [-69, 5]
-  component solar collectors [0.41] label [-40, 13]
+  component solar collectors [0.41] label [-40, 25]
   component gas [0.44] label [-7, -20]
   component solar microgen [0.74] label [17, 4]
 }
-component ENERGY GENERATION [0.51, 0.65] label [-71, -29]
+component ENERGY GENERATION [0.51, 0.65] label [-63, -37]
 pipeline ENERGY GENERATION {
   component OTC market [0.59] label [-88, 3]
-  component spotmarket [0.7] label [-21, -17]
+  component spotmarket [0.7] label [-13, -25]
   component public good [0.78] label [16, 4]
 }
 
 component BATTERY (POWER) STORAGE [0.25, 0.57] label [-57, -45]
 pipeline BATTERY (POWER) STORAGE {
   component synthetic [0.2] label [-83, 1]
-  component hydrogen [0.4] label [-25, 22]
-  component potential energy [0.53] label [-49, 13]
+  component hydrogen [0.4] label [-24, 28]
+  component potential energy [0.53] label [-48, -16]
   component electrical [0.7] label [15, 7]
 }
 component SURVIVABILITY [0.82, 0.55] label [-100, -12]

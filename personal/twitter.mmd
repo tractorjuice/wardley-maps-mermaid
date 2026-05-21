@@ -4,10 +4,10 @@ title twitter
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component user [0.98, 0.70] label [1, -15]
-component twitter [0.98, 0.52] label [-40, -17]
-component advertisers [0.98, 0.66] label [-49, -15]
-component regulators [0.98, 0.58] label [-46, -16]
+component user [0.98, 0.70] label [17, 1]
+component twitter [0.98, 0.52] label [-56, -1]
+component advertisers [0.98, 0.66] label [-58, 31]
+component regulators [0.98, 0.58] label [-46, 20]
 component device [0.95, 0.72] label [18, 5]
 
 component adverts [0.96, 0.68] label [-61, 4]
@@ -31,30 +31,30 @@ component timeline_mixer_(Control) [0.70, 0.68] label [-115, -21]
 pipeline timeline_mixer_(Control) {
   component conversation module [0.64] label [-96, -12]
   component recommendation [0.67] label [-64, 25]
-  component dedup [0.71] label [-1, 22]
-  component pagination [0.73] label [-45, -20]
-  component ad_injector [0.75] label [8, -10]
+  component dedup [0.71] label [-9, 30]
+  component pagination [0.73] label [-9, -20]
+  component ad_injector [0.75] label [8, -32]
   component data_logging [0.77] label [17, 7]
 }
 
 component home_mixer_(Control) [0.57, 0.59] label [-109, -24]
 
-component backend components [0.50, 0.63] label [-34, -41]
+component backend components [0.50, 0.63] label [-72, -79]
 pipeline backend components {
   component home ranker [0.5] label [-94, 0]
-  component timeline service [0.57] label [-42, 20]
-  component timeline scorer [0.61] label [-21, 20]
-  component people discovery [0.66] label [12, 15]
+  component timeline service [0.57] label [-80, -18]
+  component timeline scorer [0.61] label [4, 45]
+  component people discovery [0.66] label [50, -23]
   component onboarding [0.68] label [-37, -20]
   component admixer [0.7] label [24, 2]
 }
 component home_score [0.37, 0.57] label [-87, 7]
 component candidate_fetch [0.36, 0.63] label [9, -23]
 
-component business_process [0.28, 0.57] label [-58, -28]
+component business_process [0.28, 0.57] label [-33, -53]
 pipeline business_process {
-  component prediction_service [0.52] label [-112, -9]
-  component feature hydration [0.64] label [-53, 8]
+  component prediction_service [0.52] label [-120, -17]
+  component feature hydration [0.64] label [-105, 60]
   component crMixer [0.66] label [-19, -19]
   component earlyBird [0.68] label [-23, 25]
   component Uteg [0.7] label [-15, -19]
@@ -65,7 +65,7 @@ pipeline business_process {
 component foundational components [0.15, 0.59] label [-71, -37]
 pipeline foundational components {
   component gizmoduck [0.58] label [-90, 0]
-  component manhattan [0.64] label [-36, -14]
+  component manhattan [0.64] label [-52, -19]
   component tweety pie [0.67] label [-5, -22]
   component social graph [0.7] label [-30, 24]
   component memcache [0.72] label [19, 2]

@@ -11,14 +11,14 @@ component land [0.12, 0.44] label [12, 5]
 component habitable living [0.19, 0.50] label [8, -30]
 pipeline habitable living {
   component "thriving living?" [0.21] label [-73, -19]
-  component care [0.25] label [-38, -1]
+  component care [0.25] label [-50, -32]
   component basic needs met [0.6] label [-35, -58]
   component survival living [0.66] label [-14, -44]
-  component clean water [0.74] label [12, 9]
+  component clean water [0.74] label [12, 31]
   component not survivable living [0.79] label [16, -23]
 }
 component communities [0.90, 0.55] label [10, -5]
-component stabilised climate [0.12, 0.37] label [-3, 10]
+component stabilised climate [0.12, 0.37] label [-3, 32]
 component ecosystem [0.07, 0.72] label [23, 4]
 
 component social stability [0.79, 0.38] label [-62, -20]
@@ -30,16 +30,16 @@ communities -> social stability
 component reserves [0.09, 0.24] label [-62, 5]
 component surplus [0.13, 0.31] label [12, 6]
 
-component governance [0.98, 0.40] label [-37, -11]
+component governance [0.98, 0.40] label [-75, 27]
 pipeline governance {
-  component constitution [0.31] label [-52, -19]
+  component constitution [0.31] label [-74, 44]
 }
 
 component institutions [0.37, 0.49] label [-42, -14]
 pipeline institutions {
   component security services [0.34] label [-52, -41]
   component access control [0.39] label [-83, 26]
-  component capital rules [0.45] label [8, 23]
+  component capital rules [0.45] label [-39, 28]
   component rights [0.55] label [-16, -19]
   component bureaucracy [0.64] label [-36, 29]
 }
@@ -53,11 +53,11 @@ governance -> institutions
 component forms of capital [0.61, 0.64] label [-3, -48]
 pipeline forms of capital {
   component social capital [0.53] label [-33, -21]
-  component knowledge capital [0.59] label [-29, 20]
+  component knowledge capital [0.59] label [-4, 45]
   component time capital [0.67] label [-25, 25]
-  component financial capital [0.74] label [-25, 14]
+  component financial capital [0.74] label [-26, -19]
   component material resources [0.79] label [-42, -41]
-  component natural capital [0.84]
+  component natural capital [0.84] label [-7, 44]
 }
 
 individuals -> forms of capital

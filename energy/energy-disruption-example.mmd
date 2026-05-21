@@ -4,7 +4,7 @@ title Disruption in the energy industry
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity / accepted
 
-component Secure Power System [0.77, 0.73] label [5, -14]
+component Secure Power System [0.77, 0.73] label [13, -6]
 component Contingency Analysis [0.61, 0.73] label [-7, 16]
 component Short Circuit Analysis [0.56, 0.80] label [-3, -4]
 component System Models [0.31, 0.72] label [-37, 24]
@@ -15,34 +15,34 @@ evolve "3" 0.48
 
 component state [0.45, 0.59] label [-28, -11]
 pipeline state {
-  component "2" [0.23] label [-305, 471]
+  component "2" [0.23] label [-47, 44]
   component State Solution [0.23] label [-62, 25]
-  component storage [0.69] label [-51, 5]
+  component storage [0.69] label [-51, 27]
   component State Estimation [0.74] label [23, -18]
 }
 
 component renewable [0.81, 0.74] label [5, -1]
 component intermitancy [0.61, 0.61] label [-78, -2]
 component microgrids [0.57, 0.65] label [-67, 22]
-component user [0.97, 0.69]
+component user [0.97, 0.69] label [10, 6]
 
 component networks [0.09, 0.73] label [15, 4]
 
 component measurer [0.22, 0.63] label [-58, -10]
 pipeline measurer {
-  component "1" [0.38] label [-578, 203]
+  component "1" [0.38] label [-63, 6]
   component synchrophasor [0.73] label [-487, 28]
   component SCADA [0.81] label [15, 2]
 }
 
-component secure power [0.90, 0.66] label [-53, -48]
+component secure power [0.90, 0.66] label [-61, -40]
 pipeline secure power {
-  component secure renewable [0.62] label [-79, -7]
+  component secure renewable [0.62] label [-79, -29]
 }
 
 component Architectural model [0.69, 0.67] label [-50, -34]
 pipeline Architectural model {
-  component "3" [0.41] label [-564, 606]
+  component "3" [0.41] label [-9, 60]
   component chaos engines [0.41] label [-106, 1]
   component "N+1" [0.7] label [-26, 26]
 }

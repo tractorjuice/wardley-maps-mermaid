@@ -2,16 +2,16 @@ wardley-beta
 title Telecom Core Business
 size [1100, 800]
 
-component User [0.96, 0.64]
+component User [0.96, 0.64] label [4, -10]
 
-component Communicate [0.87, 0.67]
+component Communicate [0.87, 0.67] label [-8, -19]
 
 User -> Communicate
 note "Content Communication ..." [0.86, 0.68]
 
-component Last Mile [0.69, 0.69]
-component Transport [0.69, 0.60]
-component Peering [0.65, 0.53]
+component Last Mile [0.69, 0.69] label [-2, -19]
+component Transport [0.69, 0.60] label [9, 6]
+component Peering [0.65, 0.53] label [15, 6]
 
 Communicate -> Peering
 Communicate -> Last Mile
@@ -22,27 +22,27 @@ User -> Last Mile
 note "Who pays Who?" [0.65, 0.44]
 note "EU no-cost roaming" [0.63, 0.29]
 
-component Topology [0.54, 0.60]
+component Topology [0.54, 0.60] label [30, 6]
 
 Last Mile -> Topology
 Transport -> Topology
 
-component Devices [0.47, 0.65]
+component Devices [0.47, 0.65] label [4, -19]
 
 Topology -> Devices
 
 Peering -> standards
 
-component Access to commons [0.46, 0.41]
+component Access to commons [0.46, 0.41] label [-13, -32]
 Topology -> Access to commons
 
 note "Radio spectrum, right to dig [0.46, 0.26] label" [0.46, 0.26]
 
 component Operational Model [0.37, 0.65] label [1, -39]
 pipeline Operational Model {
-  component Automated Operations [0.53] label [-39, 18]
-  component standards [0.75]
-  component Manual Operations [0.85] label [-39, 18]
+  component Automated Operations [0.53] label [-47, 26]
+  component standards [0.75] label [-27, 28]
+  component Manual Operations [0.85] label [-47, 26]
 }
 
 Topology -> Operational Model

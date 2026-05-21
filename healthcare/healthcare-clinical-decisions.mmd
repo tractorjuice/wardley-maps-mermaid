@@ -10,15 +10,15 @@ component fairness [0.66, 0.67] label [-17, 22]
 component exceptions (individual funding requests) [0.66, 0.37] label [-83, -30]
 component status [0.84, 0.65] label [-51, -5]
 component medical practioner [0.87, 0.69] label [12, -9]
-component medical institute [0.95, 0.62] label [-34, -36]
+component medical institute [0.95, 0.62] label [-26, -19]
 component patient [0.18, 0.81] label [11, 4]
 component HEALTH [0.34, 0.79] label [14, 3]
-component TREATMENT OF AILMENT [0.57, 0.64] label [-69, -44]
+component TREATMENT OF AILMENT [0.57, 0.64] label [-69, -98]
 pipeline TREATMENT OF AILMENT {
   component cause [0.38] label [-61, 4]
   component symptoms [0.73] label [20, 5]
 }
-component clinical_decision [0.47, 0.67] label [-39, -25]
+component clinical_decision [0.47, 0.67] label [-23, -41]
 component historical DATA [0.32, 0.38] label [-78, -6]
 component diagnosis [0.50, 0.40] label [-75, 2]
 component SETTINGS OF CARE [0.11, 0.59] label [1, -44]
@@ -27,25 +27,25 @@ pipeline SETTINGS OF CARE {
   component virtual visits [0.4] label [-88, 32]
   component assisted living [0.43] label [-27, -43]
   component "111" [0.47] label [-8, 30]
-  component ER [0.63] label [-10, 23]
+  component ER [0.63] label [-6, 28]
   component primary care [0.73] label [20, 1]
 }
 component health outcome [0.42, 0.78] label [10, -2]
 component CLINICAL OUTCOME [0.71, 0.65] label [-66, -31]
-component DECISION SUPPORT [0.42, 0.51] label [-63, -38]
+component DECISION SUPPORT [0.42, 0.51] label [-47, -54]
 pipeline DECISION SUPPORT {
   component applied AI [0.28] label [-93, 1]
   component intuition [0.33] label [-41, 24]
-  component local protocols [0.39] label [-46, -44]
-  component national clinical guidelines [0.54] label [10, -59]
+  component local protocols [0.39] label [-83, -32]
+  component national clinical guidelines [0.54] label [-84, -48]
   component permissable treatment [0.61] label [27, -8]
 }
 component DATA [0.26, 0.57] label [-20, -16]
 pipeline DATA {
   component individual [0.36] label [-89, 3]
-  component social determinant [0.4] label [-51, 13]
+  component social determinant [0.4] label [-51, 25]
   component clinical trials [0.43] label [-65, -14]
-  component comorbidity [0.47] label [-58, 24]
+  component comorbidity [0.47] label [-58, 46]
   component biosensors [0.53] label [-33, 25]
   component lab tests [0.61] label [-15, 26]
   component observation [0.71] label [18, 2]
@@ -54,7 +54,7 @@ component PAYERS [0.88, 0.53] label [-57, 3]
 
 component compliance to standards of care [0.68, 0.71] label [17, -28]
 
-component codes of practice [0.64, 0.54] label [-52, -18]
+component codes of practice [0.64, 0.54] label [-88, -18]
 
 clinical_decision -> DATA
 clinical_decision -> DECISION SUPPORT

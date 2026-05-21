@@ -40,13 +40,13 @@ pipeline provision {
 }
 component landscape [0.11, 0.36] label [-46, 19]
 
-component currency [0.35, 0.70] label [6, -3]
+component currency [0.35, 0.70] label [60, -3]
 pipeline currency {
   component CBDC [0.39] label [-29, 24]
-  component financial infrastructure [0.51] label [-72, -12]
+  component financial infrastructure [0.51] label [-97, 31]
   component cryptocurrency [0.62] label [-33, 25]
   component fiat [0.71] label [-3, 28]
-  component mobile device [0.72] label [13, 8]
+  component mobile device [0.72] label [-25, 46]
 }
 
 component internet access [0.41, 0.69] label [-1, -23]
@@ -55,7 +55,7 @@ component network topology [0.21, 0.67] label [2, -29]
 pipeline network topology {
   component copper [0.48] label [-6, -16]
   component "5G" [0.51] label [-3, 27]
-  component consensus Algorithms [0.59] label [-70, -7]
+  component consensus Algorithms [0.59] label [-98, 44]
   component mesh [0.61] label [-6, 27]
   component satellite [0.71] label [-8, 25]
 }
@@ -63,8 +63,8 @@ pipeline network topology {
 component energy [0.06, 0.69] label [1, -7]
 pipeline energy {
   component fossil [0.41] label [-53, 3]
-  component minigrids [0.44] label [-38, 23]
-  component renewable [0.7] label [-19, 22]
+  component minigrids [0.44] label [-30, 31]
+  component renewable [0.7] label [-27, 28]
   component computing infrastucture [0.71] label [14, -18]
 }
 note "(generation)" [0.07, 0.73]

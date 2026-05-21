@@ -4,7 +4,7 @@ title ENERGY - electrical energy storage, APRIL 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component CONSUMER [0.99, 0.68] label [-69, 3]
+component CONSUMER [0.99, 0.68] label [-60, 6]
 
 component ACTIVITY [0.93, 0.68] label [-70, 5]
 
@@ -13,8 +13,8 @@ component CONTROL [0.89, 0.73] label [10, 3]
 component GRID [0.80, 0.69] label [-41, -4]
 pipeline GRID {
   component Distributed grid [0.35] label [-70, -32]
-  component ELECTRICITY [0.72] label [12, 4]
-  component Traditional grid (single machine view) [0.8] label [22, -37]
+  component ELECTRICITY [0.72] label [12, -18]
+  component Traditional grid (single machine view) [0.8] label [-32, -37]
 }
 
 component BATTERY (POWER) STORAGE [0.22, 0.60] label [-65, -41]
@@ -29,12 +29,12 @@ component ENERGY PLATFORM [0.55, 0.65] label [-76, -28]
 pipeline ENERGY PLATFORM {
   component "fast response (<1s)" [0.26] label [-80, -29]
   component fast control system [0.31] label [10, -24]
-  component spinning reserve [0.69] label [17, -6]
+  component spinning reserve [0.69] label [25, 2]
 }
 
-component MODEL OF CONTROL [0.70, 0.67] label [-65, -46]
+component MODEL OF CONTROL [0.70, 0.67] label [-65, -24]
 pipeline MODEL OF CONTROL {
-  component "Fault Tolerant (TCP/IP like)" [0.31] label [-78, -49]
+  component "Fault Tolerant (TCP/IP like)" [0.31] label [-78, -85]
   component Auto Generation Control [0.79] label [29, -7]
 }
 
