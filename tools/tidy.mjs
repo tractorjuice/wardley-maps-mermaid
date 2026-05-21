@@ -311,3 +311,49 @@ export const tidyMap = (mmdText) => {
 
   return { text: outLines.join('\n'), changed, total };
 };
+
+// ---- CLI ----
+// Usage:
+//   node tools/tidy.mjs <file.mmd>          rewrite the file in place
+//   node tools/tidy.mjs --check <file.mmd>  exit 1 if tidying would change it
+//   node tools/tidy.mjs --stdout <file.mmd> print the tidied map, do not write
+const isMain = (() => {
+  if (!process.argv[1]) {
+    return false;
+  }
+  return import.meta.url === new URL(`file://${process.argv[1]}`).href;
+})();
+
+if (isMain) {
+  const { readFileSync, writeFileSync } = await import('node:fs');
+  const { resolve } = await import('node:path');
+  const args = process.argv.slice(2);
+  const check = args.includes('--check');
+  const stdout = args.includes('--stdout');
+  const file = args.find((a) => !a.startsWith('--'));
+  if (!file) {
+    console.error('usage: node tools/tidy.mjs [--check|--stdout] <file.mmd>');
+    process.exit(2);
+  }
+  const path = resolve(file);
+  const src = readFileSync(path, 'utf8');
+  const { text, changed, total } = tidyMap(src);
+  if (check) {
+    if (text !== src) {
+      console.error(`tidy: ${file} would change (${changed}/${total} labels)`);
+      process.exit(1);
+    }
+    console.error(`tidy: ${file} already tidy`);
+    process.exit(0);
+  }
+  if (stdout) {
+    process.stdout.write(text);
+    process.exit(0);
+  }
+  if (text !== src) {
+    writeFileSync(path, text, 'utf8');
+    console.error(`tidy: ${file} — ${changed}/${total} labels updated`);
+  } else {
+    console.error(`tidy: ${file} — already tidy`);
+  }
+}
