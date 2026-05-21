@@ -336,7 +336,9 @@ const isMain = (() => {
 if (isMain) {
   const { readFileSync, writeFileSync } = await import('node:fs');
   const { resolve } = await import('node:path');
-  const args = process.argv.slice(2);
+  // `npx <pkg> wardley-tidy ...` forwards the bin name as a stray arg when the
+  // package has a single bin — drop it so the real file arg is found.
+  const args = process.argv.slice(2).filter((a) => a !== 'wardley-tidy');
   const check = args.includes('--check');
   const stdout = args.includes('--stdout');
   const file = args.find((a) => !a.startsWith('--'));
