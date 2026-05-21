@@ -17,6 +17,8 @@
  *     parsed as obstacles only, never relabelled), annotations, notes,
  *     accelerators, attitudes, evolves, evolution-stage customisation.
  */
+import { realpathSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { autoPlaceLabels, estimateLabelBox } from './vendor/wardleyLabelPlacement.js';
 
 // mermaid wardley renderer constants (getConfigValues defaults).
@@ -318,11 +320,17 @@ export const tidyMap = (mmdText) => {
 //   node tools/tidy.mjs <file.mmd>          rewrite the file in place
 //   node tools/tidy.mjs --check <file.mmd>  exit 1 if tidying would change it
 //   node tools/tidy.mjs --stdout <file.mmd> print the tidied map, do not write
+// `process.argv[1]` may be a `node_modules/.bin` symlink when invoked as the
+// `wardley-tidy` bin, so resolve it before comparing with this module's path.
 const isMain = (() => {
   if (!process.argv[1]) {
     return false;
   }
-  return import.meta.url === new URL(`file://${process.argv[1]}`).href;
+  try {
+    return fileURLToPath(import.meta.url) === realpathSync(process.argv[1]);
+  } catch {
+    return false;
+  }
 })();
 
 if (isMain) {
