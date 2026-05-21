@@ -24,15 +24,15 @@ pipeline OUTPUT {
 component "Algorithm / Model" [0.58, 0.61] label [21, -9]
 component Policy [0.53, 0.09] label [-53, 2]
 
-component DATA [0.20, 0.70]
+component DATA [0.20, 0.70] label [4, -10]
 pipeline DATA {
   component Input  DATA [0.61] label [-34, 27]
   component Training [0.79] label [-24, 27]
 }
 component ACCESS [0.68, 0.30] label [-24, -12]
 pipeline ACCESS {
-  component Transparency [0.21] label [-78, 23]
-  component Asymmetrical [0.22] label [-94, 4]
+  component Transparency [0.21] label [-90, 23]
+  component Asymmetrical [0.22] label [-106, 4]
   component Defend (IP) [0.39] label [5, 24]
 }
 
@@ -48,7 +48,7 @@ pipeline CONTROLS {
 
 component Computation [0.05, 0.75] label [-39, 20]
 
-component Feedback Loop [0.11, 0.05] label [-38, 18]
+component Feedback Loop [0.11, 0.05] label [-39, 28]
 
 component constitution [0.22, 0.03] label [-20, 17]
 

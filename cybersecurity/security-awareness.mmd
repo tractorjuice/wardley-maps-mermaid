@@ -25,8 +25,8 @@ pipeline SECURITY PRACTICES {
   component VPN [0.65] label [-13, -20]
   component general security behaviors [0.69] label [-15, -54]
   component password rules [0.8] label [-74, -20]
-  component password hygiene [0.82] label [-18, 14]
-  component "best/standard practices" [0.89] label [31, -10]
+  component password hygiene [0.82] label [-18, 26]
+  component "best/standard practices" [0.89] label [-50, -19]
 }
 
 component TRAINING [0.47, 0.66] label [-31, -15]
@@ -34,7 +34,7 @@ pipeline TRAINING {
   component customized content [0.24] label [-87, -12]
   component gamification [0.35] label [-31, -20]
   component social engineering [0.46] label [-19, -46]
-  component learning from past incidents [0.56] label [-9, -73]
+  component learning from past incidents [0.56] label [41, -23]
   component video content [0.73] label [-80, 25]
   component written content [0.77] label [-29, -43]
   component standard content [0.87] label [17, -13]
@@ -45,10 +45,10 @@ component "CMS/Application" [0.18, 0.92] label [-54, 11]
 component TESTING [0.34, 0.51] label [-40, -12]
 pipeline TESTING {
   component "physical/ anti-tailgating testing" [0.19] label [-106, -26]
-  component voice phishing [0.28] label [-48, -19]
+  component voice phishing [0.28] label [-48, -41]
   component "(multi-channel) Social engineering" [0.36] label [-28, -60]
   component spoofing [0.85] label [-43, -19]
-  component "email/sms phishing" [0.88] label [-27, 16]
+  component "email/sms phishing" [0.88] label [-19, 24]
   component impersonation [0.91] label [-40, -20]
   component survey [0.94] label [19, 4]
 }
@@ -57,10 +57,10 @@ note "skills shortage" [0.29, 0.37]
 
 component THREAT [0.17, 0.52] label [-59, -5]
 
-component SECURITY CENTRE OF EXCELLENCE [0.58, 0.36] label [-83, -57]
+component SECURITY CENTRE OF EXCELLENCE [0.58, 0.36] label [-83, -93]
 pipeline SECURITY CENTRE OF EXCELLENCE {
   component start-up [0.19] label [-81, 1]
-  component hyperscale [0.43] label [-27, -19]
+  component hyperscale [0.43] label [9, -19]
   component corporate [0.63] label [-22, -18]
 }
 evolve detecting org specific risks 0.50
@@ -69,7 +69,7 @@ annotations [0.94, 0.02]
 
 component AI (DEEP FAKES) [0.06, 0.24] label [-33, -52]
 pipeline AI (DEEP FAKES) {
-  component non-celebrity deep fake [0.16] label [-86, -27]
+  component non-celebrity deep fake [0.16] label [-111, -52]
   component celebrity deep-fake [0.35] label [-29, -42]
 }
 note "uncanny valley" [0.01, 0.37]

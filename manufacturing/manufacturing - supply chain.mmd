@@ -11,25 +11,25 @@ component sales forecasting [0.82, 0.62] label [-58, -6]
 component R&D [0.51, 0.22] label [-35, 5]
 agility -> prototype
 
-component EQUIPMENT [0.67, 0.61] label [-60, -10]
+component EQUIPMENT [0.67, 0.61] label [11, -32]
 
 component government [0.93, 0.56] label [-29, -15]
 component manufacturer [0.95, 0.65] label [9, -6]
 component REGULATION [0.65, 0.47] label [-78, -10]
 pipeline REGULATION {
   component lobbying [0.38] label [-54, -20]
-  component compliance [0.53] label [-36, -20]
+  component compliance [0.53] label [-48, -20]
 }
 component safety [0.87, 0.55] label [-51, 4]
 component distributor [0.92, 0.48] label [-54, -12]
 component IP [0.74, 0.49] label [-21, -5]
 pipeline IP {
   component prototype [0.19] label [-83, 8]
-  component trial [0.34] label [-15, -21]
+  component trial [0.34] label [1, -37]
   component design [0.42] label [-33, -19]
-  component relationships [0.53] label [18, 1]
+  component relationships [0.53] label [54, 1]
 }
-component MATERIALS [0.58, 0.63] label [-73, -8]
+component MATERIALS [0.58, 0.63] label [-65, 44]
 pipeline MATERIALS {
   component novel [0.41] label [-32, 29]
   component branded [0.5] label [-32, -20]
@@ -51,10 +51,10 @@ R&D -> SUPPLY CHAIN
 component certification [0.51, 0.70] label [10, 4]
 
 component reliability [0.78, 0.70] label [-33, 21]
-component INVENTORY MANAGEMENT [0.33, 0.64] label [12, -31]
+component INVENTORY MANAGEMENT [0.33, 0.64] label [12, -9]
 pipeline INVENTORY MANAGEMENT {
   component just in case [0.52] label [-102, 8]
-  component just in time [0.69] label [12, 4]
+  component just in time [0.69] label [18, 6]
 }
 
 component warehousing [0.26, 0.66] label [12, 1]
@@ -63,7 +63,7 @@ component forecasting [0.36, 0.44] label [-91, 6]
 component LOGISTICS [0.21, 0.60] label [-72, -7]
 pipeline LOGISTICS {
   component automation [0.27] label [-93, 0]
-  component rate of change [0.41] label [-16, -17]
+  component rate of change [0.41] label [-16, -39]
   component clipboard [0.67] label [15, 3]
 }
 
@@ -72,7 +72,7 @@ rate of change -> METRICS
 component data [0.02, 0.66] label [11, 1]
 component ROCE [0.91, 0.72] label [8, -3]
 
-component ENERGY [0.39, 0.70] label [13, 8]
+component ENERGY [0.39, 0.70] label [18, 6]
 
 component CNI [0.76, 0.57] label [8, 2]
 

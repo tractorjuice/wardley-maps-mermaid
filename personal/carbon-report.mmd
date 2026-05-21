@@ -4,12 +4,12 @@ title Energy - Cloud
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product / converging -> commodity/ accepted
 
-component user [0.97, 0.71]
+component user [0.97, 0.71] label [10, 6]
 component application [0.82, 0.61] label [-48, -19]
 pipeline application {
   component drone swarming control [0.31] label [-81, -12]
   component payroll system [0.67] label [-47, 25]
-  component word processing [0.79] label [-20, 15]
+  component word processing [0.79] label [-20, 27]
 }
 
 evolve drone swarming control 0.4
@@ -24,7 +24,7 @@ note "+LAMP / .NET" [0.53, 0.61]
 component machine container [0.42, 0.71] label [12, -12]
 component compute [0.20, 0.67] label [-65, -3]
 component operating system [0.47, 0.71] label [-73, -9]
-component data centre [0.05, 0.69]
+component data centre [0.05, 0.69] label [5, -32]
 evolve compute 0.80
 note "+cloud IaaS" [0.17, 0.81]
 note "+servers" [0.18, 0.60]
@@ -34,14 +34,14 @@ pipeline architectural practice {
   component devops [0.21] label [-52, 4]
   component ITIL [0.76] label [19, -14]
 }
-component "1" [0.20, 0.81] label [199, 174]
+component "1" [0.20, 0.81] label [161, 136]
 component application architecture [0.70, 0.63] label [-90, -31]
 pipeline application architecture {
   component finops [0.31] label [-54, 14]
   component best coding practice [0.71] label [21, -26]
 }
 evolve finops 0.4
-component "2" [0.60, 0.75] label [292, 423]
+component "2" [0.60, 0.75] label [29, 44]
 
 component carbon [0.63, 0.47] label [-20, 16]
 component reporting [0.91, 0.39] label [-80, -2]

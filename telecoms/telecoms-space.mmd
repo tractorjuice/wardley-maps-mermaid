@@ -4,8 +4,8 @@ title TELECOMS - Space - FEB 2023
 size [1100, 800]
 evolution genesis / concept -> custom / emerging -> product/ converging -> commodity / accepted
 
-component corporation [0.99, 0.53] label [-55, -10]
-component government [0.99, 0.60] label [-14, -15]
+component corporation [0.99, 0.53] label [-87, 6]
+component government [0.99, 0.60] label [24, 6]
 
 component backhaul [0.50, 0.73] label [10, 5]
 component USER TERMINAL [0.61, 0.72] label [13, 7]
@@ -13,31 +13,31 @@ component SATELLITE [0.73, 0.66] label [-72, -11]
 pipeline SATELLITE {
   component GEO Sat [0.34] label [-69, 4]
   component LEO microsat [0.7] label [-2, -18]
-  component launchers [0.72] label [6, -7]
+  component launchers [0.72] label [22, 9]
 }
 
 component geography [0.66, 0.39] label [-74, 12]
 
-component NETWORK ACCESS [0.90, 0.68] label [8, -7]
+component NETWORK ACCESS [0.90, 0.68] label [24, -23]
 pipeline NETWORK ACCESS {
   component mesh network [0.47] label [-107, 0]
   component physical network [0.59] label [-57, -42]
-  component consumer [0.67] label [5, -10]
+  component consumer [0.67] label [1, -19]
   component broadcast [0.76] label [18, 5]
 }
 
 component TOPOLOGY [0.81, 0.66] label [11, -5]
 pipeline TOPOLOGY {
   component fibre [0.35] label [-56, 3]
-  component mobile [0.42] label [-22, 23]
-  component NTN (non terrestrial Network) [0.73] label [28, -41]
+  component mobile [0.42] label [-6, 39]
+  component NTN (non terrestrial Network) [0.73] label [36, -33]
 }
 component groundstation [0.53, 0.67] label [9, -1]
 
 component SPECTRUM [0.33, 0.68] label [9, -6]
 pipeline SPECTRUM {
   component V (40GHz) [0.67] label [-81, 3]
-  component Ka (27GHz) [0.68] label [-11, 22]
+  component Ka (27GHz) [0.68] label [-5, 31]
   component Ku (12GHz) [0.7] label [16, 1]
 }
 
@@ -45,14 +45,14 @@ component Optical Sat2Sat Coms [0.56, 0.40] label [-44, 12]
 component PROPULSION [0.59, 0.66] label [-80, -3]
 pipeline PROPULSION {
   component Xenon [0.59] label [-52, 4]
-  component Krypton [0.67] label [18, 3]
+  component Krypton [0.67] label [15, 6]
 }
 
 component power [0.65, 0.72] label [11, 3]
-component COOLING [0.67, 0.60] label [-61, -5]
+component COOLING [0.67, 0.60] label [-121, 33]
 pipeline COOLING {
-  component Thermal Electric [0.51] label [-78, -17]
-  component Cryogens [0.61] label [-48, 18]
+  component Thermal Electric [0.51] label [-78, 37]
+  component Cryogens [0.61] label [-40, 26]
   component Radiative [0.63] label [17, 4]
 }
 
@@ -71,7 +71,7 @@ component beamforming [0.39, 0.67] label [-77, 18]
 component ANTENNA [0.47, 0.68] label [4, -7]
 pipeline ANTENNA {
   component beam_steering [0.65] label [-100, 15]
-  component phased array antennas [0.67] label [-75, -36]
+  component phased array antennas [0.67] label [-38, 31]
 }
 
 component supply chain awareness [0.05, 0.34] label [-66, -14]

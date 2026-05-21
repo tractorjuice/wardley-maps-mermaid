@@ -5,21 +5,21 @@ size [1100, 800]
 anchor Uk Prime minister [0.99, 0.69]
 component Awarness [0.60, 0.14] label [12, -3]
 Uk Prime minister -> Awarness
-component Information [0.51, 0.11]
+component Information [0.51, 0.11] label [-58, -19]
 Awarness -> Information
 note "(Understanding the impact of their actions)" [0.50, 0.13]
-component Media [0.39, 0.18] label [7, 4]
+component Media [0.39, 0.18] label [-15, -16]
 pipeline Media {
-  component social media [0.29] label [5, -10]
-  component radio [0.45]
+  component social media [0.29] label [5, -22]
+  component radio [0.45] label [-15, -30]
   component Democratic Mandate [0.53] label [4, -33]
-  component podcast [0.59]
-  component People [0.69]
-  component newspaper [0.7]
+  component podcast [0.59] label [-21, 28]
+  component People [0.69] label [-43, 31]
+  component newspaper [0.7] label [-65, 44]
 }
 Information -> Media
 
-component Credibility [0.85, 0.35]
+component Credibility [0.85, 0.35] label [-8, -19]
 Uk Prime minister -> Credibility
 component Influence [0.17, 0.40] label [10, -16]
 pipeline Influence {
@@ -30,7 +30,7 @@ Influence -> Media
 note "Schwartz’s theory of culture-level value prioritie" [0.17, 0.42]
 
 Credibility -> Influence
-component Trust [0.10, 0.41]
+component Trust [0.10, 0.41] label [7, 6]
 Influence -> Trust
 
 component Authenticity [0.05, 0.43] label [12, -3]
@@ -38,7 +38,7 @@ Trust -> Authenticity
 
 component Power [0.62, 0.70] label [5, -10]
 pipeline Power {
-  component Soft Power [0.65] label [-23, -15]
+  component Soft Power [0.65] label [-30, -16]
   component Hard Power [0.74] label [2, -27]
 }
 
@@ -48,7 +48,7 @@ note "(Military, economic)" [0.59, 0.67]
 component Authority [0.26, 0.75] label [-26, -19]
 pipeline Authority {
   component Chaos [0.58] label [-22, -15]
-  component Leadeship (collective authority) [0.7] label [-34, 13]
+  component Leadeship (collective authority) [0.7] label [-50, 29]
   component Controle [0.84] label [-13, -25]
 }
 
@@ -56,16 +56,16 @@ Uk Prime minister -> Power
 Power -> Influence
 component Finance [0.56, 0.53] label [14, 0]
 Power -> Finance
-component Filtering the highest political priority [0.50, 0.64] label [6, -46]
+component Filtering the highest political priority [0.50, 0.64] label [22, -30]
 Finance -> Filtering the highest political priority
 Power -> Democratic Mandate
 
-component Pressure [0.31, 0.08]
+component Pressure [0.31, 0.08] label [14, -32]
 pipeline Pressure {
   component Conformity (social) [0.03] label [-27, -40]
-  component technological advancement pressure [0.11] label [-34, 17]
+  component technological advancement pressure [0.11] label [-42, 25]
   component economic pressure [0.19] label [3, -27]
-  component Obedience (social) [0.36] label [-44, -45]
+  component Obedience (social) [0.36] label [-44, -23]
 }
 
 Information -> Pressure
@@ -91,9 +91,9 @@ Power -> Media
 People -> Filtering the highest political priority
 Media -> Pressure
 
-component Moral Value [0.09, 0.73]
+component Moral Value [0.09, 0.73] label [-17, -10]
 
-component Coping Menanism [0.15, 0.16] label [-1, -38]
+component Coping Menanism [0.15, 0.16] label [21, -38]
 
 Pressure -> Coping Menanism
 Coping Menanism -> Coping Menanism

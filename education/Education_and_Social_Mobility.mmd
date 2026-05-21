@@ -8,26 +8,26 @@ note "(+thinking)" [0.72, 0.11]
 note "(+AI automation)" [0.54, 0.13]
 note "(+robotic automation)" [0.52, 0.78]
 
-component government [1.00, 0.47] label [5, -10]
+component government [1.00, 0.47] label [-68, 44]
 government -> regulation
 government -> social cohesion
 government -> societal demand for labour
 government -> economy
 
-component societal demand for labour [0.96, 0.55] label [-6, -37]
+component societal demand for labour [0.96, 0.55] label [19, -12]
 component regulation [0.93, 0.36] label [-71, -4]
 societal demand for labour -> Business
 regulation -> Business
 societal demand for labour -> merit based management
 societal demand for labour -> economy
 
-component social cohesion [0.94, 0.71] label [-11, -39]
+component social cohesion [0.94, 0.71] label [-29, -10]
 social cohesion -> social norms
 
 component economy [0.87, 0.49] label [-45, -12]
 pipeline economy {
   component new tech [0.21] label [-76, -2]
-  component commoditisation of the economy [0.81] label [40, -2]
+  component commoditisation of the economy [0.81] label [2, -40]
 }
 economy -> choice
 economy -> Business
@@ -38,9 +38,9 @@ new tech -> entrepreneur
 component Business [0.77, 0.48] label [9, -5]
 pipeline Business {
   component entrepreneur [0.24] label [-100, 2]
-  component new roles [0.3] label [-51, 23]
-  component white collar [0.37] label [-43, 23]
-  component blue collar [0.65] label [-53, 23]
+  component new roles [0.3] label [-52, 31]
+  component white collar [0.37] label [-36, 42]
+  component blue collar [0.65] label [-58, 31]
   component "labour/mundane" [0.78] label [20, 9]
 }
 Business -> Work actions
@@ -53,9 +53,9 @@ component Work actions [0.59, 0.45] label [5, -10]
 pipeline Work actions {
   component identify new market [0.11] label [-38, -64]
   component problem solving [0.19] label [-28, -48]
-  component task completion [0.79] label [3, -3]
+  component task completion [0.79] label [15, -3]
 }
-component mentoring [0.45, 0.62]
+component mentoring [0.45, 0.62] label [-2, -19]
 note "(+external coaching)" [0.48, 0.63]
 
 component alumni [0.50, 0.42] label [-55, -12]
@@ -70,9 +70,9 @@ component new agency [0.47, 0.47] label [2, -17]
 component Post compulsary [0.36, 0.59] label [-21, -38]
 pipeline Post compulsary {
   component "masters, phd+" [0.52] label [-97, 26]
-  component uni [0.55] label [-14, 23]
-  component short courses [0.64] label [4, -18]
-  component work specific [0.72] label [-29, 20]
+  component uni [0.55] label [-9, 28]
+  component short courses [0.64] label [-14, 31]
+  component work specific [0.72] label [-54, 45]
   component none [0.78] label [23, 1]
 }
 uni -> alumni
@@ -98,11 +98,11 @@ skills training -> problem solving
 skills training -> individuals
 
 component social capital [0.06, 0.27] label [-89, 7]
-component real life experience [0.06, 0.61] label [-9, -7]
+component real life experience [0.06, 0.61] label [7, 9]
 
-component Social affordances [0.19, 0.45] label [-35, -36]
+component Social affordances [0.19, 0.45] label [-60, -61]
 component patronage [0.05, 0.55] label [-30, 20]
-component investment funds [0.11, 0.69] label [2, -19]
+component investment funds [0.11, 0.69] label [-6, -11]
 component natural ability [0.08, 0.43] label [-41, 13]
 component family [0.09, 0.63] label [13, 7]
 component hope [0.09, 0.39] label [-37, 18]
@@ -118,7 +118,7 @@ patronage -> Social affordances
 component individuals choice [0.10, 0.20] label [-72, -16]
 individuals choice -> Social affordances
 component high school [0.25, 0.69] label [-27, -17]
-component primary school [0.16, 0.75]
+component primary school [0.16, 0.75] label [-17, -19]
 
 component shocks [0.06, 0.49] label [-25, 19]
 shocks -> Social affordances

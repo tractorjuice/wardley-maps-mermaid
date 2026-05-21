@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findMapFiles, owmToMermaid } from './convert.mjs';
+import { tidyToFixpoint } from './tidy.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
@@ -46,7 +47,9 @@ for (const f of files) {
   try {
     const owm = readFileSync(f, 'utf8');
     if (owm.trim().length < 30) continue;
-    const mermaid = owmToMermaid(owm, f) + '\n';
+    // Tidy label offsets so labels don't overlap in the generated map.
+    // Iterate to the fixpoint so the committed file is stable under `--check`.
+    const mermaid = tidyToFixpoint(owmToMermaid(owm, f) + '\n').text;
 
     // Sibling .mmd path: strip any source extension, append .mmd
     const outPath = f.replace(/\.[^./]+$/, '') + '.mmd';

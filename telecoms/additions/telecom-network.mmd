@@ -19,12 +19,12 @@ component consumer [0.84, 0.66] label [-17, -13]
 pipeline consumer {
   component M2M [0.52] label [-15, 25]
   component government [0.62] label [-53, -14]
-  component B2B [0.68] label [-11, 23]
-  component public [0.79] label [-30, 22]
+  component B2B [0.68] label [-9, 28]
+  component public [0.79] label [-38, 30]
 }
-component network access [0.71, 0.72] label [6, -7]
+component network access [0.71, 0.72] label [14, -15]
 pipeline network access {
-  component satellite [0.61] label [-34, 23]
+  component satellite [0.61] label [-42, 31]
   component wireless [0.7] label [-31, 24]
   component wired [0.75] label [-3, 26]
 }
@@ -32,15 +32,15 @@ pipeline network access {
 component net_topology [0.54, 0.67] label [-94, -4]
 pipeline net_topology {
   component wires [0.39] label [-24, 25]
-  component towers [0.45] label [-13, 28]
-  component space [0.74] label [-22, 23]
+  component towers [0.45] label [-43, -19]
+  component space [0.74] label [-15, -16]
 }
 
 component ownership [0.38, 0.71] label [10, -4]
 pipeline ownership {
   component commmunity [0.58] label [-67, -14]
-  component cubesat [0.64] label [-65, 6]
-  component commercial [0.75] label [-3, 20]
+  component cubesat [0.64] label [-65, -16]
+  component commercial [0.75] label [-5, 31]
 }
 
 component territory [0.21, 0.40] label [3, 15]
@@ -49,16 +49,16 @@ component telco [0.94, 0.75] label [12, 3]
 
 component protocol [0.22, 0.70] label [8, -9]
 pipeline protocol {
-  component "5G" [0.67] label [-29, 3]
-  component "6G" [0.73] label [13, 3]
+  component "5G" [0.67] label [-41, 3]
+  component "6G" [0.73] label [24, 6]
 }
 component spectrum [0.12, 0.69] label [7, -6]
 pipeline spectrum {
-  component availability [0.73] label [-26, 23]
+  component availability [0.73] label [-36, 28]
 }
 
 component physics [0.04, 0.64] label [-62, 3]
-component use cases [0.76, 0.67] label [-36, 19]
+component use cases [0.76, 0.67] label [-61, -6]
 
 component location [0.69, 0.31] label [-71, 4]
 component Starlink [0.93, 0.51] label [-78, 5]
@@ -67,7 +67,7 @@ evolve launchers 0.8
 evolve cubesat 0.8
 component MTBF [0.30, 0.63] label [-32, -4]
 pipeline MTBF {
-  component valued [0.51] label [-24, 23]
+  component valued [0.51] label [-18, 28]
   component cattle [0.71] label [15, 4]
 }
 component cost [0.57, 0.85] label [8, 2]

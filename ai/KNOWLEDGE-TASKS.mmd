@@ -3,7 +3,7 @@ title AI, KNOWLEDGE TASKS, JUNE 2023
 size [1100, 800]
 evolution genesis / concept  -> custom / emerging  -> product / converging  -> commodity / accepted
 
-component USERS [0.95, 0.59] label [-4, -10]
+component USERS [0.95, 0.59] label [-15, 60]
 pipeline USERS {
   component Researcher [0.51] label [-91, 2]
   component SME [0.56] label [-17, -18]
@@ -31,16 +31,16 @@ component KNOWLEDGE TASKS [0.68, 0.51] label [-4, -30]
 pipeline KNOWLEDGE TASKS {
   component creating [0.11] label [-82, -1]
   component designing [0.22] label [-60, -21]
-  component empathizing [0.3] label [-59, 23]
+  component empathizing [0.3] label [-58, 31]
   component optimizing [0.37] label [-65, -20]
-  component operating [0.41] label [-54, 22]
-  component augmenting [0.46] label [-55, -19]
+  component operating [0.41] label [-27, -16]
+  component augmenting [0.46] label [-68, 44]
   component sensing [0.54] label [-24, 24]
-  component conversing [0.59] label [-19, 22]
+  component conversing [0.59] label [-27, 30]
   component automating [0.65] label [-50, -21]
-  component converting [0.67] label [-29, 23]
+  component converting [0.67] label [-30, 28]
   component summarizing [0.7] label [-13, -20]
-  component recommending [0.76] label [-19, 21]
+  component recommending [0.76] label [-27, 29]
   component analyzing [0.82] label [19, 3]
 }
 
@@ -49,14 +49,14 @@ component INTERFACE [0.57, 0.52] label [9, 4]
 component APPLIED MODEL [0.49, 0.50] label [5, -10]
 pipeline APPLIED MODEL {
   component custom [0.38] label [-64, 5]
-  component fine-tuned [0.45] label [-41, 22]
+  component fine-tuned [0.45] label [-55, 31]
   component out-of-the-box [0.64] label [18, 2]
 }
 
 component FOUNDATIONAL MODEL [0.12, 0.66] label [-1, -34]
 pipeline FOUNDATIONAL MODEL {
   component multimodal [0.26] label [-91, -1]
-  component llm [0.49] label [-11, -22]
+  component llm [0.49] label [1, -22]
   component neural network [0.61] label [-97, -18]
   component classical (markov) [0.71] label [19, -30]
 }
@@ -64,14 +64,14 @@ pipeline FOUNDATIONAL MODEL {
 component MLOPS [0.39, 0.49] label [-39, -11]
 pipeline MLOPS {
   component bespoke [0.31] label [-68, 0]
-  component managed service [0.51] label [-5, 8]
-  component automated [0.57] label [6, 21]
+  component managed service [0.51] label [-5, 30]
+  component automated [0.57] label [28, 21]
 }
 
-component TRAINING DATA [0.32, 0.69]
+component TRAINING DATA [0.32, 0.69] label [-1, -32]
 pipeline TRAINING DATA {
   component private [0.36] label [-73, 1]
-  component commercial [0.57] label [-33, 23]
+  component commercial [0.57] label [-30, 28]
   component public [0.86] label [21, 2]
 }
 
@@ -82,15 +82,15 @@ pipeline MODEL TRAINING {
   component "(un)supervised" [0.48] label [20, 2]
 }
 
-component COMPUTE [0.06, 0.75] label [9, -6]
+component COMPUTE [0.06, 0.75] label [17, 44]
 pipeline COMPUTE {
   component quantum [0.11] label [-72, 3]
-  component fpga [0.63] label [-14, 19]
-  component gpu [0.72] label [-13, 22]
+  component fpga [0.63] label [-12, 28]
+  component gpu [0.72] label [-9, 28]
   component tpu [0.79] label [17, 1]
 }
 
-component STORAGE [0.04, 0.88]
+component STORAGE [0.04, 0.88] label [-5, -10]
 
 JTBD -> PRACTICE
 PRACTICE -> KNOWLEDGE TASKS

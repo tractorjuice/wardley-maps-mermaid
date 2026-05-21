@@ -2,16 +2,16 @@ wardley-beta
 title Telecom Core Business opportunistic banking on owning the pipe
 size [1100, 800]
 
-component User [0.96, 0.64]
+component User [0.96, 0.64] label [4, -10]
 
-component Communicate [0.87, 0.67]
+component Communicate [0.87, 0.67] label [-8, -19]
 
 User -> Communicate
 note "Content Communication ..." [0.86, 0.68]
 
-component Last Mile [0.69, 0.69]
-component Transport [0.69, 0.60]
-component Peering [0.65, 0.53]
+component Last Mile [0.69, 0.69] label [-2, -19]
+component Transport [0.69, 0.60] label [9, 6]
+component Peering [0.65, 0.53] label [15, 6]
 
 Communicate -> Peering
 Communicate -> Last Mile
@@ -19,9 +19,9 @@ Communicate -> Transport
 
 User -> Last Mile
 
-component telco [0.98, 0.46]
+component telco [0.98, 0.46] label [7, 6]
 component VAR service provider [0.85, 0.35] label [-76, -16]
-component "Market segmentation" [0.77, 0.44]
+component "Market segmentation" [0.77, 0.44] label [-25, 44]
 
 telco -> VAR service provider
 telco -> "Market segmentation"
