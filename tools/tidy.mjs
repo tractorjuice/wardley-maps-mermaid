@@ -5,7 +5,9 @@
  * Reads wardley-beta source, computes non-overlapping label positions with
  * mermaid's pure placement engine, and rewrites each `component` /
  * pipeline-child line with a computed `label [x, y]` pixel offset. Existing
- * authored labels are kept when collision-free (minimal diffs).
+ * authored labels are kept when collision-free and within MAX_MANUAL_OFFSET of
+ * their node (minimal diffs); a label dragged implausibly far from its node —
+ * an OWM authoring artifact — is re-placed instead of preserved.
  *
  * Exports `tidyMap(text)`. Run directly as a CLI — see the bottom of the file.
  *
@@ -37,6 +39,13 @@ const PLACEMENT_CONFIG = {
   refinementCount: 3,
 };
 const DECORATORS = ['build', 'buy', 'outsource', 'market', 'ecosystem'];
+// Authored `label [ox, oy]` offsets beyond this many pixels from the node are
+// treated as drag artifacts, not intentional placement, and re-placed by the
+// engine. Across this repo's 4,947 labels the offset distance is 38px (median)
+// / 120px (p99), then a clear gap to a cluster of ~10 outliers at 156px+ — the
+// cap sits in that gap. The engine's own bias toward authored positions is
+// disabled for these (no manualRect) so re-placement starts fresh at the node.
+const MAX_MANUAL_OFFSET = 140;
 
 // 0-1 -> 0-100; 0-100 stays. Mirrors wardleyParser.toPercent.
 const toPercent = (v) => (v <= 1 ? v * 100 : v);
@@ -230,8 +239,13 @@ export const tidyMap = (mmdText) => {
 
     // Existing authored label -> manualRect, so a collision-free one is kept.
     // Component text-anchor:start/baseline:auto; anchor middle/middle.
+    // An offset past MAX_MANUAL_OFFSET is a drag artifact: skip the manualRect
+    // so the engine re-places the label near its node rather than preserving it.
     let manualRect;
-    if (c.manualOffset) {
+    if (
+      c.manualOffset &&
+      Math.hypot(c.manualOffset.ox, c.manualOffset.oy) <= MAX_MANUAL_OFFSET
+    ) {
       const textX = p.x + c.manualOffset.ox;
       const textY = p.y + c.manualOffset.oy;
       manualRect =
