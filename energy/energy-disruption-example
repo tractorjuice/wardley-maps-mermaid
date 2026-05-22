@@ -53,7 +53,7 @@ component N+1 [0.67, 0.70] label [-26, 26]
 //notes
 note SCADA = 8 Bytes every 1-4 seconds per point (error bar +/- 1-3%) [0.97, 0.04]
 note synchrophasor = (30 bytes * 30Hz) * Per Bus, sub 100ms delay [0.95, 0.04]
-note +efficiency, visibility of supply chain [0.46, 0.28]
+note +efficiency, visibility of supply chain [0.55, 0.28]
 
 
 // link

@@ -15,7 +15,7 @@ evolve "3" 0.48
 
 component state [0.45, 0.59] label [-28, -11]
 pipeline state {
-  component "2" [0.23] label [-47, 44]
+  component "2" [0.23] label [-9, 42]
   component State Solution [0.23] label [-62, 25]
   component storage [0.69] label [-51, 27]
   component State Estimation [0.74] label [23, -18]
@@ -30,7 +30,7 @@ component networks [0.09, 0.73] label [15, 4]
 
 component measurer [0.22, 0.63] label [-58, -10]
 pipeline measurer {
-  component "1" [0.38] label [-63, 6]
+  component "1" [0.38] label [-9, 28]
   component synchrophasor [0.73] label [-39, 28]
   component SCADA [0.81] label [15, 2]
 }
@@ -42,14 +42,14 @@ pipeline secure power {
 
 component Architectural model [0.69, 0.67] label [-50, -34]
 pipeline Architectural model {
-  component "3" [0.41] label [-9, 60]
+  component "3" [0.41] label [-9, 28]
   component chaos engines [0.41] label [-106, 1]
   component "N+1" [0.7] label [-26, 26]
 }
 
 note "SCADA = 8 Bytes every 1-4 seconds per point (error bar +/- 1-3%)" [0.97, 0.04]
 note "synchrophasor = (30 bytes * 30Hz) * Per Bus, sub 100ms delay" [0.95, 0.04]
-note "+efficiency, visibility of supply chain" [0.46, 0.28]
+note "+efficiency, visibility of supply chain" [0.55, 0.28]
 
 State Estimation -> System Models
 State Estimation -> SCADA
